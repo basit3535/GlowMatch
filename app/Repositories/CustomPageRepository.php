@@ -4,12 +4,13 @@ namespace App\Repositories;
 
 use App\Interfaces\CustomPageInterface;
 use App\Models\CustomPage;
+use App\Models\PageCategory;
 
 class CustomPageRepository implements CustomPageInterface
 {
     public function homePage()
     {
-        $guide = CustomPage::where('page_type', 'palette_page')->get();
+        $guide = CustomPage::where('category_id', PageCategory::where('slug', 'palette_page')->value('id'))->get();
         $customPage   = CustomPage::where('is_homepage', true)->firstOrFail();
         $contentArray = $customPage->content_keys ?? [];
         $guide_links = $guide->map(function ($item) {

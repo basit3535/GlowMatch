@@ -15,11 +15,11 @@ class CustomPageController extends Controller implements CustomPageInterface
     public function homePage()
     {
         $data = $this->customPageRepository->homePage();
-        return view("custom_pages.{$data->customPage->page_type}.{$data->customPage->slug}", compact('data'));
+        return view("custom_pages.{$data->customPage->category->slug}.{$data->customPage->slug}", compact('data'));
     }
     public function showCustomPage($slug)
     {
        $data =  $this->customPageRepository->showCustomPage($slug);
-        return view("custom_pages.{$data->customPage->page_type}.{$data->customPage->blade_view}", compact('data'));
+        return view("custom_pages.{$data->customPage->category->slug}.{$slug}", compact('data'));
     }
 }

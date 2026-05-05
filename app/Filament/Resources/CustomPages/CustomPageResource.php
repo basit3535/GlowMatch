@@ -5,6 +5,7 @@ use App\Filament\Resources\CustomPages\Pages\CreateCustomPage;
 use App\Filament\Resources\CustomPages\Pages\EditCustomPage;
 use App\Filament\Resources\CustomPages\Pages\ListCustomPages;
 use App\Models\CustomPage;
+use App\Models\PageCategory;
 use BackedEnum;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\CreateAction;
@@ -73,8 +74,8 @@ class CustomPageResource extends Resource
                                     ->maxLength(255)
                                     ->helperText('Unique key for referencing this page in code.'),
 
-                                Select::make('page_type')
-                                    ->options(CustomPage::PAGE_TYPES)
+                                Select::make('category_id')
+                                    ->options(PageCategory::query()->pluck('name', 'id'))
                                     ->required()
                                     ->native(false),
 
@@ -182,12 +183,12 @@ class CustomPageResource extends Resource
                 TextColumn::make('name')->searchable()->sortable()->limit(30),
                 TextColumn::make('slug')->searchable()->copyable()->copyMessage('Slug copied')->limit(30),
                 TextColumn::make('page_key')->searchable()->badge()->color('gray'),
-                SelectColumn::make('page_type')->options(CustomPage::PAGE_TYPES)->sortable(),
+                SelectColumn::make('category_id')->options(PageCategory::query()->pluck('name', 'id'))->sortable(),
                 IconColumn::make('sitemap')->boolean()->sortable(),
                 TextColumn::make('created_at')->dateTime('M d, Y')->sortable()->toggleable(),
                 TextColumn::make('deleted_at')->dateTime('M d, Y')->sortable()->toggleable(isToggledHiddenByDefault: true),
             ])->filters([
-            Tables\Filters\SelectFilter::make('page_type')->options(CustomPage::PAGE_TYPES),
+            Tables\Filters\SelectFilter::make('category_id')->options(PageCategory::query()->pluck('name', 'id')),
             Tables\Filters\TernaryFilter::make('sitemap')->label('Sitemap Inclusion'),
             Tables\Filters\TrashedFilter::make(),
         ])

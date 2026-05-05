@@ -14,7 +14,7 @@ class CreateCustomPage extends CreateRecord
         $record = $this->record;
         $slug       = $record->slug;
         $bladeView = $record->blade_view;
-        $pageType = $record->page_type;
+        $pageType = $record->category->slug; // Assuming category relationship is loaded and has a slug
         $viewBlade   = resource_path("views/custom_pages/{$pageType}/{$bladeView}.blade.php");
         $viewPath   = resource_path("views/custom_pages/{$pageType}");
         // dd($viewBlade);
@@ -22,6 +22,7 @@ class CreateCustomPage extends CreateRecord
             File::put($viewBlade, $this->generateBladeTemplate($record));
         }
     }
+
 
     protected function generateBladeTemplate($record): string
     {

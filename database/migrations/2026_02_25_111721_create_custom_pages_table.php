@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('blade_view')->nullable();
             $table->string('slug')->nullable();
             $table->string('page_key')->nullable();
-            $table->enum('page_type',['primary_page','palette_page', 'season_page'])->nullable();
+            // $table->enum('page_type',['primary_page','palette_page', 'season_page'])->nullable();
+            $table->foreignId('category_id')->constrained('page_categories')->onDelete('cascade');
             $table->string('meta_title')->nullable();
             $table->longText('meta_description')->nullable();
             $table->boolean('sitemap')->default(0);
