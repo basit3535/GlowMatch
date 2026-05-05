@@ -20,6 +20,6 @@ class CustomPageController extends Controller implements CustomPageInterface
     public function showCustomPage($slug)
     {
        $data =  $this->customPageRepository->showCustomPage($slug);
-        return view("custom_pages.{$data->customPage->page_type}.{$slug}", compact('data'));
+        return view("custom_pages.{$data->customPage->page_type}.{$data->customPage->blade_view}", compact('data'));
     }
 }

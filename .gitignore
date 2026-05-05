@@ -16,7 +16,6 @@
 /public/build
 /public/hot
 /public/storage
-/resources/views/custom_pages
 /storage/*.key
 /storage/pail
 /vendor
