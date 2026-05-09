@@ -23,8 +23,12 @@ class BlogResource extends Resource
 {
     protected static ?string $model = Blog::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedNewspaper;
     protected static string|UnitEnum|null $navigationGroup  = 'Content Management';
+      protected static ?string $navigationLabel                 = 'Blogs';
+    protected static ?string $modelLabel                        = 'Blog';
+    protected static ?string $pluralModelLabel                  = 'Blogs';
+    protected static ?int $navigationSort                       = 1;
 
     protected static ?string $recordTitleAttribute = 'blog';
 

@@ -26,7 +26,7 @@ use Filament\Actions\DeleteBulkAction;
 
 class RoleResource extends Resource
 {
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedShieldCheck;
 
     protected static ?string $model = Role::class;
 
