@@ -13,7 +13,7 @@
                 <p style="font-size:16px;font-weight:300;color:var(--muted);line-height:1.75;margin-bottom:36px;">We combined
                     decades of seasonal colour theory with AI analysis to create a tool that gives every person the kind of
                     clarity usually reserved for expensive personal stylists.</p>
-                <button class="btn-primary" onclick="showPage('quiz')">Discover Your Season →</button>
+                <a class="btn-primary" href="{{ route('show.custom_pages', ['slug' => 'test']) }}">Discover Your Season →</a>
             </div>
             <div class="about-visual">
                 <div class="about-visual-main">🌸</div>

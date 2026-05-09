@@ -110,8 +110,8 @@
         </div>
         <div class="results-actions">
           <button class="btn-primary" onclick="restartQ()">Retake Quiz</button>
-          <button class="btn-outline" onclick="showPage('blog')">Explore Style Tips</button>
-          <button class="btn-outline" onclick="showPage('seasons')">Learn About Your Season</button>
+          <a class="btn-outline" href="{{ route('show.custom_pages', ['slug' => 'blog']) }}">Explore Style Tips</a>
+          <a class="btn-outline" href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}">Learn About Your Season</a>
         </div>
       </div>
     </div>

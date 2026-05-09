@@ -20,7 +20,7 @@
 
     <!-- ── NAVIGATION ── -->
     <nav>
-        <div class="nav-logo">Chroma<em>Fit</em></div>
+        <div class="nav-logo"><a href="{{ route('show.home_page') }}">Chroma<em>Fit</em></a></div>
         <div class="nav-center">
             <a href="{{ route('show.home_page') }}" class="active" id="nav-home">Home</a>
             <a href="{{ route('show.custom_pages', ['slug' => 'about']) }}" id="nl-about">About</a>

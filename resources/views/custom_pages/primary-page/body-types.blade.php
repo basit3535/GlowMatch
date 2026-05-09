@@ -127,8 +127,5 @@
       </div>
     </div>
   </section>
-
-  <section class="cta-banner"><h2 class="section-h2">Combine season + body type</h2><p>Take the full quiz to get colour and silhouette advice tailored together.</p><div class="cta-btns"><button class="btn-primary" onclick="showPage('quiz')">Start Free Analysis →</button></div></section>
-  <footer><div class="footer-top"><div class="footer-brand"><div class="footer-logo">Chroma<em>Fit</em></div></div><div class="footer-col"><h5>Explore</h5><a onclick="showPage('quiz')">Quiz</a><a onclick="showPage('seasons')">Seasons</a><a onclick="showPage('blog')">Blog</a></div><div class="footer-col"><h5>Company</h5><a onclick="showPage('about')">About</a><a onclick="showPage('contact')">Contact</a></div></div><div class="footer-bottom"><div>© 2025 ChromaFit.</div></div></footer>
 </div>
 @endsection
