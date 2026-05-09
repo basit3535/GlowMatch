@@ -41,12 +41,12 @@ class CustomPageResource extends Resource
 {
     protected static ?string $model = CustomPage::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedDocumentText;
     protected static string|UnitEnum|null $navigationGroup  = 'Content Management';
     protected static ?string $navigationLabel                   = 'Custom Pages';
     protected static ?string $modelLabel                        = 'Custom Page';
     protected static ?string $pluralModelLabel                  = 'Custom Pages';
-    protected static ?int $navigationSort                       = 1;
+    protected static ?int $navigationSort                       = 4;
 
     public static function form(Schema $schema): Schema
     {

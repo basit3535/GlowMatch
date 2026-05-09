@@ -26,7 +26,7 @@ use Filament\Actions\DeleteBulkAction;
 
 class PermissionResource extends Resource
 {
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedKey;
 
     protected static ?string $model = Permission::class;
 
