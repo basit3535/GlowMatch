@@ -12,8 +12,10 @@
                 <p class="hero-sub">Based on your skin tone, eye colour, hair, and body type — we craft a complete personal
                     style guide that makes getting dressed effortless.</p>
                 <div class="hero-btns">
-                    <a class="btn-primary" href="{{ route('show.custom_pages', ['slug' => 'test']) }}">Start Free Analysis →</a>
-                    <a class="btn-outline" href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}">Explore Seasons</a>
+                    <a class="btn-primary" href="{{ route('show.custom_pages', ['slug' => 'test']) }}">Start Free Analysis
+                        →</a>
+                    <a class="btn-outline" href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}">Explore
+                        Seasons</a>
                 </div>
                 <div class="hero-trust">
                     <div class="hero-avatars">
@@ -108,61 +110,71 @@
         </section>
 
         <!-- Seasons -->
-        <section class="seasons-section">
-            <div class="seasons-inner">
-                <span class="section-label">✦ The Four Seasons</span>
-                <h2 class="section-h2" style="margin-bottom:40px;">Which season are you?</h2>
-            </div>
-            <div class="seasons-scroll">
-                <div class="s-card sc-spring">
-                    <div class="s-card-label">Warm · Light</div>
-                    <div class="s-card-name">Spring</div>
-                    <div class="s-card-desc">Clear, warm, and fresh — you glow in peach, coral, and warm gold.</div>
-                    <div class="s-card-dots">
-                        <div class="s-card-dot" style="background:#F4A460;"></div>
-                        <div class="s-card-dot" style="background:#FFD580;"></div>
-                        <div class="s-card-dot" style="background:#E8855A;"></div>
-                        <div class="s-card-dot" style="background:#90C46E;"></div>
-                    </div>
-                </div>
-                <div class="s-card sc-summer">
-                    <div class="s-card-label">Cool · Muted</div>
-                    <div class="s-card-name">Summer</div>
-                    <div class="s-card-desc">Soft, cool, and romantic — dusty rose and lavender are your signature.</div>
-                    <div class="s-card-dots">
-                        <div class="s-card-dot" style="background:#C8A2C8;"></div>
-                        <div class="s-card-dot" style="background:#8FA8C8;"></div>
-                        <div class="s-card-dot" style="background:#D8BFD8;"></div>
-                        <div class="s-card-dot" style="background:#88A4BC;"></div>
-                    </div>
-                </div>
-                <div class="s-card sc-autumn">
-                    <div class="s-card-label">Warm · Deep</div>
-                    <div class="s-card-name">Autumn</div>
-                    <div class="s-card-desc">Rich, warm, and earthy — terracotta, olive, and rust make you shine.</div>
-                    <div class="s-card-dots">
-                        <div class="s-card-dot" style="background:#C97B5A;"></div>
-                        <div class="s-card-dot" style="background:#D4A856;"></div>
-                        <div class="s-card-dot" style="background:#556B2F;"></div>
-                        <div class="s-card-dot" style="background:#8B4513;"></div>
-                    </div>
-                </div>
-                <div class="s-card sc-winter">
-                    <div class="s-card-label">Cool · Bold</div>
-                    <div class="s-card-name">Winter</div>
-                    <div class="s-card-desc">High-contrast and striking — jewel tones and icy shades are yours.</div>
-                    <div class="s-card-dots">
-                        <div class="s-card-dot" style="background:#00008B;"></div>
-                        <div class="s-card-dot" style="background:#8B0000;"></div>
-                        <div class="s-card-dot" style="background:#4B0082;"></div>
-                        <div class="s-card-dot" style="background:#F0F0F0;"></div>
-                    </div>
+<!-- Update the links in the home page component to pass the season parameter -->
+
+<section class="seasons-section">
+    <div class="seasons-inner">
+        <span class="section-label">✦ The Four Seasons</span>
+        <h2 class="section-h2" style="margin-bottom:40px;">Which season are you?</h2>
+    </div>
+    <div class="seasons-scroll">
+        <a href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}?season=spring" data-season="spring">
+            <div class="s-card sc-spring">
+                <div class="s-card-label">Warm · Light</div>
+                <div class="s-card-name">Spring</div>
+                <div class="s-card-desc">Clear, warm, and fresh — you glow in peach, coral, and warm gold.</div>
+                <div class="s-card-dots">
+                    <div class="s-card-dot" style="background:#F4A460;"></div>
+                    <div class="s-card-dot" style="background:#FFD580;"></div>
+                    <div class="s-card-dot" style="background:#E8855A;"></div>
+                    <div class="s-card-dot" style="background:#90C46E;"></div>
                 </div>
             </div>
-            <div style="text-align:center;margin-top:40px;padding:0 6%;">
-                <a class="btn-dark" href="{{ route('show.custom_pages', ['slug' => 'quiz']) }}">Discover Your Season →</a>
+        </a>
+        <a href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}?season=summer" data-season="summer">
+            <div class="s-card sc-summer">
+                <div class="s-card-label">Cool · Muted</div>
+                <div class="s-card-name">Summer</div>
+                <div class="s-card-desc">Soft, cool, and romantic — dusty rose and lavender are your signature.</div>
+                <div class="s-card-dots">
+                    <div class="s-card-dot" style="background:#C8A2C8;"></div>
+                    <div class="s-card-dot" style="background:#8FA8C8;"></div>
+                    <div class="s-card-dot" style="background:#D8BFD8;"></div>
+                    <div class="s-card-dot" style="background:#88A4BC;"></div>
+                </div>
             </div>
-        </section>
+        </a>
+        <a href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}?season=autumn" data-season="autumn">
+            <div class="s-card sc-autumn">
+                <div class="s-card-label">Warm · Deep</div>
+                <div class="s-card-name">Autumn</div>
+                <div class="s-card-desc">Rich, warm, and earthy — terracotta, olive, and rust make you shine.</div>
+                <div class="s-card-dots">
+                    <div class="s-card-dot" style="background:#C97B5A;"></div>
+                    <div class="s-card-dot" style="background:#D4A856;"></div>
+                    <div class="s-card-dot" style="background:#556B2F;"></div>
+                    <div class="s-card-dot" style="background:#8B4513;"></div>
+                </div>
+            </div>
+        </a>
+        <a href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}?season=winter" data-season="winter">
+            <div class="s-card sc-winter">
+                <div class="s-card-label">Cool · Bold</div>
+                <div class="s-card-name">Winter</div>
+                <div class="s-card-desc">High-contrast and striking — jewel tones and icy shades are yours.</div>
+                <div class="s-card-dots">
+                    <div class="s-card-dot" style="background:#00008B;"></div>
+                    <div class="s-card-dot" style="background:#8B0000;"></div>
+                    <div class="s-card-dot" style="background:#4B0082;"></div>
+                    <div class="s-card-dot" style="background:#F0F0F0;"></div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div style="text-align:center;margin-top:40px;padding:0 6%;">
+        <a class="btn-dark" href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}">Discover Your Season →</a>
+    </div>
+</section>
 
         <!-- Features -->
         <section class="section" style="background:var(--blush-light);">

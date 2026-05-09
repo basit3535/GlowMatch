@@ -27,4 +27,5 @@ Route::get('/media/{media}/json', function (App\Models\Media $media) {
         'filename' => $media->filename,
     ]);
 });
+Route::get('seasons/{slug}',[CustomPageController::class, 'showCustomPage'])->name('show.seasons.custom_pages');
 Route::get('/{slug}',[CustomPageController::class, 'showCustomPage'])->name('show.custom_pages');
