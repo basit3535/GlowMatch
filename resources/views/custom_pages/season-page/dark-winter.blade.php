@@ -40,7 +40,7 @@
     </div>
   </section>
 
-  <!-- PALETTE -->
+  <!-- PALETTE (unisex) -->
   <section class="season-section">
     <span class="lbl" style="color:#4860C0;">✦ Your Colour Palette</span>
     <div class="h2" style="margin-bottom:12px;">Best colours for Dark Winter</div>
@@ -83,7 +83,7 @@
     </div>
   </section>
 
-  <!-- YOUR FEATURES -->
+  <!-- YOUR FEATURES (unisex) -->
   <section class="season-section-alt">
     <span class="lbl" style="color:#4860C0;">✦ Typical Features</span>
     <div class="h2" style="margin-bottom:40px;">Do you look like a Dark Winter?</div>
@@ -110,179 +110,168 @@
     </div>
   </section>
 
-  <!-- MAKEUP -->
-  <section class="season-section">
-    <span class="lbl" style="color:#4860C0;">✦ Makeup Guide</span>
-    <div class="h2" style="margin-bottom:12px;">Your perfect makeup shades</div>
-    <p class="body-text" style="max-width:560px;margin-bottom:36px;">Dark, cool, and dramatic. Dark Winter can wear the most intense cool makeup of any season — deep plum lips, dark navy liner, and cool berry cheeks.</p>
-    <div class="makeup-row">
-      <div class="makeup-item">
-        <div class="makeup-swatch" style="background:#382830;"></div>
-        <div class="makeup-label">Deep Cool Tan</div>
-        <div class="makeup-type">Foundation</div>
-      </div>
-      <div class="makeup-item">
-        <div class="makeup-swatch" style="background:#6A3050;"></div>
-        <div class="makeup-label">Deep Berry</div>
-        <div class="makeup-type">Blush</div>
-      </div>
-      <div class="makeup-item">
-        <div class="makeup-swatch" style="background:#5A1040;"></div>
-        <div class="makeup-label">Dark Plum</div>
-        <div class="makeup-type">Lips</div>
-      </div>
-      <div class="makeup-item">
-        <div class="makeup-swatch" style="background:#1A2848;"></div>
-        <div class="makeup-label">Deep Navy</div>
-        <div class="makeup-type">Eyes</div>
-      </div>
-      <div class="makeup-item">
-        <div class="makeup-swatch" style="background:#2A1038;"></div>
-        <div class="makeup-label">Dark Violet</div>
-        <div class="makeup-type">Eyes</div>
-      </div>
-      <div class="makeup-item">
-        <div class="makeup-swatch" style="background:#301840;"></div>
-        <div class="makeup-label">Deep Purple</div>
-        <div class="makeup-type">Eyes</div>
-      </div>
-      <div class="makeup-item">
-        <div class="makeup-swatch" style="background:#4A1830;"></div>
-        <div class="makeup-label">Cool Burgundy</div>
-        <div class="makeup-type">Blush</div>
-      </div>
-      <div class="makeup-item">
-        <div class="makeup-swatch" style="background:#C0C8D8;"></div>
-        <div class="makeup-label">Icy Silver</div>
-        <div class="makeup-type">Highlighter</div>
-      </div>
+  <!-- GENDER-SPECIFIC SECTIONS -->
+  <div style="margin: 0 6%;">
+    <div class="gender-toggle">
+      <button class="gender-btn active" data-gender="women">👩 Women / Feminine</button>
+      <button class="gender-btn" data-gender="men">👨 Men / Masculine</button>
+      <button class="gender-btn" data-gender="neutral">🌟 Gender-Neutral</button>
     </div>
-    <div style="margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-      <div class="card">
-        <div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">Foundation Undertone</div>
-        <div class="body-text" style="font-size:14px;">Cool, deep foundations — the coolest and deepest in the entire foundation range. Avoid any warmth or yellow undertone entirely.</div>
-      </div>
-      <div class="card">
-        <div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">Key Makeup Rule</div>
-        <div class="body-text" style="font-size:14px;">Dark and cool. Deep plum lips, dark navy or violet eyes, and a cool berry blush is the signature Dark Winter look. You are the only season that can truly wear near-black eyeshadow.</div>
-      </div>
-    </div>
-  </section>
+  </div>
 
-  <!-- WARDROBE -->
-  <section class="season-section-alt">
-    <div class="two-col">
-      <div>
-        <span class="lbl" style="color:#4860C0;">✦ Wardrobe Tips</span>
-        <div class="h2" style="margin-bottom:20px;">How to dress as a Dark Winter</div>
-        <div class="feature-row">
-          <div class="feature-item">
-            <div class="fi-num">01</div>
-            <div><div class="fi-title">Wear your darkness proudly</div><div class="fi-desc">Deep navy, dark plum, forest black, and charcoal are not just colours for you — they're your most flattering neutrals.</div></div>
-          </div>
-          <div class="feature-item">
-            <div class="fi-num">02</div>
-            <div><div class="fi-title">Jewel tones at their deepest</div><div class="fi-desc">The deepest sapphire, darkest emerald, and richest ruby all belong to Dark Winter. The deeper the jewel tone, the better.</div></div>
-          </div>
-          <div class="feature-item">
-            <div class="fi-num">03</div>
-            <div><div class="fi-title">Black is genuinely your colour</div><div class="fi-desc">Unlike most seasons, black truly flatters you. It matches the intensity of your dark, cool features perfectly.</div></div>
-          </div>
-          <div class="feature-item">
-            <div class="fi-num">04</div>
-            <div><div class="fi-title">Silver for all jewellery</div><div class="fi-desc">Cool silver, white gold, and platinum are the only metals that enhance your cool depth. Gold will fight with your colouring.</div></div>
-          </div>
-        </div>
+  <!-- WOMEN CONTENT -->
+  <div id="women-content" class="gender-content active-gender">
+    <!-- Makeup Guide (Women) -->
+    <section class="season-section">
+      <span class="lbl" style="color:#4860C0;">✦ Makeup Guide (Women)</span>
+      <div class="h2" style="margin-bottom:12px;">Your perfect makeup shades</div>
+      <p class="body-text" style="max-width:560px;margin-bottom:36px;">Dark, cool, and dramatic. Dark Winter can wear the most intense cool makeup of any season — deep plum lips, dark navy liner, and cool berry cheeks.</p>
+      <div class="makeup-row">
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#382830;"></div><div class="makeup-label">Deep Cool Tan</div><div class="makeup-type">Foundation</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#6A3050;"></div><div class="makeup-label">Deep Berry</div><div class="makeup-type">Blush</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#5A1040;"></div><div class="makeup-label">Dark Plum</div><div class="makeup-type">Lips</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#1A2848;"></div><div class="makeup-label">Deep Navy</div><div class="makeup-type">Eyes</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#2A1038;"></div><div class="makeup-label">Dark Violet</div><div class="makeup-type">Eyes</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#301840;"></div><div class="makeup-label">Deep Purple</div><div class="makeup-type">Eyes</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#4A1830;"></div><div class="makeup-label">Cool Burgundy</div><div class="makeup-type">Blush</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#C0C8D8;"></div><div class="makeup-label">Icy Silver</div><div class="makeup-type">Highlighter</div></div>
       </div>
-      <div>
-        <span class="lbl" style="color:#7A6E68;margin-bottom:16px;display:block;">✦ Colours to Avoid</span>
-        <div class="avoid-grid">
-          <div class="avoid-card">
-            <div class="avoid-swatch" style="background:#FF6600;"></div>
-            <div class="avoid-info"><div class="avoid-name">Orange</div><div class="avoid-why">Too warm, clashes dramatically</div></div>
-          </div>
-          <div class="avoid-card">
-            <div class="avoid-swatch" style="background:#FFD700;"></div>
-            <div class="avoid-info"><div class="avoid-name">Yellow</div><div class="avoid-why">Too warm and light</div></div>
-          </div>
-          <div class="avoid-card">
-            <div class="avoid-swatch" style="background:#C8A070;"></div>
-            <div class="avoid-info"><div class="avoid-name">Warm Brown</div><div class="avoid-why">Undertone mismatch</div></div>
-          </div>
-          <div class="avoid-card">
-            <div class="avoid-swatch" style="background:#F5DEB3;"></div>
-            <div class="avoid-info"><div class="avoid-name">Warm Beige</div><div class="avoid-why">Too light and warm</div></div>
-          </div>
-          <div class="avoid-card">
-            <div class="avoid-swatch" style="background:#90EE90;"></div>
-            <div class="avoid-info"><div class="avoid-name">Light Green</div><div class="avoid-why">Too light and warm-toned</div></div>
-          </div>
-          <div class="avoid-card">
-            <div class="avoid-swatch" style="background:#FFC0CB;"></div>
-            <div class="avoid-info"><div class="avoid-name">Pastel Pink</div><div class="avoid-why">Too light, wrong undertone</div></div>
-          </div>
-        </div>
+      <div style="margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div class="card"><div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">Foundation Undertone</div><div class="body-text" style="font-size:14px;">Cool, deep foundations — the coolest and deepest in the entire foundation range. Avoid any warmth or yellow undertone entirely.</div></div>
+        <div class="card"><div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">Key Makeup Rule</div><div class="body-text" style="font-size:14px;">Dark and cool. Deep plum lips, dark navy or violet eyes, and a cool berry blush is the signature Dark Winter look. You are the only season that can truly wear near-black eyeshadow.</div></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- OUTFIT IDEAS -->
-  <section class="season-section">
-    <span class="lbl" style="color:#4860C0;">✦ Outfit Inspiration</span>
-    <div class="h2" style="margin-bottom:36px;">Looks built for Dark Winter</div>
-    <div class="outfit-grid">
-      <div class="outfit-card">
-        <div class="outfit-top" style="background:linear-gradient(145deg,#1C2848,#101828);">🌑</div>
-        <div class="outfit-body">
-          <div class="outfit-occasion">Day</div>
-          <div class="outfit-name">Dark Sovereign</div>
-          <div class="outfit-items">Deep navy structured coat · Charcoal trousers · Black leather shoes · Silver watch</div>
+    <!-- Wardrobe Tips (Women) -->
+    <section class="season-section-alt">
+      <div class="two-col">
+        <div>
+          <span class="lbl" style="color:#4860C0;">✦ Wardrobe Tips (Women)</span>
+          <div class="h2" style="margin-bottom:20px;">How to dress as a Dark Winter woman</div>
+          <div class="feature-row">
+            <div class="feature-item"><div class="fi-num">01</div><div><div class="fi-title">Wear your darkness proudly</div><div class="fi-desc">Deep navy, dark plum, forest black, and charcoal are not just colours for you — they're your most flattering neutrals.</div></div></div>
+            <div class="feature-item"><div class="fi-num">02</div><div><div class="fi-title">Jewel tones at their deepest</div><div class="fi-desc">The deepest sapphire, darkest emerald, and richest ruby all belong to Dark Winter. The deeper the jewel tone, the better.</div></div></div>
+            <div class="feature-item"><div class="fi-num">03</div><div><div class="fi-title">Black is genuinely your colour</div><div class="fi-desc">Unlike most seasons, black truly flatters you. It matches the intensity of your dark, cool features perfectly.</div></div></div>
+            <div class="feature-item"><div class="fi-num">04</div><div><div class="fi-title">Silver for all jewellery</div><div class="fi-desc">Cool silver, white gold, and platinum are the only metals that enhance your cool depth. Gold will fight with your colouring.</div></div></div>
+          </div>
+        </div>
+        <div>
+          <span class="lbl" style="color:#7A6E68;margin-bottom:16px;display:block;">✦ Colours to Avoid</span>
+          <div class="avoid-grid">
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#FF6600;"></div><div class="avoid-info"><div class="avoid-name">Orange</div><div class="avoid-why">Too warm, clashes dramatically</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#FFD700;"></div><div class="avoid-info"><div class="avoid-name">Yellow</div><div class="avoid-why">Too warm and light</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#C8A070;"></div><div class="avoid-info"><div class="avoid-name">Warm Brown</div><div class="avoid-why">Undertone mismatch</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#F5DEB3;"></div><div class="avoid-info"><div class="avoid-name">Warm Beige</div><div class="avoid-why">Too light and warm</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#90EE90;"></div><div class="avoid-info"><div class="avoid-name">Light Green</div><div class="avoid-why">Too light and warm-toned</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#FFC0CB;"></div><div class="avoid-info"><div class="avoid-name">Pastel Pink</div><div class="avoid-why">Too light, wrong undertone</div></div></div>
+          </div>
         </div>
       </div>
-      <div class="outfit-card">
-        <div class="outfit-top" style="background:linear-gradient(145deg,#3A1818,#2A1020);">💎</div>
-        <div class="outfit-body">
-          <div class="outfit-occasion">Evening</div>
-          <div class="outfit-name">Midnight Plum</div>
-          <div class="outfit-items">Deep plum silk dress · Black pointed heels · Silver evening bag · Amethyst jewellery</div>
-        </div>
-      </div>
-      <div class="outfit-card">
-        <div class="outfit-top" style="background:linear-gradient(145deg,#102030,#0A1828);">❄️</div>
-        <div class="outfit-body">
-          <div class="outfit-occasion">Formal</div>
-          <div class="outfit-name">Deep Ocean</div>
-          <div class="outfit-items">Dark teal-navy blazer · Near-black trousers · Black patent shoes · Cool sapphire cufflinks</div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CELEBRITIES -->
+    <!-- Outfit Inspiration (Women) -->
+    <section class="season-section">
+      <span class="lbl" style="color:#4860C0;">✦ Outfit Inspiration (Women)</span>
+      <div class="h2" style="margin-bottom:36px;">Looks built for Dark Winter women</div>
+      <div class="outfit-grid">
+        <div class="outfit-card"><div class="outfit-top" style="background:linear-gradient(145deg,#1C2848,#101828);">🌑</div><div class="outfit-body"><div class="outfit-occasion">Day</div><div class="outfit-name">Dark Sovereign</div><div class="outfit-items">Deep navy structured coat · Charcoal trousers · Black leather shoes · Silver watch</div></div></div>
+        <div class="outfit-card"><div class="outfit-top" style="background:linear-gradient(145deg,#3A1818,#2A1020);">💎</div><div class="outfit-body"><div class="outfit-occasion">Evening</div><div class="outfit-name">Midnight Plum</div><div class="outfit-items">Deep plum silk dress · Black pointed heels · Silver evening bag · Amethyst jewellery</div></div></div>
+        <div class="outfit-card"><div class="outfit-top" style="background:linear-gradient(145deg,#102030,#0A1828);">❄️</div><div class="outfit-body"><div class="outfit-occasion">Formal</div><div class="outfit-name">Deep Ocean</div><div class="outfit-items">Dark teal-navy blazer · Near-black trousers · Black patent shoes · Cool sapphire cufflinks</div></div></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- MEN CONTENT -->
+  <div id="men-content" class="gender-content">
+    <!-- Grooming & Skincare (Men) -->
+    <section class="season-section">
+      <span class="lbl" style="color:#4860C0;">✦ Grooming & Skincare (Men)</span>
+      <div class="h2" style="margin-bottom:12px;">Grooming for the Dark Winter man</div>
+      <p class="body-text" style="max-width:560px;margin-bottom:36px;">Dark, cool, and sharp. Your grooming should enhance your natural cool depth and dramatic contrast. Avoid any warmth or redness.</p>
+      <div class="makeup-row">
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#282830;"></div><div class="makeup-label">Cool Matte Moisturizer</div><div class="makeup-type">Skincare</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#383048;"></div><div class="makeup-label">Deep Cool Concealer</div><div class="makeup-type">Concealer (if needed)</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#484860;"></div><div class="makeup-label">Neutral-Cool SPF</div><div class="makeup-type">Sunscreen</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#2A1A28;"></div><div class="makeup-label">Cool Charcoal Beard Oil</div><div class="makeup-type">Facial hair care</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#1C2040;"></div><div class="makeup-label">Deep Navy Pomade</div><div class="makeup-type">Hair Styling</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#301830;"></div><div class="makeup-label">Dark Plum Accent</div><div class="makeup-type">Subtle brow gel</div></div>
+      </div>
+      <div style="margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div class="card"><div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">Skincare Focus</div><div class="body-text" style="font-size:14px;">Clarity and coolness. Use cooling gels, ice rollers, and products that minimise redness or warmth. Avoid self-tanners with warm/orange undertones.</div></div>
+        <div class="card"><div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">Facial Hair</div><div class="body-text" style="font-size:14px;">Keep facial hair neat and cool-toned. Use a charcoal or cool grey beard oil. Avoid any reddish or warm brown tones. A sharp, clean line enhances your dramatic contrast.</div></div>
+      </div>
+    </section>
+
+    <!-- Wardrobe Tips (Men) -->
+    <section class="season-section-alt">
+      <div class="two-col">
+        <div>
+          <span class="lbl" style="color:#4860C0;">✦ Wardrobe Tips (Men)</span>
+          <div class="h2" style="margin-bottom:20px;">How to dress as a Dark Winter man</div>
+          <div class="feature-row">
+            <div class="feature-item"><div class="fi-num">01</div><div><div class="fi-title">Deep, dark neutrals</div><div class="fi-desc">Navy, charcoal, near-black, and deep teal are your core suit and trouser colours. Black is genuinely excellent for you.</div></div></div>
+            <div class="feature-item"><div class="fi-num">02</div><div><div class="fi-title">Cool jewel-tone accents</div><div class="fi-desc">Deep burgundy ties, dark plum pocket squares, or cool sapphire accessories add drama without losing the dark intensity.</div></div></div>
+            <div class="feature-item"><div class="fi-num">03</div><div><div class="fi-title">Silver over gold</div><div class="fi-desc">Silver watches, platinum rings, and cool chrome hardware. Avoid yellow gold and bronze entirely.</div></div></div>
+            <div class="feature-item"><div class="fi-num">04</div><div><div class="fi-title">Avoid warm and light colours</div><div class="fi-desc">No camel, tan, warm brown, pastels, or earthy warm tones. They will drain your dramatic intensity.</div></div></div>
+          </div>
+        </div>
+        <div>
+          <span class="lbl" style="color:#7A6E68;margin-bottom:16px;display:block;">✦ Colours to Avoid</span>
+          <div class="avoid-grid">
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#FF6600;"></div><div class="avoid-info"><div class="avoid-name">Orange</div><div class="avoid-why">Too warm, clashes dramatically</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#FFD700;"></div><div class="avoid-info"><div class="avoid-name">Yellow</div><div class="avoid-why">Too warm and light</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#C8A070;"></div><div class="avoid-info"><div class="avoid-name">Warm Brown</div><div class="avoid-why">Undertone mismatch</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#F5DEB3;"></div><div class="avoid-info"><div class="avoid-name">Warm Beige</div><div class="avoid-why">Too light and warm</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#90EE90;"></div><div class="avoid-info"><div class="avoid-name">Light Green</div><div class="avoid-why">Too light and warm-toned</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#FFC0CB;"></div><div class="avoid-info"><div class="avoid-name">Pastel Pink</div><div class="avoid-why">Too light, wrong undertone</div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Outfit Inspiration (Men) -->
+    <section class="season-section">
+      <span class="lbl" style="color:#4860C0;">✦ Outfit Inspiration (Men)</span>
+      <div class="h2" style="margin-bottom:36px;">Looks built for Dark Winter men</div>
+      <div class="outfit-grid">
+        <div class="outfit-card"><div class="outfit-top" style="background:linear-gradient(145deg,#1C2848,#101828);">🌑</div><div class="outfit-body"><div class="outfit-occasion">Business</div><div class="outfit-name">Midnight Navy</div><div class="outfit-items">Deep navy suit · White or icy grey shirt · Deep plum tie · Silver cufflinks</div></div></div>
+        <div class="outfit-card"><div class="outfit-top" style="background:linear-gradient(145deg,#3A1818,#2A1020);">💎</div><div class="outfit-body"><div class="outfit-occasion">Smart Casual</div><div class="outfit-name">Dark Burgundy Edge</div><div class="outfit-items">Charcoal trousers · Deep burgundy sweater · Black leather boots · Silver watch</div></div></div>
+        <div class="outfit-card"><div class="outfit-top" style="background:linear-gradient(145deg,#102030,#0A1828);">❄️</div><div class="outfit-body"><div class="outfit-occasion">Formal</div><div class="outfit-name">Black & Silver</div><div class="outfit-items">Black tuxedo · White shirt · Dark navy pocket square · Silver accessories</div></div></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- GENDER-NEUTRAL CONTENT -->
+  <div id="neutral-content" class="gender-content">
+    <section class="season-section">
+      <span class="lbl" style="color:#4860C0;">✦ Style for Everyone</span>
+      <div class="h2" style="margin-bottom:12px;">Gender-neutral Dark Winter tips</div>
+      <p class="body-text" style="max-width:560px;margin-bottom:36px;">Dark Winter is about cool depth, dramatic intensity, and powerful contrast. These principles work for any gender expression.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px;margin-bottom:32px;">
+        <div class="card"><div style="font-size:24px;margin-bottom:8px;">🌑</div><div class="fi-title">Embrace the deepest neutrals</div><div class="fi-desc" style="font-size:14px;">Black, dark navy, charcoal, and deep plum are your anchors. Build every outfit around these powerful dark tones.</div></div>
+        <div class="card"><div style="font-size:24px;margin-bottom:8px;">💎</div><div class="fi-title">Deep jewel accents</div><div class="fi-desc" style="font-size:14px;">Use dark sapphire, deep emerald, or rich burgundy as statement colours in accessories or layers.</div></div>
+        <div class="card"><div style="font-size:24px;margin-bottom:8px;">⚜️</div><div class="fi-title">Metallic finishes</div><div class="fi-desc" style="font-size:14px;">Silver, platinum, chrome, and white gold only. Avoid all warm metals like gold, brass, or copper.</div></div>
+        <div class="card"><div style="font-size:24px;margin-bottom:8px;">❄️</div><div class="fi-title">One light accent allowed</div><div class="fi-desc" style="font-size:14px;">Icy white or cool pale grey can be used sparingly for contrast, but keep the overall look dark.</div></div>
+      </div>
+      <div class="outfit-grid" style="margin-bottom:20px;">
+        <div class="outfit-card"><div class="outfit-top" style="background:linear-gradient(145deg,#1C2848,#101828);">🌑</div><div class="outfit-body"><div class="outfit-occasion">Unisex Look</div><div class="outfit-name">Dark Power</div><div class="outfit-items">Black or deep navy oversized coat · Charcoal trousers · Silver accessories · Black boots or sneakers</div></div></div>
+        <div class="outfit-card"><div class="outfit-top" style="background:linear-gradient(145deg,#3A1818,#2A1020);">💎</div><div class="outfit-body"><div class="outfit-occasion">Statement Layer</div><div class="outfit-name">Plum Drama</div><div class="outfit-items">Deep plum jacket or sweater · Dark denim or trousers · Silver jewellery or watch</div></div></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CELEBRITIES (expanded with male and non-binary examples) -->
   <section class="season-section-alt">
     <span class="lbl" style="color:#4860C0;">✦ Famous Dark Winters</span>
     <div class="h2" style="margin-bottom:36px;">You're in great company</div>
-    <div class="celeb-grid">
-      <div class="celeb-card">
-        <div class="celeb-avatar" style="background:#1C2848;">👑</div>
-        <div class="celeb-name">Priyanka Chopra</div>
-        <div class="celeb-note">Deep cool winter depth</div>
-      </div>
-      <div class="celeb-card">
-        <div class="celeb-avatar" style="background:#2A1020;">💫</div>
-        <div class="celeb-name">Deepika Padukone</div>
-        <div class="celeb-note">Dramatic dark winter</div>
-      </div>
-      <div class="celeb-card">
-        <div class="celeb-avatar" style="background:#1A1A30;">🌟</div>
-        <div class="celeb-name">Andie MacDowell</div>
-        <div class="celeb-note">Dark winter contrast</div>
-      </div>
-      <div class="celeb-card">
-        <div class="celeb-avatar" style="background:#301028;">🎬</div>
-        <div class="celeb-name">Sofia Vergara</div>
-        <div class="celeb-note">Deep cool features</div>
-      </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:24px;">
+      <div class="celeb-card"><div class="celeb-avatar" style="background:#1C2848;">👑</div><div class="celeb-name">Priyanka Chopra</div><div class="celeb-note">Deep cool winter depth (she/her)</div></div>
+      <div class="celeb-card"><div class="celeb-avatar" style="background:#2A1020;">💫</div><div class="celeb-name">Deepika Padukone</div><div class="celeb-note">Dramatic dark winter (she/her)</div></div>
+      <div class="celeb-card"><div class="celeb-avatar" style="background:#1A1A30;">🌟</div><div class="celeb-name">Andie MacDowell</div><div class="celeb-note">Dark winter contrast (she/her)</div></div>
+      <div class="celeb-card"><div class="celeb-avatar" style="background:#301028;">🎬</div><div class="celeb-name">Sofia Vergara</div><div class="celeb-note">Deep cool features (she/her)</div></div>
+      <div class="celeb-card"><div class="celeb-avatar" style="background:#1C2848;">🎭</div><div class="celeb-name">Keanu Reeves</div><div class="celeb-note">Cool dark intensity (he/him)</div></div>
+      <div class="celeb-card"><div class="celeb-avatar" style="background:#2A1020;">🎸</div><div class="celeb-name">Jon Bon Jovi</div><div class="celeb-note">Dark winter rock (he/him)</div></div>
+      <div class="celeb-card"><div class="celeb-avatar" style="background:#102030;">🎨</div><div class="celeb-name">Toni Braxton</div><div class="celeb-note">Deep cool dramatic (she/her)</div></div>
     </div>
   </section>
 
@@ -297,6 +286,6 @@
 
   <div class="footer-mini">
     <div class="fm-logo">Chroma<em>Fit</em></div>
-    <div class="fm-links"><a  href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}">All Seasons</a></div>
+    <div class="fm-links"><a href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}">All Seasons</a></div>
   </div>
 @endsection

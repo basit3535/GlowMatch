@@ -434,4 +434,40 @@
         };
     });
 </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const btns = document.querySelectorAll('.gender-btn');
+      const contents = {
+        women: document.getElementById('women-content'),
+        men: document.getElementById('men-content'),
+        neutral: document.getElementById('neutral-content')
+      };
+
+      function activateGender(gender) {
+        // Hide all
+        Object.values(contents).forEach(content => {
+          if (content) content.classList.remove('active-gender');
+        });
+        // Show selected
+        if (contents[gender]) contents[gender].classList.add('active-gender');
+        // Update button active state
+        btns.forEach(btn => {
+          if (btn.dataset.gender === gender) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        });
+      }
+
+      btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const gender = btn.dataset.gender;
+          activateGender(gender);
+        });
+      });
+
+      // Default: women is already active
+    });
+  </script>
 @yield('page_script')

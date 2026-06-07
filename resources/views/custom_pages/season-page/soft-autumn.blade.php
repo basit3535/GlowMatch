@@ -40,7 +40,7 @@
     </div>
   </section>
 
-  <!-- PALETTE -->
+  <!-- PALETTE (unisex) -->
   <section class="season-section">
     <span class="lbl" style="color:#906038;">✦ Your Colour Palette</span>
     <div class="h2" style="margin-bottom:12px;">Best colours for Soft Autumn</div>
@@ -83,7 +83,7 @@
     </div>
   </section>
 
-  <!-- YOUR FEATURES -->
+  <!-- YOUR FEATURES (unisex) -->
   <section class="season-section-alt">
     <span class="lbl" style="color:#906038;">✦ Typical Features</span>
     <div class="h2" style="margin-bottom:40px;">Do you look like a Soft Autumn?</div>
@@ -110,179 +110,168 @@
     </div>
   </section>
 
-  <!-- MAKEUP -->
-  <section class="season-section">
-    <span class="lbl" style="color:#906038;">✦ Makeup Guide</span>
-    <div class="h2" style="margin-bottom:12px;">Your perfect makeup shades</div>
-    <p class="body-text" style="max-width:560px;margin-bottom:36px;">Warm but soft — every shade should look like a natural extension of your colouring. Think "warm no-makeup makeup."</p>
-    <div class="makeup-row">
-      <div class="makeup-item">
-        <div class="makeup-swatch" style="background:#D4A882;"></div>
-        <div class="makeup-label">Warm Sand</div>
-        <div class="makeup-type">Foundation</div>
-      </div>
-      <div class="makeup-item">
-        <div class="makeup-swatch" style="background:#C8906A;"></div>
-        <div class="makeup-label">Soft Terracotta</div>
-        <div class="makeup-type">Blush</div>
-      </div>
-      <div class="makeup-item">
-        <div class="makeup-swatch" style="background:#B87858;"></div>
-        <div class="makeup-label">Muted Warm Rose</div>
-        <div class="makeup-type">Lips</div>
-      </div>
-      <div class="makeup-item">
-        <div class="makeup-swatch" style="background:#A89060;"></div>
-        <div class="makeup-label">Warm Taupe</div>
-        <div class="makeup-type">Eyes</div>
-      </div>
-      <div class="makeup-item">
-        <div class="makeup-swatch" style="background:#908868;"></div>
-        <div class="makeup-label">Soft Olive</div>
-        <div class="makeup-type">Eyes</div>
-      </div>
-      <div class="makeup-item">
-        <div class="makeup-swatch" style="background:#C09870;"></div>
-        <div class="makeup-label">Warm Bronze</div>
-        <div class="makeup-type">Eyes</div>
-      </div>
-      <div class="makeup-item">
-        <div class="makeup-swatch" style="background:#D0A880;"></div>
-        <div class="makeup-label">Peach Coral</div>
-        <div class="makeup-type">Blush</div>
-      </div>
-      <div class="makeup-item">
-        <div class="makeup-swatch" style="background:#C8B080;"></div>
-        <div class="makeup-label">Warm Gold</div>
-        <div class="makeup-type">Highlighter</div>
-      </div>
+  <!-- GENDER-SPECIFIC SECTIONS -->
+  <div style="margin: 0 6%;">
+    <div class="gender-toggle">
+      <button class="gender-btn active" data-gender="women">👩 Women / Feminine</button>
+      <button class="gender-btn" data-gender="men">👨 Men / Masculine</button>
+      <button class="gender-btn" data-gender="neutral">🌟 Gender-Neutral</button>
     </div>
-    <div style="margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-      <div class="card">
-        <div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">Foundation Undertone</div>
-        <div class="body-text" style="font-size:14px;">Warm, peachy-beige foundations — warmer than neutral but less golden than True Autumn. Look for "warm beige" or "soft golden" shades.</div>
-      </div>
-      <div class="card">
-        <div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">Key Makeup Rule</div>
-        <div class="body-text" style="font-size:14px;">Warm and blended. Nothing too vivid or sharp. A warm peachy nude lip, a terracotta blush, and a soft taupe eyeshadow is the perfect Soft Autumn look.</div>
-      </div>
-    </div>
-  </section>
+  </div>
 
-  <!-- WARDROBE -->
-  <section class="season-section-alt">
-    <div class="two-col">
-      <div>
-        <span class="lbl" style="color:#906038;">✦ Wardrobe Tips</span>
-        <div class="h2" style="margin-bottom:20px;">How to dress as a Soft Autumn</div>
-        <div class="feature-row">
-          <div class="feature-item">
-            <div class="fi-num">01</div>
-            <div><div class="fi-title">Dusty rose is surprisingly yours</div><div class="fi-desc">Unlike other autumns, you can wear dusty rose — the warm version. It bridges your autumn warmth with summer's softness.</div></div>
-          </div>
-          <div class="feature-item">
-            <div class="fi-num">02</div>
-            <div><div class="fi-title">Your olive is soft, not rich</div><div class="fi-desc">Soft olive and sage green are perfect for you — they harmonise with your warm but muted natural colouring.</div></div>
-          </div>
-          <div class="feature-item">
-            <div class="fi-num">03</div>
-            <div><div class="fi-title">Camel is your ultimate neutral</div><div class="fi-desc">Warm camel, tan, and mushroom are your wardrobe staples — they blend with everything in your muted warm palette.</div></div>
-          </div>
-          <div class="feature-item">
-            <div class="fi-num">04</div>
-            <div><div class="fi-title">Avoid both extremes</div><div class="fi-desc">You sit between seasons, so avoid the richest autumn colours AND the coolest summer colours — stay in the muted warm middle.</div></div>
-          </div>
-        </div>
+  <!-- WOMEN CONTENT -->
+  <div id="women-content" class="gender-content active-gender">
+    <!-- Makeup Guide (Women) -->
+    <section class="season-section">
+      <span class="lbl" style="color:#906038;">✦ Makeup Guide (Women)</span>
+      <div class="h2" style="margin-bottom:12px;">Your perfect makeup shades</div>
+      <p class="body-text" style="max-width:560px;margin-bottom:36px;">Warm but soft — every shade should look like a natural extension of your colouring. Think "warm no-makeup makeup."</p>
+      <div class="makeup-row">
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#D4A882;"></div><div class="makeup-label">Warm Sand</div><div class="makeup-type">Foundation</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#C8906A;"></div><div class="makeup-label">Soft Terracotta</div><div class="makeup-type">Blush</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#B87858;"></div><div class="makeup-label">Muted Warm Rose</div><div class="makeup-type">Lips</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#A89060;"></div><div class="makeup-label">Warm Taupe</div><div class="makeup-type">Eyes</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#908868;"></div><div class="makeup-label">Soft Olive</div><div class="makeup-type">Eyes</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#C09870;"></div><div class="makeup-label">Warm Bronze</div><div class="makeup-type">Eyes</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#D0A880;"></div><div class="makeup-label">Peach Coral</div><div class="makeup-type">Blush</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#C8B080;"></div><div class="makeup-label">Warm Gold</div><div class="makeup-type">Highlighter</div></div>
       </div>
-      <div>
-        <span class="lbl" style="color:#7A6E68;margin-bottom:16px;display:block;">✦ Colours to Avoid</span>
-        <div class="avoid-grid">
-          <div class="avoid-card">
-            <div class="avoid-swatch" style="background:#00008B;"></div>
-            <div class="avoid-info"><div class="avoid-name">Navy Blue</div><div class="avoid-why">Too cool and too dark</div></div>
-          </div>
-          <div class="avoid-card">
-            <div class="avoid-swatch" style="background:#FF69B4;"></div>
-            <div class="avoid-info"><div class="avoid-name">Hot Pink</div><div class="avoid-why">Too cool and vivid</div></div>
-          </div>
-          <div class="avoid-card">
-            <div class="avoid-swatch" style="background:#FFD700;"></div>
-            <div class="avoid-info"><div class="avoid-name">Bright Yellow</div><div class="avoid-why">Too clear, needs more muting</div></div>
-          </div>
-          <div class="avoid-card">
-            <div class="avoid-swatch" style="background:#FF0000;"></div>
-            <div class="avoid-info"><div class="avoid-name">Pure Red</div><div class="avoid-why">Too vivid and clear</div></div>
-          </div>
-          <div class="avoid-card">
-            <div class="avoid-swatch" style="background:#C0C0C0;"></div>
-            <div class="avoid-info"><div class="avoid-name">Cool Silver</div><div class="avoid-why">Undertone mismatch</div></div>
-          </div>
-          <div class="avoid-card">
-            <div class="avoid-swatch" style="background:#000000;"></div>
-            <div class="avoid-info"><div class="avoid-name">Black</div><div class="avoid-why">Too harsh and cool</div></div>
-          </div>
-        </div>
+      <div style="margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div class="card"><div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">Foundation Undertone</div><div class="body-text" style="font-size:14px;">Warm, peachy-beige foundations — warmer than neutral but less golden than True Autumn. Look for "warm beige" or "soft golden" shades.</div></div>
+        <div class="card"><div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">Key Makeup Rule</div><div class="body-text" style="font-size:14px;">Warm and blended. Nothing too vivid or sharp. A warm peachy nude lip, a terracotta blush, and a soft taupe eyeshadow is the perfect Soft Autumn look.</div></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- OUTFIT IDEAS -->
-  <section class="season-section">
-    <span class="lbl" style="color:#906038;">✦ Outfit Inspiration</span>
-    <div class="h2" style="margin-bottom:36px;">Looks built for Soft Autumn</div>
-    <div class="outfit-grid">
-      <div class="outfit-card">
-        <div class="outfit-top" style="background:linear-gradient(145deg,#C4A882,#A07858);">🍂</div>
-        <div class="outfit-body">
-          <div class="outfit-occasion">Casual</div>
-          <div class="outfit-name">Natural Warmth</div>
-          <div class="outfit-items">Warm camel oversized sweater · Olive straight jeans · Tan ankle boots · Wooden bead necklace</div>
+    <!-- Wardrobe Tips (Women) -->
+    <section class="season-section-alt">
+      <div class="two-col">
+        <div>
+          <span class="lbl" style="color:#906038;">✦ Wardrobe Tips (Women)</span>
+          <div class="h2" style="margin-bottom:20px;">How to dress as a Soft Autumn woman</div>
+          <div class="feature-row">
+            <div class="feature-item"><div class="fi-num">01</div><div><div class="fi-title">Dusty rose is surprisingly yours</div><div class="fi-desc">Unlike other autumns, you can wear dusty rose — the warm version. It bridges your autumn warmth with summer's softness.</div></div></div>
+            <div class="feature-item"><div class="fi-num">02</div><div><div class="fi-title">Your olive is soft, not rich</div><div class="fi-desc">Soft olive and sage green are perfect for you — they harmonise with your warm but muted natural colouring.</div></div></div>
+            <div class="feature-item"><div class="fi-num">03</div><div><div class="fi-title">Camel is your ultimate neutral</div><div class="fi-desc">Warm camel, tan, and mushroom are your wardrobe staples — they blend with everything in your muted warm palette.</div></div></div>
+            <div class="feature-item"><div class="fi-num">04</div><div><div class="fi-title">Avoid both extremes</div><div class="fi-desc">You sit between seasons, so avoid the richest autumn colours AND the coolest summer colours — stay in the muted warm middle.</div></div></div>
+          </div>
+        </div>
+        <div>
+          <span class="lbl" style="color:#7A6E68;margin-bottom:16px;display:block;">✦ Colours to Avoid</span>
+          <div class="avoid-grid">
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#00008B;"></div><div class="avoid-info"><div class="avoid-name">Navy Blue</div><div class="avoid-why">Too cool and too dark</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#FF69B4;"></div><div class="avoid-info"><div class="avoid-name">Hot Pink</div><div class="avoid-why">Too cool and vivid</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#FFD700;"></div><div class="avoid-info"><div class="avoid-name">Bright Yellow</div><div class="avoid-why">Too clear, needs more muting</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#FF0000;"></div><div class="avoid-info"><div class="avoid-name">Pure Red</div><div class="avoid-why">Too vivid and clear</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#C0C0C0;"></div><div class="avoid-info"><div class="avoid-name">Cool Silver</div><div class="avoid-why">Undertone mismatch</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#000000;"></div><div class="avoid-info"><div class="avoid-name">Black</div><div class="avoid-why">Too harsh and cool</div></div></div>
+          </div>
         </div>
       </div>
-      <div class="outfit-card">
-        <div class="outfit-top" style="background:linear-gradient(145deg,#BC8F8F,#A07070);">🌹</div>
-        <div class="outfit-body">
-          <div class="outfit-occasion">Day</div>
-          <div class="outfit-name">Dusty Rose Day</div>
-          <div class="outfit-items">Dusty rose linen shirt · Warm taupe trousers · Camel loafers · Hammered gold earrings</div>
-        </div>
-      </div>
-      <div class="outfit-card">
-        <div class="outfit-top" style="background:linear-gradient(145deg,#8FBC8F,#6A9A6A);">🌿</div>
-        <div class="outfit-body">
-          <div class="outfit-occasion">Evening</div>
-          <div class="outfit-name">Sage Evening</div>
-          <div class="outfit-items">Soft olive silk wrap dress · Cognac heels · Simple gold chain · Warm brown clutch</div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CELEBRITIES -->
+    <!-- Outfit Inspiration (Women) -->
+    <section class="season-section">
+      <span class="lbl" style="color:#906038;">✦ Outfit Inspiration (Women)</span>
+      <div class="h2" style="margin-bottom:36px;">Looks built for Soft Autumn women</div>
+      <div class="outfit-grid">
+        <div class="outfit-card"><div class="outfit-top" style="background:linear-gradient(145deg,#C4A882,#A07858);">🍂</div><div class="outfit-body"><div class="outfit-occasion">Casual</div><div class="outfit-name">Natural Warmth</div><div class="outfit-items">Warm camel oversized sweater · Olive straight jeans · Tan ankle boots · Wooden bead necklace</div></div></div>
+        <div class="outfit-card"><div class="outfit-top" style="background:linear-gradient(145deg,#BC8F8F,#A07070);">🌹</div><div class="outfit-body"><div class="outfit-occasion">Day</div><div class="outfit-name">Dusty Rose Day</div><div class="outfit-items">Dusty rose linen shirt · Warm taupe trousers · Camel loafers · Hammered gold earrings</div></div></div>
+        <div class="outfit-card"><div class="outfit-top" style="background:linear-gradient(145deg,#8FBC8F,#6A9A6A);">🌿</div><div class="outfit-body"><div class="outfit-occasion">Evening</div><div class="outfit-name">Sage Evening</div><div class="outfit-items">Soft olive silk wrap dress · Cognac heels · Simple gold chain · Warm brown clutch</div></div></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- MEN CONTENT -->
+  <div id="men-content" class="gender-content">
+    <!-- Grooming & Skincare (Men) -->
+    <section class="season-section">
+      <span class="lbl" style="color:#906038;">✦ Grooming & Skincare (Men)</span>
+      <div class="h2" style="margin-bottom:12px;">Grooming for the Soft Autumn man</div>
+      <p class="body-text" style="max-width:560px;margin-bottom:36px;">Warm, natural, and effortless. Your grooming should enhance your natural warmth without looking artificial.</p>
+      <div class="makeup-row">
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#D4A882;"></div><div class="makeup-label">Warm Tinted Moisturizer</div><div class="makeup-type">Skincare</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#C8A070;"></div><div class="makeup-label">Peachy Concealer</div><div class="makeup-type">Concealer</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#E0C090;"></div><div class="makeup-label">Warm Golden SPF</div><div class="makeup-type">Sunscreen</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#A08060;"></div><div class="makeup-label">Warm Brown Beard Oil</div><div class="makeup-type">Facial hair care</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#B89870;"></div><div class="makeup-label">Honey Pomade</div><div class="makeup-type">Hair Styling</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#9E8B7A;"></div><div class="makeup-label">Warm Taupe Brow Gel</div><div class="makeup-type">Brows</div></div>
+      </div>
+      <div style="margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div class="card"><div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">Skincare Focus</div><div class="body-text" style="font-size:14px;">Natural radiance and hydration. Use gentle, warm-toned products that enhance your skin's natural glow. Avoid cool or ashy finishes.</div></div>
+        <div class="card"><div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">Facial Hair</div><div class="body-text" style="font-size:14px;">Keep facial hair warm and soft. Use warm brown or honey-toned beard oils. Avoid cool, ashy, or reddish tones. A well-groomed natural beard suits you well.</div></div>
+      </div>
+    </section>
+
+    <!-- Wardrobe Tips (Men) -->
+    <section class="season-section-alt">
+      <div class="two-col">
+        <div>
+          <span class="lbl" style="color:#906038;">✦ Wardrobe Tips (Men)</span>
+          <div class="h2" style="margin-bottom:20px;">How to dress as a Soft Autumn man</div>
+          <div class="feature-row">
+            <div class="feature-item"><div class="fi-num">01</div><div><div class="fi-title">Warm, muted neutrals</div><div class="fi-desc">Camel, warm taupe, olive, and mushroom are your best suit and trouser colours. Avoid charcoal and navy.</div></div></div>
+            <div class="feature-item"><div class="fi-num">02</div><div><div class="fi-title">Soft earthy accents</div><div class="fi-desc">Dusty rose, soft olive, and muted peach in shirts, polos, or ties add the right amount of colour without being overpowering.</div></div></div>
+            <div class="feature-item"><div class="fi-num">03</div><div><div class="fi-title">Gold and warm leather</div><div class="fi-desc">Gold watches, warm brown leather shoes and belts, and wood accessories complement your natural warmth.</div></div></div>
+            <div class="feature-item"><div class="fi-num">04</div><div><div class="fi-title">Avoid cool and bright colours</div><div class="fi-desc">No black, navy, bright white, cool greys, or neon colours. They will wash you out and clash with your warmth.</div></div></div>
+          </div>
+        </div>
+        <div>
+          <span class="lbl" style="color:#7A6E68;margin-bottom:16px;display:block;">✦ Colours to Avoid</span>
+          <div class="avoid-grid">
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#00008B;"></div><div class="avoid-info"><div class="avoid-name">Navy Blue</div><div class="avoid-why">Too cool and too dark</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#FF69B4;"></div><div class="avoid-info"><div class="avoid-name">Hot Pink</div><div class="avoid-why">Too cool and vivid</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#FFD700;"></div><div class="avoid-info"><div class="avoid-name">Bright Yellow</div><div class="avoid-why">Too clear, needs more muting</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#C0C0C0;"></div><div class="avoid-info"><div class="avoid-name">Cool Silver</div><div class="avoid-why">Undertone mismatch</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#000000;"></div><div class="avoid-info"><div class="avoid-name">Black</div><div class="avoid-why">Too harsh and cool</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#FF0000;"></div><div class="avoid-info"><div class="avoid-name">Pure Red</div><div class="avoid-why">Too vivid and clear</div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Outfit Inspiration (Men) -->
+    <section class="season-section">
+      <span class="lbl" style="color:#906038;">✦ Outfit Inspiration (Men)</span>
+      <div class="h2" style="margin-bottom:36px;">Looks built for Soft Autumn men</div>
+      <div class="outfit-grid">
+        <div class="outfit-card"><div class="outfit-top" style="background:linear-gradient(145deg,#C4A882,#A07858);">🍂</div><div class="outfit-body"><div class="outfit-occasion">Business</div><div class="outfit-name">Warm Camel Suit</div><div class="outfit-items">Camel suit · Dusty rose tie · Cream shirt · Brown leather oxfords · Gold watch</div></div></div>
+        <div class="outfit-card"><div class="outfit-top" style="background:linear-gradient(145deg,#BC8F8F,#A07070);">🌹</div><div class="outfit-body"><div class="outfit-occasion">Smart Casual</div><div class="outfit-name">Dusty Rose Polo</div><div class="outfit-items">Dusty rose polo · Olive chinos · Tan suede loafers · Brown leather belt</div></div></div>
+        <div class="outfit-card"><div class="outfit-top" style="background:linear-gradient(145deg,#8FBC8F,#6A9A6A);">🌿</div><div class="outfit-body"><div class="outfit-occasion">Weekend</div><div class="outfit-name">Sage & Sand</div><div class="outfit-items">Sage green sweater · Warm sand trousers · Tan boots · Simple gold chain</div></div></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- GENDER-NEUTRAL CONTENT -->
+  <div id="neutral-content" class="gender-content">
+    <section class="season-section">
+      <span class="lbl" style="color:#906038;">✦ Style for Everyone</span>
+      <div class="h2" style="margin-bottom:12px;">Gender-neutral Soft Autumn tips</div>
+      <p class="body-text" style="max-width:560px;margin-bottom:36px;">Soft Autumn is about warm muting, natural harmony, and effortless elegance. These principles work for any gender expression.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px;margin-bottom:32px;">
+        <div class="card"><div style="font-size:24px;margin-bottom:8px;">🍂</div><div class="fi-title">Warm, muted neutrals</div><div class="fi-desc" style="font-size:14px;">Camel, warm taupe, mushroom, and greige are your foundation. Avoid stark white or cool greys.</div></div>
+        <div class="card"><div style="font-size:24px;margin-bottom:8px;">🌹</div><div class="fi-title">Soft dusty accents</div><div class="fi-desc" style="font-size:14px;">Dusty rose, soft olive, muted peach, and sage green bring gentle colour without overwhelming.</div></div>
+        <div class="card"><div style="font-size:24px;margin-bottom:8px;">⚜️</div><div class="fi-title">Warm metals</div><div class="fi-desc" style="font-size:14px;">Gold, brass, rose gold, and bronze. Avoid silver, platinum, or chrome.</div></div>
+        <div class="card"><div style="font-size:24px;margin-bottom:8px;">🍃</div><div class="fi-title">Keep it natural</div><div class="fi-desc" style="font-size:14px;">Your look should feel organic and easy. Natural fibres (linen, cotton, wool) in muted warm tones suit you perfectly.</div></div>
+      </div>
+      <div class="outfit-grid" style="margin-bottom:20px;">
+        <div class="outfit-card"><div class="outfit-top" style="background:linear-gradient(145deg,#C4A882,#A07858);">🍂</div><div class="outfit-body"><div class="outfit-occasion">Unisex Look</div><div class="outfit-name">Warm Earth</div><div class="outfit-items">Camel linen shirt/jacket · Olive trousers · Tan boots/sandals · Gold accessories</div></div></div>
+        <div class="outfit-card"><div class="outfit-top" style="background:linear-gradient(145deg,#BC8F8F,#A07070);">🌹</div><div class="outfit-body"><div class="outfit-occasion">Soft Accent</div><div class="outfit-name">Dusty Rose Layer</div><div class="outfit-items">Dusty rose cardigan or hoodie over warm neutral base · Brown leather details</div></div></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CELEBRITIES (expanded with male examples) -->
   <section class="season-section-alt">
     <span class="lbl" style="color:#906038;">✦ Famous Soft Autumns</span>
     <div class="h2" style="margin-bottom:36px;">You're in great company</div>
-    <div class="celeb-grid">
-      <div class="celeb-card">
-        <div class="celeb-avatar" style="background:#C4A882;">👠</div>
-        <div class="celeb-name">Sarah Jessica Parker</div>
-        <div class="celeb-note">Warm muted colouring</div>
-      </div>
-      <div class="celeb-card">
-        <div class="celeb-avatar" style="background:#BC8F8F;">🎬</div>
-        <div class="celeb-name">Julia Roberts</div>
-        <div class="celeb-note">Soft warm features</div>
-      </div>
-      <div class="celeb-card">
-        <div class="celeb-avatar" style="background:#C8A870;">🌟</div>
-        <div class="celeb-name">Drew Barrymore</div>
-        <div class="celeb-note">Natural warm blonde</div>
-      </div>
-      <div class="celeb-card">
-        <div class="celeb-avatar" style="background:#B08B72;">💫</div>
-        <div class="celeb-name">Jennifer Garner</div>
-        <div class="celeb-note">Softly warm autumn</div>
-      </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:24px;">
+      <div class="celeb-card"><div class="celeb-avatar" style="background:#C4A882;">👠</div><div class="celeb-name">Sarah Jessica Parker</div><div class="celeb-note">Warm muted colouring (she/her)</div></div>
+      <div class="celeb-card"><div class="celeb-avatar" style="background:#BC8F8F;">🎬</div><div class="celeb-name">Julia Roberts</div><div class="celeb-note">Soft warm features (she/her)</div></div>
+      <div class="celeb-card"><div class="celeb-avatar" style="background:#C8A870;">🌟</div><div class="celeb-name">Drew Barrymore</div><div class="celeb-note">Natural warm blonde (she/her)</div></div>
+      <div class="celeb-card"><div class="celeb-avatar" style="background:#B08B72;">💫</div><div class="celeb-name">Jennifer Garner</div><div class="celeb-note">Softly warm autumn (she/her)</div></div>
+      <div class="celeb-card"><div class="celeb-avatar" style="background:#C4A882;">🎸</div><div class="celeb-name">Ryan Reynolds</div><div class="celeb-note">Warm muted spring/autumn (he/him)</div></div>
+      <div class="celeb-card"><div class="celeb-avatar" style="background:#BC8F8F;">🎭</div><div class="celeb-name">Chris Hemsworth</div><div class="celeb-note">Soft warm features (he/him)</div></div>
+      <div class="celeb-card"><div class="celeb-avatar" style="background:#C8A870;">🎨</div><div class="celeb-name">Gigi Hadid</div><div class="celeb-note">Natural warm blonde (she/her)</div></div>
     </div>
   </section>
 
@@ -297,6 +286,6 @@
 
   <div class="footer-mini">
     <div class="fm-logo">Chroma<em>Fit</em></div>
-    <div class="fm-links"><a  href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}">All Seasons</a></div>
+    <div class="fm-links"><a href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}">All Seasons</a></div>
   </div>
 @endsection

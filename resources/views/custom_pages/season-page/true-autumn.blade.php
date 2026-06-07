@@ -40,7 +40,7 @@
     </div>
   </section>
 
-  <!-- PALETTE -->
+  <!-- PALETTE (unisex) -->
   <section class="season-section">
     <span class="lbl" style="color:#C47838;">✦ Your Colour Palette</span>
     <div class="h2" style="margin-bottom:12px;">Best colours for True Autumn</div>
@@ -83,7 +83,7 @@
     </div>
   </section>
 
-  <!-- YOUR FEATURES -->
+  <!-- YOUR FEATURES (unisex) -->
   <section class="season-section-alt">
     <span class="lbl" style="color:#C47838;">✦ Typical Features</span>
     <div class="h2" style="margin-bottom:40px;">Do you look like a True Autumn?</div>
@@ -106,183 +106,172 @@
     </div>
     <div style="margin-top:32px;padding:24px;background:#C4783814;border:1px solid #C4783833;border-radius:16px;">
       <div style="font-size:15px;font-weight:600;color:#2C2420;margin-bottom:6px;">✦ The True Autumn glow effect</div>
-      <div class="body-text" style="font-size:14px;">True Autumns in their colours look powerfully, richly beautiful — like a woman surrounded by autumn leaves. The warm earth tones amplify their natural warmth to create a deeply alive, radiant appearance.</div>
+      <div class="body-text" style="font-size:14px;">True Autumns in their colours look powerfully, richly beautiful — like a person surrounded by autumn leaves. The warm earth tones amplify their natural warmth to create a deeply alive, radiant appearance.</div>
     </div>
   </section>
 
-  <!-- MAKEUP -->
-  <section class="season-section">
-    <span class="lbl" style="color:#C47838;">✦ Makeup Guide</span>
-    <div class="h2" style="margin-bottom:12px;">Your perfect makeup shades</div>
-    <p class="body-text" style="max-width:560px;margin-bottom:36px;">Rich, warm, and earthy. True Autumn can wear the most intense warm makeup of any season without being overwhelmed.</p>
-    <div class="makeup-row">
-      <div class="makeup-item">
-        <div class="makeup-swatch" style="background:#C47A5A;"></div>
-        <div class="makeup-label">Warm Terracotta</div>
-        <div class="makeup-type">Foundation</div>
-      </div>
-      <div class="makeup-item">
-        <div class="makeup-swatch" style="background:#C06040;"></div>
-        <div class="makeup-label">Brick Red Blush</div>
-        <div class="makeup-type">Blush</div>
-      </div>
-      <div class="makeup-item">
-        <div class="makeup-swatch" style="background:#B04A28;"></div>
-        <div class="makeup-label">Rich Burnt Red</div>
-        <div class="makeup-type">Lips</div>
-      </div>
-      <div class="makeup-item">
-        <div class="makeup-swatch" style="background:#8B6914;"></div>
-        <div class="makeup-label">Deep Gold</div>
-        <div class="makeup-type">Eyes</div>
-      </div>
-      <div class="makeup-item">
-        <div class="makeup-swatch" style="background:#8B4513;"></div>
-        <div class="makeup-label">Rich Brown</div>
-        <div class="makeup-type">Eyes</div>
-      </div>
-      <div class="makeup-item">
-        <div class="makeup-swatch" style="background:#B85A30;"></div>
-        <div class="makeup-label">Warm Copper</div>
-        <div class="makeup-type">Eyes</div>
-      </div>
-      <div class="makeup-item">
-        <div class="makeup-swatch" style="background:#C07040;"></div>
-        <div class="makeup-label">Terracotta</div>
-        <div class="makeup-type">Blush</div>
-      </div>
-      <div class="makeup-item">
-        <div class="makeup-swatch" style="background:#C89040;"></div>
-        <div class="makeup-label">Bronze Gold</div>
-        <div class="makeup-type">Highlighter</div>
-      </div>
+  <!-- GENDER-SPECIFIC SECTIONS -->
+  <div style="margin: 0 6%;">
+    <div class="gender-toggle">
+      <button class="gender-btn active" data-gender="women">👩 Women / Feminine</button>
+      <button class="gender-btn" data-gender="men">👨 Men / Masculine</button>
+      <button class="gender-btn" data-gender="neutral">🌟 Gender-Neutral</button>
     </div>
-    <div style="margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-      <div class="card">
-        <div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">Foundation Undertone</div>
-        <div class="body-text" style="font-size:14px;">Strong warm, golden foundations. True Autumn often needs the warmest, most golden-toned foundation available. Never pink or cool.</div>
-      </div>
-      <div class="card">
-        <div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">Key Makeup Rule</div>
-        <div class="body-text" style="font-size:14px;">Think earth, spice, and harvest. Terracotta lip, bronzy eyes, and a brick blush is the ultimate True Autumn look. Rich and earthy, never cool.</div>
-      </div>
-    </div>
-  </section>
+  </div>
 
-  <!-- WARDROBE -->
-  <section class="season-section-alt">
-    <div class="two-col">
-      <div>
-        <span class="lbl" style="color:#C47838;">✦ Wardrobe Tips</span>
-        <div class="h2" style="margin-bottom:20px;">How to dress as a True Autumn</div>
-        <div class="feature-row">
-          <div class="feature-item">
-            <div class="fi-num">01</div>
-            <div><div class="fi-title">Terracotta is your signature</div><div class="fi-desc">No season wears terracotta like True Autumn. It's not just a colour for you — it's almost your second skin.</div></div>
-          </div>
-          <div class="feature-item">
-            <div class="fi-num">02</div>
-            <div><div class="fi-title">Olive green is essential</div><div class="fi-desc">Warm olive in every shade — from soft sage to deep forest olive — is one of your most powerful and versatile colours.</div></div>
-          </div>
-          <div class="feature-item">
-            <div class="fi-num">03</div>
-            <div><div class="fi-title">Build around warm browns</div><div class="fi-desc">Rich brown, cognac, tan, and camel form the backbone of your wardrobe. These neutrals anchor every outfit.</div></div>
-          </div>
-          <div class="feature-item">
-            <div class="fi-num">04</div>
-            <div><div class="fi-title">Gold accessories only</div><div class="fi-desc">Warm gold, antique gold, and burnished copper in jewellery enhance your warm depth. Silver fights your undertone.</div></div>
-          </div>
-        </div>
+  <!-- WOMEN CONTENT -->
+  <div id="women-content" class="gender-content active-gender">
+    <!-- Makeup Guide (Women) -->
+    <section class="season-section">
+      <span class="lbl" style="color:#C47838;">✦ Makeup Guide (Women)</span>
+      <div class="h2" style="margin-bottom:12px;">Your perfect makeup shades</div>
+      <p class="body-text" style="max-width:560px;margin-bottom:36px;">Rich, warm, and earthy. True Autumn can wear the most intense warm makeup of any season without being overwhelmed.</p>
+      <div class="makeup-row">
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#C47A5A;"></div><div class="makeup-label">Warm Terracotta</div><div class="makeup-type">Foundation</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#C06040;"></div><div class="makeup-label">Brick Red Blush</div><div class="makeup-type">Blush</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#B04A28;"></div><div class="makeup-label">Rich Burnt Red</div><div class="makeup-type">Lips</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#8B6914;"></div><div class="makeup-label">Deep Gold</div><div class="makeup-type">Eyes</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#8B4513;"></div><div class="makeup-label">Rich Brown</div><div class="makeup-type">Eyes</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#B85A30;"></div><div class="makeup-label">Warm Copper</div><div class="makeup-type">Eyes</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#C07040;"></div><div class="makeup-label">Terracotta</div><div class="makeup-type">Blush</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#C89040;"></div><div class="makeup-label">Bronze Gold</div><div class="makeup-type">Highlighter</div></div>
       </div>
-      <div>
-        <span class="lbl" style="color:#7A6E68;margin-bottom:16px;display:block;">✦ Colours to Avoid</span>
-        <div class="avoid-grid">
-          <div class="avoid-card">
-            <div class="avoid-swatch" style="background:#FF69B4;"></div>
-            <div class="avoid-info"><div class="avoid-name">Cool Pink</div><div class="avoid-why">Clashes with warm depth</div></div>
-          </div>
-          <div class="avoid-card">
-            <div class="avoid-swatch" style="background:#87CEEB;"></div>
-            <div class="avoid-info"><div class="avoid-name">Cool Blue</div><div class="avoid-why">Too cool and contrasting</div></div>
-          </div>
-          <div class="avoid-card">
-            <div class="avoid-swatch" style="background:#E0E0E0;"></div>
-            <div class="avoid-info"><div class="avoid-name">Cool Grey</div><div class="avoid-why">Clashes with warm richness</div></div>
-          </div>
-          <div class="avoid-card">
-            <div class="avoid-swatch" style="background:#000080;"></div>
-            <div class="avoid-info"><div class="avoid-name">Navy</div><div class="avoid-why">Too cool and harsh</div></div>
-          </div>
-          <div class="avoid-card">
-            <div class="avoid-swatch" style="background:#F0F0F0;"></div>
-            <div class="avoid-info"><div class="avoid-name">Cool White</div><div class="avoid-why">Washes out your warmth</div></div>
-          </div>
-          <div class="avoid-card">
-            <div class="avoid-swatch" style="background:#C0C0C0;"></div>
-            <div class="avoid-info"><div class="avoid-name">Silver</div><div class="avoid-why">Undertone mismatch</div></div>
-          </div>
-        </div>
+      <div style="margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div class="card"><div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">Foundation Undertone</div><div class="body-text" style="font-size:14px;">Strong warm, golden foundations. True Autumn often needs the warmest, most golden-toned foundation available. Never pink or cool.</div></div>
+        <div class="card"><div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">Key Makeup Rule</div><div class="body-text" style="font-size:14px;">Think earth, spice, and harvest. Terracotta lip, bronzy eyes, and a brick blush is the ultimate True Autumn look. Rich and earthy, never cool.</div></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- OUTFIT IDEAS -->
-  <section class="season-section">
-    <span class="lbl" style="color:#C47838;">✦ Outfit Inspiration</span>
-    <div class="h2" style="margin-bottom:36px;">Looks built for True Autumn</div>
-    <div class="outfit-grid">
-      <div class="outfit-card">
-        <div class="outfit-top" style="background:linear-gradient(145deg,#C97B5A,#A05030);">🍂</div>
-        <div class="outfit-body">
-          <div class="outfit-occasion">Casual</div>
-          <div class="outfit-name">Harvest Earth</div>
-          <div class="outfit-items">Terracotta linen top · Dark olive wide-leg trousers · Cognac leather boots · Bronze earrings</div>
+    <!-- Wardrobe Tips (Women) -->
+    <section class="season-section-alt">
+      <div class="two-col">
+        <div>
+          <span class="lbl" style="color:#C47838;">✦ Wardrobe Tips (Women)</span>
+          <div class="h2" style="margin-bottom:20px;">How to dress as a True Autumn woman</div>
+          <div class="feature-row">
+            <div class="feature-item"><div class="fi-num">01</div><div><div class="fi-title">Terracotta is your signature</div><div class="fi-desc">No season wears terracotta like True Autumn. It's not just a colour for you — it's almost your second skin.</div></div></div>
+            <div class="feature-item"><div class="fi-num">02</div><div><div class="fi-title">Olive green is essential</div><div class="fi-desc">Warm olive in every shade — from soft sage to deep forest olive — is one of your most powerful and versatile colours.</div></div></div>
+            <div class="feature-item"><div class="fi-num">03</div><div><div class="fi-title">Build around warm browns</div><div class="fi-desc">Rich brown, cognac, tan, and camel form the backbone of your wardrobe. These neutrals anchor every outfit.</div></div></div>
+            <div class="feature-item"><div class="fi-num">04</div><div><div class="fi-title">Gold accessories only</div><div class="fi-desc">Warm gold, antique gold, and burnished copper in jewellery enhance your warm depth. Silver fights your undertone.</div></div></div>
+          </div>
+        </div>
+        <div>
+          <span class="lbl" style="color:#7A6E68;margin-bottom:16px;display:block;">✦ Colours to Avoid</span>
+          <div class="avoid-grid">
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#FF69B4;"></div><div class="avoid-info"><div class="avoid-name">Cool Pink</div><div class="avoid-why">Clashes with warm depth</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#87CEEB;"></div><div class="avoid-info"><div class="avoid-name">Cool Blue</div><div class="avoid-why">Too cool and contrasting</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#E0E0E0;"></div><div class="avoid-info"><div class="avoid-name">Cool Grey</div><div class="avoid-why">Clashes with warm richness</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#000080;"></div><div class="avoid-info"><div class="avoid-name">Navy</div><div class="avoid-why">Too cool and harsh</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#F0F0F0;"></div><div class="avoid-info"><div class="avoid-name">Cool White</div><div class="avoid-why">Washes out your warmth</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#C0C0C0;"></div><div class="avoid-info"><div class="avoid-name">Silver</div><div class="avoid-why">Undertone mismatch</div></div></div>
+          </div>
         </div>
       </div>
-      <div class="outfit-card">
-        <div class="outfit-top" style="background:linear-gradient(145deg,#D4A856,#B08030);">🌾</div>
-        <div class="outfit-body">
-          <div class="outfit-occasion">Day</div>
-          <div class="outfit-name">Golden Field</div>
-          <div class="outfit-items">Warm mustard knit sweater · Rich brown corduroy · Tan leather boots · Antique gold pendant</div>
-        </div>
-      </div>
-      <div class="outfit-card">
-        <div class="outfit-top" style="background:linear-gradient(145deg,#556B2F,#3D5020);">🌿</div>
-        <div class="outfit-body">
-          <div class="outfit-occasion">Evening</div>
-          <div class="outfit-name">Dark Olive</div>
-          <div class="outfit-items">Deep olive silk wrap dress · Brown heeled boots · Tortoiseshell clutch · Gold chain necklace</div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CELEBRITIES -->
+    <!-- Outfit Inspiration (Women) -->
+    <section class="season-section">
+      <span class="lbl" style="color:#C47838;">✦ Outfit Inspiration (Women)</span>
+      <div class="h2" style="margin-bottom:36px;">Looks built for True Autumn women</div>
+      <div class="outfit-grid">
+        <div class="outfit-card"><div class="outfit-top" style="background:linear-gradient(145deg,#C97B5A,#A05030);">🍂</div><div class="outfit-body"><div class="outfit-occasion">Casual</div><div class="outfit-name">Harvest Earth</div><div class="outfit-items">Terracotta linen top · Dark olive wide-leg trousers · Cognac leather boots · Bronze earrings</div></div></div>
+        <div class="outfit-card"><div class="outfit-top" style="background:linear-gradient(145deg,#D4A856,#B08030);">🌾</div><div class="outfit-body"><div class="outfit-occasion">Day</div><div class="outfit-name">Golden Field</div><div class="outfit-items">Warm mustard knit sweater · Rich brown corduroy · Tan leather boots · Antique gold pendant</div></div></div>
+        <div class="outfit-card"><div class="outfit-top" style="background:linear-gradient(145deg,#556B2F,#3D5020);">🌿</div><div class="outfit-body"><div class="outfit-occasion">Evening</div><div class="outfit-name">Dark Olive</div><div class="outfit-items">Deep olive silk wrap dress · Brown heeled boots · Tortoiseshell clutch · Gold chain necklace</div></div></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- MEN CONTENT -->
+  <div id="men-content" class="gender-content">
+    <!-- Grooming & Skincare (Men) -->
+    <section class="season-section">
+      <span class="lbl" style="color:#C47838;">✦ Grooming & Skincare (Men)</span>
+      <div class="h2" style="margin-bottom:12px;">Grooming for the True Autumn man</div>
+      <p class="body-text" style="max-width:560px;margin-bottom:36px;">Rich, warm, and natural. Your grooming should enhance your earthy warmth and golden undertones.</p>
+      <div class="makeup-row">
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#C47A5A;"></div><div class="makeup-label">Warm Golden Moisturizer</div><div class="makeup-type">Skincare</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#B07040;"></div><div class="makeup-label">Warm Tan Concealer</div><div class="makeup-type">Concealer</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#D4A060;"></div><div class="makeup-label">Golden SPF</div><div class="makeup-type">Sunscreen</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#A06030;"></div><div class="makeup-label">Warm Brown Beard Oil</div><div class="makeup-type">Facial hair care</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#C08040;"></div><div class="makeup-label">Honey Brown Pomade</div><div class="makeup-type">Hair Styling</div></div>
+        <div class="makeup-item"><div class="makeup-swatch" style="background:#9E7A50;"></div><div class="makeup-label">Warm Taupe Brow Gel</div><div class="makeup-type">Brows</div></div>
+      </div>
+      <div style="margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div class="card"><div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">Skincare Focus</div><div class="body-text" style="font-size:14px;">Natural radiance and warmth. Use products that enhance your golden undertone. Avoid anything that leaves an ashy or cool finish.</div></div>
+        <div class="card"><div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">Facial Hair</div><div class="body-text" style="font-size:14px;">Keep facial hair warm and rich. Use warm brown or honey-toned beard oils. Avoid cool, ashy, or reddish tones that don't match your warmth.</div></div>
+      </div>
+    </section>
+
+    <!-- Wardrobe Tips (Men) -->
+    <section class="season-section-alt">
+      <div class="two-col">
+        <div>
+          <span class="lbl" style="color:#C47838;">✦ Wardrobe Tips (Men)</span>
+          <div class="h2" style="margin-bottom:20px;">How to dress as a True Autumn man</div>
+          <div class="feature-row">
+            <div class="feature-item"><div class="fi-num">01</div><div><div class="fi-title">Embrace warm earthy neutrals</div><div class="fi-desc">Camel, rich brown, cognac, and tan are your core suit and trouser colours. Avoid charcoal and navy.</div></div></div>
+            <div class="feature-item"><div class="fi-num">02</div><div><div class="fi-title">Olive and terracotta accents</div><div class="fi-desc">Olive green shirts, terracotta ties, or warm mustard pocket squares add signature True Autumn energy.</div></div></div>
+            <div class="feature-item"><div class="fi-num">03</div><div><div class="fi-title">Gold and warm leather</div><div class="fi-desc">Gold watches, warm brown leather shoes and belts, and tortoiseshell accessories complement your earthy warmth.</div></div></div>
+            <div class="feature-item"><div class="fi-num">04</div><div><div class="fi-title">Avoid cool and bright colours</div><div class="fi-desc">No black, navy, cool greys, bright whites, or pastels. They will drain your warm colouring.</div></div></div>
+          </div>
+        </div>
+        <div>
+          <span class="lbl" style="color:#7A6E68;margin-bottom:16px;display:block;">✦ Colours to Avoid</span>
+          <div class="avoid-grid">
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#FF69B4;"></div><div class="avoid-info"><div class="avoid-name">Cool Pink</div><div class="avoid-why">Clashes with warm depth</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#87CEEB;"></div><div class="avoid-info"><div class="avoid-name">Cool Blue</div><div class="avoid-why">Too cool and contrasting</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#E0E0E0;"></div><div class="avoid-info"><div class="avoid-name">Cool Grey</div><div class="avoid-why">Clashes with warm richness</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#000080;"></div><div class="avoid-info"><div class="avoid-name">Navy</div><div class="avoid-why">Too cool and harsh</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#F0F0F0;"></div><div class="avoid-info"><div class="avoid-name">Cool White</div><div class="avoid-why">Washes out your warmth</div></div></div>
+            <div class="avoid-card"><div class="avoid-swatch" style="background:#C0C0C0;"></div><div class="avoid-info"><div class="avoid-name">Silver</div><div class="avoid-why">Undertone mismatch</div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Outfit Inspiration (Men) -->
+    <section class="season-section">
+      <span class="lbl" style="color:#C47838;">✦ Outfit Inspiration (Men)</span>
+      <div class="h2" style="margin-bottom:36px;">Looks built for True Autumn men</div>
+      <div class="outfit-grid">
+        <div class="outfit-card"><div class="outfit-top" style="background:linear-gradient(145deg,#C97B5A,#A05030);">🍂</div><div class="outfit-body"><div class="outfit-occasion">Business</div><div class="outfit-name">Camel Suit</div><div class="outfit-items">Warm camel suit · Olive green tie · Cream shirt · Brown leather oxfords · Gold watch</div></div></div>
+        <div class="outfit-card"><div class="outfit-top" style="background:linear-gradient(145deg,#D4A856,#B08030);">🌾</div><div class="outfit-body"><div class="outfit-occasion">Smart Casual</div><div class="outfit-name">Golden Harvest</div><div class="outfit-items">Mustard sweater · Brown chinos · Tan leather boots · Tortoiseshell sunglasses</div></div></div>
+        <div class="outfit-card"><div class="outfit-top" style="background:linear-gradient(145deg,#556B2F,#3D5020);">🌿</div><div class="outfit-body"><div class="outfit-occasion">Weekend</div><div class="outfit-name">Olive & Tan</div><div class="outfit-items">Olive field jacket · Cream henley · Brown jeans · Tan work boots · Leather strap watch</div></div></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- GENDER-NEUTRAL CONTENT -->
+  <div id="neutral-content" class="gender-content">
+    <section class="season-section">
+      <span class="lbl" style="color:#C47838;">✦ Style for Everyone</span>
+      <div class="h2" style="margin-bottom:12px;">Gender-neutral True Autumn tips</div>
+      <p class="body-text" style="max-width:560px;margin-bottom:36px;">True Autumn is about rich warmth, earthy depth, and natural harmony. These principles work for any gender expression.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px;margin-bottom:32px;">
+        <div class="card"><div style="font-size:24px;margin-bottom:8px;">🍂</div><div class="fi-title">Warm earthy neutrals</div><div class="fi-desc" style="font-size:14px;">Camel, cognac, tan, and rich brown are your foundation. Avoid cool greys, navy, and black.</div></div>
+        <div class="card"><div style="font-size:24px;margin-bottom:8px;">🌾</div><div class="fi-title">Harvest colours</div><div class="fi-desc" style="font-size:14px;">Terracotta, mustard, burnt orange, and warm olive are your signature accent colours.</div></div>
+        <div class="card"><div style="font-size:24px;margin-bottom:8px;">⚜️</div><div class="fi-title">Warm metals</div><div class="fi-desc" style="font-size:14px;">Gold, brass, copper, and bronze. Avoid silver, platinum, or chrome.</div></div>
+        <div class="card"><div style="font-size:24px;margin-bottom:8px;">🌰</div><div class="fi-title">Natural textures</div><div class="fi-desc" style="font-size:14px;">Leather, suede, corduroy, wool, and linen in warm earthy tones enhance your natural richness.</div></div>
+      </div>
+      <div class="outfit-grid" style="margin-bottom:20px;">
+        <div class="outfit-card"><div class="outfit-top" style="background:linear-gradient(145deg,#C97B5A,#A05030);">🍂</div><div class="outfit-body"><div class="outfit-occasion">Unisex Look</div><div class="outfit-name">Warm Earth</div><div class="outfit-items">Camel coat or jacket · Olive trousers · Brown leather boots · Gold jewellery or watch</div></div></div>
+        <div class="outfit-card"><div class="outfit-top" style="background:linear-gradient(145deg,#D4A856,#B08030);">🌾</div><div class="outfit-body"><div class="outfit-occasion">Accent Layer</div><div class="outfit-name">Mustard Pop</div><div class="outfit-items">Mustard sweater or hoodie · Brown or cream base · Tan accessories · Gold details</div></div></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CELEBRITIES (expanded with male examples) -->
   <section class="season-section-alt">
     <span class="lbl" style="color:#C47838;">✦ Famous True Autumns</span>
     <div class="h2" style="margin-bottom:36px;">You're in great company</div>
-    <div class="celeb-grid">
-      <div class="celeb-card">
-        <div class="celeb-avatar" style="background:#C97B5A;">🌟</div>
-        <div class="celeb-name">Julianne Moore</div>
-        <div class="celeb-note">Classic warm autumn</div>
-      </div>
-      <div class="celeb-card">
-        <div class="celeb-avatar" style="background:#D4A856;">💫</div>
-        <div class="celeb-name">Marcia Cross</div>
-        <div class="celeb-note">Rich auburn warmth</div>
-      </div>
-      <div class="celeb-card">
-        <div class="celeb-avatar" style="background:#C4844A;">🎬</div>
-        <div class="celeb-name">Emma Stone</div>
-        <div class="celeb-note">Warm autumn colouring</div>
-      </div>
-      <div class="celeb-card">
-        <div class="celeb-avatar" style="background:#B8632A;">🏆</div>
-        <div class="celeb-name">Bryce Dallas Howard</div>
-        <div class="celeb-note">Deep warm autumn</div>
-      </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:24px;">
+      <div class="celeb-card"><div class="celeb-avatar" style="background:#C97B5A;">🌟</div><div class="celeb-name">Julianne Moore</div><div class="celeb-note">Classic warm autumn (she/her)</div></div>
+      <div class="celeb-card"><div class="celeb-avatar" style="background:#D4A856;">💫</div><div class="celeb-name">Marcia Cross</div><div class="celeb-note">Rich auburn warmth (she/her)</div></div>
+      <div class="celeb-card"><div class="celeb-avatar" style="background:#C4844A;">🎬</div><div class="celeb-name">Emma Stone</div><div class="celeb-note">Warm autumn colouring (she/her)</div></div>
+      <div class="celeb-card"><div class="celeb-avatar" style="background:#B8632A;">🏆</div><div class="celeb-name">Bryce Dallas Howard</div><div class="celeb-note">Deep warm autumn (she/her)</div></div>
+      <div class="celeb-card"><div class="celeb-avatar" style="background:#C97B5A;">🎸</div><div class="celeb-name">Eddie Redmayne</div><div class="celeb-note">Warm autumn depth (he/him)</div></div>
+      <div class="celeb-card"><div class="celeb-avatar" style="background:#D4A856;">🎭</div><div class="celeb-name">Jake Gyllenhaal</div><div class="celeb-note">Earthly warm autumn (he/him)</div></div>
+      <div class="celeb-card"><div class="celeb-avatar" style="background:#C4844A;">🎨</div><div class="celeb-name">Jessica Chastain</div><div class="celeb-note">Rich warm red hair (she/her)</div></div>
     </div>
   </section>
 
@@ -297,6 +286,6 @@
 
   <div class="footer-mini">
     <div class="fm-logo">Chroma<em>Fit</em></div>
-    <div class="fm-links"><a  href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}">All Seasons</a></div>
+    <div class="fm-links"><a href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}">All Seasons</a></div>
   </div>
 @endsection
