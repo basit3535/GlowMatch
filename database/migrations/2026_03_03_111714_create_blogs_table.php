@@ -39,7 +39,9 @@ return new class extends Migration
             $table->boolean('status')
                 ->default(1)
                 ->comment('0 = inactive, 1 = active');
-
+            $table->string('category')->nullable();
+            $table->string('reading_time')->nullable();
+            $table->boolean('featured')->default(false);
             $table->softDeletes();
             $table->timestamps();
         });

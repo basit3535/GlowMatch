@@ -895,4 +895,75 @@
             grid-template-columns: 1fr;
         }
     }
+
+    .gender-toggle {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 32px;
+        flex-wrap: wrap;
+        border-bottom: 1px solid rgba(0, 128, 255, 0.2);
+        padding-bottom: 16px;
+    }
+
+    .gender-btn {
+        background: none;
+        border: none;
+        padding: 8px 20px;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        border-radius: 40px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        color: #5A4E48;
+        background: #F0F4F8;
+    }
+
+    .gender-btn.active {
+        background: rgb(44, 36, 32);
+        color: white;
+        box-shadow: 0 2px 8px rgba(44, 36, 32, 0.3);
+    }
+
+    .gender-content {
+        display: none;
+    }
+
+    .gender-content.active-gender {
+        display: block;
+    }
+
+    /* Adjust card styles to be consistent */
+    .feature-row,
+    .makeup-row,
+    .outfit-grid,
+    .celeb-grid {
+        transition: all 0.2s;
+    }
+
+    .btn-outline {
+        background: transparent;
+        border: 1px solid;
+        padding: 8px 20px;
+        border-radius: 40px;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .btn-white {
+        background: white;
+        color: #1840A0;
+        padding: 8px 20px;
+        border-radius: 40px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .btn-outline:hover,
+    .btn-white:hover {
+        opacity: 0.85;
+    }
 </style>

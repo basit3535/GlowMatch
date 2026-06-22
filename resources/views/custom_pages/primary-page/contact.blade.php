@@ -8,7 +8,7 @@
                 <h2 class="section-h2">We'd love to<br>hear from you</h2>
                 <p class="clp-sub">Questions about your colour season, partnership inquiries, or just want to say hello —
                     we're here and we respond fast.</p>
-                <div class="contact-info">
+                {{-- <div class="contact-info">
                     <div class="ci">
                         <div class="ci-icon">📧</div>
                         <div>
@@ -37,7 +37,7 @@
                             <div class="ci-val">Usually within 24 hours</div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <div
                     style="margin-bottom:20px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(250,247,242,.3);">
                     Follow Along</div>

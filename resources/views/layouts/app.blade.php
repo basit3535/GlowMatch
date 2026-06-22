@@ -2,9 +2,28 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <title>ChromaFit — Your Colour & Style Universe</title>
+
+    <meta name="description" content="Discover your perfect colours, style recommendations, and personalized fashion insights with ChromaFit.">
+
+    <link rel="canonical" href="https://chromafit.com">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ChromaFit — Your Colour & Style Universe">
+    <meta property="og:description" content="Discover your perfect colours, style recommendations, and personalized fashion insights with ChromaFit.">
+    <meta property="og:url" content="https://chromafit.com">
+    <meta property="og:image" content="https://chromafit.com/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ChromaFit — Your Colour & Style Universe">
+    <meta name="twitter:description" content="Discover your perfect colours, style recommendations, and personalized fashion insights with ChromaFit.">
+    <meta name="twitter:image" content="https://chromafit.com/images/og-image.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
 
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
@@ -20,7 +39,7 @@
 
     <!-- ── NAVIGATION ── -->
     <nav>
-        <div class="nav-logo">Chroma<em>Fit</em></div>
+        <div class="nav-logo"><a href="{{ route('show.home_page') }}">Chroma<em>Fit</em></a></div>
         <div class="nav-center">
             <a href="{{ route('show.home_page') }}" class="active" id="nav-home">Home</a>
             <a href="{{ route('show.custom_pages', ['slug' => 'about']) }}" id="nl-about">About</a>
@@ -89,6 +108,12 @@
                 <div class="footer-logo">Chroma<em>Fit</em></div>
                 <div class="footer-tagline">Your personal colour season and style guide — powered by colour theory and
                     modern insights.</div>
+                <div class="footer-tagline">
+                    GlowMatch is a trading style of SB Intercontinental LTD.
+                    <br>
+                    Registered in England and Wales (Company No. 17047376).
+                    <br>
+                    Registered Office: 22 Balliol Street, Manchester, England, M8 0WS</div>
                 <div class="footer-social">
                     <div class="social-btn">📸</div>
                     <div class="social-btn">🎵</div>
@@ -115,7 +140,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <div>© 2025 ChromaFit. All rights reserved.</div>
+            <div>© 2026 SB INTERCONTINENTAL LIMITED. All rights reserved.</div>
             <div><a>Privacy</a><a>Terms</a><a>Cookies</a></div>
         </div>
     </footer>
