@@ -72,7 +72,7 @@
                         </div>
                     </div>
                 @empty
-                    <p>No blog posts found.</p>
+                    <p>No blog posts yet.</p>
                 @endforelse
             </div>
 
