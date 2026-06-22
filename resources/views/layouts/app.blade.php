@@ -6,24 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>ChromaFit — Your Colour & Style Universe</title>
+    <title>GlowMatch. — Your Colour & Style Universe</title>
 
-    <meta name="description" content="Discover your perfect colours, style recommendations, and personalized fashion insights with ChromaFit.">
+    <meta name="description"
+        content="Discover your perfect colours, style recommendations, and personalized fashion insights with GlowMatch..">
 
-    <link rel="canonical" href="https://chromafit.com">
+    <link rel="canonical" href="https://glowmatch.co.uk">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="ChromaFit — Your Colour & Style Universe">
-    <meta property="og:description" content="Discover your perfect colours, style recommendations, and personalized fashion insights with ChromaFit.">
-    <meta property="og:url" content="https://chromafit.com">
-    <meta property="og:image" content="https://chromafit.com/images/og-image.jpg">
+    <meta property="og:title" content="GlowMatch. — Your Colour & Style Universe">
+    <meta property="og:description"
+        content="Discover your perfect colours, style recommendations, and personalized fashion insights with GlowMatch..">
+    <meta property="og:url" content="https://glowmatch.co.uk">
+    <meta property="og:image" content="https://glowmatch.co.uk/images/og-image.jpg">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ChromaFit — Your Colour & Style Universe">
-    <meta name="twitter:description" content="Discover your perfect colours, style recommendations, and personalized fashion insights with ChromaFit.">
-    <meta name="twitter:image" content="https://chromafit.com/images/og-image.jpg">
+    <meta name="twitter:title" content="GlowMatch. — Your Colour & Style Universe">
+    <meta name="twitter:description"
+        content="Discover your perfect colours, style recommendations, and personalized fashion insights with GlowMatch..">
+    <meta name="twitter:image" content="https://glowmatch.co.uk/images/og-image.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
 
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
@@ -113,7 +116,8 @@
                     <br>
                     Registered in England and Wales (Company No. 17047376).
                     <br>
-                    Registered Office: 22 Balliol Street, Manchester, England, M8 0WS</div>
+                    Registered Office: 22 Balliol Street, Manchester, England, M8 0WS
+                </div>
                 <div class="footer-social">
                     <div class="social-btn">📸</div>
                     <div class="social-btn">🎵</div>

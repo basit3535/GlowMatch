@@ -7,7 +7,7 @@
                 <span class="section-label">✦ Our Story</span>
                 <h1 class="section-h2">We believe everyone deserves to feel beautiful <em
                         style="font-style:italic;color:var(--rose);">in colour</em></h1>
-                <p style="font-size:16px;font-weight:300;color:var(--muted);line-height:1.75;margin-bottom:28px;">ChromaFit
+                <p style="font-size:16px;font-weight:300;color:var(--muted);line-height:1.75;margin-bottom:28px;">GlowMatch.
                     was born from a simple frustration: spending hours shopping only to get home and realize something looks
                     wrong. Usually, it's a colour problem — not a you problem.</p>
                 <p style="font-size:16px;font-weight:300;color:var(--muted);line-height:1.75;margin-bottom:36px;">We combined
@@ -92,7 +92,7 @@
         <!-- Team -->
         <section class="section">
             <span class="section-label">✦ The Team</span>
-            <h2 class="section-h2">People behind ChromaFit</h2>
+            <h2 class="section-h2">People behind GlowMatch.</h2>
             <p class="section-sub">A small team of colour nerds, stylists, and technologists united by one obsession.</p>
             <div class="team-grid">
                 <div class="team-card">
@@ -102,7 +102,7 @@
                         <div class="team-name">Aisha Noor</div>
                         <div class="team-role">Founder & Colour Director</div>
                         <div class="team-bio">Former personal stylist with 12 years of experience across London and Dubai.
-                            Aisha developed ChromaFit's core analysis methodology.</div>
+                            Aisha developed GlowMatch.'s core analysis methodology.</div>
                     </div>
                 </div>
                 <div class="team-card">
@@ -111,7 +111,7 @@
                         <div class="team-name">Rahul Mehta</div>
                         <div class="team-role">Head of Technology</div>
                         <div class="team-bio">Full-stack engineer and AI enthusiast. Rahul built the analysis engine that
-                            powers ChromaFit's recommendations.</div>
+                            powers GlowMatch.'s recommendations.</div>
                     </div>
                 </div>
                 <div class="team-card">
@@ -120,7 +120,7 @@
                     <div class="team-body">
                         <div class="team-name">Zara Hassan</div>
                         <div class="team-role">Head of Design & UX</div>
-                        <div class="team-bio">Brand designer and typography lover. Zara ensures ChromaFit is as beautiful
+                        <div class="team-bio">Brand designer and typography lover. Zara ensures GlowMatch. is as beautiful
                             and intuitive as the palettes it creates.</div>
                     </div>
                 </div>

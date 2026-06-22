@@ -13,7 +13,7 @@
                         <div class="ci-icon">📧</div>
                         <div>
                             <div class="ci-label">Email</div>
-                            <div class="ci-val">hello@chromafit.co</div>
+                            <div class="ci-val">hello@glowmatch.co</div>
                         </div>
                     </div>
                     <div class="ci">
@@ -101,7 +101,7 @@
                         a season.</div>
                 </div>
                 <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-q">Is ChromaFit really free?</div>
+                    <div class="faq-q">Is GlowMatch. really free?</div>
                     <div class="faq-a">Yes — the quiz, your results, and all our blog content are completely free. We may
                         offer premium features in the future, but the core analysis will always be free.</div>
                 </div>
@@ -112,7 +112,7 @@
                         colour.</div>
                 </div>
                 <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-q">Can men use ChromaFit?</div>
+                    <div class="faq-q">Can men use GlowMatch.?</div>
                     <div class="faq-a">Absolutely! Colour seasons are not gender-specific. The quiz and recommendations
                         work for everyone — the colour principles are universal, and the body type advice is adaptable.
                     </div>
