@@ -2679,21 +2679,21 @@
 
         .btn-outline {
             background: transparent;
-            color: var(--quiz-text);
-            border: 1.5px solid var(--quiz-border);
+            color: var(--quiz-text) !important;
+            border: 1.5px solid var(--quiz-border) !important;
             border-radius: var(--quiz-radius-sm);
             padding: 13px 24px;
             font-family: 'DM Sans', sans-serif;
             font-size: 14px;
             cursor: pointer;
             transition: all 0.2s;
-            text-decoration: none;
+            text-decoration: none !important;
             display: inline-block;
         }
 
         .btn-outline:hover {
-            border-color: var(--quiz-accent);
-            color: var(--quiz-accent);
+            border-color: var(--quiz-accent) !important;
+            color: var(--quiz-accent) !important;
         }
 
         /* ─── Responsive ─── */
