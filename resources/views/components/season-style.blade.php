@@ -920,9 +920,9 @@
     }
 
     .gender-btn.active {
-        background: #0080FF;
+        background: rgb(44, 36, 32);
         color: white;
-        box-shadow: 0 2px 8px rgba(0, 128, 255, 0.3);
+        box-shadow: 0 2px 8px rgba(44, 36, 32, 0.3);
     }
 
     .gender-content {

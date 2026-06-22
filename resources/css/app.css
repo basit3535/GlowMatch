@@ -266,12 +266,12 @@
 
     .btn-outline {
         background: transparent;
-        color: var(--charcoal) !important;
+        color: var(--charcoal) ;
         padding: 14px 32px;
         border-radius: 50px;
         font-size: 14px;
         font-weight: 500;
-        border: 1.5px solid var(--border) !important;
+        border: 1.5px solid var(--border) ;
         cursor: pointer;
         font-family: 'Jost', sans-serif;
         transition: all .2s;
@@ -2914,7 +2914,7 @@
 
     .nl-input {
         flex: 1;
-        padding: 14px 20px;
+        padding: 14px 20px !important;
         border: 1.5px solid var(--border);
         border-radius: 50px 0 0 50px;
         font-size: 14px;
@@ -2930,15 +2930,15 @@
     }
 
     .nl-btn {
-        background: var(--terracotta);
-        color: #fff;
-        padding: 14px 24px;
+        background: var(--terracotta) !important;
+        color: #fff !important;
+        padding: 14px 24px !important;
         border: none;
-        border-radius: 0 50px 50px 0;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        font-family: 'Jost', sans-serif;
+        border-radius: 0 50px 50px 0 !important;
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        cursor: pointer !important;
+        font-family: 'Jost', sans-serif !important;
         white-space: nowrap;
         transition: background .2s;
     }
@@ -3077,7 +3077,7 @@
 
     .cf-input {
         width: 100%;
-        padding: 14px 18px;
+        padding: 14px 18px !important;
         border: 1.5px solid var(--border);
         border-radius: 12px;
         font-size: 15px;
@@ -3127,17 +3127,17 @@
 
     .cf-submit {
         width: 100%;
-        padding: 16px;
-        background: var(--charcoal);
-        color: var(--cream);
-        border: none;
-        border-radius: 14px;
-        font-size: 15px;
-        font-weight: 600;
-        cursor: pointer;
-        font-family: 'Jost', sans-serif;
+        padding: 16px !important;
+        background: var(--charcoal) !important;
+        color: var(--cream) !important;
+        border: none !important;
+        border-radius: 14px !important;
+        font-size: 15px !important;
+        font-weight: 600 !important;
+        cursor: pointer !important;
+        font-family: 'Jost', sans-serif !important;
         transition: background .2s;
-        margin-top: 8px;
+        margin-top: 8px !important;
     }
 
     .cf-submit:hover {

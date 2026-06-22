@@ -11,6 +11,7 @@ class Blog extends Model
     protected $fillable = [
         'title',
         'slug',
+        'category',
         'meta_title',
         'meta_description',
         'language',
@@ -18,6 +19,8 @@ class Blog extends Model
         'parent_id',
         'image_id',
         'status',
+        'reading_time',
+        'featured',
     ];
 
     public function image()

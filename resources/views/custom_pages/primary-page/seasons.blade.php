@@ -6,7 +6,7 @@
     <div class="page" id="page-seasons">
         <div class="hub-hero">
             <div class="lbl" style="color:#C97B5A;margin-bottom:16px;">✦ All 12 Colour Seasons</div>
-            <div class="hub-h1">Your colour<br><em>universe</em></div>
+            <h1 class="hub-h1">Your colour<br><em>universe</em></h1>
             <p class="hub-sub">The 12-season colour system goes beyond the basics. Find your exact season — the one that
                 truly captures your unique combination of features.</p>
 

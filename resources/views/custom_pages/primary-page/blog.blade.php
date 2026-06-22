@@ -1,146 +1,209 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="page" id="page-blog">
-        <div class="blog-hero">
-            <span class="section-label">✦ Style & Colour Journal</span>
-            <h1 class="section-h2">Inspiration for every season</h1>
-            <p style="color:var(--muted);font-size:16px;max-width:480px;margin-top:10px;">Deep dives into colour theory, body
-                type styling, makeup, and body-positive fashion advice.</p>
-            <div class="blog-filters">
-                <div class="bf-pill active">All Articles</div>
-                <div class="bf-pill">Colour Theory</div>
-                <div class="bf-pill">Body Types</div>
-                <div class="bf-pill">Makeup</div>
-                <div class="bf-pill">Capsule Wardrobe</div>
-                <div class="bf-pill">Style Tips</div>
-            </div>
+<div class="page" id="page-blog">
+    <!-- Hero -->
+    <div class="blog-hero">
+        <span class="section-label">✦ Style & Colour Journal</span>
+        <h1 class="section-h2">Inspiration for every season</h1>
+        <p style="color:var(--muted);font-size:16px;max-width:480px;margin-top:10px;">
+            Deep dives into colour theory, body type styling, makeup, and body-positive fashion advice.
+        </p>
+        <!-- Filters -->
+        <div class="blog-filters" id="blog-filters">
+            <a href="#" data-category="" class="bf-pill active">All Articles</a>
+            <a href="#" data-category="colour-theory" class="bf-pill">Colour Theory</a>
+            <a href="#" data-category="body-types" class="bf-pill">Body Types</a>
+            <a href="#" data-category="makeup" class="bf-pill">Makeup</a>
+            <a href="#" data-category="capsule-wardrobe" class="bf-pill">Capsule Wardrobe</a>
+            <a href="#" data-category="style-tips" class="bf-pill">Style Tips</a>
         </div>
+    </div>
 
+    <!-- Blog Container -->
+    <div id="blog-container">
         <div class="blog-layout">
-            <div class="blog-featured-wrap">
-                <div class="blog-feat-img">🍂</div>
-                <div class="blog-feat-body">
-                    <span class="tag tag-rose" style="margin-bottom:14px;display:inline-block;">Colour Theory</span>
-                    <div class="blog-feat-title">The Complete Guide to Autumn Colour Season: Palette, Makeup & Wardrobe
+            {{-- Featured Article --}}
+            @if($data->featured)
+                <div class="blog-featured-wrap">
+                    <div class="blog-feat-img">
+                        @if($data->featured->image)
+                            <img src="{{ asset('storage/' . $data->featured->image->path) }}" alt="{{ $data->featured->title }}">
+                        @else
+                            🍂
+                        @endif
                     </div>
-                    <div class="blog-feat-meta">
-                        <span>June 12, 2025</span>
-                        <span>·</span>
-                        <span>8 min read</span>
+                    <div class="blog-feat-body">
+                        <span class="tag tag-rose" style="margin-bottom:14px;display:inline-block;">
+                            {{ $data->featured->category ?? 'Colour Theory' }}
+                        </span>
+                        <div class="blog-feat-title">{{ $data->featured->title }}</div>
+                        <div class="blog-feat-meta">
+                            <span>{{ $data->featured->created_at->format('M d, Y') }}</span>
+                            <span>·</span>
+                            <span>{{ $data->featured->reading_time ?? '5 min read' }}</span>
+                        </div>
+                        <div class="blog-feat-excerpt">{{ Str::limit($data->featured->description, 150) }}</div>
+                        <a href="{{ route('blog.show', $data->featured->slug) }}" class="btn-outline" style="font-size:13px;padding:10px 22px;">Read Article →</a>
                     </div>
-                    <div class="blog-feat-excerpt">If warm, earthy, and rich tones make you look radiant, you're likely an
-                        autumn. Dive into everything about this gorgeous season — from the best foundation shades to outfit
-                        formulas that work year-round.</div>
-                    <button class="btn-outline" style="font-size:13px;padding:10px 22px;">Read Article →</button>
                 </div>
+            @endif
+
+            {{-- Blog Cards Grid --}}
+            <div class="blog-cards" id="blog-cards">
+                @forelse($data->blogs as $blog)
+                    <div class="blog-card">
+                        <div class="bc-img" style="background:linear-gradient(145deg, #7B8EC9, #C8A2C8);">
+                            @if($blog->image)
+                                <img src="{{ asset('storage/' . $blog->image->path) }}" alt="{{ $blog->title }}">
+                            @else
+                                🌸
+                            @endif
+                        </div>
+                        <div class="bc-body">
+                            <div class="bc-tag">{{ $blog->category ?? 'Style Tips' }}</div>
+                            <div class="bc-title">{{ $blog->title }}</div>
+                            <div class="bc-excerpt">{{ Str::limit($blog->description, 100) }}</div>
+                            <div class="bc-meta">
+                                <span>{{ $blog->created_at->format('M d, Y') }}</span>
+                                <span>·</span>
+                                <span>{{ $blog->reading_time ?? '4 min' }}</span>
+                            </div>
+                        </div>
+                    </div>
+                @empty
+                    <p>No blog posts found.</p>
+                @endforelse
             </div>
 
-            <div class="blog-cards">
-                <div class="blog-card">
-                    <div class="bc-img" style="background:linear-gradient(145deg,#7B8EC9,#C8A2C8);">🌸</div>
-                    <div class="bc-body">
-                        <div class="bc-tag">Body Types</div>
-                        <div class="bc-title">Dressing the Pear Shape: What Actually Flatters</div>
-                        <div class="bc-excerpt">Forget the old rules. An honest, body-positive guide to styling your
-                            pear-shaped silhouette with confidence.</div>
-                        <div class="bc-meta"><span>May 30, 2025</span><span>·</span><span>5 min</span></div>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <div class="bc-img" style="background:linear-gradient(145deg,#3C4A6B,#6B7F9E);">❄️</div>
-                    <div class="bc-body">
-                        <div class="bc-tag">Colour Season</div>
-                        <div class="bc-title">Winter Palette: Embracing Bold Jewel Tones</div>
-                        <div class="bc-excerpt">Crisp, cool, and high-contrast — winters shine in the shades others shy away
-                            from. A guide to wearing your boldest self.</div>
-                        <div class="bc-meta"><span>May 18, 2025</span><span>·</span><span>6 min</span></div>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <div class="bc-img" style="background:linear-gradient(145deg,#F4C7A0,#E8A882);">💄</div>
-                    <div class="bc-body">
-                        <div class="bc-tag">Makeup</div>
-                        <div class="bc-title">Best Lipstick Shades for Every Skin Undertone</div>
-                        <div class="bc-excerpt">From your perfect nude to a show-stopping red — undertone-matched lip colour
-                            makes an enormous difference.</div>
-                        <div class="bc-meta"><span>May 10, 2025</span><span>·</span><span>4 min</span></div>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <div class="bc-img" style="background:linear-gradient(145deg,#7A9E7E,#A8C5A0);">🌿</div>
-                    <div class="bc-body">
-                        <div class="bc-tag">Capsule Wardrobe</div>
-                        <div class="bc-title">Build a Capsule Wardrobe Around Your Colour Season</div>
-                        <div class="bc-excerpt">A minimalist wardrobe strategy that works with your season's palette. Less
-                            clutter, more cohesion.</div>
-                        <div class="bc-meta"><span>April 28, 2025</span><span>·</span><span>7 min</span></div>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <div class="bc-img" style="background:linear-gradient(145deg,#C8A2C8,#B0C4DE);">☁️</div>
-                    <div class="bc-body">
-                        <div class="bc-tag">Colour Season</div>
-                        <div class="bc-title">Summer Palette: The Art of Soft, Muted Elegance</div>
-                        <div class="bc-excerpt">Summer seasons have quiet magnetism — dusty pinks, cool lavenders, and
-                            powder blues that feel effortlessly chic.</div>
-                        <div class="bc-meta"><span>April 14, 2025</span><span>·</span><span>5 min</span></div>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <div class="bc-img" style="background:linear-gradient(145deg,#D4845A,#E8C080);">🌸</div>
-                    <div class="bc-body">
-                        <div class="bc-tag">Style Tips</div>
-                        <div class="bc-title">Spring Season: How to Wear Your Best Warm Brights</div>
-                        <div class="bc-excerpt">Springs are made for clear, fresh, and warm colours. Here's how to wear them
-                            without looking overwhelming.</div>
-                        <div class="bc-meta"><span>April 2, 2025</span><span>·</span><span>6 min</span></div>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <div class="bc-img" style="background:linear-gradient(145deg,#E8DDD0,#C8B8A8);">👗</div>
-                    <div class="bc-body">
-                        <div class="bc-tag">Body Types</div>
-                        <div class="bc-title">The Hourglass Myth: What to Actually Wear</div>
-                        <div class="bc-excerpt">Everyone says hourglass figures can wear anything. But what really works? We
-                            break down the truth with practical examples.</div>
-                        <div class="bc-meta"><span>March 22, 2025</span><span>·</span><span>5 min</span></div>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <div class="bc-img" style="background:linear-gradient(145deg,#B8D4C8,#88B0A0);">🪞</div>
-                    <div class="bc-body">
-                        <div class="bc-tag">Style Tips</div>
-                        <div class="bc-title">How to Find Your Undertone at Home (No Guessing)</div>
-                        <div class="bc-excerpt">Three foolproof methods to identify your skin undertone using only things
-                            you already have at home.</div>
-                        <div class="bc-meta"><span>March 10, 2025</span><span>·</span><span>4 min</span></div>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <div class="bc-img" style="background:linear-gradient(145deg,#E0C8D8,#C8A8C0);">💅</div>
-                    <div class="bc-body">
-                        <div class="bc-tag">Makeup</div>
-                        <div class="bc-title">Season-Matched Nail Colours: Your Complete Guide</div>
-                        <div class="bc-excerpt">Your nail colour should harmonise with your season palette — here's exactly
-                            what shades to reach for.</div>
-                        <div class="bc-meta"><span>February 28, 2025</span><span>·</span><span>3 min</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Newsletter -->
-        <div class="newsletter-bar">
-            <div class="nl-text">
-                <h2 class="section-h2">Get colour tips in your inbox</h2>
-                <p>New articles on seasons, styling, and colour every week.</p>
-            </div>
-            <div class="nl-form">
-                <input class="nl-input" type="email" placeholder="your@email.com" />
-                <button class="nl-btn"
-                    onclick="this.textContent='Subscribed ✓';this.style.background='var(--sage)';">Subscribe</button>
+            {{-- Pagination --}}
+            <div class="pagination-wrapper" id="pagination-wrapper">
+                {{ $data->blogs->links() }}
             </div>
         </div>
     </div>
+
+    <!-- Newsletter (static) -->
+    <div class="newsletter-bar">
+        <div class="nl-text">
+            <h2 class="section-h2">Get colour tips in your inbox</h2>
+            <p>New articles on seasons, styling, and colour every week.</p>
+        </div>
+        <div class="nl-form">
+            <input class="nl-input" type="email" placeholder="your@email.com" />
+            <button class="nl-btn" onclick="this.textContent='Subscribed ✓';this.style.background='var(--sage)';">Subscribe</button>
+        </div>
+    </div>
+</div>
+@endsection
+@section('scripts')
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const container = document.getElementById('blog-container');
+    const filters = document.getElementById('blog-filters');
+    let currentCategory = '';
+
+    // Fetch blogs via AJAX
+    function fetchBlogs(category, page = 1) {
+        const url = `{{ route('blog.fetch') }}?category=${encodeURIComponent(category)}&page=${page}`;
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                // Rebuild the layout content
+                const layout = container.querySelector('.blog-layout');
+                let featuredHtml = data.featured ? generateFeaturedHtml(data.featured) : '';
+                let cardsHtml = data.blogs.length
+                    ? data.blogs.map(blog => generateCardHtml(blog)).join('')
+                    : '<p>No blog posts found.</p>';
+
+                layout.innerHTML = `
+                    ${featuredHtml}
+                    <div class="blog-cards" id="blog-cards">${cardsHtml}</div>
+                    <div class="pagination-wrapper" id="pagination-wrapper">${data.pagination}</div>
+                `;
+            })
+            .catch(error => console.error('Error fetching blogs:', error));
+    }
+
+    // Generate a single card HTML
+    function generateCardHtml(blog) {
+        const imageHtml = blog.image ? `<img src="/storage/${blog.image.path}" alt="${blog.title}">` : '🌸';
+        const category = blog.category || 'Style Tips';
+        const readingTime = blog.reading_time || '4 min';
+        const date = new Date(blog.created_at).toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' });
+        return `
+            <div class="blog-card">
+                <div class="bc-img" style="background:linear-gradient(145deg, #7B8EC9, #C8A2C8);">${imageHtml}</div>
+                <div class="bc-body">
+                    <div class="bc-tag">${category}</div>
+                    <div class="bc-title">${blog.title}</div>
+                    <div class="bc-excerpt">${blog.description ? blog.description.substring(0, 100) + '...' : ''}</div>
+                    <div class="bc-meta">
+                        <span>${date}</span>
+                        <span>·</span>
+                        <span>${readingTime}</span>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    // Generate featured article HTML
+    function generateFeaturedHtml(featured) {
+        const imageHtml = featured.image ? `<img src="/storage/${featured.image.path}" alt="${featured.title}">` : '🍂';
+        const category = featured.category || 'Colour Theory';
+        const readingTime = featured.reading_time || '5 min read';
+        const date = new Date(featured.created_at).toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' });
+        return `
+            <div class="blog-featured-wrap">
+                <div class="blog-feat-img">${imageHtml}</div>
+                <div class="blog-feat-body">
+                    <span class="tag tag-rose" style="margin-bottom:14px;display:inline-block;">${category}</span>
+                    <div class="blog-feat-title">${featured.title}</div>
+                    <div class="blog-feat-meta">
+                        <span>${date}</span>
+                        <span>·</span>
+                        <span>${readingTime}</span>
+                    </div>
+                    <div class="blog-feat-excerpt">${featured.description ? featured.description.substring(0, 150) + '...' : ''}</div>
+                    <a href="/blog/${featured.slug}" class="btn-outline" style="font-size:13px;padding:10px 22px;">Read Article →</a>
+                </div>
+            </div>
+        `;
+    }
+
+    // Filter click (event delegation)
+    filters.addEventListener('click', function(e) {
+        const link = e.target.closest('a');
+        if (!link) return;
+        e.preventDefault();
+        const category = link.dataset.category;
+        currentCategory = category;
+        // Update active state
+        filters.querySelectorAll('a').forEach(a => a.classList.remove('active'));
+        link.classList.add('active');
+        fetchBlogs(category, 1);
+    });
+
+    // Pagination click (event delegation)
+    container.addEventListener('click', function(e) {
+        const pageLink = e.target.closest('.pagination-wrapper a');
+        if (!pageLink) return;
+        e.preventDefault();
+        const url = new URL(pageLink.href);
+        const page = url.searchParams.get('page') || 1;
+        fetchBlogs(currentCategory, page);
+    });
+
+    // Set initial category from URL query string
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialCategory = urlParams.get('category') || '';
+    if (initialCategory) {
+        filters.querySelectorAll('a').forEach(a => {
+            a.classList.toggle('active', a.dataset.category === initialCategory);
+        });
+        currentCategory = initialCategory;
+    }
+});
+</script>
 @endsection
