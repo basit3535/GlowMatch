@@ -29,9 +29,7 @@
     <meta name="twitter:image" content="https://glowmatch.co.uk/images/og-image.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
 
-    @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @endif
+     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap"
         rel="stylesheet" />
