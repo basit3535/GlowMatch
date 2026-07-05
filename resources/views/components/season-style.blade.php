@@ -458,7 +458,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
-        padding: 60px 6%;
+        padding: 120px 6%;
         gap: 60px;
     }
 
@@ -853,8 +853,10 @@
     }
 
     @media(max-width:900px) {
+        .season-page-hero{
+            grid-template-columns: 1fr;
+        }
 
-        .season-page-hero,
         .two-col {
             grid-template-columns: 1fr;
         }
@@ -966,4 +968,300 @@
     .btn-white:hover {
         opacity: 0.85;
     }
+
+    /* Add these styles at the end of your <style> section */
+
+/* Fix hero to be full width */
+.season-page-hero {
+    padding: 120px 6%;
+    margin: 0;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+
+/* Mobile responsive fixes */
+@media (max-width: 768px) {
+    .season-page-hero {
+        padding: 80px 20px;
+        min-height: auto;
+        gap: 30px;
+    }
+
+    .sp-title {
+        font-size: clamp(36px, 10vw, 52px) !important;
+    }
+
+    .sp-tagline {
+        font-size: 16px;
+    }
+
+    .sp-desc {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+
+    .sp-palette-preview {
+        gap: 6px;
+    }
+
+    .sp-swatch {
+        width: 36px;
+        height: 36px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    /* Make sections full width on mobile */
+    .season-section,
+    .season-section-alt {
+        padding: 40px 20px;
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .two-col {
+        gap: 30px;
+    }
+
+    .three-col {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .makeup-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .outfit-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .outfit-top {
+        height: 100px;
+    }
+
+    .avoid-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .avoid-card {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .avoid-swatch {
+        width: 32px;
+        height: 32px;
+    }
+
+    .gender-toggle {
+        gap: 6px;
+        padding-bottom: 12px;
+    }
+
+    .gender-btn {
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+
+    .color-grid {
+        gap: 6px;
+    }
+
+    .cswatch {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+    }
+
+    .cswatch-lg {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+    }
+
+    .swatch-strip {
+        height: 10px;
+    }
+
+    .feature-item {
+        padding: 14px 0;
+        gap: 14px;
+    }
+
+    .fi-num {
+        font-size: 24px;
+        width: 30px;
+    }
+
+    /* Footer mobile */
+    .footer-mini {
+        padding: 30px 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .fm-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Hero visual badges */
+    .sp-visual-badges {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .sp-badge {
+        padding: 12px;
+    }
+
+    .sp-badge-icon {
+        font-size: 18px;
+    }
+
+    .sp-badge-title {
+        font-size: 11px;
+    }
+
+    .sp-badge-sub {
+        font-size: 10px;
+    }
+
+    /* Navigation between seasons */
+    .season-nav {
+        padding: 30px 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    /* Celebrity cards */
+    .celeb-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .celeb-card {
+        padding: 14px;
+    }
+
+    .celeb-avatar {
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+    }
+
+    .celeb-name {
+        font-size: 12px;
+    }
+
+    .celeb-note {
+        font-size: 10px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .season-page-hero {
+        padding: 60px 16px;
+    }
+
+    .sp-title {
+        font-size: clamp(28px, 8vw, 36px) !important;
+    }
+
+    .makeup-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .avoid-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .celeb-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sp-palette-preview {
+        gap: 4px;
+    }
+
+    .sp-swatch {
+        width: 28px;
+        height: 28px;
+        border-radius: 8px;
+    }
+
+    .gender-toggle {
+        gap: 4px;
+    }
+
+    .gender-btn {
+        padding: 4px 10px;
+        font-size: 11px;
+    }
+
+    .cswatch {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+    }
+
+    .cswatch-lg {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .tooltip-box {
+        font-size: 10px !important;
+        padding: 4px 10px !important;
+    }
+}
+
+/* Fix for tooltips on mobile - make them work better */
+@media (max-width: 768px) {
+    .tooltip-trigger .tooltip-box {
+        display: none;
+    }
+
+    /* Show tooltips on click for mobile */
+    .tooltip-trigger:active .tooltip-box {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: normal;
+        max-width: 280px;
+        width: auto;
+        padding: 16px 20px;
+        font-size: 14px;
+        z-index: 1000;
+        background: #1e293b;
+        color: #f1f5f9;
+        border-radius: 12px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .tooltip-trigger:active .tooltip-box::after {
+        display: none;
+    }
+}
 </style>

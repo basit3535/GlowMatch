@@ -1328,7 +1328,112 @@
         color: var(--muted);
         cursor: default;
     }
+       .image-stack {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.stack-img {
+    position: absolute;
+    width: 380px;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    transition: all 0.4s ease;
+}
+
+/* Left card */
+.img-left {
+    left: 0;
+    top: 120px;
+    transform: rotate(-10deg);
+    z-index: 1;
+    animation: floatLeft 6s ease-in-out infinite;
+}
+
+/* Center card */
+.img-center {
+    top: 20px;
+    z-index: 2;
+    transform: rotate(0deg);
+    animation: floatCenter 5s ease-in-out infinite;
+}
+
+/* Right card */
+.img-right {
+    right: 0;
+    top: 120px;
+    transform: rotate(10deg);
+    z-index: 3;
+    animation: floatRight 7s ease-in-out infinite;
+}
+
+.image-stack:hover .img-left {
+    transform: rotate(-15deg) translateX(-20px) scale(1.03);
+}
+
+.image-stack:hover .img-center {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.image-stack:hover .img-right {
+    transform: rotate(15deg) translateX(20px) scale(1.03);
+}
+
+@keyframes floatLeft {
+    0%,100% {
+        transform: rotate(-10deg) translateY(0);
+    }
+    50% {
+        transform: rotate(-10deg) translateY(-15px);
+    }
+}
+
+@keyframes floatCenter {
+    0%,100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes floatRight {
+    0%,100% {
+        transform: rotate(10deg) translateY(0);
+    }
+    50% {
+        transform: rotate(10deg) translateY(-12px);
+    }
+}
+
+@media (max-width: 768px) {
+    .image-stack {
+        height: 380px;
+        margin-top: 40px;
+    }
+
+    .stack-img {
+        width: 220px;
+    }
+
+    .img-left {
+        left: 20px;
+        top: 100px;
+    }
+
+    .img-center {
+        top: 20px;
+    }
+
+    .img-right {
+        right: 20px;
+        top: 100px;
+    }
+}
     /* ══════════════════════════════════════════
         SEASONS / PALETTE PAGE
         ══════════════════════════════════════════ */

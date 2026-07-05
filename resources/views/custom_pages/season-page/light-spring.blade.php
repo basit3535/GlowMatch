@@ -96,13 +96,11 @@
         <div>
             <div class="sp-eyebrow">
                 <div class="sp-line" style="background:#C97B3A;"></div>
-                <span class="sp-season-type" style="color:#C97B3A;">🌸 Spring · Warm · Light</span>
+                <span class="sp-season-type" style="color:#C97B3A;">{{ $data->content->season_hero_eyebrow_label->value ?? '' }}</span>
             </div>
-            <h1 class="sp-title" style="font-size:clamp(52px,7vw,88px);">Light Spring</h1>
-            <div class="sp-tagline" style="color:#3C180066;">"Soft as morning light, warm as sunshine"</div>
-            <p class="sp-desc" style="color:#3C180088;">Light Spring is the most delicate and ethereal of all spring types.
-                Your natural colouring is light, warm, and softly luminous — think golden hour, peach blossoms, and warm
-                cream.</p>
+            <h1 class="sp-title" style="font-size:clamp(52px,7vw,88px);">{{ $data->content->season_hero_title->value ?? '' }}</h1>
+            <div class="sp-tagline" style="color:#3C180066;">{{ $data->content->season_hero_tagline->value ?? '' }}</div>
+            <p class="sp-desc" style="color:#3C180088;">{{ $data->content->season_hero_desc->value ?? '' }}</p>
             <div class="sp-palette-preview">
                 {{-- tooltips on preview swatches --}}
                 <div class="tooltip-trigger">
@@ -131,9 +129,9 @@
                 </div>
             </div>
             <div style="display:flex;gap:12px;flex-wrap:wrap;">
-                <a class="btn btn-white" href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}">← All Seasons</a>
+                <a class="btn btn-white" href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}">{{ $data->content->season_hero_btn_all->value ?? '' }}</a>
                 <a class="btn btn-outline" style="color:#3C1800;border-color:#3C180044;"
-                    href="{{ route('show.custom_pages', ['slug' => 'test']) }}">Find My Season</a>
+                    href="{{ route('show.custom_pages', ['slug' => 'test']) }}">{{ $data->content->season_hero_btn_quiz->value ?? '' }}</a>
             </div>
         </div>
         <div class="sp-hero-visual">
@@ -141,22 +139,20 @@
             <div class="sp-visual-badges">
                 {{-- tooltips on badges --}}
                 <div class="tooltip-trigger sp-badge" style="background:rgba(255,255,255,.12);">
-                    <div class="sp-badge-icon">🌡️</div>
+                    <div class="sp-badge-icon">{{ $data->content->season_badge1_icon->value ?? '' }}</div>
                     <div>
-                        <div class="sp-badge-title" style="color:#3C1800;">Warm Undertone</div>
-                        <div class="sp-badge-sub" style="color:#3C1800;">Golden, peachy</div>
+                        <div class="sp-badge-title" style="color:#3C1800;">{{ $data->content->season_badge1_title->value ?? '' }}</div>
+                        <div class="sp-badge-sub" style="color:#3C1800;">{{ $data->content->season_badge1_sub->value ?? '' }}</div>
                     </div>
-                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">Your skin has a
-                        distinct golden or peachy warmth — never pink or cool.</div>
+                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">{{ $data->content->season_badge1_tooltip->value ?? '' }}</div>
                 </div>
                 <div class="tooltip-trigger sp-badge" style="background:rgba(255,255,255,.12);">
-                    <div class="sp-badge-icon">☀️</div>
+                    <div class="sp-badge-icon">{{ $data->content->season_badge2_icon->value ?? '' }}</div>
                     <div>
-                        <div class="sp-badge-title" style="color:#3C1800;">Light Value</div>
-                        <div class="sp-badge-sub" style="color:#3C1800;">Pale, soft depth</div>
+                        <div class="sp-badge-title" style="color:#3C1800;">{{ $data->content->season_badge2_title->value ?? '' }}</div>
+                        <div class="sp-badge-sub" style="color:#3C1800;">{{ $data->content->season_badge2_sub->value ?? '' }}</div>
                     </div>
-                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">Your overall
-                        colouring is light and delicate — you look best in soft, pale shades.</div>
+                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">{{ $data->content->season_badge2_tooltip->value ?? '' }}</div>
                 </div>
             </div>
         </div>
@@ -164,16 +160,14 @@
 
     <!-- PALETTE (unisex) -->
     <section class="season-section">
-        <span class="lbl" style="color:#C97B3A;">✦ Your Colour Palette</span>
-        <div class="h2" style="margin-bottom:12px;">Best colours for Light Spring</div>
-        <p class="body-text" style="max-width:560px;margin-bottom:36px;">Your palette is warm, light, and delicate. Think
-            peaches, golden creams, warm corals, and soft warm yellows. Nothing too intense — keep saturation low and warmth
-            high.</p>
+        <span class="lbl" style="color:#C97B3A;">{{ $data->content->palette_label->value ?? '' }}</span>
+        <div class="h2" style="margin-bottom:12px;">{{ $data->content->palette_title->value ?? '' }}</div>
+        <p class="body-text" style="max-width:560px;margin-bottom:36px;">{{ $data->content->palette_desc->value ?? '' }}</p>
         <div class="two-col">
             <div>
-                <div
-                    style="font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#7A6E68;margin-bottom:16px;">
-                    Power Shades</div>
+                <div style="font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#7A6E68;margin-bottom:16px;">
+                    {{ $data->content->palette_power_label->value ?? '' }}
+                </div>
                 <div class="color-grid" style="margin-bottom:28px;">
                     {{-- tooltips on each swatch --}}
                     <div class="tooltip-trigger cswatch cswatch-lg" style="background:#FFD8A0;" title="#FFD8A0">
@@ -211,12 +205,12 @@
                     <span style="background:#F0C8A0;"></span>
                     <span style="background:#E0A878;"></span>
                 </div>
-                <div style="font-size:12px;color:#B0A49E;">Your complete spectrum — from light to dark</div>
+                <div style="font-size:12px;color:#B0A49E;">{{ $data->content->palette_strip_label->value ?? '' }}</div>
             </div>
             <div>
-                <div
-                    style="font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#7A6E68;margin-bottom:16px;">
-                    Neutrals & Staples</div>
+                <div style="font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#7A6E68;margin-bottom:16px;">
+                    {{ $data->content->palette_neutral_label->value ?? '' }}
+                </div>
                 <div class="color-grid" style="margin-bottom:20px;">
                     <div class="tooltip-trigger cswatch" style="background:#F5E8D8;">
                         <div class="tooltip-box">#F5E8D8 · Warm Ivory</div>
@@ -231,57 +225,47 @@
                         <div class="tooltip-box">#C0A890 · Warm Taupe</div>
                     </div>
                 </div>
-                <p class="body-text" style="font-size:14px;">Warm ivory, peach-beige, and soft camel are your perfect
-                    neutrals — never harsh white or cool grey.</p>
+                <p class="body-text" style="font-size:14px;">{{ $data->content->palette_neutral_desc->value ?? '' }}</p>
             </div>
         </div>
     </section>
 
     <!-- YOUR FEATURES (unisex) -->
     <section class="season-section-alt">
-        <span class="lbl" style="color:#C97B3A;">✦ Typical Features</span>
-        <div class="h2" style="margin-bottom:40px;">Do you look like a Light Spring?</div>
+        <span class="lbl" style="color:#C97B3A;">{{ $data->content->features_label->value ?? '' }}</span>
+        <div class="h2" style="margin-bottom:40px;">{{ $data->content->features_title->value ?? '' }}</div>
         <div class="three-col">
             <div class="tooltip-trigger card" style="position:relative;">
                 <div style="font-size:32px;margin-bottom:14px;">🧴</div>
-                <div style="font-size:16px;font-weight:600;color:#2C2420;margin-bottom:8px;">Skin</div>
-                <div class="body-text" style="font-size:14px;">Fair to light skin with a warm, peachy or ivory undertone.
-                    Often has a golden warmth and may have light freckles. Skin can look washed out in cool tones.</div>
-                <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:220px;">Warm, peachy, and
-                    delicate — avoid anything cool or pink-toned.</div>
+                <div style="font-size:16px;font-weight:600;color:#2C2420;margin-bottom:8px;">{{ $data->content->features_skin_title->value ?? '' }}</div>
+                <div class="body-text" style="font-size:14px;">{{ $data->content->features_skin_desc->value ?? '' }}</div>
+                <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:220px;">{{ $data->content->features_skin_tooltip->value ?? '' }}</div>
             </div>
             <div class="tooltip-trigger card" style="position:relative;">
                 <div style="font-size:32px;margin-bottom:14px;">👁️</div>
-                <div style="font-size:16px;font-weight:600;color:#2C2420;margin-bottom:8px;">Eyes</div>
-                <div class="body-text" style="font-size:14px;">Light blue, light green, warm hazel, or golden brown. Often
-                    with warm, honey-coloured flecks. Eyes may appear almost transparent or watery in cool lighting.</div>
-                <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:220px;">Light, warm, and often
-                    flecked with gold — very expressive.</div>
+                <div style="font-size:16px;font-weight:600;color:#2C2420;margin-bottom:8px;">{{ $data->content->features_eyes_title->value ?? '' }}</div>
+                <div class="body-text" style="font-size:14px;">{{ $data->content->features_eyes_desc->value ?? '' }}</div>
+                <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:220px;">{{ $data->content->features_eyes_tooltip->value ?? '' }}</div>
             </div>
             <div class="tooltip-trigger card" style="position:relative;">
                 <div style="font-size:32px;margin-bottom:14px;">💇</div>
-                <div style="font-size:16px;font-weight:600;color:#2C2420;margin-bottom:8px;">Hair</div>
-                <div class="body-text" style="font-size:14px;">Light golden blonde, strawberry blonde, warm ash blonde, or
-                    light golden brown. Natural highlights are common. Hair has a warm, luminous quality.</div>
-                <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:220px;">Light, warm, and
-                    naturally highlighted — often with a golden sheen.</div>
+                <div style="font-size:16px;font-weight:600;color:#2C2420;margin-bottom:8px;">{{ $data->content->features_hair_title->value ?? '' }}</div>
+                <div class="body-text" style="font-size:14px;">{{ $data->content->features_hair_desc->value ?? '' }}</div>
+                <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:220px;">{{ $data->content->features_hair_tooltip->value ?? '' }}</div>
             </div>
         </div>
         <div style="margin-top:32px;padding:24px;background:#C97B3A14;border:1px solid #C97B3A33;border-radius:16px;">
-            <div style="font-size:15px;font-weight:600;color:#2C2420;margin-bottom:6px;">✦ The Light Spring glow effect
-            </div>
-            <div class="body-text" style="font-size:14px;">When a Light Spring wears their season colours, their skin
-                appears to glow with a warm, peachy luminosity. The colours seem to blend into their natural colouring as if
-                they were born wearing them.</div>
+            <div style="font-size:15px;font-weight:600;color:#2C2420;margin-bottom:6px;">{{ $data->content->features_effect_title->value ?? '' }}</div>
+            <div class="body-text" style="font-size:14px;">{{ $data->content->features_effect_desc->value ?? '' }}</div>
         </div>
     </section>
 
     <!-- GENDER-SPECIFIC SECTIONS -->
     <div style="margin: 0 6%;">
         <div class="gender-toggle">
-            <button class="gender-btn active" data-gender="women">👩 Women / Feminine</button>
-            <button class="gender-btn" data-gender="men">👨 Men / Masculine</button>
-            <button class="gender-btn" data-gender="neutral">🌟 Gender-Neutral</button>
+            <button class="gender-btn active" data-gender="women">{{ $data->content->gender_women->value ?? '' }}</button>
+            <button class="gender-btn" data-gender="men">{{ $data->content->gender_men->value ?? '' }}</button>
+            <button class="gender-btn" data-gender="neutral">{{ $data->content->gender_neutral->value ?? '' }}</button>
         </div>
     </div>
 
@@ -289,10 +273,9 @@
     <div id="women-content" class="gender-content active-gender">
         <!-- Makeup Guide (Women) -->
         <section class="season-section">
-            <span class="lbl" style="color:#C97B3A;">✦ Makeup Guide (Women)</span>
-            <div class="h2" style="margin-bottom:12px;">Your perfect makeup shades</div>
-            <p class="body-text" style="max-width:560px;margin-bottom:36px;">Keep everything soft, warm, and light. Heavy
-                or dark colours will overpower your delicate natural colouring.</p>
+            <span class="lbl" style="color:#C97B3A;">{{ $data->content->makeup_label->value ?? '' }}</span>
+            <div class="h2" style="margin-bottom:12px;">{{ $data->content->makeup_title->value ?? '' }}</div>
+            <p class="body-text" style="max-width:560px;margin-bottom:36px;">{{ $data->content->makeup_desc->value ?? '' }}</p>
             <div class="makeup-row">
                 {{-- makeup items with tooltips --}}
                 <div class="tooltip-trigger makeup-item">
@@ -352,20 +335,16 @@
                         glow — never silver or icy.</div>
                 </div>
             </div>
-            <div style="margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div class="two-col" style="margin-top:28px;display:grid;gap:16px;">
                 <div class="tooltip-trigger card" style="position:relative;">
-                    <div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">Foundation Undertone</div>
-                    <div class="body-text" style="font-size:14px;">Choose foundations with a warm, peachy undertone. Avoid
-                        anything with pink or cool undertones — they will make you look dull and flat.</div>
-                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">Look for "warm",
-                        "golden", or "peachy" — never "cool" or "neutral".</div>
+                    <div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">{{ $data->content->makeup_foundation_label->value ?? '' }}</div>
+                    <div class="body-text" style="font-size:14px;">{{ $data->content->makeup_foundation_desc->value ?? '' }}</div>
+                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">{{ $data->content->makeup_foundation_tooltip->value ?? '' }}</div>
                 </div>
                 <div class="tooltip-trigger card" style="position:relative;">
-                    <div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">Key Makeup Rule</div>
-                    <div class="body-text" style="font-size:14px;">Keep all makeup soft and blended. Hard lines and dark
-                        colours overwhelm your natural delicacy. Think "lit from within" rather than made-up.</div>
-                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">Soft, blended, and
-                        luminous — never heavy or harsh.</div>
+                    <div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">{{ $data->content->makeup_rule_label->value ?? '' }}</div>
+                    <div class="body-text" style="font-size:14px;">{{ $data->content->makeup_rule_desc->value ?? '' }}</div>
+                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">{{ $data->content->makeup_rule_tooltip->value ?? '' }}</div>
                 </div>
             </div>
         </section>
@@ -374,108 +353,94 @@
         <section class="season-section-alt">
             <div class="two-col">
                 <div>
-                    <span class="lbl" style="color:#C97B3A;">✦ Wardrobe Tips (Women)</span>
-                    <div class="h2" style="margin-bottom:20px;">How to dress as a Light Spring woman</div>
+                    <span class="lbl" style="color:#C97B3A;">{{ $data->content->wardrobe_women_label->value ?? '' }}</span>
+                    <div class="h2" style="margin-bottom:20px;">{{ $data->content->wardrobe_women_title->value ?? '' }}</div>
                     <div class="feature-row">
                         <div class="tooltip-trigger feature-item" style="position:relative;">
                             <div class="fi-num">01</div>
                             <div>
-                                <div class="fi-title">Embrace warm, peachy tones</div>
-                                <div class="fi-desc">Your best base colours are warm creams, peaches, and soft golden tans.
-                                    Use these in tops and blouses closest to your face.</div>
+                                <div class="fi-title">{{ $data->content->wardrobe_women_tip1_title->value ?? '' }}</div>
+                                <div class="fi-desc">{{ $data->content->wardrobe_women_tip1_desc->value ?? '' }}</div>
                             </div>
-                            <div class="tooltip-box tooltip-right" style="white-space:normal;max-width:200px;">These warm
-                                tones bring out your natural glow.</div>
+                            <div class="tooltip-box tooltip-right" style="white-space:normal;max-width:200px;">{{ $data->content->wardrobe_women_tip1_tooltip->value ?? '' }}</div>
                         </div>
                         <div class="tooltip-trigger feature-item" style="position:relative;">
                             <div class="fi-num">02</div>
                             <div>
-                                <div class="fi-title">Avoid pure white</div>
-                                <div class="fi-desc">Bright white is too stark. Opt for warm ivory, cream, or off-white
-                                    which blends with your warm undertone.</div>
+                                <div class="fi-title">{{ $data->content->wardrobe_women_tip2_title->value ?? '' }}</div>
+                                <div class="fi-desc">{{ $data->content->wardrobe_women_tip2_desc->value ?? '' }}</div>
                             </div>
-                            <div class="tooltip-box tooltip-right" style="white-space:normal;max-width:200px;">Warm
-                                off-whites harmonize with your skin — stark white washes you out.</div>
+                            <div class="tooltip-box tooltip-right" style="white-space:normal;max-width:200px;">{{ $data->content->wardrobe_women_tip2_tooltip->value ?? '' }}</div>
                         </div>
                         <div class="tooltip-trigger feature-item" style="position:relative;">
                             <div class="fi-num">03</div>
                             <div>
-                                <div class="fi-title">Add warmth with accessories</div>
-                                <div class="fi-desc">Gold jewellery, warm wooden pieces, and camel-toned accessories all
-                                    complement your golden warmth perfectly.</div>
+                                <div class="fi-title">{{ $data->content->wardrobe_women_tip3_title->value ?? '' }}</div>
+                                <div class="fi-desc">{{ $data->content->wardrobe_women_tip3_desc->value ?? '' }}</div>
                             </div>
-                            <div class="tooltip-box tooltip-right" style="white-space:normal;max-width:200px;">Gold and
-                                warm tones are your best metallic accents.</div>
+                            <div class="tooltip-box tooltip-right" style="white-space:normal;max-width:200px;">{{ $data->content->wardrobe_women_tip3_tooltip->value ?? '' }}</div>
                         </div>
                         <div class="tooltip-trigger feature-item" style="position:relative;">
                             <div class="fi-num">04</div>
                             <div>
-                                <div class="fi-title">Keep patterns light</div>
-                                <div class="fi-desc">Florals in warm tones, soft watercolour prints, and delicate designs
-                                    suit your ethereal quality.</div>
+                                <div class="fi-title">{{ $data->content->wardrobe_women_tip4_title->value ?? '' }}</div>
+                                <div class="fi-desc">{{ $data->content->wardrobe_women_tip4_desc->value ?? '' }}</div>
                             </div>
-                            <div class="tooltip-box tooltip-right" style="white-space:normal;max-width:200px;">Delicate,
-                                soft patterns match your light, airy essence.</div>
+                            <div class="tooltip-box tooltip-right" style="white-space:normal;max-width:200px;">{{ $data->content->wardrobe_women_tip4_tooltip->value ?? '' }}</div>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <span class="lbl" style="color:#7A6E68;margin-bottom:16px;display:block;">✦ Colours to Avoid</span>
+                    <span class="lbl" style="color:#7A6E68;margin-bottom:16px;display:block;">{{ $data->content->avoid_label->value ?? '' }}</span>
                     <div class="avoid-grid">
                         {{-- avoid cards with tooltips --}}
                         <div class="tooltip-trigger avoid-card" style="position:relative;">
                             <div class="avoid-swatch" style="background:#000080;"></div>
                             <div class="avoid-info">
-                                <div class="avoid-name">Navy Blue</div>
-                                <div class="avoid-why">Too cool and harsh</div>
+                                <div class="avoid-name">{{ $data->content->avoid_navy->value ?? '' }}</div>
+                                <div class="avoid-why">{{ $data->content->avoid_navy_why->value ?? '' }}</div>
                             </div>
-                            <div class="tooltip-box tooltip-left" style="white-space:normal;max-width:160px;">Navy is too
-                                dark and cool — opt for warm navy or teal.</div>
+                            <div class="tooltip-box tooltip-left" style="white-space:normal;max-width:160px;">{{ $data->content->avoid_navy_tooltip->value ?? '' }}</div>
                         </div>
                         <div class="tooltip-trigger avoid-card" style="position:relative;">
                             <div class="avoid-swatch" style="background:#808080;"></div>
                             <div class="avoid-info">
-                                <div class="avoid-name">Cool Grey</div>
-                                <div class="avoid-why">Drains your warmth</div>
+                                <div class="avoid-name">{{ $data->content->avoid_cool_grey->value ?? '' }}</div>
+                                <div class="avoid-why">{{ $data->content->avoid_cool_grey_why->value ?? '' }}</div>
                             </div>
-                            <div class="tooltip-box tooltip-left" style="white-space:normal;max-width:160px;">Cool grey
-                                steals your warmth — choose warm taupe or beige.</div>
+                            <div class="tooltip-box tooltip-left" style="white-space:normal;max-width:160px;">{{ $data->content->avoid_cool_grey_tooltip->value ?? '' }}</div>
                         </div>
                         <div class="tooltip-trigger avoid-card" style="position:relative;">
                             <div class="avoid-swatch" style="background:#FF1493;"></div>
                             <div class="avoid-info">
-                                <div class="avoid-name">Fuchsia</div>
-                                <div class="avoid-why">Too saturated and cool</div>
+                                <div class="avoid-name">{{ $data->content->avoid_fuchsia->value ?? '' }}</div>
+                                <div class="avoid-why">{{ $data->content->avoid_fuchsia_why->value ?? '' }}</div>
                             </div>
-                            <div class="tooltip-box tooltip-left" style="white-space:normal;max-width:160px;">Fuchsia is
-                                too cool and bright — choose coral or warm pink.</div>
+                            <div class="tooltip-box tooltip-left" style="white-space:normal;max-width:160px;">{{ $data->content->avoid_fuchsia_tooltip->value ?? '' }}</div>
                         </div>
                         <div class="tooltip-trigger avoid-card" style="position:relative;">
                             <div class="avoid-swatch" style="background:#000000;"></div>
                             <div class="avoid-info">
-                                <div class="avoid-name">Black</div>
-                                <div class="avoid-why">Creates jarring contrast</div>
+                                <div class="avoid-name">{{ $data->content->avoid_black->value ?? '' }}</div>
+                                <div class="avoid-why">{{ $data->content->avoid_black_why->value ?? '' }}</div>
                             </div>
-                            <div class="tooltip-box tooltip-left" style="white-space:normal;max-width:160px;">Black is too
-                                harsh — choose warm chocolate or charcoal.</div>
+                            <div class="tooltip-box tooltip-left" style="white-space:normal;max-width:160px;">{{ $data->content->avoid_black_tooltip->value ?? '' }}</div>
                         </div>
                         <div class="tooltip-trigger avoid-card" style="position:relative;">
                             <div class="avoid-swatch" style="background:#8B0000;"></div>
                             <div class="avoid-info">
-                                <div class="avoid-name">Dark Red</div>
-                                <div class="avoid-why">Too deep and cool</div>
+                                <div class="avoid-name">{{ $data->content->avoid_dark_red->value ?? '' }}</div>
+                                <div class="avoid-why">{{ $data->content->avoid_dark_red_why->value ?? '' }}</div>
                             </div>
-                            <div class="tooltip-box tooltip-left" style="white-space:normal;max-width:160px;">Dark red is
-                                too heavy — choose warm coral or rust.</div>
+                            <div class="tooltip-box tooltip-left" style="white-space:normal;max-width:160px;">{{ $data->content->avoid_dark_red_tooltip->value ?? '' }}</div>
                         </div>
                         <div class="tooltip-trigger avoid-card" style="position:relative;">
                             <div class="avoid-swatch" style="background:#4B0082;"></div>
                             <div class="avoid-info">
-                                <div class="avoid-name">Purple</div>
-                                <div class="avoid-why">Clashes with warm undertone</div>
+                                <div class="avoid-name">{{ $data->content->avoid_purple->value ?? '' }}</div>
+                                <div class="avoid-why">{{ $data->content->avoid_purple_why->value ?? '' }}</div>
                             </div>
-                            <div class="tooltip-box tooltip-left" style="white-space:normal;max-width:160px;">Purple is
-                                too cool — choose warm lavender or mauve.</div>
+                            <div class="tooltip-box tooltip-left" style="white-space:normal;max-width:160px;">{{ $data->content->avoid_purple_tooltip->value ?? '' }}</div>
                         </div>
                     </div>
                 </div>
@@ -484,41 +449,35 @@
 
         <!-- Outfit Inspiration (Women) -->
         <section class="season-section">
-            <span class="lbl" style="color:#C97B3A;">✦ Outfit Inspiration (Women)</span>
-            <div class="h2" style="margin-bottom:36px;">Looks built for Light Spring women</div>
+            <span class="lbl" style="color:#C97B3A;">{{ $data->content->outfit_women_label->value ?? '' }}</span>
+            <div class="h2" style="margin-bottom:36px;">{{ $data->content->outfit_women_title->value ?? '' }}</div>
             <div class="outfit-grid">
                 <div class="tooltip-trigger outfit-card" style="position:relative;">
                     <div class="outfit-top" style="background:linear-gradient(145deg,#FAE8CC,#F5D4A8);">🌿</div>
                     <div class="outfit-body">
-                        <div class="outfit-occasion">Everyday</div>
-                        <div class="outfit-name">Golden Hour</div>
-                        <div class="outfit-items">Warm ivory linen top · Camel wide-leg trousers · Gold sandals · Woven bag
-                        </div>
+                        <div class="outfit-occasion">{{ $data->content->outfit_women_1_occasion->value ?? '' }}</div>
+                        <div class="outfit-name">{{ $data->content->outfit_women_1_name->value ?? '' }}</div>
+                        <div class="outfit-items">{{ $data->content->outfit_women_1_items->value ?? '' }}</div>
                     </div>
-                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">Effortless, warm,
-                        and luminous — your everyday glow.</div>
+                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">{{ $data->content->outfit_women_1_tooltip->value ?? '' }}</div>
                 </div>
                 <div class="tooltip-trigger outfit-card" style="position:relative;">
                     <div class="outfit-top" style="background:linear-gradient(145deg,#FFD8A0,#E8C080);">🌸</div>
                     <div class="outfit-body">
-                        <div class="outfit-occasion">Weekend</div>
-                        <div class="outfit-name">Peach Bloom</div>
-                        <div class="outfit-items">Floral blouse in peach and cream · Light denim · Tan mules · Dainty gold
-                            earrings</div>
+                        <div class="outfit-occasion">{{ $data->content->outfit_women_2_occasion->value ?? '' }}</div>
+                        <div class="outfit-name">{{ $data->content->outfit_women_2_name->value ?? '' }}</div>
+                        <div class="outfit-items">{{ $data->content->outfit_women_2_items->value ?? '' }}</div>
                     </div>
-                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">Delicate,
-                        romantic, and perfectly spring-like.</div>
+                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">{{ $data->content->outfit_women_2_tooltip->value ?? '' }}</div>
                 </div>
                 <div class="tooltip-trigger outfit-card" style="position:relative;">
                     <div class="outfit-top" style="background:linear-gradient(145deg,#F5C090,#E8A870);">✨</div>
                     <div class="outfit-body">
-                        <div class="outfit-occasion">Evening</div>
-                        <div class="outfit-name">Warm Gold</div>
-                        <div class="outfit-items">Rust-orange midi dress · Strappy gold heels · Small gold clutch ·
-                            Delicate necklace</div>
+                        <div class="outfit-occasion">{{ $data->content->outfit_women_3_occasion->value ?? '' }}</div>
+                        <div class="outfit-name">{{ $data->content->outfit_women_3_name->value ?? '' }}</div>
+                        <div class="outfit-items">{{ $data->content->outfit_women_3_items->value ?? '' }}</div>
                     </div>
-                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">Golden and glowing
-                        — perfect for a warm evening out.</div>
+                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">{{ $data->content->outfit_women_3_tooltip->value ?? '' }}</div>
                 </div>
             </div>
         </section>
@@ -528,10 +487,9 @@
     <div id="men-content" class="gender-content">
         <!-- Grooming & Skincare (Men) -->
         <section class="season-section">
-            <span class="lbl" style="color:#C97B3A;">✦ Grooming & Skincare (Men)</span>
-            <div class="h2" style="margin-bottom:12px;">Grooming for the Light Spring man</div>
-            <p class="body-text" style="max-width:560px;margin-bottom:36px;">Keep grooming light, warm, and fresh. Avoid
-                heavy products or anything that adds darkness to your features.</p>
+            <span class="lbl" style="color:#C97B3A;">{{ $data->content->grooming_label->value ?? '' }}</span>
+            <div class="h2" style="margin-bottom:12px;">{{ $data->content->grooming_title->value ?? '' }}</div>
+            <p class="body-text" style="max-width:560px;margin-bottom:36px;">{{ $data->content->grooming_desc->value ?? '' }}</p>
             <div class="makeup-row">
                 <div class="tooltip-trigger makeup-item">
                     <div class="makeup-swatch" style="background:#FDDBB4;"></div>
@@ -576,20 +534,16 @@
                         define brows without darkening.</div>
                 </div>
             </div>
-            <div style="margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div class="two-col" style="margin-top:28px;display:grid;gap:16px;">
                 <div class="tooltip-trigger card" style="position:relative;">
-                    <div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">Skincare Focus</div>
-                    <div class="body-text" style="font-size:14px;">Brightening and hydration. Use vitamin C and gentle
-                        exfoliation to keep your naturally luminous skin glowing. Avoid heavy, matte finishes.</div>
-                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">Keep it light and
-                        glowing — never heavy or dull.</div>
+                    <div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">{{ $data->content->grooming_skincare_title->value ?? '' }}</div>
+                    <div class="body-text" style="font-size:14px;">{{ $data->content->grooming_skincare_desc->value ?? '' }}</div>
+                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">{{ $data->content->grooming_skincare_tooltip->value ?? '' }}</div>
                 </div>
                 <div class="tooltip-trigger card" style="position:relative;">
-                    <div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">Facial Hair</div>
-                    <div class="body-text" style="font-size:14px;">Keep facial hair light and well-groomed. Use warm honey
-                        or golden beard oils. Avoid dark, heavy beards that contrast too sharply with your fair skin.</div>
-                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">Soft, light facial
-                        hair complements your delicate colouring.</div>
+                    <div style="font-size:14px;font-weight:600;color:#2C2420;margin-bottom:8px;">{{ $data->content->grooming_facial_title->value ?? '' }}</div>
+                    <div class="body-text" style="font-size:14px;">{{ $data->content->grooming_facial_desc->value ?? '' }}</div>
+                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">{{ $data->content->grooming_facial_tooltip->value ?? '' }}</div>
                 </div>
             </div>
         </section>
@@ -598,107 +552,93 @@
         <section class="season-section-alt">
             <div class="two-col">
                 <div>
-                    <span class="lbl" style="color:#C97B3A;">✦ Wardrobe Tips (Men)</span>
-                    <div class="h2" style="margin-bottom:20px;">How to dress as a Light Spring man</div>
+                    <span class="lbl" style="color:#C97B3A;">{{ $data->content->wardrobe_men_label->value ?? '' }}</span>
+                    <div class="h2" style="margin-bottom:20px;">{{ $data->content->wardrobe_men_title->value ?? '' }}</div>
                     <div class="feature-row">
                         <div class="tooltip-trigger feature-item" style="position:relative;">
                             <div class="fi-num">01</div>
                             <div>
-                                <div class="fi-title">Embrace light warm neutrals</div>
-                                <div class="fi-desc">Warm cream, camel, and soft tan are your best suit and trouser
-                                    colours. Avoid charcoal and navy.</div>
+                                <div class="fi-title">{{ $data->content->wardrobe_men_tip1_title->value ?? '' }}</div>
+                                <div class="fi-desc">{{ $data->content->wardrobe_men_tip1_desc->value ?? '' }}</div>
                             </div>
-                            <div class="tooltip-box tooltip-right" style="white-space:normal;max-width:200px;">Light, warm
-                                neutrals are your foundation — they enhance your natural warmth.</div>
+                            <div class="tooltip-box tooltip-right" style="white-space:normal;max-width:200px;">{{ $data->content->wardrobe_men_tip1_tooltip->value ?? '' }}</div>
                         </div>
                         <div class="tooltip-trigger feature-item" style="position:relative;">
                             <div class="fi-num">02</div>
                             <div>
-                                <div class="fi-title">Soft warm pastels as accents</div>
-                                <div class="fi-desc">Peach, warm coral, and soft yellow in polos, shirts, or ties add the
-                                    right amount of spring energy.</div>
+                                <div class="fi-title">{{ $data->content->wardrobe_men_tip2_title->value ?? '' }}</div>
+                                <div class="fi-desc">{{ $data->content->wardrobe_men_tip2_desc->value ?? '' }}</div>
                             </div>
-                            <div class="tooltip-box tooltip-right" style="white-space:normal;max-width:200px;">These
-                                accents bring life without overpowering your light features.</div>
+                            <div class="tooltip-box tooltip-right" style="white-space:normal;max-width:200px;">{{ $data->content->wardrobe_men_tip2_tooltip->value ?? '' }}</div>
                         </div>
                         <div class="tooltip-trigger feature-item" style="position:relative;">
                             <div class="fi-num">03</div>
                             <div>
-                                <div class="fi-title">Gold and light leather</div>
-                                <div class="fi-desc">Gold watches, tan leather shoes and belts, and light wood accents
-                                    complement your warm colouring perfectly.</div>
+                                <div class="fi-title">{{ $data->content->wardrobe_men_tip3_title->value ?? '' }}</div>
+                                <div class="fi-desc">{{ $data->content->wardrobe_men_tip3_desc->value ?? '' }}</div>
                             </div>
-                            <div class="tooltip-box tooltip-right" style="white-space:normal;max-width:200px;">Warm metals
-                                and leathers tie your look together.</div>
+                            <div class="tooltip-box tooltip-right" style="white-space:normal;max-width:200px;">{{ $data->content->wardrobe_men_tip3_tooltip->value ?? '' }}</div>
                         </div>
                         <div class="tooltip-trigger feature-item" style="position:relative;">
                             <div class="fi-num">04</div>
                             <div>
-                                <div class="fi-title">Avoid dark and cool colours</div>
-                                <div class="fi-desc">No black, navy, charcoal grey, or cool pastels. They will make you
-                                    look washed out and dull.</div>
+                                <div class="fi-title">{{ $data->content->wardrobe_men_tip4_title->value ?? '' }}</div>
+                                <div class="fi-desc">{{ $data->content->wardrobe_men_tip4_desc->value ?? '' }}</div>
                             </div>
-                            <div class="tooltip-box tooltip-right" style="white-space:normal;max-width:200px;">Dark and
-                                cool colours drain your warmth — stick to light and warm.</div>
+                            <div class="tooltip-box tooltip-right" style="white-space:normal;max-width:200px;">{{ $data->content->wardrobe_men_tip4_tooltip->value ?? '' }}</div>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <span class="lbl" style="color:#7A6E68;margin-bottom:16px;display:block;">✦ Colours to Avoid</span>
+                    <span class="lbl" style="color:#7A6E68;margin-bottom:16px;display:block;">{{ $data->content->avoid_label->value ?? '' }}</span>
                     <div class="avoid-grid">
                         <div class="tooltip-trigger avoid-card" style="position:relative;">
                             <div class="avoid-swatch" style="background:#000080;"></div>
                             <div class="avoid-info">
-                                <div class="avoid-name">Navy Blue</div>
-                                <div class="avoid-why">Too cool and harsh</div>
+                                <div class="avoid-name">{{ $data->content->avoid_navy->value ?? '' }}</div>
+                                <div class="avoid-why">{{ $data->content->avoid_navy_why->value ?? '' }}</div>
                             </div>
-                            <div class="tooltip-box tooltip-left" style="white-space:normal;max-width:160px;">Navy is too
-                                dark and cool — choose warm navy or teal.</div>
+                            <div class="tooltip-box tooltip-left" style="white-space:normal;max-width:160px;">{{ $data->content->avoid_navy_tooltip->value ?? '' }}</div>
                         </div>
                         <div class="tooltip-trigger avoid-card" style="position:relative;">
                             <div class="avoid-swatch" style="background:#808080;"></div>
                             <div class="avoid-info">
-                                <div class="avoid-name">Cool Grey</div>
-                                <div class="avoid-why">Drains your warmth</div>
+                                <div class="avoid-name">{{ $data->content->avoid_cool_grey->value ?? '' }}</div>
+                                <div class="avoid-why">{{ $data->content->avoid_cool_grey_why->value ?? '' }}</div>
                             </div>
-                            <div class="tooltip-box tooltip-left" style="white-space:normal;max-width:160px;">Cool grey
-                                steals your warmth — choose warm taupe or beige.</div>
+                            <div class="tooltip-box tooltip-left" style="white-space:normal;max-width:160px;">{{ $data->content->avoid_cool_grey_tooltip->value ?? '' }}</div>
                         </div>
                         <div class="tooltip-trigger avoid-card" style="position:relative;">
                             <div class="avoid-swatch" style="background:#000000;"></div>
                             <div class="avoid-info">
-                                <div class="avoid-name">Black</div>
-                                <div class="avoid-why">Creates jarring contrast</div>
+                                <div class="avoid-name">{{ $data->content->avoid_black->value ?? '' }}</div>
+                                <div class="avoid-why">{{ $data->content->avoid_black_why->value ?? '' }}</div>
                             </div>
-                            <div class="tooltip-box tooltip-left" style="white-space:normal;max-width:160px;">Black is too
-                                harsh — choose warm chocolate or charcoal.</div>
+                            <div class="tooltip-box tooltip-left" style="white-space:normal;max-width:160px;">{{ $data->content->avoid_black_tooltip->value ?? '' }}</div>
                         </div>
                         <div class="tooltip-trigger avoid-card" style="position:relative;">
                             <div class="avoid-swatch" style="background:#8B0000;"></div>
                             <div class="avoid-info">
-                                <div class="avoid-name">Dark Red</div>
-                                <div class="avoid-why">Too deep and cool</div>
+                                <div class="avoid-name">{{ $data->content->avoid_dark_red->value ?? '' }}</div>
+                                <div class="avoid-why">{{ $data->content->avoid_dark_red_why->value ?? '' }}</div>
                             </div>
-                            <div class="tooltip-box tooltip-left" style="white-space:normal;max-width:160px;">Dark red is
-                                too heavy — choose warm coral or rust.</div>
+                            <div class="tooltip-box tooltip-left" style="white-space:normal;max-width:160px;">{{ $data->content->avoid_dark_red_tooltip->value ?? '' }}</div>
                         </div>
                         <div class="tooltip-trigger avoid-card" style="position:relative;">
                             <div class="avoid-swatch" style="background:#4B0082;"></div>
                             <div class="avoid-info">
-                                <div class="avoid-name">Purple</div>
-                                <div class="avoid-why">Clashes with warm undertone</div>
+                                <div class="avoid-name">{{ $data->content->avoid_purple->value ?? '' }}</div>
+                                <div class="avoid-why">{{ $data->content->avoid_purple_why->value ?? '' }}</div>
                             </div>
-                            <div class="tooltip-box tooltip-left" style="white-space:normal;max-width:160px;">Purple is
-                                too cool — choose warm lavender or mauve.</div>
+                            <div class="tooltip-box tooltip-left" style="white-space:normal;max-width:160px;">{{ $data->content->avoid_purple_tooltip->value ?? '' }}</div>
                         </div>
                         <div class="tooltip-trigger avoid-card" style="position:relative;">
                             <div class="avoid-swatch" style="background:#FF1493;"></div>
                             <div class="avoid-info">
-                                <div class="avoid-name">Fuchsia</div>
-                                <div class="avoid-why">Too saturated and cool</div>
+                                <div class="avoid-name">{{ $data->content->avoid_fuchsia->value ?? '' }}</div>
+                                <div class="avoid-why">{{ $data->content->avoid_fuchsia_why->value ?? '' }}</div>
                             </div>
-                            <div class="tooltip-box tooltip-left" style="white-space:normal;max-width:160px;">Fuchsia is
-                                too cool and bright — choose coral or warm pink.</div>
+                            <div class="tooltip-box tooltip-left" style="white-space:normal;max-width:160px;">{{ $data->content->avoid_fuchsia_tooltip->value ?? '' }}</div>
                         </div>
                     </div>
                 </div>
@@ -707,41 +647,35 @@
 
         <!-- Outfit Inspiration (Men) -->
         <section class="season-section">
-            <span class="lbl" style="color:#C97B3A;">✦ Outfit Inspiration (Men)</span>
-            <div class="h2" style="margin-bottom:36px;">Looks built for Light Spring men</div>
+            <span class="lbl" style="color:#C97B3A;">{{ $data->content->outfit_men_label->value ?? '' }}</span>
+            <div class="h2" style="margin-bottom:36px;">{{ $data->content->outfit_men_title->value ?? '' }}</div>
             <div class="outfit-grid">
                 <div class="tooltip-trigger outfit-card" style="position:relative;">
                     <div class="outfit-top" style="background:linear-gradient(145deg,#FAE8CC,#F5D4A8);">🌿</div>
                     <div class="outfit-body">
-                        <div class="outfit-occasion">Business</div>
-                        <div class="outfit-name">Warm Camel Suit</div>
-                        <div class="outfit-items">Camel blazer · Cream trousers · Light blue shirt · Gold watch · Tan
-                            loafers</div>
+                        <div class="outfit-occasion">{{ $data->content->outfit_men_1_occasion->value ?? '' }}</div>
+                        <div class="outfit-name">{{ $data->content->outfit_men_1_name->value ?? '' }}</div>
+                        <div class="outfit-items">{{ $data->content->outfit_men_1_items->value ?? '' }}</div>
                     </div>
-                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">Warm,
-                        sophisticated, and perfectly Light Spring.</div>
+                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">{{ $data->content->outfit_men_1_tooltip->value ?? '' }}</div>
                 </div>
                 <div class="tooltip-trigger outfit-card" style="position:relative;">
                     <div class="outfit-top" style="background:linear-gradient(145deg,#FFD8A0,#E8C080);">🌸</div>
                     <div class="outfit-body">
-                        <div class="outfit-occasion">Smart Casual</div>
-                        <div class="outfit-name">Peachy Pastel</div>
-                        <div class="outfit-items">Warm coral polo · Cream chinos · Tan leather sneakers · Light gold
-                            accessories</div>
+                        <div class="outfit-occasion">{{ $data->content->outfit_men_2_occasion->value ?? '' }}</div>
+                        <div class="outfit-name">{{ $data->content->outfit_men_2_name->value ?? '' }}</div>
+                        <div class="outfit-items">{{ $data->content->outfit_men_2_items->value ?? '' }}</div>
                     </div>
-                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">Effortlessly warm
-                        and stylish — a modern spring look.</div>
+                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">{{ $data->content->outfit_men_2_tooltip->value ?? '' }}</div>
                 </div>
                 <div class="tooltip-trigger outfit-card" style="position:relative;">
                     <div class="outfit-top" style="background:linear-gradient(145deg,#F5C090,#E8A870);">✨</div>
                     <div class="outfit-body">
-                        <div class="outfit-occasion">Weekend</div>
-                        <div class="outfit-name">Golden Hour</div>
-                        <div class="outfit-items">Soft yellow sweater · Light beige trousers · Brown leather boots · Woven
-                            belt</div>
+                        <div class="outfit-occasion">{{ $data->content->outfit_men_3_occasion->value ?? '' }}</div>
+                        <div class="outfit-name">{{ $data->content->outfit_men_3_name->value ?? '' }}</div>
+                        <div class="outfit-items">{{ $data->content->outfit_men_3_items->value ?? '' }}</div>
                     </div>
-                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">Cosy, warm, and
-                        relaxed — your weekend uniform.</div>
+                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">{{ $data->content->outfit_men_3_tooltip->value ?? '' }}</div>
                 </div>
             </div>
         </section>
@@ -750,67 +684,53 @@
     <!-- GENDER-NEUTRAL CONTENT -->
     <div id="neutral-content" class="gender-content">
         <section class="season-section">
-            <span class="lbl" style="color:#C97B3A;">✦ Style for Everyone</span>
-            <div class="h2" style="margin-bottom:12px;">Gender-neutral Light Spring tips</div>
-            <p class="body-text" style="max-width:560px;margin-bottom:36px;">Light Spring is about soft warmth, gentle
-                luminosity, and delicate harmony. These principles work for any gender expression.</p>
-            <div
-                style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px;margin-bottom:32px;">
+            <span class="lbl" style="color:#C97B3A;">{{ $data->content->neutral_label->value ?? '' }}</span>
+            <div class="h2" style="margin-bottom:12px;">{{ $data->content->neutral_title->value ?? '' }}</div>
+            <p class="body-text" style="max-width:560px;margin-bottom:36px;">{{ $data->content->neutral_desc->value ?? '' }}</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px;margin-bottom:32px;">
                 <div class="tooltip-trigger card" style="position:relative;">
                     <div style="font-size:24px;margin-bottom:8px;">☀️</div>
-                    <div class="fi-title">Light warm neutrals</div>
-                    <div class="fi-desc" style="font-size:14px;">Warm cream, soft camel, and peachy beige are your
-                        foundation. Avoid stark white or dark greys.</div>
-                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:180px;">Your neutrals
-                        should be warm and light — never cold or dark.</div>
+                    <div class="fi-title">{{ $data->content->neutral_tip1_title->value ?? '' }}</div>
+                    <div class="fi-desc" style="font-size:14px;">{{ $data->content->neutral_tip1_desc->value ?? '' }}</div>
+                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:180px;">{{ $data->content->neutral_tip1_tooltip->value ?? '' }}</div>
                 </div>
                 <div class="tooltip-trigger card" style="position:relative;">
                     <div style="font-size:24px;margin-bottom:8px;">🌸</div>
-                    <div class="fi-title">Soft pastel accents</div>
-                    <div class="fi-desc" style="font-size:14px;">Peach, soft coral, butter yellow, and warm mint bring
-                        life without overpowering your delicate features.</div>
-                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:180px;">Delicate pastels
-                        add just the right amount of spring energy.</div>
+                    <div class="fi-title">{{ $data->content->neutral_tip2_title->value ?? '' }}</div>
+                    <div class="fi-desc" style="font-size:14px;">{{ $data->content->neutral_tip2_desc->value ?? '' }}</div>
+                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:180px;">{{ $data->content->neutral_tip2_tooltip->value ?? '' }}</div>
                 </div>
                 <div class="tooltip-trigger card" style="position:relative;">
                     <div style="font-size:24px;margin-bottom:8px;">⚜️</div>
-                    <div class="fi-title">Metallic finishes</div>
-                    <div class="fi-desc" style="font-size:14px;">Gold, rose gold, and light champagne. Avoid silver, white
-                        gold, or dark metals.</div>
-                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:180px;">Warm metals
-                        enhance your golden undertone — silver is too cool.</div>
+                    <div class="fi-title">{{ $data->content->neutral_tip3_title->value ?? '' }}</div>
+                    <div class="fi-desc" style="font-size:14px;">{{ $data->content->neutral_tip3_desc->value ?? '' }}</div>
+                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:180px;">{{ $data->content->neutral_tip3_tooltip->value ?? '' }}</div>
                 </div>
                 <div class="tooltip-trigger card" style="position:relative;">
                     <div style="font-size:24px;margin-bottom:8px;">🍃</div>
-                    <div class="fi-title">Keep it light</div>
-                    <div class="fi-desc" style="font-size:14px;">The overall value of your outfit should be light to
-                        medium. Dark colours will weigh you down.</div>
-                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:180px;">Lightness is key —
-                        dark tones overwhelm your delicate features.</div>
+                    <div class="fi-title">{{ $data->content->neutral_tip4_title->value ?? '' }}</div>
+                    <div class="fi-desc" style="font-size:14px;">{{ $data->content->neutral_tip4_desc->value ?? '' }}</div>
+                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:180px;">{{ $data->content->neutral_tip4_tooltip->value ?? '' }}</div>
                 </div>
             </div>
             <div class="outfit-grid" style="margin-bottom:20px;">
                 <div class="tooltip-trigger outfit-card" style="position:relative;">
                     <div class="outfit-top" style="background:linear-gradient(145deg,#FAE8CC,#F5D4A8);">🌿</div>
                     <div class="outfit-body">
-                        <div class="outfit-occasion">Unisex Look</div>
-                        <div class="outfit-name">Warm Cream</div>
-                        <div class="outfit-items">Cream linen shirt or blouse · Tan trousers or shorts · Woven sandals ·
-                            Gold jewellery</div>
+                        <div class="outfit-occasion">{{ $data->content->neutral_outfit1_occasion->value ?? '' }}</div>
+                        <div class="outfit-name">{{ $data->content->neutral_outfit1_name->value ?? '' }}</div>
+                        <div class="outfit-items">{{ $data->content->neutral_outfit1_items->value ?? '' }}</div>
                     </div>
-                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">A light, warm, and
-                        effortlessly elegant unisex outfit.</div>
+                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">{{ $data->content->neutral_outfit1_tooltip->value ?? '' }}</div>
                 </div>
                 <div class="tooltip-trigger outfit-card" style="position:relative;">
                     <div class="outfit-top" style="background:linear-gradient(145deg,#FFD8A0,#E8C080);">🌸</div>
                     <div class="outfit-body">
-                        <div class="outfit-occasion">Soft Accent</div>
-                        <div class="outfit-name">Peachy Layer</div>
-                        <div class="outfit-items">Soft peach cardigan or jacket over cream base · Tan accessories · Gold
-                            details</div>
+                        <div class="outfit-occasion">{{ $data->content->neutral_outfit2_occasion->value ?? '' }}</div>
+                        <div class="outfit-name">{{ $data->content->neutral_outfit2_name->value ?? '' }}</div>
+                        <div class="outfit-items">{{ $data->content->neutral_outfit2_items->value ?? '' }}</div>
                     </div>
-                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">A warm, soft layer
-                        that adds personality without overwhelming.</div>
+                    <div class="tooltip-box tooltip-bottom" style="white-space:normal;max-width:200px;">{{ $data->content->neutral_outfit2_tooltip->value ?? '' }}</div>
                 </div>
             </div>
         </section>
@@ -818,8 +738,8 @@
 
     <!-- CELEBRITIES (expanded with male and non-binary examples) -->
     <section class="season-section-alt">
-        <span class="lbl" style="color:#C97B3A;">✦ Famous Light Springs</span>
-        <div class="h2" style="margin-bottom:36px;">You're in great company</div>
+        <span class="lbl" style="color:#C97B3A;">{{ $data->content->celebrities_label->value ?? '' }}</span>
+        <div class="h2" style="margin-bottom:36px;">{{ $data->content->celebrities_title->value ?? '' }}</div>
         <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:24px;">
             {{-- celebrity cards with tooltips --}}
             <div class="tooltip-trigger celeb-card" style="position:relative;">
@@ -868,21 +788,20 @@
     </section>
 
     <!-- NAV BETWEEN SEASONS -->
-    <div
-        style="padding:40px 6%;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #E8DDD6;gap:20px;flex-wrap:wrap;">
+    <div style="padding:40px 6%;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #E8DDD6;gap:20px;flex-wrap:wrap;">
         <a class="btn btn-outline" style="color:#2C2420;border-color:#E8DDD6;"
-            href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}">← All Seasons</a>
+            href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}">{{ $data->content->nav_all->value ?? '' }}</a>
         <div style="display:flex;gap:8px;flex-wrap:wrap;">
             <a class="btn btn-outline" style="color:#C97B3A;border-color:#C97B3A44;font-size:13px;"
-                href="{{ route('show.seasons.custom_pages', ['slug' => 'true-spring']) }}">True Spring →</a>
+                href="{{ route('show.seasons.custom_pages', ['slug' => 'true-spring']) }}">{{ $data->content->nav_prev->value ?? '' }}</a>
             <a class="btn btn-outline" style="color:#C97B3A;border-color:#C97B3A44;font-size:13px;"
-                href="{{ route('show.seasons.custom_pages', ['slug' => 'light-summer']) }}">Light Summer →</a>
+                href="{{ route('show.seasons.custom_pages', ['slug' => 'light-summer']) }}">{{ $data->content->nav_adjacent->value ?? '' }}</a>
         </div>
     </div>
 
     <div class="footer-mini">
         <div class="fm-logo">Glow<em>Match</em></div>
-        <div class="fm-links"><a href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}">All Seasons</a></div>
+        <div class="fm-links"><a href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}">{{ $data->content->footer_links->value ?? '' }}</a></div>
     </div>
 
     {{-- gender toggle script (unchanged) --}}

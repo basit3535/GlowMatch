@@ -6,16 +6,18 @@
         <section class="hero">
             <div>
                 <div class="hero-eyebrow">
-                    <div class="hero-line"></div><span>AI-Powered Colour Analysis</span>
+                    <div class="hero-line"></div>
+                    <span>{{ $data->content->hero_line->value ?? '' }}</span>
                 </div>
-                <h1 class="hero-h1">Discover your<br><em>perfect palette</em><br><strong>look radiant always</strong></h1>
-                <p class="hero-sub">Based on your skin tone, eye colour, hair, and body type — we craft a complete personal
-                    style guide that makes getting dressed effortless.</p>
+                <h1 class="hero-h1">{!! $data->content->hero_h1->value ?? '' !!}</h1>
+                <p class="hero-sub">{{ $data->content->hero_sub->value ?? '' }}</p>
                 <div class="hero-btns">
-                    <a class="btn-primary" href="{{ route('show.custom_pages', ['slug' => 'test']) }}">Start Free Analysis
-                        →</a>
-                    <a class="btn-outline" href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}">Explore
-                        Seasons</a>
+                    <a class="btn-primary" href="{{ $data->content->hero_btn_url->value ?? '#' }}">
+                        {{ $data->content->hero_btn_text->value ?? '' }}
+                    </a>
+                    <a class="btn-outline" href="{{ $data->content->hero_btn2_url->value ?? '#' }}">
+                        {{ $data->content->hero_btn2_text->value ?? '' }}
+                    </a>
                 </div>
                 <div class="hero-trust">
                     <div class="hero-avatars">
@@ -24,12 +26,15 @@
                         <span style="background:#B8CCE4;color:#1A3A6B;">LP</span>
                         <span style="background:#C8E4B8;color:#1A4A1A;">RP</span>
                     </div>
-                    <div class="hero-trust-text"><strong>48,000+</strong> colour analyses completed</div>
+                    <div class="hero-trust-text">
+                        <strong>{{ $data->content->hero_trust_count->value ?? '' }}</strong>
+                        {{ $data->content->hero_trust_label->value ?? '' }}
+                    </div>
                 </div>
             </div>
             <div class="hero-visual">
                 <div class="hv-card span2 c-autumn" style="color:#5C2A0E;">
-                    <div class="hv-label">Your Season</div>
+                    <div class="hv-label">Your Colour Season</div>
                     <div class="hv-title">Warm Autumn ✦</div>
                     <div class="hv-swatches">
                         <div class="hv-dot" style="background:#C97B5A;"></div>
@@ -73,153 +78,142 @@
 
         <!-- How It Works -->
         <section class="section">
-            <span class="section-label">✦ How It Works</span>
-            <h2 class="section-h2">Science meets style<br>in four simple steps</h2>
-            <p class="section-sub">Our analysis combines decades of colour theory with modern AI to give you a deeply
-                personal result.</p>
+            <span class="section-label">{{ $data->content->hiw_label->value ?? '' }}</span>
+            <h2 class="section-h2">{!! $data->content->hiw_h2->value ?? '' !!}</h2>
+            <p class="section-sub">{{ $data->content->hiw_sub->value ?? '' }}</p>
             <div class="hiw-grid">
                 <div class="hiw-card">
-                    <div class="hiw-num">01</div>
-                    <div class="hiw-icon-wrap" style="background:var(--blush);">🎨</div>
-                    <div class="hiw-title">Share your features</div>
-                    <div class="hiw-desc">Select your skin tone, undertone, natural eye colour, and hair shade from our
-                        visual options.</div>
+                    <div class="hiw-num">{{ $data->content->hiw_step1_num->value ?? '' }}</div>
+                    <div class="hiw-icon-wrap" style="background:var(--blush);">{{ $data->content->hiw_step1_icon->value ?? '' }}</div>
+                    <div class="hiw-title">{{ $data->content->hiw_step1_title->value ?? '' }}</div>
+                    <div class="hiw-desc">{{ $data->content->hiw_step1_desc->value ?? '' }}</div>
                 </div>
                 <div class="hiw-card">
-                    <div class="hiw-num">02</div>
-                    <div class="hiw-icon-wrap" style="background:var(--teal-light);">👗</div>
-                    <div class="hiw-title">Describe your silhouette</div>
-                    <div class="hiw-desc">Tell us your body type so we can recommend the most flattering cuts and
-                        silhouettes.</div>
+                    <div class="hiw-num">{{ $data->content->hiw_step2_num->value ?? '' }}</div>
+                    <div class="hiw-icon-wrap" style="background:var(--teal-light);">{{ $data->content->hiw_step2_icon->value ?? '' }}</div>
+                    <div class="hiw-title">{{ $data->content->hiw_step2_title->value ?? '' }}</div>
+                    <div class="hiw-desc">{{ $data->content->hiw_step2_desc->value ?? '' }}</div>
                 </div>
                 <div class="hiw-card">
-                    <div class="hiw-num">03</div>
-                    <div class="hiw-icon-wrap" style="background:var(--lavender-light);">✨</div>
-                    <div class="hiw-title">Get your colour season</div>
-                    <div class="hiw-desc">Receive your full palette — best colours, colours to avoid, and makeup shade
-                        recommendations.</div>
+                    <div class="hiw-num">{{ $data->content->hiw_step3_num->value ?? '' }}</div>
+                    <div class="hiw-icon-wrap" style="background:var(--lavender-light);">{{ $data->content->hiw_step3_icon->value ?? '' }}</div>
+                    <div class="hiw-title">{{ $data->content->hiw_step3_title->value ?? '' }}</div>
+                    <div class="hiw-desc">{{ $data->content->hiw_step3_desc->value ?? '' }}</div>
                 </div>
                 <div class="hiw-card">
-                    <div class="hiw-num">04</div>
-                    <div class="hiw-icon-wrap" style="background:var(--gold-light);">🛍️</div>
-                    <div class="hiw-title">Shop with confidence</div>
-                    <div class="hiw-desc">Browse tailored clothing ideas and styling tips based on both your season and body
-                        type.</div>
+                    <div class="hiw-num">{{ $data->content->hiw_step4_num->value ?? '' }}</div>
+                    <div class="hiw-icon-wrap" style="background:var(--gold-light);">{{ $data->content->hiw_step4_icon->value ?? '' }}</div>
+                    <div class="hiw-title">{{ $data->content->hiw_step4_title->value ?? '' }}</div>
+                    <div class="hiw-desc">{{ $data->content->hiw_step4_desc->value ?? '' }}</div>
                 </div>
             </div>
         </section>
 
         <!-- Seasons -->
-<!-- Update the links in the home page component to pass the season parameter -->
-
-<section class="seasons-section">
-    <div class="seasons-inner">
-        <span class="section-label">✦ The Four Seasons</span>
-        <h2 class="section-h2" style="margin-bottom:40px;">Which season are you?</h2>
-    </div>
-    <div class="seasons-scroll">
-        <a href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}?season=spring" data-season="spring">
-            <div class="s-card sc-spring">
-                <div class="s-card-label">Warm · Light</div>
-                <div class="s-card-name">Spring</div>
-                <div class="s-card-desc">Clear, warm, and fresh — you glow in peach, coral, and warm gold.</div>
-                <div class="s-card-dots">
-                    <div class="s-card-dot" style="background:#F4A460;"></div>
-                    <div class="s-card-dot" style="background:#FFD580;"></div>
-                    <div class="s-card-dot" style="background:#E8855A;"></div>
-                    <div class="s-card-dot" style="background:#90C46E;"></div>
-                </div>
+        <section class="seasons-section">
+            <div class="seasons-inner">
+                <span class="section-label">{{ $data->content->seasons_label->value ?? '' }}</span>
+                <h2 class="section-h2" style="margin-bottom:40px;">{!! $data->content->seasons_h2->value ?? '' !!}</h2>
             </div>
-        </a>
-        <a href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}?season=summer" data-season="summer">
-            <div class="s-card sc-summer">
-                <div class="s-card-label">Cool · Muted</div>
-                <div class="s-card-name">Summer</div>
-                <div class="s-card-desc">Soft, cool, and romantic — dusty rose and lavender are your signature.</div>
-                <div class="s-card-dots">
-                    <div class="s-card-dot" style="background:#C8A2C8;"></div>
-                    <div class="s-card-dot" style="background:#8FA8C8;"></div>
-                    <div class="s-card-dot" style="background:#D8BFD8;"></div>
-                    <div class="s-card-dot" style="background:#88A4BC;"></div>
-                </div>
+            <div class="seasons-scroll">
+                <a href="{{ $data->content->seasons_btn_url->value ?? '#' }}?season=spring" data-season="spring">
+                    <div class="s-card sc-spring">
+                        <div class="s-card-label">{{ $data->content->season_spring_label->value ?? '' }}</div>
+                        <div class="s-card-name">{{ $data->content->season_spring_name->value ?? '' }}</div>
+                        <div class="s-card-desc">{{ $data->content->season_spring_desc->value ?? '' }}</div>
+                        <div class="s-card-dots">
+                            <div class="s-card-dot" style="background:#F4A460;"></div>
+                            <div class="s-card-dot" style="background:#FFD580;"></div>
+                            <div class="s-card-dot" style="background:#E8855A;"></div>
+                            <div class="s-card-dot" style="background:#90C46E;"></div>
+                        </div>
+                    </div>
+                </a>
+                <a href="{{ $data->content->seasons_btn_url->value ?? '#' }}?season=summer" data-season="summer">
+                    <div class="s-card sc-summer">
+                        <div class="s-card-label">{{ $data->content->season_summer_label->value ?? '' }}</div>
+                        <div class="s-card-name">{{ $data->content->season_summer_name->value ?? '' }}</div>
+                        <div class="s-card-desc">{{ $data->content->season_summer_desc->value ?? '' }}</div>
+                        <div class="s-card-dots">
+                            <div class="s-card-dot" style="background:#C8A2C8;"></div>
+                            <div class="s-card-dot" style="background:#8FA8C8;"></div>
+                            <div class="s-card-dot" style="background:#D8BFD8;"></div>
+                            <div class="s-card-dot" style="background:#88A4BC;"></div>
+                        </div>
+                    </div>
+                </a>
+                <a href="{{ $data->content->seasons_btn_url->value ?? '#' }}?season=autumn" data-season="autumn">
+                    <div class="s-card sc-autumn">
+                        <div class="s-card-label">{{ $data->content->season_autumn_label->value ?? '' }}</div>
+                        <div class="s-card-name">{{ $data->content->season_autumn_name->value ?? '' }}</div>
+                        <div class="s-card-desc">{{ $data->content->season_autumn_desc->value ?? '' }}</div>
+                        <div class="s-card-dots">
+                            <div class="s-card-dot" style="background:#C97B5A;"></div>
+                            <div class="s-card-dot" style="background:#D4A856;"></div>
+                            <div class="s-card-dot" style="background:#556B2F;"></div>
+                            <div class="s-card-dot" style="background:#8B4513;"></div>
+                        </div>
+                    </div>
+                </a>
+                <a href="{{ $data->content->seasons_btn_url->value ?? '#' }}?season=winter" data-season="winter">
+                    <div class="s-card sc-winter">
+                        <div class="s-card-label">{{ $data->content->season_winter_label->value ?? '' }}</div>
+                        <div class="s-card-name">{{ $data->content->season_winter_name->value ?? '' }}</div>
+                        <div class="s-card-desc">{{ $data->content->season_winter_desc->value ?? '' }}</div>
+                        <div class="s-card-dots">
+                            <div class="s-card-dot" style="background:#00008B;"></div>
+                            <div class="s-card-dot" style="background:#8B0000;"></div>
+                            <div class="s-card-dot" style="background:#4B0082;"></div>
+                            <div class="s-card-dot" style="background:#F0F0F0;"></div>
+                        </div>
+                    </div>
+                </a>
             </div>
-        </a>
-        <a href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}?season=autumn" data-season="autumn">
-            <div class="s-card sc-autumn">
-                <div class="s-card-label">Warm · Deep</div>
-                <div class="s-card-name">Autumn</div>
-                <div class="s-card-desc">Rich, warm, and earthy — terracotta, olive, and rust make you shine.</div>
-                <div class="s-card-dots">
-                    <div class="s-card-dot" style="background:#C97B5A;"></div>
-                    <div class="s-card-dot" style="background:#D4A856;"></div>
-                    <div class="s-card-dot" style="background:#556B2F;"></div>
-                    <div class="s-card-dot" style="background:#8B4513;"></div>
-                </div>
+            <div style="text-align:center;margin-top:40px;padding:0 6%;">
+                <a class="btn-dark" href="{{ $data->content->seasons_btn_url->value ?? '#' }}">
+                    {{ $data->content->seasons_btn_text->value ?? '' }}
+                </a>
             </div>
-        </a>
-        <a href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}?season=winter" data-season="winter">
-            <div class="s-card sc-winter">
-                <div class="s-card-label">Cool · Bold</div>
-                <div class="s-card-name">Winter</div>
-                <div class="s-card-desc">High-contrast and striking — jewel tones and icy shades are yours.</div>
-                <div class="s-card-dots">
-                    <div class="s-card-dot" style="background:#00008B;"></div>
-                    <div class="s-card-dot" style="background:#8B0000;"></div>
-                    <div class="s-card-dot" style="background:#4B0082;"></div>
-                    <div class="s-card-dot" style="background:#F0F0F0;"></div>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div style="text-align:center;margin-top:40px;padding:0 6%;">
-        <a class="btn-dark" href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}">Discover Your Season →</a>
-    </div>
-</section>
+        </section>
 
         <!-- Features -->
         <section class="section" style="background:var(--blush-light);">
-            <span class="section-label">✦ What You Get</span>
-            <h2 class="section-h2">Everything you need<br>to dress with confidence</h2>
+            <span class="section-label">{{ $data->content->features_label->value ?? '' }}</span>
+            <h2 class="section-h2">{!! $data->content->features_h2->value ?? '' !!}</h2>
             <div class="features-grid">
                 <div class="feat-card">
-                    <div class="feat-icon-wrap" style="background:var(--blush);">🎨</div>
+                    <div class="feat-icon-wrap" style="background:var(--blush);">{{ $data->content->feature1_icon->value ?? '' }}</div>
                     <div>
-                        <div class="feat-title">Full Colour Palette</div>
-                        <div class="feat-desc">30+ colours curated specifically for your season, from everyday neutrals to
-                            statement shades.</div>
+                        <div class="feat-title">{{ $data->content->feature1_title->value ?? '' }}</div>
+                        <div class="feat-desc">{{ $data->content->feature1_desc->value ?? '' }}</div>
                     </div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-icon-wrap" style="background:var(--teal-light);">💄</div>
+                    <div class="feat-icon-wrap" style="background:var(--teal-light);">{{ $data->content->feature2_icon->value ?? '' }}</div>
                     <div>
-                        <div class="feat-title">Makeup Shade Guide</div>
-                        <div class="feat-desc">Foundation undertones, lip colours, eyeshadow shades, and blush tones
-                            matched to your features.</div>
+                        <div class="feat-title">{{ $data->content->feature2_title->value ?? '' }}</div>
+                        <div class="feat-desc">{{ $data->content->feature2_desc->value ?? '' }}</div>
                     </div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-icon-wrap" style="background:var(--lavender-light);">👗</div>
+                    <div class="feat-icon-wrap" style="background:var(--lavender-light);">{{ $data->content->feature3_icon->value ?? '' }}</div>
                     <div>
-                        <div class="feat-title">Body Type Styling</div>
-                        <div class="feat-desc">Silhouette recommendations, cuts to embrace, and styles to avoid for your
-                            unique proportions.</div>
+                        <div class="feat-title">{{ $data->content->feature3_title->value ?? '' }}</div>
+                        <div class="feat-desc">{{ $data->content->feature3_desc->value ?? '' }}</div>
                     </div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-icon-wrap" style="background:var(--gold-light);">🚫</div>
+                    <div class="feat-icon-wrap" style="background:var(--gold-light);">{{ $data->content->feature4_icon->value ?? '' }}</div>
                     <div>
-                        <div class="feat-title">Colours to Avoid</div>
-                        <div class="feat-desc">Clearly shown — the shades that wash you out or clash, so you can shop
-                            smarter.</div>
+                        <div class="feat-title">{{ $data->content->feature4_title->value ?? '' }}</div>
+                        <div class="feat-desc">{{ $data->content->feature4_desc->value ?? '' }}</div>
                     </div>
                 </div>
                 <div class="feat-card wide">
-                    <div class="feat-icon-wrap" style="background:var(--blush);width:64px;height:64px;font-size:28px;">✦
-                    </div>
+                    <div class="feat-icon-wrap" style="background:var(--blush);width:64px;height:64px;font-size:28px;">{{ $data->content->feature5_icon->value ?? '' }}</div>
                     <div>
-                        <div class="feat-title">Personal Style Insights</div>
-                        <div class="feat-desc">A written breakdown of how your season and body type work together, with
-                            practical advice you can use every time you shop or get dressed. No jargon, just clarity.</div>
+                        <div class="feat-title">{{ $data->content->feature5_title->value ?? '' }}</div>
+                        <div class="feat-desc">{{ $data->content->feature5_desc->value ?? '' }}</div>
                     </div>
                 </div>
             </div>
@@ -229,62 +223,59 @@
         <section class="stats-band">
             <div class="stats-grid">
                 <div>
-                    <div class="stat-n">48K+</div>
-                    <div class="stat-l">Analyses completed</div>
+                    <div class="stat-n">{{ $data->content->stat1_number->value ?? '' }}</div>
+                    <div class="stat-l">{{ $data->content->stat1_label->value ?? '' }}</div>
                 </div>
                 <div>
-                    <div class="stat-n">4</div>
-                    <div class="stat-l">Colour seasons</div>
+                    <div class="stat-n">{{ $data->content->stat2_number->value ?? '' }}</div>
+                    <div class="stat-l">{{ $data->content->stat2_label->value ?? '' }}</div>
                 </div>
                 <div>
-                    <div class="stat-n">96%</div>
-                    <div class="stat-l">Satisfaction rate</div>
+                    <div class="stat-n">{{ $data->content->stat3_number->value ?? '' }}</div>
+                    <div class="stat-l">{{ $data->content->stat3_label->value ?? '' }}</div>
                 </div>
                 <div>
-                    <div class="stat-n">5min</div>
-                    <div class="stat-l">Average quiz time</div>
+                    <div class="stat-n">{{ $data->content->stat4_number->value ?? '' }}</div>
+                    <div class="stat-l">{{ $data->content->stat4_label->value ?? '' }}</div>
                 </div>
             </div>
         </section>
 
         <!-- Testimonials -->
         <section class="section">
-            <span class="section-label">✦ Real Stories</span>
-            <h2 class="section-h2">Colour changed everything</h2>
+            <span class="section-label">{{ $data->content->testimonials_label->value ?? '' }}</span>
+            <h2 class="section-h2">{!! $data->content->testimonials_h2->value ?? '' !!}</h2>
             <div class="t-grid" style="margin-top:40px;">
                 <div class="t-card">
                     <div class="t-stars">★★★★★</div>
-                    <div class="t-text">"I finally understand why certain colours washed me out. My autumn palette has
-                        completely transformed my wardrobe. Worth every second!"</div>
+                    <div class="t-text">{{ $data->content->testimonial1_text->value ?? '' }}</div>
                     <div class="t-author">
-                        <div class="t-avatar" style="background:#FDF0EA;color:#8B4A32;">SA</div>
+                        <div class="t-avatar" style="background:#FDF0EA;color:#8B4A32;">{{ $data->content->testimonial1_avatar->value ?? '' }}</div>
                         <div>
-                            <div class="t-name">Sara Ahmed</div>
-                            <div class="t-meta">Warm Autumn · Pear Shape</div>
+                            <div class="t-name">{{ $data->content->testimonial1_name->value ?? '' }}</div>
+                            <div class="t-meta">{{ $data->content->testimonial1_meta->value ?? '' }}</div>
                         </div>
                     </div>
                 </div>
                 <div class="t-card">
                     <div class="t-stars">★★★★★</div>
-                    <div class="t-text">"As someone who always struggled shopping, this quiz gave me a clear direction. The
-                        body type recommendations were spot-on and so practical."</div>
+                    <div class="t-text">{{ $data->content->testimonial2_text->value ?? '' }}</div>
                     <div class="t-author">
-                        <div class="t-avatar" style="background:#EAF0FA;color:#1A3A6B;">MK</div>
+                        <div class="t-avatar" style="background:#EAF0FA;color:#1A3A6B;">{{ $data->content->testimonial2_avatar->value ?? '' }}</div>
                         <div>
-                            <div class="t-name">Maya Kaur</div>
-                            <div class="t-meta">Cool Winter · Hourglass</div>
+                            <div class="t-name">{{ $data->content->testimonial2_name->value ?? '' }}</div>
+                            <div class="t-meta">{{ $data->content->testimonial2_meta->value ?? '' }}</div>
                         </div>
                     </div>
                 </div>
                 <div class="t-card">
                     <div class="t-stars">★★★★★</div>
-                    <div class="t-text">"I never knew I was a Summer season! The dusty rose and lavender suggestions are
-                        incredibly flattering. I've recommended this to all my friends."</div>
+                    <div class="t-text">{{ $data->content->testimonial3_text->value ?? '' }}</div>
                     <div class="t-author">
-                        <div class="t-avatar" style="background:#F0EDF5;color:#4B3A6B;">LP</div>
+                        <div class="t-avatar" style="background:#F0EDF5;color:#4B3A6B;">{{ $data->content->testimonial3_avatar->value ?? '' }}</div>
                         <div>
-                            <div class="t-name">Layla Patel</div>
-                            <div class="t-meta">Cool Summer · Rectangle</div>
+                            <div class="t-name">{{ $data->content->testimonial3_name->value ?? '' }}</div>
+                            <div class="t-meta">{{ $data->content->testimonial3_meta->value ?? '' }}</div>
                         </div>
                     </div>
                 </div>

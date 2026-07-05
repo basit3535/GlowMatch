@@ -4,13 +4,13 @@
 @section('page_style')
     <style>
         /* ══════════════════════════════════════════════════════════
-               Google Fonts
-            ══════════════════════════════════════════════════════════ */
+                   Google Fonts
+                ══════════════════════════════════════════════════════════ */
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
 
         /* ══════════════════════════════════════════════════════════
-               Root Variables
-            ══════════════════════════════════════════════════════════ */
+                   Root Variables
+                ══════════════════════════════════════════════════════════ */
         :root {
             --quiz-bg: #FAF8F5;
             --quiz-card: #FFFFFF;
@@ -28,8 +28,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-               Page Shell
-            ══════════════════════════════════════════════════════════ */
+                   Page Shell
+                ══════════════════════════════════════════════════════════ */
         #page-quiz {
             background: var(--quiz-bg);
             min-height: 100vh;
@@ -37,8 +37,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-               Header
-            ══════════════════════════════════════════════════════════ */
+                   Header
+                ══════════════════════════════════════════════════════════ */
         .quiz-header {
             text-align: center;
             padding: 90px 24px 40px;
@@ -74,8 +74,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-               Progress Bar
-            ══════════════════════════════════════════════════════════ */
+                   Progress Bar
+                ══════════════════════════════════════════════════════════ */
         .quiz-progress {
             display: flex;
             align-items: center;
@@ -145,8 +145,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-               Quiz Body
-            ══════════════════════════════════════════════════════════ */
+                   Quiz Body
+                ══════════════════════════════════════════════════════════ */
         .quiz-body {
             max-width: 900px;
             margin: 48px auto 0;
@@ -201,8 +201,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-               Gender Step
-            ══════════════════════════════════════════════════════════ */
+                   Gender Step
+                ══════════════════════════════════════════════════════════ */
         .gender-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -246,8 +246,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-               Option Grids
-            ══════════════════════════════════════════════════════════ */
+                   Option Grids
+                ══════════════════════════════════════════════════════════ */
         .opt-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
@@ -285,7 +285,8 @@
             margin: 0 auto 12px;
             box-shadow: 0 3px 10px rgba(0, 0, 0, .15);
             position: relative;
-            overflow: hidden; /* clip input to circle */
+            overflow: hidden;
+            /* clip input to circle */
         }
 
         .opt-circle input[type="color"] {
@@ -316,8 +317,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-               Body Type
-            ══════════════════════════════════════════════════════════ */
+                   Body Type
+                ══════════════════════════════════════════════════════════ */
         .body-opt-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -367,8 +368,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-               Photo Upload
-            ══════════════════════════════════════════════════════════ */
+                   Photo Upload
+                ══════════════════════════════════════════════════════════ */
         .photo-upload-area {
             border: 2px dashed var(--quiz-border);
             border-radius: var(--quiz-radius);
@@ -444,8 +445,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-               Preview Swatch (for steps 2-5)
-            ══════════════════════════════════════════════════════════ */
+                   Preview Swatch (for steps 2-5)
+                ══════════════════════════════════════════════════════════ */
         .preview-container {
             background: var(--quiz-card);
             border-radius: 16px;
@@ -470,7 +471,7 @@
             height: 48px;
             border-radius: 12px;
             border: 2px solid #fff;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
             background: #ddd;
             transition: background 0.2s;
         }
@@ -489,8 +490,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-               Contact Form
-            ══════════════════════════════════════════════════════════ */
+                   Contact Form
+                ══════════════════════════════════════════════════════════ */
         .contact-form-wrap {
             background: var(--quiz-card);
             border: 1px solid var(--quiz-border);
@@ -541,8 +542,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-               Nav Buttons
-            ══════════════════════════════════════════════════════════ */
+                   Nav Buttons
+                ══════════════════════════════════════════════════════════ */
         .q-nav {
             display: flex;
             justify-content: space-between;
@@ -594,8 +595,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-               Loading
-            ══════════════════════════════════════════════════════════ */
+                   Loading
+                ══════════════════════════════════════════════════════════ */
         #qLoading {
             text-align: center;
             padding: 80px 24px;
@@ -644,8 +645,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-               Results
-            ══════════════════════════════════════════════════════════ */
+                   Results
+                ══════════════════════════════════════════════════════════ */
         .results-wrap {
             padding: 0;
         }
@@ -832,8 +833,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-               ██  COLOUR TRY-ON PANEL  ██
-            ══════════════════════════════════════════════════════════ */
+                   ██  COLOUR TRY-ON PANEL  ██
+                ══════════════════════════════════════════════════════════ */
         .tryon-section {
             background: var(--quiz-card);
             border: 1px solid var(--quiz-border);
@@ -1247,8 +1248,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-               Pinterest
-            ══════════════════════════════════════════════════════════ */
+                   Pinterest
+                ══════════════════════════════════════════════════════════ */
         .pinterest-section {
             background: var(--quiz-card);
             border: 1px solid var(--quiz-border);
@@ -1339,8 +1340,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-               Results Actions
-            ══════════════════════════════════════════════════════════ */
+                   Results Actions
+                ══════════════════════════════════════════════════════════ */
         .results-actions {
             display: flex;
             gap: 12px;
@@ -1390,8 +1391,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-               Responsive
-            ══════════════════════════════════════════════════════════ */
+                   Responsive
+                ══════════════════════════════════════════════════════════ */
         @media(max-width:600px) {
             .results-main {
                 grid-template-columns: 1fr;
@@ -1429,16 +1430,16 @@
 
         {{-- ─── HEADER ─── --}}
         <div class="quiz-header">
-            <span class="section-label">✦ Personal Colour & Style Analysis</span>
-            <h1>Find your colour season</h1>
-            <p class="subtitle">7 steps · Takes about 5 minutes · Free forever</p>
+            <span class="section-label">{{ $data->content->quiz_header_label->value ?? '' }}</span>
+            <h1>{{ $data->content->quiz_header_title->value ?? '' }}</h1>
+            <p class="subtitle">{{ $data->content->quiz_header_subtitle->value ?? '' }}</p>
 
             <div class="quiz-progress">
-                @foreach ([['♀', 'Gender'], ['📷', 'Your Photo'], ['2', 'Skin'], ['3', 'Undertone'], ['4', 'Eyes'], ['5', 'Hair'], ['6', 'Body'], ['✉', 'Profile']] as $i => $s)
+                @foreach ([['♀', 'progress_gender'], ['📷', 'progress_photo'], ['2', 'progress_skin'], ['3', 'progress_undertone'], ['4', 'progress_eyes'], ['5', 'progress_hair'], ['6', 'progress_body'], ['✉', 'progress_profile']] as $i => $s)
                     <div class="qp-step">
                         <div class="qp-circle {{ $i === 0 ? 'active' : '' }}" id="qc{{ $i }}">{{ $s[0] }}
                         </div>
-                        <div class="qp-label">{{ $s[1] }}</div>
+                        <div class="qp-label">{{ $data->content->{$s[1]}->value ?? '' }}</div>
                     </div>
                     @if ($i < 7)
                         <div class="qp-line" id="ql{{ $i }}"></div>
@@ -1451,52 +1452,48 @@
 
             {{-- ─── STEP 0: GENDER ─── --}}
             <div class="q-step active" id="q0">
-                <div class="q-num">Step 1 of 7</div>
-                <div class="q-question">How do you identify?</div>
-                <div class="q-hint">This helps us personalise your style &amp; clothing recommendations.</div>
+                <div class="q-num">{{ $data->content->step0_num->value ?? '' }}</div>
+                <div class="q-question">{{ $data->content->step0_question->value ?? '' }}</div>
+                <div class="q-hint">{{ $data->content->step0_hint->value ?? '' }}</div>
                 <div class="gender-grid">
                     <div class="gender-opt" onclick="qSelectGender(this,'female')"><span class="gender-opt-icon">♀</span>
-                        <div class="gender-opt-name">Female</div>
+                        <div class="gender-opt-name">{{ $data->content->step0_female->value ?? '' }}</div>
                     </div>
                     <div class="gender-opt" onclick="qSelectGender(this,'male')"><span class="gender-opt-icon">♂</span>
-                        <div class="gender-opt-name">Male</div>
+                        <div class="gender-opt-name">{{ $data->content->step0_male->value ?? '' }}</div>
                     </div>
                     <div class="gender-opt" onclick="qSelectGender(this,'nonbinary')"><span class="gender-opt-icon">⚧</span>
-                        <div class="gender-opt-name">Non-binary</div>
+                        <div class="gender-opt-name">{{ $data->content->step0_nonbinary->value ?? '' }}</div>
                     </div>
                 </div>
                 <div class="q-nav">
-                    <div></div><button class="btn-next-q" id="qn0" onclick="qGo(1)">Next →</button>
+                    <div></div><button class="btn-next-q" id="qn0" onclick="qGo(1)">{{ $data->content->step0_next->value ?? '' }}</button>
                 </div>
             </div>
 
             {{-- ─── STEP 1: PHOTO ─── --}}
             <div class="q-step" id="q1">
-                <div class="q-num">Step 2 of 7</div>
-                <div class="q-question">Upload a clear photo of yourself</div>
-                <div class="q-hint">A well-lit selfie helps our AI detect your colouring and features more accurately. Your
-                    photo is analysed locally and never stored.</div>
-                <div class="photo-ai-note"><span>🔒</span><span>Your image is used only for AI colour analysis in this
-                        session. It is not saved or shared.</span></div>
+                <div class="q-num">{{ $data->content->step1_num->value ?? '' }}</div>
+                <div class="q-question">{{ $data->content->step1_question->value ?? '' }}</div>
+                <div class="q-hint">{{ $data->content->step1_hint->value ?? '' }}</div>
+                <div class="photo-ai-note"><span>🔒</span><span>{{ $data->content->step1_photo_ai_note->value ?? '' }}</span></div>
                 <div class="photo-upload-area" id="photoUploadArea" onclick="triggerPhotoUpload()">
                     <span class="photo-upload-icon">📸</span>
-                    <div class="photo-upload-title">Tap to upload your photo</div>
-                    <div class="photo-upload-sub">JPG, PNG or WEBP · Max 10MB</div>
+                    <div class="photo-upload-title">{{ $data->content->step1_upload_title->value ?? '' }}</div>
+                    <div class="photo-upload-sub">{{ $data->content->step1_upload_sub->value ?? '' }}</div>
                 </div>
-                <input type="file" id="photoFileInput" accept="image/*" style="display:none"
-                    onchange="handlePhotoUpload(this)">
+                <input type="file" id="photoFileInput" accept="image/*" style="display:none" onchange="handlePhotoUpload(this)">
                 <div class="q-nav">
-                    <button class="btn-back-q" onclick="qGo(0)">← Back</button>
-                    <button class="btn-next-q on" id="qn1" onclick="qGo(2)">Next →</button>
+                    <button class="btn-back-q" onclick="qGo(0)">{{ $data->content->step1_back->value ?? '' }}</button>
+                    <button class="btn-next-q on" id="qn1" onclick="qGo(2)">{{ $data->content->step1_next->value ?? '' }}</button>
                 </div>
             </div>
 
             {{-- ─── STEP 2: SKIN ─── --}}
             <div class="q-step" id="q2">
-                <div class="q-num">Step 3 of 7</div>
-                <div class="q-question">What is your natural skin tone?</div>
-                <div class="q-hint">Choose the option that best matches your complexion when you haven't been in the sun.
-                </div>
+                <div class="q-num">{{ $data->content->step2_num->value ?? '' }}</div>
+                <div class="q-question">{{ $data->content->step2_question->value ?? '' }}</div>
+                <div class="q-hint">{{ $data->content->step2_hint->value ?? '' }}</div>
 
                 <div class="grid">
                     <div class="grid grid-cols-6 gap-4">
@@ -1514,56 +1511,57 @@
                                 <div class="opt" onclick="qSelect(this,'skin','fair')">
                                     <div class="opt-circle" style="background:linear-gradient(135deg,#FDDBB4,#F5C89C);">
                                     </div>
-                                    <div class="opt-name">Fair</div>
-                                    <div class="opt-sub">Very light, may burn easily</div>
+                                    <div class="opt-name">{{ $data->content->step2_fair->value ?? '' }}</div>
+                                    <div class="opt-sub">{{ $data->content->step2_fair_sub->value ?? '' }}</div>
                                 </div>
                                 <div class="opt" onclick="qSelect(this,'skin','light')">
                                     <div class="opt-circle" style="background:linear-gradient(135deg,#F0C089,#D4956A);">
                                     </div>
-                                    <div class="opt-name">Light</div>
-                                    <div class="opt-sub">Light to medium</div>
+                                    <div class="opt-name">{{ $data->content->step2_light->value ?? '' }}</div>
+                                    <div class="opt-sub">{{ $data->content->step2_light_sub->value ?? '' }}</div>
                                 </div>
                                 <div class="opt" onclick="qSelect(this,'skin','medium')">
                                     <div class="opt-circle" style="background:linear-gradient(135deg,#C68642,#A0522D);">
                                     </div>
-                                    <div class="opt-name">Medium</div>
-                                    <div class="opt-sub">Warm beige or olive</div>
+                                    <div class="opt-name">{{ $data->content->step2_medium->value ?? '' }}</div>
+                                    <div class="opt-sub">{{ $data->content->step2_medium_sub->value ?? '' }}</div>
                                 </div>
                                 <div class="opt" onclick="qSelect(this,'skin','tan')">
                                     <div class="opt-circle" style="background:linear-gradient(135deg,#8D5524,#6B3A1F);">
                                     </div>
-                                    <div class="opt-name">Tan</div>
-                                    <div class="opt-sub">Medium to deep</div>
+                                    <div class="opt-name">{{ $data->content->step2_tan->value ?? '' }}</div>
+                                    <div class="opt-sub">{{ $data->content->step2_tan_sub->value ?? '' }}</div>
                                 </div>
                                 <div class="opt" onclick="qSelect(this,'skin','deep')">
                                     <div class="opt-circle" style="background:linear-gradient(135deg,#4A2508,#2C1A08);">
                                     </div>
-                                    <div class="opt-name">Deep</div>
-                                    <div class="opt-sub">Rich, dark complexion</div>
+                                    <div class="opt-name">{{ $data->content->step2_deep->value ?? '' }}</div>
+                                    <div class="opt-sub">{{ $data->content->step2_deep_sub->value ?? '' }}</div>
                                 </div>
                                 <!-- Custom skin option -->
                                 <div class="opt" id="skin_custom_opt">
                                     <div class="opt-circle">
-                                        <input type="color" id="skin_custom" value="#C4956A"
-                                               onchange="qSelectCustom(this, 'skin')">
+                                        <input type="color" id="skin_custom" value="#C4956A" onchange="qSelectCustom(this, 'skin')">
                                     </div>
-                                    <div class="opt-name">Custom</div>
-                                    <div class="opt-sub">Pick a color</div>
+                                    <div class="opt-name">{{ $data->content->step2_custom->value ?? '' }}</div>
+                                    <div class="opt-sub">{{ $data->content->step2_custom_sub->value ?? '' }}</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="q-nav"><button class="btn-back-q" onclick="qGo(1)">← Back</button><button
-                        class="btn-next-q" id="qn2" onclick="qGo(3)">Next →</button></div>
+                <div class="q-nav">
+                    <button class="btn-back-q" onclick="qGo(1)">{{ $data->content->step2_back->value ?? '' }}</button>
+                    <button class="btn-next-q" id="qn2" onclick="qGo(3)">{{ $data->content->step2_next->value ?? '' }}</button>
+                </div>
             </div>
 
             {{-- ─── STEP 3: UNDERTONE ─── --}}
             <div class="q-step" id="q3">
-                <div class="q-num">Step 4 of 7</div>
-                <div class="q-question">What is your skin's undertone?</div>
-                <div class="q-hint">Check your inner wrist in natural light. What colour do your veins appear?</div>
+                <div class="q-num">{{ $data->content->step3_num->value ?? '' }}</div>
+                <div class="q-question">{{ $data->content->step3_question->value ?? '' }}</div>
+                <div class="q-hint">{{ $data->content->step3_hint->value ?? '' }}</div>
 
                 <div class="grid">
                     <div class="grid grid-cols-6 gap-4">
@@ -1573,7 +1571,8 @@
                                 <div class="preview-placeholder" id="previewPlaceholderUndertone">
                                     <span>📸</span> Your photo will appear here
                                 </div>
-                                <div class="preview-swatch" id="previewSwatchUndertone" style="background: #E0D6C8;"></div>
+                                <div class="preview-swatch" id="previewSwatchUndertone" style="background: #E0D6C8;">
+                                </div>
                             </div>
                         </div>
                         <div class="col-span-4">
@@ -1581,49 +1580,50 @@
                                 <div class="opt" onclick="qSelect(this,'undertone','warm')">
                                     <div class="opt-circle" style="background:linear-gradient(135deg,#FFD700,#FFA500);">
                                     </div>
-                                    <div class="opt-name">Warm</div>
-                                    <div class="opt-sub">Veins look greenish, gold suits you</div>
+                                    <div class="opt-name">{{ $data->content->step3_warm->value ?? '' }}</div>
+                                    <div class="opt-sub">{{ $data->content->step3_warm_sub->value ?? '' }}</div>
                                 </div>
                                 <div class="opt" onclick="qSelect(this,'undertone','cool')">
                                     <div class="opt-circle" style="background:linear-gradient(135deg,#B0C4DE,#6A5ACD);">
                                     </div>
-                                    <div class="opt-name">Cool</div>
-                                    <div class="opt-sub">Veins look blue/purple, silver suits you</div>
+                                    <div class="opt-name">{{ $data->content->step3_cool->value ?? '' }}</div>
+                                    <div class="opt-sub">{{ $data->content->step3_cool_sub->value ?? '' }}</div>
                                 </div>
                                 <div class="opt" onclick="qSelect(this,'undertone','neutral')">
                                     <div class="opt-circle" style="background:linear-gradient(135deg,#D2B48C,#BC9A6A);">
                                     </div>
-                                    <div class="opt-name">Neutral</div>
-                                    <div class="opt-sub">Can't tell, both metals work</div>
+                                    <div class="opt-name">{{ $data->content->step3_neutral->value ?? '' }}</div>
+                                    <div class="opt-sub">{{ $data->content->step3_neutral_sub->value ?? '' }}</div>
                                 </div>
                                 <div class="opt" onclick="qSelect(this,'undertone','olive')">
                                     <div class="opt-circle" style="background:linear-gradient(135deg,#8FBC8F,#6B8E23);">
                                     </div>
-                                    <div class="opt-name">Olive</div>
-                                    <div class="opt-sub">Greenish-yellow undertone</div>
+                                    <div class="opt-name">{{ $data->content->step3_olive->value ?? '' }}</div>
+                                    <div class="opt-sub">{{ $data->content->step3_olive_sub->value ?? '' }}</div>
                                 </div>
                                 <!-- Custom undertone option -->
                                 <div class="opt" id="undertone_custom_opt">
                                     <div class="opt-circle">
-                                        <input type="color" id="undertone_custom" value="#C4956A"
-                                               onchange="qSelectCustom(this, 'undertone')">
+                                        <input type="color" id="undertone_custom" value="#C4956A" onchange="qSelectCustom(this, 'undertone')">
                                     </div>
-                                    <div class="opt-name">Custom</div>
-                                    <div class="opt-sub">Pick a color</div>
+                                    <div class="opt-name">{{ $data->content->step3_custom->value ?? '' }}</div>
+                                    <div class="opt-sub">{{ $data->content->step3_custom_sub->value ?? '' }}</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="q-nav"><button class="btn-back-q" onclick="qGo(2)">← Back</button><button
-                        class="btn-next-q" id="qn3" onclick="qGo(4)">Next →</button></div>
+                <div class="q-nav">
+                    <button class="btn-back-q" onclick="qGo(2)">{{ $data->content->step3_back->value ?? '' }}</button>
+                    <button class="btn-next-q" id="qn3" onclick="qGo(4)">{{ $data->content->step3_next->value ?? '' }}</button>
+                </div>
             </div>
 
             {{-- ─── STEP 4: EYES ─── --}}
             <div class="q-step" id="q4">
-                <div class="q-num">Step 5 of 7</div>
-                <div class="q-question">What colour are your eyes?</div>
-                <div class="q-hint">Select your natural eye colour — not what you'd like them to be!</div>
+                <div class="q-num">{{ $data->content->step4_num->value ?? '' }}</div>
+                <div class="q-question">{{ $data->content->step4_question->value ?? '' }}</div>
+                <div class="q-hint">{{ $data->content->step4_hint->value ?? '' }}</div>
                 <div class="grid">
                     <div class="grid grid-cols-6 gap-4">
                         <div class="col-span-2">
@@ -1638,57 +1638,52 @@
                         <div class="col-span-4">
                             <div class="opt-grid">
                                 <div class="opt" onclick="qSelect(this,'eyes','blue')">
-                                    <div class="opt-circle"
-                                        style="background:radial-gradient(circle,#6CA6CD,#4682B4,#1C3A6E);"></div>
-                                    <div class="opt-name">Blue</div>
+                                    <div class="opt-circle" style="background:radial-gradient(circle,#6CA6CD,#4682B4,#1C3A6E);"></div>
+                                    <div class="opt-name">{{ $data->content->step4_blue->value ?? '' }}</div>
                                 </div>
                                 <div class="opt" onclick="qSelect(this,'eyes','green')">
-                                    <div class="opt-circle"
-                                        style="background:radial-gradient(circle,#8FBC8F,#3D7A47,#1B4A24);"></div>
-                                    <div class="opt-name">Green</div>
+                                    <div class="opt-circle" style="background:radial-gradient(circle,#8FBC8F,#3D7A47,#1B4A24);"></div>
+                                    <div class="opt-name">{{ $data->content->step4_green->value ?? '' }}</div>
                                 </div>
                                 <div class="opt" onclick="qSelect(this,'eyes','hazel')">
-                                    <div class="opt-circle"
-                                        style="background:radial-gradient(circle,#C8A96E,#8B6914,#4A3508);"></div>
-                                    <div class="opt-name">Hazel</div>
+                                    <div class="opt-circle" style="background:radial-gradient(circle,#C8A96E,#8B6914,#4A3508);"></div>
+                                    <div class="opt-name">{{ $data->content->step4_hazel->value ?? '' }}</div>
                                 </div>
                                 <div class="opt" onclick="qSelect(this,'eyes','light-brown')">
-                                    <div class="opt-circle"
-                                        style="background:radial-gradient(circle,#C8905A,#9B5A24,#5C2A0A);"></div>
-                                    <div class="opt-name">Light Brown</div>
+                                    <div class="opt-circle" style="background:radial-gradient(circle,#C8905A,#9B5A24,#5C2A0A);"></div>
+                                    <div class="opt-name">{{ $data->content->step4_light_brown->value ?? '' }}</div>
                                 </div>
                                 <div class="opt" onclick="qSelect(this,'eyes','dark-brown')">
-                                    <div class="opt-circle"
-                                        style="background:radial-gradient(circle,#6B3A1F,#2C150A,#000);"></div>
-                                    <div class="opt-name">Dark Brown</div>
+                                    <div class="opt-circle" style="background:radial-gradient(circle,#6B3A1F,#2C150A,#000);"></div>
+                                    <div class="opt-name">{{ $data->content->step4_dark_brown->value ?? '' }}</div>
                                 </div>
                                 <div class="opt" onclick="qSelect(this,'eyes','grey')">
-                                    <div class="opt-circle"
-                                        style="background:radial-gradient(circle,#B0B8C0,#7A8A94,#3A464E);"></div>
-                                    <div class="opt-name">Grey</div>
+                                    <div class="opt-circle" style="background:radial-gradient(circle,#B0B8C0,#7A8A94,#3A464E);"></div>
+                                    <div class="opt-name">{{ $data->content->step4_grey->value ?? '' }}</div>
                                 </div>
                                 <!-- Custom eyes option -->
                                 <div class="opt" id="eyes_custom_opt">
                                     <div class="opt-circle">
-                                        <input type="color" id="eyes_custom" value="#C4956A"
-                                               onchange="qSelectCustom(this, 'eyes')">
+                                        <input type="color" id="eyes_custom" value="#C4956A" onchange="qSelectCustom(this, 'eyes')">
                                     </div>
-                                    <div class="opt-name">Custom</div>
-                                    <div class="opt-sub">Pick a color</div>
+                                    <div class="opt-name">{{ $data->content->step4_custom->value ?? '' }}</div>
+                                    <div class="opt-sub">{{ $data->content->step4_custom_sub->value ?? '' }}</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="q-nav"><button class="btn-back-q" onclick="qGo(3)">← Back</button><button
-                        class="btn-next-q" id="qn4" onclick="qGo(5)">Next →</button></div>
+                <div class="q-nav">
+                    <button class="btn-back-q" onclick="qGo(3)">{{ $data->content->step4_back->value ?? '' }}</button>
+                    <button class="btn-next-q" id="qn4" onclick="qGo(5)">{{ $data->content->step4_next->value ?? '' }}</button>
+                </div>
             </div>
 
             {{-- ─── STEP 5: HAIR ─── --}}
             <div class="q-step" id="q5">
-                <div class="q-num">Step 6 of 7</div>
-                <div class="q-question">What is your natural hair colour?</div>
-                <div class="q-hint">Choose your untreated, natural shade.</div>
+                <div class="q-num">{{ $data->content->step5_num->value ?? '' }}</div>
+                <div class="q-question">{{ $data->content->step5_question->value ?? '' }}</div>
+                <div class="q-hint">{{ $data->content->step5_hint->value ?? '' }}</div>
                 <div class="grid">
                     <div class="grid grid-cols-6 gap-4">
                         <div class="col-span-2">
@@ -1705,134 +1700,129 @@
                                 <div class="opt" onclick="qSelect(this,'hair','blonde')">
                                     <div class="opt-circle" style="background:linear-gradient(135deg,#F5E0A0,#D4A843);">
                                     </div>
-                                    <div class="opt-name">Blonde</div>
-                                    <div class="opt-sub">Light to golden</div>
+                                    <div class="opt-name">{{ $data->content->step5_blonde->value ?? '' }}</div>
+                                    <div class="opt-sub">{{ $data->content->step5_blonde_sub->value ?? '' }}</div>
                                 </div>
                                 <div class="opt" onclick="qSelect(this,'hair','auburn')">
                                     <div class="opt-circle" style="background:linear-gradient(135deg,#C67B4A,#8B3A1A);">
                                     </div>
-                                    <div class="opt-name">Auburn / Red</div>
-                                    <div class="opt-sub">Warm, reddish tones</div>
+                                    <div class="opt-name">{{ $data->content->step5_auburn->value ?? '' }}</div>
+                                    <div class="opt-sub">{{ $data->content->step5_auburn_sub->value ?? '' }}</div>
                                 </div>
                                 <div class="opt" onclick="qSelect(this,'hair','light-brown')">
                                     <div class="opt-circle" style="background:linear-gradient(135deg,#A0724E,#6B4226);">
                                     </div>
-                                    <div class="opt-name">Light Brown</div>
-                                    <div class="opt-sub">Warm or ashy brown</div>
+                                    <div class="opt-name">{{ $data->content->step5_light_brown->value ?? '' }}</div>
+                                    <div class="opt-sub">{{ $data->content->step5_light_brown_sub->value ?? '' }}</div>
                                 </div>
                                 <div class="opt" onclick="qSelect(this,'hair','dark-brown')">
                                     <div class="opt-circle" style="background:linear-gradient(135deg,#4A2C1A,#2C1810);">
                                     </div>
-                                    <div class="opt-name">Dark Brown</div>
-                                    <div class="opt-sub">Rich, deep brown</div>
+                                    <div class="opt-name">{{ $data->content->step5_dark_brown->value ?? '' }}</div>
+                                    <div class="opt-sub">{{ $data->content->step5_dark_brown_sub->value ?? '' }}</div>
                                 </div>
                                 <div class="opt" onclick="qSelect(this,'hair','black')">
                                     <div class="opt-circle" style="background:linear-gradient(135deg,#2A2A2A,#080808);">
                                     </div>
-                                    <div class="opt-name">Black</div>
-                                    <div class="opt-sub">Warm or cool black</div>
+                                    <div class="opt-name">{{ $data->content->step5_black->value ?? '' }}</div>
+                                    <div class="opt-sub">{{ $data->content->step5_black_sub->value ?? '' }}</div>
                                 </div>
                                 <div class="opt" onclick="qSelect(this,'hair','grey')">
                                     <div class="opt-circle" style="background:linear-gradient(135deg,#C8C8C8,#888888);">
                                     </div>
-                                    <div class="opt-name">Grey / White</div>
-                                    <div class="opt-sub">Silver or white</div>
+                                    <div class="opt-name">{{ $data->content->step5_grey->value ?? '' }}</div>
+                                    <div class="opt-sub">{{ $data->content->step5_grey_sub->value ?? '' }}</div>
                                 </div>
                                 <!-- Custom hair option -->
                                 <div class="opt" id="hair_custom_opt">
                                     <div class="opt-circle">
-                                        <input type="color" id="hair_custom" value="#C4956A"
-                                               onchange="qSelectCustom(this, 'hair')">
+                                        <input type="color" id="hair_custom" value="#C4956A" onchange="qSelectCustom(this, 'hair')">
                                     </div>
-                                    <div class="opt-name">Custom</div>
-                                    <div class="opt-sub">Pick a color</div>
+                                    <div class="opt-name">{{ $data->content->step5_custom->value ?? '' }}</div>
+                                    <div class="opt-sub">{{ $data->content->step5_custom_sub->value ?? '' }}</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="q-nav"><button class="btn-back-q" onclick="qGo(4)">← Back</button><button
-                        class="btn-next-q" id="qn5" onclick="qGo(6)">Next →</button></div>
+                <div class="q-nav">
+                    <button class="btn-back-q" onclick="qGo(4)">{{ $data->content->step5_back->value ?? '' }}</button>
+                    <button class="btn-next-q" id="qn5" onclick="qGo(6)">{{ $data->content->step5_next->value ?? '' }}</button>
+                </div>
             </div>
 
             {{-- ─── STEP 6: BODY TYPE ─── --}}
             <div class="q-step" id="q6">
-                <div class="q-num">Step 7 of 7 — almost there!</div>
-                <div class="q-question">What is your body type?</div>
-                <div class="q-hint">Think about where you carry your weight and your widest measurements.</div>
+                <div class="q-num">{{ $data->content->step6_num->value ?? '' }}</div>
+                <div class="q-question">{{ $data->content->step6_question->value ?? '' }}</div>
+                <div class="q-hint">{{ $data->content->step6_hint->value ?? '' }}</div>
                 <div class="body-opt-grid">
                     <div class="body-opt" onclick="qSelectBody(this,'hourglass')">
                         <div class="body-opt-icon">⧖</div>
-                        <div class="body-opt-name">Hourglass</div>
-                        <div class="body-opt-desc">Balanced bust &amp; hips, defined waist</div>
+                        <div class="body-opt-name">{{ $data->content->step6_hourglass->value ?? '' }}</div>
+                        <div class="body-opt-desc">{{ $data->content->step6_hourglass_desc->value ?? '' }}</div>
                     </div>
                     <div class="body-opt" onclick="qSelectBody(this,'pear')">
                         <div class="body-opt-icon">🍐</div>
-                        <div class="body-opt-name">Pear</div>
-                        <div class="body-opt-desc">Hips wider than bust</div>
+                        <div class="body-opt-name">{{ $data->content->step6_pear->value ?? '' }}</div>
+                        <div class="body-opt-desc">{{ $data->content->step6_pear_desc->value ?? '' }}</div>
                     </div>
                     <div class="body-opt" onclick="qSelectBody(this,'apple')">
                         <div class="body-opt-icon">🍎</div>
-                        <div class="body-opt-name">Apple</div>
-                        <div class="body-opt-desc">Fuller middle, slimmer legs</div>
+                        <div class="body-opt-name">{{ $data->content->step6_apple->value ?? '' }}</div>
+                        <div class="body-opt-desc">{{ $data->content->step6_apple_desc->value ?? '' }}</div>
                     </div>
                     <div class="body-opt" onclick="qSelectBody(this,'rectangle')">
                         <div class="body-opt-icon">▭</div>
-                        <div class="body-opt-name">Rectangle</div>
-                        <div class="body-opt-desc">Similar width throughout</div>
+                        <div class="body-opt-name">{{ $data->content->step6_rectangle->value ?? '' }}</div>
+                        <div class="body-opt-desc">{{ $data->content->step6_rectangle_desc->value ?? '' }}</div>
                     </div>
                     <div class="body-opt" onclick="qSelectBody(this,'inverted')">
                         <div class="body-opt-icon">▽</div>
-                        <div class="body-opt-name">Inverted Triangle</div>
-                        <div class="body-opt-desc">Broad shoulders, narrow hips</div>
+                        <div class="body-opt-name">{{ $data->content->step6_inverted->value ?? '' }}</div>
+                        <div class="body-opt-desc">{{ $data->content->step6_inverted_desc->value ?? '' }}</div>
                     </div>
-                    {{-- <div class="body-opt" onclick="triggerBodyPhotoUpload()">
-                        <div class="body-opt-icon">📷</div>
-                        <div class="body-opt-name">Detect with AI</div>
-                        <div class="body-opt-desc">Upload a full-body photo</div>
-                    </div> --}}
                 </div>
-                <input type="file" id="bodyPhotoInput" accept="image/*" style="display:none"
-                    onchange="handleBodyPhotoUpload(this)">
-                <div class="q-nav"><button class="btn-back-q" onclick="qGo(5)">← Back</button><button
-                        class="btn-next-q" id="qn6" onclick="qGo(7)">Next →</button></div>
+                <input type="file" id="bodyPhotoInput" accept="image/*" style="display:none" onchange="handleBodyPhotoUpload(this)">
+                <div class="q-nav">
+                    <button class="btn-back-q" onclick="qGo(5)">{{ $data->content->step6_back->value ?? '' }}</button>
+                    <button class="btn-next-q" id="qn6" onclick="qGo(7)">{{ $data->content->step6_next->value ?? '' }}</button>
+                </div>
             </div>
 
             {{-- ─── STEP 7: CONTACT ─── --}}
             <div class="q-step" id="q7">
-                <div class="q-num">One last step</div>
-                <div class="q-question">Where should we send your results?</div>
-                <div class="q-hint">Get your full colour season report saved to your inbox — plus personalised
-                    style tips
-                    each week.</div>
+                <div class="q-num">{{ $data->content->step7_num->value ?? '' }}</div>
+                <div class="q-question">{{ $data->content->step7_question->value ?? '' }}</div>
+                <div class="q-hint">{{ $data->content->step7_hint->value ?? '' }}</div>
                 <div class="contact-form-wrap">
-                    <div class="form-row"><label for="user_name">Your First Name</label><input type="text"
-                            id="user_name" placeholder="e.g. Sarah" oninput="checkContactForm()"></div>
-                    <div class="form-row"><label for="user_email">Email Address</label><input type="email"
-                            id="user_email" placeholder="e.g. sarah@example.com" oninput="checkContactForm()"></div>
-                    <p class="privacy-note">🔒 We respect your privacy. No spam — ever. Unsubscribe any time.
-                    </p>
+                    <div class="form-row">
+                        <label for="user_name">{{ $data->content->step7_name_label->value ?? '' }}</label>
+                        <input type="text" id="user_name" placeholder="{{ $data->content->step7_name_placeholder->value ?? '' }}" oninput="checkContactForm()">
+                    </div>
+                    <div class="form-row">
+                        <label for="user_email">{{ $data->content->step7_email_label->value ?? '' }}</label>
+                        <input type="email" id="user_email" placeholder="{{ $data->content->step7_email_placeholder->value ?? '' }}" oninput="checkContactForm()">
+                    </div>
+                    <p class="privacy-note">{{ $data->content->step7_privacy->value ?? '' }}</p>
                 </div>
                 <div class="q-nav">
-                    <button class="btn-back-q" onclick="qGo(6)">← Back</button>
-                    <button class="btn-next-q" id="qn7" onclick="showQuizResults()">See My Results
-                        ✨</button>
+                    <button class="btn-back-q" onclick="qGo(6)">{{ $data->content->step7_back->value ?? '' }}</button>
+                    <button class="btn-next-q" id="qn7" onclick="showQuizResults()">{{ $data->content->step7_submit->value ?? '' }}</button>
                 </div>
             </div>
 
             {{-- ─── LOADING ─── --}}
             <div class="q-step" id="qLoading">
                 <div class="loading-spinner"></div>
-                <div class="q-question" style="text-align:center;">Analysing your profile…</div>
-                <p style="text-align:center;color:var(--quiz-muted);font-size:14px;">Our AI is crafting your
-                    personalised
-                    results</p>
+                <div class="q-question" style="text-align:center;">{{ $data->content->loading_title->value ?? '' }}</div>
+                <p style="text-align:center;color:var(--quiz-muted);font-size:14px;">{{ $data->content->loading_sub->value ?? '' }}</p>
                 <ul class="loading-steps">
-                    <li id="ls1">Determining your colour season</li>
-                    <li id="ls2">Selecting your best colour palette</li>
-                    <li id="ls3">Building makeup recommendations</li>
-                    <li id="ls4">Curating clothing suggestions</li>
-                    <li id="ls5">Searching Pinterest for outfit ideas</li>
+                    <li id="ls1">{{ $data->content->loading_step1->value ?? '' }}</li>
+                    <li id="ls2">{{ $data->content->loading_step2->value ?? '' }}</li>
+                    <li id="ls3">{{ $data->content->loading_step3->value ?? '' }}</li>
+                    <li id="ls4">{{ $data->content->loading_step4->value ?? '' }}</li>
+                    <li id="ls5">{{ $data->content->loading_step5->value ?? '' }}</li>
                 </ul>
             </div>
 
@@ -1844,28 +1834,27 @@
                         <h2 id="r-title"></h2>
                         <p id="r-desc"></p>
                     </div>
-
                     <div class="results-main">
                         <div class="r-card">
-                            <div class="r-card-label">Your Best Colours</div>
+                            <div class="r-card-label">{{ $data->content->result_best_label->value ?? '' }}</div>
                             <div class="r-palette-row" id="r-best"></div>
                             <div class="r-note" id="r-best-note"></div>
                         </div>
                         <div class="r-card">
-                            <div class="r-card-label">Colours to Avoid</div>
+                            <div class="r-card-label">{{ $data->content->result_avoid_label->value ?? '' }}</div>
                             <div class="r-avoid-row" id="r-avoid"></div>
                             <div class="r-note" id="r-avoid-note"></div>
                         </div>
                         <div class="r-card r-full" id="r-makeup-card">
-                            <div class="r-card-label">Makeup Shade Recommendations</div>
+                            <div class="r-card-label">{{ $data->content->result_makeup_label->value ?? '' }}</div>
                             <div class="r-makeup" id="r-makeup"></div>
                         </div>
                         <div class="r-card r-full">
-                            <div class="r-card-label">Clothing Tips for Your Body Shape</div>
+                            <div class="r-card-label">{{ $data->content->result_body_label->value ?? '' }}</div>
                             <ul class="r-cloth-list" id="r-cloth"></ul>
                         </div>
                         <div class="r-card r-full">
-                            <div class="r-card-label">Your Personal Style Archetype</div>
+                            <div class="r-card-label">{{ $data->content->result_archetype_label->value ?? '' }}</div>
                             <div class="r-insight" id="r-insight"></div>
                         </div>
                     </div>
@@ -1874,10 +1863,8 @@
                      COLOUR TRY-ON PANEL
                 ════════════════════════════════════════════ --}}
                     <div class="tryon-section">
-                        <div class="tryon-title">🎨 Try Colours On Your Photo</div>
-                        <div class="tryon-sub">Drag the colour circles onto any part of your photo, or pick
-                            custom colours
-                            and get an instant season-match score from our AI.</div>
+                        <div class="tryon-title">{{ $data->content->tryon_title->value ?? '' }}</div>
+                        <div class="tryon-sub">{{ $data->content->tryon_sub->value ?? '' }}</div>
 
                         <div class="tryon-layout">
                             {{-- Left: Photo with draggable zones --}}
@@ -1886,8 +1873,7 @@
                                     <div class="tryon-placeholder" id="tryonPlaceholder">
                                         <span class="ph-icon">🖼️</span>
                                         <p>Upload a photo in Step 2 to try colours on yourself. The panel still
-                                            works for
-                                            checking colours against your season.</p>
+                                            works for checking colours against your season.</p>
                                     </div>
                                     {{-- Photo injected here by JS --}}
                                     <div class="colour-zones" id="colourZones">
@@ -1895,7 +1881,7 @@
                                     </div>
                                 </div>
                                 <p style="font-size:11px;color:var(--quiz-muted);margin-top:8px;text-align:center;">
-                                    💡 Drag the coloured circles to any area of your photo
+                                    {{ $data->content->tryon_drag_hint->value ?? '' }}
                                 </p>
                             </div>
 
@@ -1903,41 +1889,32 @@
                             <div class="tryon-controls">
                                 {{-- Zone tabs --}}
                                 <div>
-                                    <div
-                                        style="font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--quiz-accent);margin-bottom:8px;">
-                                        Colour Zone</div>
+                                    <div style="font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--quiz-accent);margin-bottom:8px;">
+                                        {{ $data->content->tryon_zone_label->value ?? '' }}
+                                    </div>
                                     <div class="zone-tabs" id="zoneTabs">
-                                        <button class="zone-tab active" data-zone="top" onclick="selectZone('top')">👕
-                                            Top</button>
-                                        <button class="zone-tab" data-zone="bottom" onclick="selectZone('bottom')">👖
-                                            Bottom</button>
-                                        <button class="zone-tab" data-zone="hair" onclick="selectZone('hair')">💇
-                                            Hair</button>
-                                        <button class="zone-tab" data-zone="accent" onclick="selectZone('accent')">✨
-                                            Accent</button>
+                                        <button class="zone-tab active" data-zone="top" onclick="selectZone('top')">👕 {{ $data->content->tryon_zone_top->value ?? '' }}</button>
+                                        <button class="zone-tab" data-zone="bottom" onclick="selectZone('bottom')">👖 {{ $data->content->tryon_zone_bottom->value ?? '' }}</button>
+                                        <button class="zone-tab" data-zone="hair" onclick="selectZone('hair')">💇 {{ $data->content->tryon_zone_hair->value ?? '' }}</button>
+                                        <button class="zone-tab" data-zone="accent" onclick="selectZone('accent')">✨ {{ $data->content->tryon_zone_accent->value ?? '' }}</button>
                                     </div>
                                 </div>
 
                                 {{-- Season palette quick-pick --}}
                                 <div class="tryon-palette-strip">
-                                    <div class="palette-row-label">✨ Your Season Palette — Best Colours</div>
+                                    <div class="palette-row-label">{{ $data->content->tryon_palette_best->value ?? '' }}</div>
                                     <div class="palette-swatches" id="tryonBestSwatches"></div>
-                                    <div class="palette-row-label" style="margin-top:8px;">⚠️ Colours to Avoid
-                                    </div>
+                                    <div class="palette-row-label" style="margin-top:8px;">{{ $data->content->tryon_palette_avoid->value ?? '' }}</div>
                                     <div class="palette-swatches" id="tryonAvoidSwatches"></div>
                                 </div>
 
                                 {{-- Custom colour picker --}}
                                 <div class="custom-colour-row">
-                                    <label>Test Any Custom Colour</label>
+                                    <label>{{ $data->content->tryon_custom_label->value ?? '' }}</label>
                                     <div class="colour-input-wrap">
-                                        <input type="color" id="customColourPicker" value="#C4956A"
-                                            onchange="syncHexFromPicker()">
-                                        <input type="text" class="colour-hex-input" id="customHexInput"
-                                            value="#C4956A" maxlength="7" placeholder="#RRGGBB"
-                                            oninput="syncPickerFromHex()">
-                                        <button class="btn-apply-colour" onclick="applyCustomColour()">Apply
-                                            →</button>
+                                        <input type="color" id="customColourPicker" value="#C4956A" onchange="syncHexFromPicker()">
+                                        <input type="text" class="colour-hex-input" id="customHexInput" value="#C4956A" maxlength="7" placeholder="#RRGGBB" oninput="syncPickerFromHex()">
+                                        <button class="btn-apply-colour" onclick="applyCustomColour()">{{ $data->content->tryon_apply_btn->value ?? '' }}</button>
                                     </div>
                                 </div>
 
@@ -1946,19 +1923,17 @@
                                     <div class="rating-score" id="ratingScore">—</div>
                                     <div>
                                         <div id="ratingLabel" style="font-weight:600;margin-bottom:3px;">
-                                            Select or pick a
-                                            colour to get your match score</div>
+                                            {{ $data->content->tryon_rating_placeholder->value ?? '' }}
+                                        </div>
                                         <div id="ratingReason" style="font-size:12px;"></div>
                                     </div>
                                 </div>
 
                                 {{-- Colour history --}}
                                 <div>
-                                    <div
-                                        style="font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--quiz-muted);margin-bottom:8px;">
-                                        Recently Tried
-                                        <button class="history-clear" onclick="clearHistory()"
-                                            style="margin-left:8px;">Clear</button>
+                                    <div style="font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--quiz-muted);margin-bottom:8px;">
+                                        {{ $data->content->tryon_history_label->value ?? '' }}
+                                        <button class="history-clear" onclick="clearHistory()" style="margin-left:8px;">{{ $data->content->tryon_clear_btn->value ?? '' }}</button>
                                     </div>
                                     <div class="colour-history" id="colourHistory">
                                         <span style="font-size:12px;color:var(--quiz-muted);">None yet</span>
@@ -1971,23 +1946,19 @@
                     {{-- Pinterest --}}
                     <div class="pinterest-section" id="pinterestSection">
                         <div class="pinterest-header">
-                            <div class="r-card-label" style="margin-bottom:0;">Recommended Outfits for You
-                            </div>
-                            <div class="pinterest-badge">Pinterest</div>
+                            <div class="r-card-label" style="margin-bottom:0;">{{ $data->content->pinterest_title->value ?? '' }}</div>
+                            <div class="pinterest-badge">{{ $data->content->pinterest_badge->value ?? '' }}</div>
                         </div>
-                        <p style="font-size:13px;color:var(--quiz-muted);margin:0 0 18px;">Curated picks based
-                            on your
-                            colour season &amp; body type.</p>
+                        <p style="font-size:13px;color:var(--quiz-muted);margin:0 0 18px;">{{ $data->content->pinterest_sub->value ?? '' }}</p>
                         <div class="pinterest-grid" id="pinterestGrid">
-                            <div class="pin-loading">🔍 Finding your perfect looks…</div>
+                            <div class="pin-loading">{{ $data->content->pinterest_loading->value ?? '' }}</div>
                         </div>
                     </div>
 
                     <div class="results-actions">
-                        <button class="btn-primary" onclick="restartQ()">Retake Quiz</button>
-                        <a class="btn-outline" href="{{ route('show.custom_pages', ['slug' => 'blog']) }}">Style Tips</a>
-                        <a class="btn-outline" href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}">About
-                            Seasons</a>
+                        <button class="btn-primary" onclick="restartQ()">{{ $data->content->action_retake->value ?? '' }}</button>
+                        <a class="btn-outline" href="{{ route('show.custom_pages', ['slug' => 'blog']) }}">{{ $data->content->action_blog->value ?? '' }}</a>
+                        <a class="btn-outline" href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}">{{ $data->content->action_seasons->value ?? '' }}</a>
                     </div>
                 </div>
             </div>
@@ -1999,8 +1970,8 @@
 @section('page_script')
     <script>
         /* ════════════════════════════════════════════════════════════
-                           QUIZ STATE
-        ════════════════════════════════════════════════════════════ */
+                               QUIZ STATE
+            ════════════════════════════════════════════════════════════ */
         const qa = {
             gender: null,
             photo: null,
@@ -2195,7 +2166,12 @@
         }
 
         function enableNextButton(key) {
-            const stepMap = { skin: 2, undertone: 3, eyes: 4, hair: 5 };
+            const stepMap = {
+                skin: 2,
+                undertone: 3,
+                eyes: 4,
+                hair: 5
+            };
             const btn = document.getElementById('qn' + stepMap[key]);
             if (btn) btn.classList.add('on');
         }
@@ -2262,7 +2238,8 @@
                 qa.photo = e.target.result;
                 const area = document.getElementById('photoUploadArea');
                 area.classList.add('has-photo');
-                area.innerHTML = `
+                area.innerHTML =
+                    `
                     <img src="${e.target.result}" alt="Your photo" style="width:100%;max-height:300px;object-fit:cover;display:block;border-radius:16px;">
                     <button class="photo-change-btn" onclick="event.stopPropagation();triggerPhotoUpload()">Change Photo</button>`;
 
@@ -2294,7 +2271,9 @@
             try {
                 const response = await fetch('https://api.anthropic.com/v1/messages', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
                     body: JSON.stringify({
                         model: 'claude-sonnet-4-20250514',
                         max_tokens: 200,
@@ -2302,7 +2281,11 @@
                             role: 'user',
                             content: [{
                                 type: 'image',
-                                source: { type: 'base64', media_type: file.type, data: base64 }
+                                source: {
+                                    type: 'base64',
+                                    media_type: file.type,
+                                    data: base64
+                                }
                             }, {
                                 type: 'text',
                                 text: 'Analyse this full body photo and detect the person\'s body shape. Reply with ONLY a single JSON object like: {"bodyType":"hourglass"} where bodyType is one of: hourglass, pear, apple, rectangle, inverted. No explanation.'
@@ -2315,7 +2298,8 @@
                 const result = JSON.parse(text.replace(/```json|```/g, '').trim());
                 if (result.bodyType) {
                     qa.body = result.bodyType;
-                    if (detectOpt) detectOpt.querySelector('.body-opt-desc').textContent = `Detected: ${result.bodyType}`;
+                    if (detectOpt) detectOpt.querySelector('.body-opt-desc').textContent =
+                        `Detected: ${result.bodyType}`;
                     document.getElementById('qn6').classList.add('on');
                 }
             } catch (err) {
@@ -2370,7 +2354,8 @@
             };
 
             // Validate that we have all required fields
-            if (!payload.skin || !payload.undertone || !payload.eyes || !payload.hair || !payload.gender || !payload.body) {
+            if (!payload.skin || !payload.undertone || !payload.eyes || !payload.hair || !payload.gender || !payload
+                .body) {
                 alert('Please complete all steps before submitting.');
                 document.getElementById('qLoading').classList.remove('active');
                 qGo(0);
@@ -2381,7 +2366,10 @@
 
             document.querySelectorAll('.q-step').forEach(el => el.classList.remove('active'));
             document.getElementById('qLoading').classList.add('active');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
 
             const steps = ['ls1', 'ls2', 'ls3', 'ls4', 'ls5'];
             const animPromise = (async () => {
@@ -2398,7 +2386,10 @@
             try {
                 const res = await fetch(ROUTES.computeSeason, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': CSRF },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': CSRF
+                    },
                     body: JSON.stringify(payload)
                 });
 
@@ -2431,7 +2422,10 @@
 
             document.getElementById('qLoading').classList.remove('active');
             document.getElementById('qResults').classList.add('active');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
 
             initTryonPanel(result);
             setTimeout(() => renderPinterest(result.pinterest), 400);
@@ -2440,7 +2434,8 @@
         function populateResults(result) {
             const data = result.data;
             document.getElementById('r-badge').textContent = data.label;
-            document.getElementById('r-title').textContent = `${qa.name ? qa.name + ', you\'re a ' : 'You are a '}${data.title}`;
+            document.getElementById('r-title').textContent =
+                `${qa.name ? qa.name + ', you\'re a ' : 'You are a '}${data.title}`;
             document.getElementById('r-desc').textContent = data.desc;
 
             document.getElementById('r-best').innerHTML = data.best.map(c =>
@@ -2474,13 +2469,46 @@
         ════════════════════════════════════════════════════════════ */
         let activeZone = 'top';
         let colourHistory = [];
-        let zoneColours = { top: '#C4956A', bottom: '#5C4A3A', hair: '#6B3A2A', accent: '#F4C542' };
+        let zoneColours = {
+            top: '#C4956A',
+            bottom: '#5C4A3A',
+            hair: '#6B3A2A',
+            accent: '#F4C542'
+        };
 
         const zoneConfig = {
-            top: { emoji: '👕', label: 'TOP', default: { x: 45, y: 35 } },
-            bottom: { emoji: '👖', label: 'BOTTOM', default: { x: 45, y: 62 } },
-            hair: { emoji: '💇', label: 'HAIR', default: { x: 45, y: 10 } },
-            accent: { emoji: '✨', label: 'ACCENT', default: { x: 75, y: 45 } },
+            top: {
+                emoji: '👕',
+                label: 'TOP',
+                default: {
+                    x: 45,
+                    y: 35
+                }
+            },
+            bottom: {
+                emoji: '👖',
+                label: 'BOTTOM',
+                default: {
+                    x: 45,
+                    y: 62
+                }
+            },
+            hair: {
+                emoji: '💇',
+                label: 'HAIR',
+                default: {
+                    x: 45,
+                    y: 10
+                }
+            },
+            accent: {
+                emoji: '✨',
+                label: 'ACCENT',
+                default: {
+                    x: 75,
+                    y: 45
+                }
+            },
         };
 
         function initTryonPanel(result) {
@@ -2523,7 +2551,8 @@
                 circle.className = 'czone';
                 circle.id = 'czone_' + key;
                 circle.innerHTML = `${cfg.emoji}<div class="czone-label">${cfg.label}</div>`;
-                circle.style.cssText = `background: ${zoneColours[key]}; left: ${cfg.default.x}%; top: ${cfg.default.y}%; transform: translate(-50%,-50%);`;
+                circle.style.cssText =
+                    `background: ${zoneColours[key]}; left: ${cfg.default.x}%; top: ${cfg.default.y}%; transform: translate(-50%,-50%);`;
                 circle.style.outline = (key === activeZone) ? '3px solid var(--quiz-accent)' : 'none';
                 makeDraggable(circle, key);
                 circle.addEventListener('click', () => selectZone(key));
@@ -2532,16 +2561,20 @@
         }
 
         function makeDraggable(el, zoneKey) {
-            let isDragging = false, startX, startY, startLeft, startTop;
+            let isDragging = false,
+                startX, startY, startLeft, startTop;
             const getWrapRect = () => document.getElementById('tryonPhotoWrap').getBoundingClientRect();
+
             function onStart(cx, cy) {
                 isDragging = true;
-                startX = cx; startY = cy;
+                startX = cx;
+                startY = cy;
                 startLeft = parseFloat(el.style.left);
                 startTop = parseFloat(el.style.top);
                 el.style.transition = 'none';
                 selectZone(zoneKey);
             }
+
             function onMove(cx, cy) {
                 if (!isDragging) return;
                 const wrap = getWrapRect();
@@ -2552,12 +2585,31 @@
                 el.style.left = newL + '%';
                 el.style.top = newT + '%';
             }
-            function onEnd() { isDragging = false; el.style.transition = ''; }
-            el.addEventListener('mousedown', e => { e.preventDefault(); onStart(e.clientX, e.clientY); });
+
+            function onEnd() {
+                isDragging = false;
+                el.style.transition = '';
+            }
+            el.addEventListener('mousedown', e => {
+                e.preventDefault();
+                onStart(e.clientX, e.clientY);
+            });
             window.addEventListener('mousemove', e => onMove(e.clientX, e.clientY));
             window.addEventListener('mouseup', onEnd);
-            el.addEventListener('touchstart', e => { e.preventDefault(); onStart(e.touches[0].clientX, e.touches[0].clientY); }, { passive: false });
-            window.addEventListener('touchmove', e => { if (isDragging) { e.preventDefault(); onMove(e.touches[0].clientX, e.touches[0].clientY); } }, { passive: false });
+            el.addEventListener('touchstart', e => {
+                e.preventDefault();
+                onStart(e.touches[0].clientX, e.touches[0].clientY);
+            }, {
+                passive: false
+            });
+            window.addEventListener('touchmove', e => {
+                if (isDragging) {
+                    e.preventDefault();
+                    onMove(e.touches[0].clientX, e.touches[0].clientY);
+                }
+            }, {
+                passive: false
+            });
             window.addEventListener('touchend', onEnd);
         }
 
@@ -2577,7 +2629,8 @@
             setZoneColour(activeZone, hex);
             document.getElementById('customColourPicker').value = hex;
             document.getElementById('customHexInput').value = hex;
-            document.querySelectorAll('.pswatch').forEach(el => el.classList.toggle('selected', el.dataset.hex === hex));
+            document.querySelectorAll('.pswatch').forEach(el => el.classList.toggle('selected', el.dataset.hex ===
+            hex));
             await evaluateAndDisplay(hex);
         }
 
@@ -2594,10 +2647,12 @@
             const hex = document.getElementById('customColourPicker').value;
             document.getElementById('customHexInput').value = hex;
         }
+
         function syncPickerFromHex() {
             const hex = normaliseHex(document.getElementById('customHexInput').value);
             if (hex) document.getElementById('customColourPicker').value = hex;
         }
+
         function setZoneColour(key, hex) {
             zoneColours[key] = hex;
             const el = document.getElementById('czone_' + key);
@@ -2617,8 +2672,14 @@
             try {
                 const res = await fetch(ROUTES.evaluateColour, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': CSRF },
-                    body: JSON.stringify({ hex, season: currentSeason })
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': CSRF
+                    },
+                    body: JSON.stringify({
+                        hex,
+                        season: currentSeason
+                    })
                 });
                 const data = await res.json();
                 ratingEl.className = `colour-rating ${data.rating}`;
@@ -2633,10 +2694,15 @@
 
         function addToHistory(hex, rating, score) {
             colourHistory = colourHistory.filter(h => h.hex !== hex);
-            colourHistory.unshift({ hex, rating, score });
+            colourHistory.unshift({
+                hex,
+                rating,
+                score
+            });
             if (colourHistory.length > 12) colourHistory.pop();
             renderHistory();
         }
+
         function renderHistory() {
             const el = document.getElementById('colourHistory');
             if (!colourHistory.length) {
@@ -2655,7 +2721,12 @@
             document.getElementById('customHexInput').value = hex;
             await evaluateAndDisplay(hex);
         }
-        function clearHistory() { colourHistory = []; renderHistory(); }
+
+        function clearHistory() {
+            colourHistory = [];
+            renderHistory();
+        }
+
         function normaliseHex(raw) {
             const s = raw.trim().replace(/^#*/, '');
             if (/^[0-9A-Fa-f]{6}$/.test(s)) return '#' + s.toUpperCase();
@@ -2697,23 +2768,46 @@
             try {
                 await fetch(ROUTES.saveLead, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': CSRF },
-                    body: JSON.stringify({ name, email, answers: { gender: qa.gender, skin: qa.skin, undertone: qa.undertone, eyes: qa.eyes, hair: qa.hair, body: qa.body } })
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': CSRF
+                    },
+                    body: JSON.stringify({
+                        name,
+                        email,
+                        answers: {
+                            gender: qa.gender,
+                            skin: qa.skin,
+                            undertone: qa.undertone,
+                            eyes: qa.eyes,
+                            hair: qa.hair,
+                            body: qa.body
+                        }
+                    })
                 });
-            } catch (e) { console.warn('Lead save failed:', e); }
+            } catch (e) {
+                console.warn('Lead save failed:', e);
+            }
         }
 
         function restartQ() {
             Object.keys(qa).forEach(k => qa[k] = null);
-            currentSeason = null; currentData = null;
+            currentSeason = null;
+            currentData = null;
             colourHistory = [];
-            zoneColours = { top: '#C4956A', bottom: '#5C4A3A', hair: '#6B3A2A', accent: '#F4C542' };
+            zoneColours = {
+                top: '#C4956A',
+                bottom: '#5C4A3A',
+                hair: '#6B3A2A',
+                accent: '#F4C542'
+            };
             document.querySelectorAll('.opt,.gender-opt,.body-opt').forEach(el => el.classList.remove('sel'));
             document.querySelectorAll('.btn-next-q').forEach(btn => btn.classList.remove('on'));
 
             const area = document.getElementById('photoUploadArea');
             area.classList.remove('has-photo');
-            area.innerHTML = `<span class="photo-upload-icon">📸</span><div class="photo-upload-title">Tap to upload your photo</div><div class="photo-upload-sub">JPG, PNG or WEBP · Max 10MB</div>`;
+            area.innerHTML =
+                `<span class="photo-upload-icon">📸</span><div class="photo-upload-title">Tap to upload your photo</div><div class="photo-upload-sub">JPG, PNG or WEBP · Max 10MB</div>`;
 
             const wrap = document.getElementById('tryonPhotoWrap');
             const mainImg = document.getElementById('tryonPhotoMain');
@@ -2724,7 +2818,10 @@
             const stepIds = ['Skin', 'Undertone', 'Eyes', 'Hair'];
             stepIds.forEach(step => {
                 const img = document.getElementById(`previewImg${step}`);
-                if (img) { img.src = ''; img.style.display = 'none'; }
+                if (img) {
+                    img.src = '';
+                    img.style.display = 'none';
+                }
                 const placeholderDiv = document.getElementById(`previewPlaceholder${step}`);
                 if (placeholderDiv) placeholderDiv.style.display = 'flex';
                 const swatch = document.getElementById(`previewSwatch${step}`);
@@ -2746,7 +2843,9 @@
             qGo(0);
         }
 
-        function delay(ms) { return new Promise(r => setTimeout(r, ms)); }
+        function delay(ms) {
+            return new Promise(r => setTimeout(r, ms));
+        }
 
         document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('qn1')?.classList.add('on');

@@ -51,7 +51,10 @@
         </div>
         </div>
         <div class="nav-right">
-            <a href="{{ route('show.custom_pages', ['slug' => 'about']) }}" class="nav-btn-ghost">Learn More</a>
+            <a href="{{ route('show.custom_pages', ['slug' => 'about']) }}"
+            class="nav-btn-ghost hidden sm:inline-block">
+                Learn More
+            </a>
             <a href="{{ route('show.custom_pages', ['slug' => 'test']) }}" class="nav-btn-fill">Take the Quiz →</a>
         </div>
         <div class="hamburger" onclick="toggleMobileMenu()">
@@ -93,8 +96,9 @@
 
     <!-- CTA -->
     <section class="cta-banner">
-        <h2 class="section-h2" style="font-size:clamp(34px,4vw,58px);">Ready to find your colours?</h2>
-        <p>It takes just 5 minutes and it's completely free.</p>
+            <span class="section-label">✦ Free · No Sign-Up · Results in 5 Minutes</span>
+            <h2 class="section-h2">Ready to find your colour season?</h2>
+            <p class="section-sub text-center mx-auto">Join 48,000+ people who've discovered their perfect colour palette and transformed the way they shop and get dressed.</p>
         <div class="cta-btns">
             <a class="btn-primary" href="{{ route('show.custom_pages', ['slug' => 'test']) }}">Start My Analysis →</a>
             <a style="background:rgba(250,247,242,.1);color:var(--cream);padding:14px 32px;border-radius:50px;font-size:14px;font-weight:500;border:1.5px solid rgba(250,247,242,.2);cursor:pointer;font-family:'Jost',sans-serif;"

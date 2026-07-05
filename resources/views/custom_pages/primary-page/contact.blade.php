@@ -4,118 +4,122 @@
     <div class="page" id="page-contact">
         <div class="contact-layout">
             <div class="contact-left-panel">
-                <span class="section-label">✦ Get in Touch</span>
-                <h2 class="section-h2">We'd love to<br>hear from you</h2>
-                <p class="clp-sub">Questions about your colour season, partnership inquiries, or just want to say hello —
-                    we're here and we respond fast.</p>
+                <span class="section-label">{{ $data->content->contact_label->value ?? '' }}</span>
+                <h2 class="section-h2">{!! $data->content->contact_h2->value ?? '' !!}</h2>
+                <p class="clp-sub">{{ $data->content->contact_sub->value ?? '' }}</p>
                 {{-- <div class="contact-info">
                     <div class="ci">
                         <div class="ci-icon">📧</div>
                         <div>
-                            <div class="ci-label">Email</div>
-                            <div class="ci-val">hello@glowmatch.co</div>
+                            <div class="ci-label">{{ $data->content->contact_email_label->value ?? '' }}</div>
+                            <div class="ci-val">{{ $data->content->contact_email_val->value ?? '' }}</div>
                         </div>
                     </div>
                     <div class="ci">
                         <div class="ci-icon">💬</div>
                         <div>
-                            <div class="ci-label">Live Chat</div>
-                            <div class="ci-val">Available 9am – 6pm PKT</div>
+                            <div class="ci-label">{{ $data->content->contact_chat_label->value ?? '' }}</div>
+                            <div class="ci-val">{{ $data->content->contact_chat_val->value ?? '' }}</div>
                         </div>
                     </div>
                     <div class="ci">
                         <div class="ci-icon">📍</div>
                         <div>
-                            <div class="ci-label">Location</div>
-                            <div class="ci-val">Lahore, Pakistan</div>
+                            <div class="ci-label">{{ $data->content->contact_location_label->value ?? '' }}</div>
+                            <div class="ci-val">{{ $data->content->contact_location_val->value ?? '' }}</div>
                         </div>
                     </div>
                     <div class="ci">
                         <div class="ci-icon">⏱️</div>
                         <div>
-                            <div class="ci-label">Response Time</div>
-                            <div class="ci-val">Usually within 24 hours</div>
+                            <div class="ci-label">{{ $data->content->contact_response_label->value ?? '' }}</div>
+                            <div class="ci-val">{{ $data->content->contact_response_val->value ?? '' }}</div>
                         </div>
                     </div>
-                </div> --}}
-                <div
-                    style="margin-bottom:20px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(250,247,242,.3);">
-                    Follow Along</div>
+                </div>
+                <div style="margin-bottom:20px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(250,247,242,.3);">
+                    {{ $data->content->contact_social_label->value ?? '' }}
+                </div>
                 <div class="contact-social">
                     <div class="cs-btn">📸</div>
                     <div class="cs-btn">🎵</div>
                     <div class="cs-btn">🐦</div>
                     <div class="cs-btn">📌</div>
-                </div>
+                </div> --}}
             </div>
 
             <div class="contact-right-panel">
-                <div class="cf-heading">Send us a message</div>
+                <div class="cf-heading">{{ $data->content->form_heading->value ?? '' }}</div>
                 <div class="cf-row">
-                    <div class="cf-group"><label class="cf-label">First Name</label><input class="cf-input" type="text"
-                            placeholder="Zara" /></div>
-                    <div class="cf-group"><label class="cf-label">Last Name</label><input class="cf-input" type="text"
-                            placeholder="Ahmed" /></div>
-                </div>
-                <div class="cf-group"><label class="cf-label">Email Address</label><input class="cf-input" type="email"
-                        placeholder="zara@example.com" /></div>
-                <div class="cf-group">
-                    <label class="cf-label">What's this about?</label>
-                    <div class="cf-chips">
-                        <div class="cf-chip active" onclick="selectChip(this)">Quiz Question</div>
-                        <div class="cf-chip" onclick="selectChip(this)">My Season Results</div>
-                        <div class="cf-chip" onclick="selectChip(this)">Partnership</div>
-                        <div class="cf-chip" onclick="selectChip(this)">Press / Media</div>
-                        <div class="cf-chip" onclick="selectChip(this)">Other</div>
+                    <div class="cf-group">
+                        <label class="cf-label">{{ $data->content->form_firstname_label->value ?? '' }}</label>
+                        <input class="cf-input" type="text" placeholder="{{ $data->content->form_firstname_placeholder->value ?? '' }}" />
+                    </div>
+                    <div class="cf-group">
+                        <label class="cf-label">{{ $data->content->form_lastname_label->value ?? '' }}</label>
+                        <input class="cf-input" type="text" placeholder="{{ $data->content->form_lastname_placeholder->value ?? '' }}" />
                     </div>
                 </div>
-                <div class="cf-group"><label class="cf-label">Message</label>
-                    <textarea class="cf-input" placeholder="Tell us what's on your mind..."></textarea>
+                <div class="cf-group">
+                    <label class="cf-label">{{ $data->content->form_email_label->value ?? '' }}</label>
+                    <input class="cf-input" type="email" placeholder="{{ $data->content->form_email_placeholder->value ?? '' }}" />
                 </div>
-                <button class="cf-submit" onclick="handleContactSubmit(this)">Send Message →</button>
-                <div class="cf-privacy">🔒 Your information is never shared with third parties.</div>
+                <div class="cf-group">
+                    <label class="cf-label">{{ $data->content->form_topic_label->value ?? '' }}</label>
+                    <div class="cf-chips">
+                        <div class="cf-chip active" onclick="selectChip(this)">{{ $data->content->form_chip1->value ?? '' }}</div>
+                        <div class="cf-chip" onclick="selectChip(this)">{{ $data->content->form_chip2->value ?? '' }}</div>
+                        <div class="cf-chip" onclick="selectChip(this)">{{ $data->content->form_chip3->value ?? '' }}</div>
+                        <div class="cf-chip" onclick="selectChip(this)">{{ $data->content->form_chip4->value ?? '' }}</div>
+                        <div class="cf-chip" onclick="selectChip(this)">{{ $data->content->form_chip5->value ?? '' }}</div>
+                        <div class="cf-chip" onclick="selectChip(this)">{{ $data->content->form_chip6->value ?? '' }}</div>
+                    </div>
+                </div>
+                <div class="cf-group">
+                    <label class="cf-label">{{ $data->content->form_message_label->value ?? '' }}</label>
+                    <textarea class="cf-input" placeholder="{{ $data->content->form_message_placeholder->value ?? '' }}"></textarea>
+                </div>
+                <button class="cf-submit" onclick="handleContactSubmit(this)">{{ $data->content->form_submit->value ?? '' }}</button>
+                <div class="cf-privacy">{{ $data->content->form_privacy->value ?? '' }}</div>
             </div>
         </div>
 
         <!-- FAQ -->
         <section class="faq-section">
-            <span class="section-label">✦ FAQ</span>
-            <h2 class="section-h2" style="margin-bottom:36px;">Common questions</h2>
+            <span class="section-label">{{ $data->content->faq_label->value ?? '' }}</span>
+            <h2 class="section-h2" style="margin-bottom:36px;">{!! $data->content->faq_h2->value ?? '' !!}</h2>
             <div class="faq-grid">
                 <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-q">How accurate is the quiz?</div>
-                    <div class="faq-a">Our quiz is based on proven seasonal colour theory developed over decades. It's
-                        highly accurate for most people, though a professional colour analysis remains the gold standard.
-                        Think of our quiz as an excellent starting point.</div>
+                    <div class="faq-q">{{ $data->content->faq_q1->value ?? '' }}</div>
+                    <div class="faq-a">{{ $data->content->faq_a1->value ?? '' }}</div>
                 </div>
                 <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-q">Can I be between two seasons?</div>
-                    <div class="faq-a">Yes — colour seasons exist on a spectrum. Some people are clearly one season, others
-                        sit between two. If your result doesn't feel quite right, try the sub-seasons (Soft Autumn, True
-                        Winter, etc.) or look at both neighbouring seasons' palettes.</div>
+                    <div class="faq-q">{{ $data->content->faq_q2->value ?? '' }}</div>
+                    <div class="faq-a">{{ $data->content->faq_a2->value ?? '' }}</div>
                 </div>
                 <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-q">Does it work for all skin tones?</div>
-                    <div class="faq-a">Absolutely. Seasonal colour theory works for every skin tone, from very fair to very
-                        deep. The seasons are defined by undertone and contrast level, not by skin tone depth. Everyone has
-                        a season.</div>
+                    <div class="faq-q">{{ $data->content->faq_q3->value ?? '' }}</div>
+                    <div class="faq-a">{{ $data->content->faq_a3->value ?? '' }}</div>
                 </div>
                 <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-q">Is GlowMatch. really free?</div>
-                    <div class="faq-a">Yes — the quiz, your results, and all our blog content are completely free. We may
-                        offer premium features in the future, but the core analysis will always be free.</div>
+                    <div class="faq-q">{{ $data->content->faq_q4->value ?? '' }}</div>
+                    <div class="faq-a">{{ $data->content->faq_a4->value ?? '' }}</div>
                 </div>
                 <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-q">My hair is dyed. What do I enter?</div>
-                    <div class="faq-a">Enter your natural, untreated hair colour — or the colour your hair was before you
-                        started dyeing it. Your natural pigmentation is what determines your season, not your current
-                        colour.</div>
+                    <div class="faq-q">{{ $data->content->faq_q5->value ?? '' }}</div>
+                    <div class="faq-a">{{ $data->content->faq_a5->value ?? '' }}</div>
                 </div>
                 <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-q">Can men use GlowMatch.?</div>
-                    <div class="faq-a">Absolutely! Colour seasons are not gender-specific. The quiz and recommendations
-                        work for everyone — the colour principles are universal, and the body type advice is adaptable.
-                    </div>
+                    <div class="faq-q">{{ $data->content->faq_q6->value ?? '' }}</div>
+                    <div class="faq-a">{{ $data->content->faq_a6->value ?? '' }}</div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-q">{{ $data->content->faq_q7->value ?? '' }}</div>
+                    <div class="faq-a">{{ $data->content->faq_a7->value ?? '' }}</div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-q">{{ $data->content->faq_q8->value ?? '' }}</div>
+                    <div class="faq-a">{{ $data->content->faq_a8->value ?? '' }}</div>
                 </div>
             </div>
         </section>
