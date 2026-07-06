@@ -161,7 +161,7 @@
     <!-- PALETTE (unisex) -->
     <section class="season-section">
         <span class="lbl" style="color:#C47838;">{{ $data->content->palette_label->value ?? '' }}</span>
-        <div class="h2" style="margin-bottom:12px;">{{ $data->content->palette_title->value ?? '' }}</div>
+        <h2 class="h2" style="margin-bottom:12px;">{{ $data->content->palette_title->value ?? '' }}</h2>
         <p class="body-text" style="max-width:560px;margin-bottom:36px;">{{ $data->content->palette_desc->value ?? '' }}</p>
         <div class="two-col">
             <div>
@@ -233,7 +233,7 @@
     <!-- YOUR FEATURES (unisex) -->
     <section class="season-section-alt">
         <span class="lbl" style="color:#C47838;">{{ $data->content->features_label->value ?? '' }}</span>
-        <div class="h2" style="margin-bottom:40px;">{{ $data->content->features_title->value ?? '' }}</div>
+        <h2 class="h2" style="margin-bottom:40px;">{{ $data->content->features_title->value ?? '' }}</h2>
         <div class="three-col">
             <div class="tooltip-trigger card" style="position:relative;">
                 <div style="font-size:32px;margin-bottom:14px;">🧴</div>
@@ -274,7 +274,7 @@
         <!-- Makeup Guide (Women) -->
         <section class="season-section">
             <span class="lbl" style="color:#C47838;">{{ $data->content->makeup_label->value ?? '' }}</span>
-            <div class="h2" style="margin-bottom:12px;">{{ $data->content->makeup_title->value ?? '' }}</div>
+            <h2 class="h2" style="margin-bottom:12px;">{{ $data->content->makeup_title->value ?? '' }}</h2>
             <p class="body-text" style="max-width:560px;margin-bottom:36px;">{{ $data->content->makeup_desc->value ?? '' }}</p>
             <div class="makeup-row">
                 {{-- makeup items with tooltips --}}
@@ -354,7 +354,7 @@
             <div class="two-col">
                 <div>
                     <span class="lbl" style="color:#C47838;">{{ $data->content->wardrobe_women_label->value ?? '' }}</span>
-                    <div class="h2" style="margin-bottom:20px;">{{ $data->content->wardrobe_women_title->value ?? '' }}</div>
+                    <h2 class="h2" style="margin-bottom:20px;">{{ $data->content->wardrobe_women_title->value ?? '' }}</h2>
                     <div class="feature-row">
                         <div class="tooltip-trigger feature-item" style="position:relative;">
                             <div class="fi-num">01</div>
@@ -450,7 +450,7 @@
         <!-- Outfit Inspiration (Women) -->
         <section class="season-section">
             <span class="lbl" style="color:#C47838;">{{ $data->content->outfit_women_label->value ?? '' }}</span>
-            <div class="h2" style="margin-bottom:36px;">{{ $data->content->outfit_women_title->value ?? '' }}</div>
+            <h2 class="h2" style="margin-bottom:36px;">{{ $data->content->outfit_women_title->value ?? '' }}</h2>
             <div class="outfit-grid">
                 <div class="tooltip-trigger outfit-card" style="position:relative;">
                     <div class="outfit-top" style="background:linear-gradient(145deg,#C97B5A,#A05030);">🍂</div>
@@ -488,7 +488,7 @@
         <!-- Grooming & Skincare (Men) -->
         <section class="season-section">
             <span class="lbl" style="color:#C47838;">{{ $data->content->grooming_label->value ?? '' }}</span>
-            <div class="h2" style="margin-bottom:12px;">{{ $data->content->grooming_title->value ?? '' }}</div>
+            <h2 class="h2" style="margin-bottom:12px;">{{ $data->content->grooming_title->value ?? '' }}</h2>
             <p class="body-text" style="max-width:560px;margin-bottom:36px;">{{ $data->content->grooming_desc->value ?? '' }}</p>
             <div class="makeup-row">
                 <div class="tooltip-trigger makeup-item">
@@ -553,7 +553,7 @@
             <div class="two-col">
                 <div>
                     <span class="lbl" style="color:#C47838;">{{ $data->content->wardrobe_men_label->value ?? '' }}</span>
-                    <div class="h2" style="margin-bottom:20px;">{{ $data->content->wardrobe_men_title->value ?? '' }}</div>
+                    <h2 class="h2" style="margin-bottom:20px;">{{ $data->content->wardrobe_men_title->value ?? '' }}</h2>
                     <div class="feature-row">
                         <div class="tooltip-trigger feature-item" style="position:relative;">
                             <div class="fi-num">01</div>
@@ -648,7 +648,7 @@
         <!-- Outfit Inspiration (Men) -->
         <section class="season-section">
             <span class="lbl" style="color:#C47838;">{{ $data->content->outfit_men_label->value ?? '' }}</span>
-            <div class="h2" style="margin-bottom:36px;">{{ $data->content->outfit_men_title->value ?? '' }}</div>
+            <h2 class="h2" style="margin-bottom:36px;">{{ $data->content->outfit_men_title->value ?? '' }}</h2>
             <div class="outfit-grid">
                 <div class="tooltip-trigger outfit-card" style="position:relative;">
                     <div class="outfit-top" style="background:linear-gradient(145deg,#C97B5A,#A05030);">🍂</div>
@@ -685,7 +685,7 @@
     <div id="neutral-content" class="gender-content">
         <section class="season-section">
             <span class="lbl" style="color:#C47838;">{{ $data->content->neutral_label->value ?? '' }}</span>
-            <div class="h2" style="margin-bottom:12px;">{{ $data->content->neutral_title->value ?? '' }}</div>
+            <h2 class="h2" style="margin-bottom:12px;">{{ $data->content->neutral_title->value ?? '' }}</h2>
             <p class="body-text" style="max-width:560px;margin-bottom:36px;">{{ $data->content->neutral_desc->value ?? '' }}</p>
             <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px;margin-bottom:32px;">
                 <div class="tooltip-trigger card" style="position:relative;">
@@ -739,7 +739,7 @@
     <!-- CELEBRITIES (expanded with male examples) -->
     <section class="season-section-alt">
         <span class="lbl" style="color:#C47838;">{{ $data->content->celebrities_label->value ?? '' }}</span>
-        <div class="h2" style="margin-bottom:36px;">{{ $data->content->celebrities_title->value ?? '' }}</div>
+        <h2 class="h2" style="margin-bottom:36px;">{{ $data->content->celebrities_title->value ?? '' }}</div>
         <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:24px;">
             {{-- celebrity cards with tooltips --}}
             <div class="tooltip-trigger celeb-card" style="position:relative;">
