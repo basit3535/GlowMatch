@@ -163,7 +163,7 @@
         </p>
         <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:6px;">
             <button id="cookie-accept" style="flex:1; background:#C4956A; border:none; border-radius:50px; padding:10px 18px; font-size:13px; font-weight:500; color:#fff; cursor:pointer; box-shadow:0 4px 12px rgba(196,149,106,0.25); transition:all 0.2s; min-width:100px;">Accept All</button>
-            <button id="cookie-manage" style="flex:1; background:transparent; border:1px solid #E6DFD6; border-radius:50px; padding:10px 18px; font-size:13px; font-weight:500; color:#2D2A24; cursor:pointer; transition:all 0.2s; min-width:80px;">Manage</button>
+            <button id="cookie-reject" style="flex:1; background:transparent; border:1px solid #E6DFD6; border-radius:50px; padding:10px 18px; font-size:13px; font-weight:500; color:#2D2A24; cursor:pointer; transition:all 0.2s; min-width:80px;">Reject</button>
         </div>
     </div>
 </div>
@@ -208,9 +208,10 @@
             banner.style.display = 'none';
         });
 
-        document.getElementById('cookie-manage').addEventListener('click', function() {
-            // Replace with your own settings modal or redirect
-            alert('Cookie settings will open here. You can customise your preferences.');
+        document.getElementById('cookie-reject').addEventListener('click', function() {
+            localStorage.setItem('cookie_consent', 'rejected');
+            document.cookie = "cookie_consent=rejected; path=/; max-age=" + 60 * 60 * 24 * 365;
+            banner.style.display = 'none';
         });
     })();
 </script>
