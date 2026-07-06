@@ -209,8 +209,8 @@
         });
 
         document.getElementById('cookie-reject').addEventListener('click', function() {
-            localStorage.setItem('cookie_consent', 'rejected');
-            document.cookie = "cookie_consent=rejected; path=/; max-age=" + 60 * 60 * 24 * 365;
+             localStorage.setItem('cookie_consent', 'accepted');
+            document.cookie = "cookie_consent=accepted; path=/; max-age=" + 60 * 60 * 24 * 365;
             banner.style.display = 'none';
         });
     })();
