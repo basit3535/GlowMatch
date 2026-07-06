@@ -27,7 +27,7 @@
     <meta name="twitter:description"
         content="Discover your perfect colours, style recommendations, and personalized fashion insights with GlowMatch..">
     <meta name="twitter:image" content="https://glowmatch.co.uk/images/og-image.jpg">
-    <script src="https://cdn.tailwindcss.com"></script>
+    {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link
