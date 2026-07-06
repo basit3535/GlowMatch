@@ -28,6 +28,15 @@
         }
 
         /* ══════════════════════════════════════════════════════════
+                   Reset & Base
+                ══════════════════════════════════════════════════════════ */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        /* ══════════════════════════════════════════════════════════
                    Page Shell
                 ══════════════════════════════════════════════════════════ */
         #page-quiz {
@@ -74,7 +83,7 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-                   Progress Bar
+                   Progress Bar – responsive
                 ══════════════════════════════════════════════════════════ */
         .quiz-progress {
             display: flex;
@@ -84,28 +93,34 @@
             margin-top: 36px;
             flex-wrap: nowrap;
             overflow-x: auto;
-            padding: 8px;
+            padding: 8px 4px;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .quiz-progress::-webkit-scrollbar {
+            display: none;
         }
 
         .qp-step {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 6px;
+            gap: 4px;
             flex-shrink: 0;
-            width: 2.5rem;
+            min-width: 2.2rem;
         }
 
         .qp-circle {
-            width: 34px;
-            height: 34px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             background: var(--quiz-card);
             border: 2px solid var(--quiz-border);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 500;
             color: var(--quiz-muted);
             transition: all .3s ease;
@@ -125,15 +140,18 @@
         }
 
         .qp-label {
-            font-size: 10px;
+            font-size: 8px;
             color: var(--quiz-muted);
-            letter-spacing: .5px;
+            letter-spacing: .3px;
             white-space: nowrap;
+            text-align: center;
+            max-width: 48px;
+            line-height: 1.2;
         }
 
         .qp-line {
             height: 2px;
-            width: 28px;
+            width: 16px;
             background: var(--quiz-border);
             margin-bottom: 18px;
             transition: background .3s;
@@ -144,13 +162,54 @@
             background: var(--quiz-success);
         }
 
+        @media (max-width: 480px) {
+            .qp-line {
+                width: 8px;
+            }
+            .qp-circle {
+                width: 26px;
+                height: 26px;
+                font-size: 10px;
+            }
+            .qp-label {
+                font-size: 7px;
+                max-width: 36px;
+            }
+            .quiz-progress {
+                gap: 0;
+                padding: 4px 2px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .qp-line {
+                width: 4px;
+            }
+            .qp-circle {
+                width: 22px;
+                height: 22px;
+                font-size: 8px;
+            }
+            .qp-label {
+                font-size: 6px;
+                max-width: 28px;
+            }
+        }
+
         /* ══════════════════════════════════════════════════════════
                    Quiz Body
                 ══════════════════════════════════════════════════════════ */
         .quiz-body {
             max-width: 900px;
             margin: 48px auto 0;
-            padding: 0 20px;
+            padding: 0 16px;
+        }
+
+        @media (max-width: 480px) {
+            .quiz-body {
+                padding: 0 10px;
+                margin-top: 28px;
+            }
         }
 
         .q-step {
@@ -167,7 +226,6 @@
                 opacity: 0;
                 transform: translateY(16px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -185,7 +243,7 @@
 
         .q-question {
             font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(22px, 3vw, 30px);
+            font-size: clamp(20px, 3vw, 30px);
             font-weight: 400;
             color: var(--quiz-text);
             margin-bottom: 8px;
@@ -200,6 +258,59 @@
             line-height: 1.5;
         }
 
+        @media (max-width: 480px) {
+            .q-hint {
+                font-size: 13px;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* ══════════════════════════════════════════════════════════
+                   STEP LAYOUT – preview + options (responsive)
+                ══════════════════════════════════════════════════════════ */
+        .step-layout {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 24px;
+            margin-bottom: 8px;
+        }
+
+        .step-layout .step-preview {
+            min-width: 0;
+        }
+
+        .step-layout .step-options {
+            min-width: 0;
+        }
+
+        @media (max-width: 820px) {
+            .step-layout {
+                grid-template-columns: 1fr 1.5fr;
+                gap: 18px;
+            }
+        }
+
+        @media (max-width: 680px) {
+            .step-layout {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            .step-layout .step-preview {
+                max-width: 340px;
+                margin: 0 auto;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .step-layout {
+                gap: 12px;
+            }
+            .step-layout .step-preview {
+                max-width: 280px;
+            }
+        }
+
         /* ══════════════════════════════════════════════════════════
                    Gender Step
                 ══════════════════════════════════════════════════════════ */
@@ -210,11 +321,17 @@
             margin-bottom: 32px;
         }
 
+        @media (max-width: 480px) {
+            .gender-grid {
+                gap: 10px;
+            }
+        }
+
         .gender-opt {
             background: var(--quiz-card);
             border: 2px solid var(--quiz-border);
             border-radius: var(--quiz-radius);
-            padding: 28px 16px;
+            padding: 28px 12px;
             text-align: center;
             cursor: pointer;
             transition: all .25s ease;
@@ -233,33 +350,59 @@
         }
 
         .gender-opt-icon {
-            font-size: 36px;
-            margin-bottom: 10px;
+            font-size: 30px;
+            margin-bottom: 8px;
             display: block;
         }
 
         .gender-opt-name {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 400;
             color: var(--quiz-text);
         }
 
+        @media (max-width: 480px) {
+            .gender-opt {
+                padding: 18px 8px;
+            }
+            .gender-opt-icon {
+                font-size: 24px;
+            }
+            .gender-opt-name {
+                font-size: 14px;
+            }
+        }
+
         /* ══════════════════════════════════════════════════════════
-                   Option Grids
+                   Option Grids – fully responsive
                 ══════════════════════════════════════════════════════════ */
         .opt-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-            gap: 14px;
-            margin-bottom: 32px;
+            grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 600px) {
+            .opt-grid {
+                grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+                gap: 8px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .opt-grid {
+                grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+                gap: 6px;
+            }
         }
 
         .opt {
             background: var(--quiz-card);
             border: 2px solid var(--quiz-border);
-            border-radius: var(--quiz-radius);
-            padding: 20px 14px 18px;
+            border-radius: var(--quiz-radius-sm);
+            padding: 16px 8px 14px;
             text-align: center;
             cursor: pointer;
             transition: all .25s ease;
@@ -277,24 +420,22 @@
             box-shadow: 0 0 0 3px rgba(196, 149, 106, .15);
         }
 
-        /* ─── custom color picker inside circle ─── */
         .opt-circle {
-            width: 52px;
-            height: 52px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
-            margin: 0 auto 12px;
+            margin: 0 auto 10px;
             box-shadow: 0 3px 10px rgba(0, 0, 0, .15);
             position: relative;
             overflow: hidden;
-            /* clip input to circle */
         }
 
         .opt-circle input[type="color"] {
             position: absolute;
             top: -6px;
             left: -6px;
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
             border: none;
             padding: 0;
             cursor: pointer;
@@ -305,15 +446,125 @@
 
         .opt-name {
             font-weight: 500;
-            font-size: 14px;
+            font-size: 13px;
             color: var(--quiz-text);
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
 
         .opt-sub {
-            font-size: 11px;
+            font-size: 10px;
             color: var(--quiz-muted);
-            line-height: 1.4;
+            line-height: 1.3;
+        }
+
+        @media (max-width: 480px) {
+            .opt {
+                padding: 12px 4px 10px;
+            }
+            .opt-circle {
+                width: 36px;
+                height: 36px;
+                margin-bottom: 6px;
+            }
+            .opt-circle input[type="color"] {
+                width: 50px;
+                height: 50px;
+                top: -7px;
+                left: -7px;
+            }
+            .opt-name {
+                font-size: 11px;
+            }
+            .opt-sub {
+                font-size: 9px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .opt-circle {
+                width: 30px;
+                height: 30px;
+            }
+            .opt-circle input[type="color"] {
+                width: 42px;
+                height: 42px;
+                top: -6px;
+                left: -6px;
+            }
+            .opt-name {
+                font-size: 10px;
+            }
+        }
+
+        /* ══════════════════════════════════════════════════════════
+                   Preview Container
+                ══════════════════════════════════════════════════════════ */
+        .preview-container {
+            background: var(--quiz-card);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--quiz-shadow);
+            position: relative;
+            margin-bottom: 0;
+            aspect-ratio: 1 / 1;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .preview-container .preview-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .preview-container .preview-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: var(--quiz-muted);
+            font-size: 12px;
+            text-align: center;
+            background: var(--quiz-light);
+            padding: 16px;
+            border-radius: 16px;
+            gap: 6px;
+        }
+
+        .preview-container .preview-placeholder span {
+            font-size: 32px;
+        }
+
+        .preview-container .preview-swatch {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            background: #ddd;
+            transition: background 0.2s;
+        }
+
+        @media (max-width: 480px) {
+            .preview-container .preview-swatch {
+                width: 32px;
+                height: 32px;
+                border-radius: 8px;
+                bottom: 8px;
+                right: 8px;
+            }
+            .preview-container .preview-placeholder span {
+                font-size: 24px;
+            }
+            .preview-container .preview-placeholder {
+                font-size: 10px;
+            }
         }
 
         /* ══════════════════════════════════════════════════════════
@@ -321,16 +572,30 @@
                 ══════════════════════════════════════════════════════════ */
         .body-opt-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
             gap: 14px;
             margin-bottom: 32px;
+        }
+
+        @media (max-width: 600px) {
+            .body-opt-grid {
+                grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .body-opt-grid {
+                grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+                gap: 8px;
+            }
         }
 
         .body-opt {
             background: var(--quiz-card);
             border: 2px solid var(--quiz-border);
             border-radius: var(--quiz-radius);
-            padding: 24px 14px 20px;
+            padding: 20px 10px 16px;
             text-align: center;
             cursor: pointer;
             transition: all .25s ease;
@@ -349,22 +614,37 @@
         }
 
         .body-opt-icon {
-            font-size: 28px;
+            font-size: 24px;
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .body-opt-name {
             font-weight: 500;
-            font-size: 14px;
+            font-size: 13px;
             color: var(--quiz-text);
-            margin-bottom: 4px;
+            margin-bottom: 3px;
         }
 
         .body-opt-desc {
-            font-size: 11px;
+            font-size: 10px;
             color: var(--quiz-muted);
-            line-height: 1.4;
+            line-height: 1.3;
+        }
+
+        @media (max-width: 480px) {
+            .body-opt {
+                padding: 14px 6px 12px;
+            }
+            .body-opt-icon {
+                font-size: 20px;
+            }
+            .body-opt-name {
+                font-size: 11px;
+            }
+            .body-opt-desc {
+                font-size: 9px;
+            }
         }
 
         /* ══════════════════════════════════════════════════════════
@@ -402,20 +682,20 @@
         }
 
         .photo-upload-icon {
-            font-size: 42px;
-            margin-bottom: 12px;
+            font-size: 36px;
+            margin-bottom: 10px;
             display: block;
         }
 
         .photo-upload-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 20px;
+            font-size: 18px;
             color: var(--quiz-text);
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
 
         .photo-upload-sub {
-            font-size: 13px;
+            font-size: 12px;
             color: var(--quiz-muted);
         }
 
@@ -427,7 +707,7 @@
             border: 1px solid var(--quiz-border);
             border-radius: 8px;
             padding: 6px 14px;
-            font-size: 13px;
+            font-size: 12px;
             cursor: pointer;
             font-family: 'DM Sans', sans-serif;
         }
@@ -435,8 +715,8 @@
         .photo-ai-note {
             background: linear-gradient(135deg, #F0EDE8, #E8E2D8);
             border-radius: var(--quiz-radius-sm);
-            padding: 14px 18px;
-            margin-bottom: 28px;
+            padding: 12px 16px;
+            margin-bottom: 24px;
             font-size: 13px;
             color: var(--quiz-muted);
             display: flex;
@@ -444,49 +724,27 @@
             gap: 10px;
         }
 
-        /* ══════════════════════════════════════════════════════════
-                   Preview Swatch (for steps 2-5)
-                ══════════════════════════════════════════════════════════ */
-        .preview-container {
-            background: var(--quiz-card);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: var(--quiz-shadow);
-            position: relative;
-            margin-bottom: 16px;
-        }
-
-        .preview-photo {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-            display: block;
-        }
-
-        .preview-swatch {
-            position: absolute;
-            bottom: 12px;
-            right: 12px;
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            border: 2px solid #fff;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-            background: #ddd;
-            transition: background 0.2s;
-        }
-
-        .preview-placeholder {
-            background: var(--quiz-light);
-            aspect-ratio: 1 / 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            color: var(--quiz-muted);
-            font-size: 12px;
-            text-align: center;
-            border-radius: 16px;
+        @media (max-width: 480px) {
+            .photo-upload-area {
+                padding: 32px 16px;
+            }
+            .photo-upload-icon {
+                font-size: 28px;
+            }
+            .photo-upload-title {
+                font-size: 16px;
+            }
+            .photo-upload-sub {
+                font-size: 11px;
+            }
+            .photo-change-btn {
+                font-size: 11px;
+                padding: 4px 10px;
+            }
+            .photo-ai-note {
+                font-size: 12px;
+                padding: 10px 14px;
+            }
         }
 
         /* ══════════════════════════════════════════════════════════
@@ -496,27 +754,27 @@
             background: var(--quiz-card);
             border: 1px solid var(--quiz-border);
             border-radius: var(--quiz-radius);
-            padding: 36px;
+            padding: 32px 28px;
             margin-bottom: 32px;
         }
 
         .contact-form-wrap .form-row {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .contact-form-wrap label {
             display: block;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 500;
             letter-spacing: 1.5px;
             text-transform: uppercase;
             color: var(--quiz-muted);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .contact-form-wrap input {
             width: 100%;
-            padding: 14px 18px;
+            padding: 12px 16px;
             border: 1.5px solid var(--quiz-border);
             border-radius: var(--quiz-radius-sm);
             font-family: 'DM Sans', sans-serif;
@@ -536,9 +794,19 @@
         .privacy-note {
             font-size: 12px;
             color: var(--quiz-muted);
-            margin-top: 16px;
+            margin-top: 14px;
             text-align: center;
             line-height: 1.5;
+        }
+
+        @media (max-width: 480px) {
+            .contact-form-wrap {
+                padding: 20px 14px;
+            }
+            .contact-form-wrap input {
+                font-size: 14px;
+                padding: 10px 14px;
+            }
         }
 
         /* ══════════════════════════════════════════════════════════
@@ -550,15 +818,17 @@
             align-items: center;
             margin-top: 8px;
             padding-top: 8px;
+            gap: 12px;
+            flex-wrap: wrap;
         }
 
         .btn-back-q {
             background: none;
             border: 1.5px solid var(--quiz-border);
             border-radius: var(--quiz-radius-sm);
-            padding: 12px 22px;
+            padding: 10px 18px;
             font-family: 'DM Sans', sans-serif;
-            font-size: 14px;
+            font-size: 13px;
             color: var(--quiz-muted);
             cursor: pointer;
             transition: all .2s;
@@ -573,9 +843,9 @@
             background: var(--quiz-border);
             border: none;
             border-radius: var(--quiz-radius-sm);
-            padding: 13px 28px;
+            padding: 11px 22px;
             font-family: 'DM Sans', sans-serif;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
             color: var(--quiz-muted);
             cursor: not-allowed;
@@ -594,22 +864,36 @@
             box-shadow: 0 6px 20px rgba(196, 149, 106, .45);
         }
 
+        @media (max-width: 480px) {
+            .btn-back-q {
+                padding: 8px 14px;
+                font-size: 12px;
+            }
+            .btn-next-q {
+                padding: 9px 18px;
+                font-size: 12px;
+            }
+            .q-nav {
+                gap: 8px;
+            }
+        }
+
         /* ══════════════════════════════════════════════════════════
                    Loading
                 ══════════════════════════════════════════════════════════ */
         #qLoading {
             text-align: center;
-            padding: 80px 24px;
+            padding: 60px 20px;
         }
 
         .loading-spinner {
-            width: 52px;
-            height: 52px;
+            width: 48px;
+            height: 48px;
             border: 3px solid var(--quiz-border);
             border-top-color: var(--quiz-accent);
             border-radius: 50%;
             animation: spin .8s linear infinite;
-            margin: 0 auto 24px;
+            margin: 0 auto 20px;
         }
 
         @keyframes spin {
@@ -621,7 +905,7 @@
         .loading-steps {
             list-style: none;
             padding: 0;
-            margin: 28px 0 0;
+            margin: 24px 0 0;
         }
 
         .loading-steps li {
@@ -644,6 +928,16 @@
             content: '✓ ';
         }
 
+        @media (max-width: 480px) {
+            #qLoading {
+                padding: 40px 16px;
+            }
+            .loading-steps li {
+                font-size: 13px;
+                padding: 4px 0;
+            }
+        }
+
         /* ══════════════════════════════════════════════════════════
                    Results
                 ══════════════════════════════════════════════════════════ */
@@ -654,7 +948,7 @@
         .results-hero {
             background: linear-gradient(135deg, #F5EDE0, #EDE0CC);
             border-radius: var(--quiz-radius);
-            padding: 48px 32px 40px;
+            padding: 40px 24px 32px;
             text-align: center;
             margin-bottom: 24px;
             border: 1px solid rgba(196, 149, 106, .2);
@@ -662,30 +956,30 @@
 
         .result-badge {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 400;
             letter-spacing: 3px;
             text-transform: uppercase;
             color: var(--quiz-accent-dark);
             background: rgba(196, 149, 106, .12);
             display: inline-block;
-            padding: 7px 20px;
+            padding: 6px 18px;
             border-radius: 40px;
             border: 1px solid rgba(196, 149, 106, .25);
-            margin-bottom: 18px;
+            margin-bottom: 14px;
         }
 
         .results-hero h2 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(28px, 4vw, 42px);
+            font-size: clamp(26px, 4vw, 40px);
             font-weight: 300;
             color: var(--quiz-text);
-            margin: 0 auto 14px;
+            margin: 0 auto 12px;
             line-height: 1.2;
         }
 
         .results-hero p {
-            font-size: 15px;
+            font-size: 14px;
             color: var(--quiz-muted);
             max-width: 520px;
             margin: 0 auto;
@@ -693,22 +987,41 @@
             font-weight: 300;
         }
 
+        @media (max-width: 480px) {
+            .results-hero {
+                padding: 28px 16px 24px;
+            }
+            .results-hero h2 {
+                font-size: 24px;
+            }
+            .results-hero p {
+                font-size: 13px;
+            }
+        }
+
         .results-main {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 18px;
+            gap: 16px;
             margin-bottom: 24px;
+        }
+
+        @media (max-width: 680px) {
+            .results-main {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
         }
 
         .r-card {
             background: var(--quiz-card);
             border: 1px solid var(--quiz-border);
             border-radius: var(--quiz-radius);
-            padding: 24px 22px;
+            padding: 20px 18px;
         }
 
         .r-card.r-full {
-            grid-column: 1/-1;
+            grid-column: 1 / -1;
         }
 
         .r-card-label {
@@ -717,7 +1030,7 @@
             letter-spacing: 2.5px;
             text-transform: uppercase;
             color: var(--quiz-accent);
-            margin-bottom: 16px;
+            margin-bottom: 14px;
         }
 
         .r-palette-row,
@@ -725,20 +1038,20 @@
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .r-swatch {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 6px;
+            gap: 4px;
             cursor: default;
         }
 
         .r-swatch-dot {
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             border: 1px solid rgba(0, 0, 0, .08);
             box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
@@ -750,11 +1063,11 @@
         }
 
         .r-swatch-name {
-            font-size: 10px;
+            font-size: 9px;
             color: var(--quiz-muted);
             text-align: center;
-            max-width: 48px;
-            line-height: 1.3;
+            max-width: 42px;
+            line-height: 1.2;
         }
 
         .r-note {
@@ -762,39 +1075,39 @@
             color: var(--quiz-muted);
             line-height: 1.55;
             font-style: italic;
-            margin-top: 6px;
+            margin-top: 4px;
         }
 
         .r-makeup {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            gap: 14px;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 12px;
         }
 
         .r-makeup-item {
             background: var(--quiz-light);
             border-radius: var(--quiz-radius-sm);
-            padding: 14px;
+            padding: 12px 14px;
         }
 
         .r-makeup-type {
-            font-size: 10px;
+            font-size: 9px;
             font-weight: 500;
             letter-spacing: 1.5px;
             text-transform: uppercase;
             color: var(--quiz-accent);
-            margin-bottom: 5px;
+            margin-bottom: 4px;
         }
 
         .r-makeup-shade {
-            font-size: 14px;
+            font-size: 13px;
             color: var(--quiz-text);
             font-weight: 500;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
 
         .r-makeup-note {
-            font-size: 12px;
+            font-size: 11px;
             color: var(--quiz-muted);
         }
 
@@ -810,54 +1123,75 @@
         .r-cloth-list li {
             background: var(--quiz-light);
             border-radius: var(--quiz-radius-sm);
-            padding: 12px 16px;
-            font-size: 14px;
+            padding: 10px 14px;
+            font-size: 13px;
             color: var(--quiz-text);
             line-height: 1.4;
             display: flex;
-            gap: 10px;
+            gap: 8px;
             align-items: flex-start;
         }
 
         .r-cloth-list li span {
             color: var(--quiz-accent);
-            font-size: 16px;
+            font-size: 15px;
             flex-shrink: 0;
         }
 
         .r-insight {
-            font-size: 15px;
+            font-size: 14px;
             color: var(--quiz-text);
             line-height: 1.7;
             font-weight: 300;
         }
 
+        @media (max-width: 600px) {
+            .r-cloth-list {
+                grid-template-columns: 1fr;
+            }
+            .r-card {
+                padding: 16px 14px;
+            }
+            .r-makeup {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .r-makeup {
+                grid-template-columns: 1fr;
+            }
+            .r-swatch-dot {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
         /* ══════════════════════════════════════════════════════════
-                   ██  COLOUR TRY-ON PANEL  ██
+                   TRY-ON PANEL – fully responsive
                 ══════════════════════════════════════════════════════════ */
         .tryon-section {
             background: var(--quiz-card);
             border: 1px solid var(--quiz-border);
             border-radius: var(--quiz-radius);
-            padding: 28px 24px;
+            padding: 24px 20px;
             margin-bottom: 24px;
         }
 
         .tryon-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 400;
             color: var(--quiz-text);
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
 
         .tryon-sub {
             font-size: 13px;
             color: var(--quiz-muted);
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
-        /* Two-column layout */
         .tryon-layout {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -865,22 +1199,30 @@
             align-items: start;
         }
 
-        @media(max-width:600px) {
+        @media (max-width: 820px) {
             .tryon-layout {
-                grid-template-columns: 1fr;
+                gap: 18px;
             }
         }
 
-        /* Photo + overlay container */
+        @media (max-width: 680px) {
+            .tryon-layout {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
         .tryon-photo-wrap {
             position: relative;
             border-radius: var(--quiz-radius);
             overflow: hidden;
             background: var(--quiz-light);
-            min-height: 320px;
+            min-height: 280px;
             display: flex;
             align-items: center;
             justify-content: center;
+            aspect-ratio: 4 / 3;
+            width: 100%;
         }
 
         .tryon-photo-wrap img.tryon-photo-img {
@@ -893,22 +1235,22 @@
 
         .tryon-placeholder {
             text-align: center;
-            padding: 40px 20px;
+            padding: 30px 16px;
             color: var(--quiz-muted);
         }
 
         .tryon-placeholder .ph-icon {
-            font-size: 56px;
+            font-size: 44px;
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .tryon-placeholder p {
-            font-size: 13px;
+            font-size: 12px;
             line-height: 1.5;
+            margin: 0;
         }
 
-        /* Colour zone overlays — draggable swatches on the photo */
         .colour-zones {
             position: absolute;
             inset: 0;
@@ -917,8 +1259,8 @@
 
         .czone {
             position: absolute;
-            width: 48px;
-            height: 48px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
             border: 3px solid #fff;
             box-shadow: 0 3px 12px rgba(0, 0, 0, .35), 0 0 0 2px rgba(0, 0, 0, .15);
@@ -928,7 +1270,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
+            font-size: 16px;
             user-select: none;
             touch-action: none;
         }
@@ -941,99 +1283,55 @@
 
         .czone-label {
             position: absolute;
-            bottom: -22px;
+            bottom: -20px;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 9px;
+            font-size: 8px;
             font-weight: 600;
             letter-spacing: .5px;
             text-transform: uppercase;
             color: #fff;
             background: rgba(0, 0, 0, .55);
-            border-radius: 4px;
-            padding: 2px 6px;
+            border-radius: 3px;
+            padding: 1px 6px;
             white-space: nowrap;
             pointer-events: none;
         }
 
-        /* Right panel: colour controls */
+        @media (max-width: 480px) {
+            .czone {
+                width: 36px;
+                height: 36px;
+                font-size: 13px;
+            }
+            .czone-label {
+                font-size: 7px;
+                bottom: -18px;
+                padding: 1px 4px;
+            }
+            .tryon-photo-wrap {
+                min-height: 200px;
+                aspect-ratio: 4 / 3;
+            }
+        }
+
+        /* Try-on controls */
         .tryon-controls {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 18px;
         }
 
-        /* Season palette quick-select */
-        .tryon-palette-strip {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .palette-row-label {
-            font-size: 10px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--quiz-accent);
-            margin-bottom: 4px;
-        }
-
-        .palette-swatches {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .pswatch {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            border: 2px solid transparent;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
-            cursor: pointer;
-            transition: transform .15s, box-shadow .15s, border-color .15s;
-            position: relative;
-        }
-
-        .pswatch:hover {
-            transform: scale(1.18);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, .25);
-        }
-
-        .pswatch.selected {
-            border-color: var(--quiz-accent);
-            transform: scale(1.18);
-        }
-
-        .pswatch-tip {
-            position: absolute;
-            bottom: -24px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 9px;
-            color: var(--quiz-muted);
-            white-space: nowrap;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity .15s;
-        }
-
-        .pswatch:hover .pswatch-tip {
-            opacity: 1;
-        }
-
-        /* Zone selector tabs */
         .zone-tabs {
             display: flex;
-            gap: 8px;
+            gap: 6px;
             flex-wrap: wrap;
         }
 
         .zone-tab {
-            padding: 6px 14px;
+            padding: 5px 12px;
             border-radius: 20px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 500;
             border: 1.5px solid var(--quiz-border);
             color: var(--quiz-muted);
@@ -1053,18 +1351,90 @@
             color: #fff;
         }
 
-        /* Custom colour picker row */
+        @media (max-width: 400px) {
+            .zone-tab {
+                font-size: 10px;
+                padding: 4px 8px;
+            }
+        }
+
+        .tryon-palette-strip {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .palette-row-label {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--quiz-accent);
+            margin-bottom: 2px;
+        }
+
+        .palette-swatches {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .pswatch {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+            cursor: pointer;
+            transition: transform .15s, box-shadow .15s, border-color .15s;
+            position: relative;
+        }
+
+        .pswatch:hover {
+            transform: scale(1.15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .25);
+        }
+
+        .pswatch.selected {
+            border-color: var(--quiz-accent);
+            transform: scale(1.15);
+        }
+
+        .pswatch-tip {
+            position: absolute;
+            bottom: -22px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 8px;
+            color: var(--quiz-muted);
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .15s;
+        }
+
+        .pswatch:hover .pswatch-tip {
+            opacity: 1;
+        }
+
+        @media (max-width: 480px) {
+            .pswatch {
+                width: 28px;
+                height: 28px;
+            }
+        }
+
         .custom-colour-row {
             background: var(--quiz-light);
             border-radius: var(--quiz-radius-sm);
-            padding: 16px;
+            padding: 14px 16px;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 10px;
         }
 
         .custom-colour-row label {
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 600;
             letter-spacing: 1.5px;
             text-transform: uppercase;
@@ -1073,13 +1443,14 @@
 
         .colour-input-wrap {
             display: flex;
-            gap: 10px;
+            gap: 8px;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .colour-input-wrap input[type="color"] {
-            width: 52px;
-            height: 52px;
+            width: 44px;
+            height: 44px;
             border: none;
             border-radius: 50%;
             cursor: pointer;
@@ -1102,11 +1473,12 @@
 
         .colour-hex-input {
             flex: 1;
-            padding: 10px 14px;
+            min-width: 80px;
+            padding: 8px 12px;
             border: 1.5px solid var(--quiz-border);
             border-radius: var(--quiz-radius-sm);
             font-family: 'DM Sans', monospace;
-            font-size: 14px;
+            font-size: 13px;
             color: var(--quiz-text);
             background: #fff;
             outline: none;
@@ -1123,9 +1495,9 @@
             color: #fff;
             border: none;
             border-radius: var(--quiz-radius-sm);
-            padding: 10px 18px;
+            padding: 8px 16px;
             font-family: 'DM Sans', sans-serif;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 500;
             cursor: pointer;
             transition: all .2s;
@@ -1137,17 +1509,35 @@
             box-shadow: 0 4px 12px rgba(196, 149, 106, .4);
         }
 
-        /* AI rating badge */
+        @media (max-width: 480px) {
+            .colour-input-wrap input[type="color"] {
+                width: 38px;
+                height: 38px;
+            }
+            .colour-hex-input {
+                font-size: 12px;
+                padding: 6px 10px;
+                min-width: 60px;
+            }
+            .btn-apply-colour {
+                font-size: 11px;
+                padding: 6px 12px;
+            }
+            .custom-colour-row {
+                padding: 12px;
+            }
+        }
+
         .colour-rating {
             border-radius: var(--quiz-radius-sm);
-            padding: 12px 16px;
+            padding: 10px 14px;
             font-size: 13px;
             display: flex;
             align-items: flex-start;
             gap: 10px;
             line-height: 1.5;
             transition: all .3s ease;
-            min-height: 48px;
+            min-height: 44px;
         }
 
         .colour-rating.perfect {
@@ -1181,24 +1571,34 @@
         }
 
         .rating-score {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 700;
             font-family: 'Cormorant Garamond', serif;
             flex-shrink: 0;
             line-height: 1;
         }
 
-        /* Colour history strip */
+        @media (max-width: 480px) {
+            .colour-rating {
+                font-size: 12px;
+                padding: 8px 12px;
+                min-height: 38px;
+            }
+            .rating-score {
+                font-size: 18px;
+            }
+        }
+
         .colour-history {
             display: flex;
-            gap: 6px;
+            gap: 5px;
             flex-wrap: wrap;
             align-items: center;
         }
 
         .history-dot {
-            width: 28px;
-            height: 28px;
+            width: 26px;
+            height: 26px;
             border-radius: 50%;
             border: 2px solid transparent;
             box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
@@ -1213,15 +1613,15 @@
 
         .history-dot .hd-tip {
             position: absolute;
-            bottom: -20px;
+            bottom: -18px;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 9px;
+            font-size: 8px;
             white-space: nowrap;
             background: rgba(0, 0, 0, .6);
             color: #fff;
-            padding: 2px 6px;
-            border-radius: 4px;
+            padding: 1px 6px;
+            border-radius: 3px;
             opacity: 0;
             pointer-events: none;
             transition: opacity .15s;
@@ -1232,10 +1632,10 @@
         }
 
         .history-clear {
-            font-size: 11px;
+            font-size: 10px;
             color: var(--quiz-muted);
             cursor: pointer;
-            padding: 4px 8px;
+            padding: 2px 8px;
             border: 1px solid var(--quiz-border);
             border-radius: 6px;
             transition: all .2s;
@@ -1247,6 +1647,17 @@
             color: var(--quiz-accent);
         }
 
+        @media (max-width: 480px) {
+            .history-dot {
+                width: 22px;
+                height: 22px;
+            }
+            .history-clear {
+                font-size: 9px;
+                padding: 2px 6px;
+            }
+        }
+
         /* ══════════════════════════════════════════════════════════
                    Pinterest
                 ══════════════════════════════════════════════════════════ */
@@ -1254,7 +1665,7 @@
             background: var(--quiz-card);
             border: 1px solid var(--quiz-border);
             border-radius: var(--quiz-radius);
-            padding: 24px 22px;
+            padding: 20px 18px;
             margin-bottom: 24px;
         }
 
@@ -1262,23 +1673,24 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            margin-bottom: 18px;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
         }
 
         .pinterest-badge {
             background: #E60023;
             color: #fff;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 500;
             letter-spacing: 1px;
-            padding: 3px 10px;
+            padding: 2px 10px;
             border-radius: 4px;
         }
 
         .pinterest-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
-            gap: 16px;
+            grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+            gap: 14px;
         }
 
         .pin-card {
@@ -1299,34 +1711,34 @@
 
         .pin-card-img-placeholder {
             width: 100%;
-            aspect-ratio: 3/4;
+            aspect-ratio: 3 / 4;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
+            font-size: 28px;
         }
 
         .pin-card-body {
-            padding: 10px 12px 12px;
+            padding: 8px 10px 10px;
         }
 
         .pin-card-title {
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 500;
             color: var(--quiz-text);
-            margin-bottom: 4px;
-            line-height: 1.35;
+            margin-bottom: 2px;
+            line-height: 1.3;
         }
 
         .pin-card-sub {
-            font-size: 11px;
+            font-size: 10px;
             color: var(--quiz-muted);
         }
 
         .pin-card-cta {
             display: inline-block;
-            margin-top: 8px;
-            font-size: 11px;
+            margin-top: 6px;
+            font-size: 10px;
             font-weight: 500;
             color: var(--quiz-accent);
             letter-spacing: .5px;
@@ -1334,9 +1746,29 @@
 
         .pin-loading {
             text-align: center;
-            padding: 40px 0;
+            padding: 30px 0;
             color: var(--quiz-muted);
-            font-size: 14px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            .pinterest-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 10px;
+            }
+            .pinterest-section {
+                padding: 16px 12px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .pinterest-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+            .pin-card-title {
+                font-size: 11px;
+            }
         }
 
         /* ══════════════════════════════════════════════════════════
@@ -1347,7 +1779,7 @@
             gap: 12px;
             flex-wrap: wrap;
             justify-content: center;
-            margin-top: 32px;
+            margin-top: 28px;
         }
 
         .btn-primary {
@@ -1355,9 +1787,9 @@
             color: #fff;
             border: none;
             border-radius: var(--quiz-radius-sm);
-            padding: 14px 28px;
+            padding: 12px 24px;
             font-family: 'DM Sans', sans-serif;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
             cursor: pointer;
             transition: all .25s;
@@ -1376,9 +1808,9 @@
             color: var(--quiz-text);
             border: 1.5px solid var(--quiz-border);
             border-radius: var(--quiz-radius-sm);
-            padding: 13px 24px;
+            padding: 11px 20px;
             font-family: 'DM Sans', sans-serif;
-            font-size: 14px;
+            font-size: 13px;
             cursor: pointer;
             transition: all .2s;
             text-decoration: none;
@@ -1390,36 +1822,77 @@
             color: var(--quiz-accent);
         }
 
+        @media (max-width: 480px) {
+            .results-actions {
+                gap: 8px;
+            }
+            .btn-primary {
+                padding: 10px 18px;
+                font-size: 12px;
+            }
+            .btn-outline {
+                padding: 9px 16px;
+                font-size: 12px;
+            }
+        }
+
         /* ══════════════════════════════════════════════════════════
-                   Responsive
+                   Extra: small tweaks
                 ══════════════════════════════════════════════════════════ */
-        @media(max-width:600px) {
-            .results-main {
-                grid-template-columns: 1fr;
-            }
+        .text-center {
+            text-align: center;
+        }
 
-            .r-cloth-list {
-                grid-template-columns: 1fr;
-            }
+        .mt-8 {
+            margin-top: 8px;
+        }
 
-            .body-opt-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        .gap-8 {
+            gap: 8px;
+        }
 
-            .gender-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
 
-            .contact-form-wrap {
-                padding: 24px 18px;
-            }
+        .items-center {
+            align-items: center;
+        }
 
-            .pinterest-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        /* ─── Fix for mobile tap highlight ─── */
+        .opt,
+        .gender-opt,
+        .body-opt,
+        .pswatch,
+        .zone-tab,
+        .czone,
+        .photo-upload-area,
+        .btn-back-q,
+        .btn-next-q,
+        .btn-primary,
+        .btn-outline,
+        .history-dot,
+        .history-clear,
+        .btn-apply-colour {
+            -webkit-tap-highlight-color: transparent;
+        }
 
-            .zone-tabs {
-                gap: 6px;
+        /* ─── Print-friendly ─── */
+        @media print {
+            .q-nav {
+                display: none;
+            }
+            .tryon-section {
+                break-inside: avoid;
+            }
+            .results-actions {
+                display: none;
+            }
+            .quiz-progress {
+                display: none;
+            }
+            .photo-upload-area {
+                border-style: solid;
             }
         }
     </style>
@@ -1495,57 +1968,51 @@
                 <div class="q-question">{{ $data->content->step2_question->value ?? '' }}</div>
                 <div class="q-hint">{{ $data->content->step2_hint->value ?? '' }}</div>
 
-                <div class="grid">
-                    <div class="grid grid-cols-6 gap-4">
-                        <div class="col-span-2">
-                            <div class="preview-container" id="previewSkin">
-                                <img class="preview-photo" id="previewImgSkin" style="display: none;">
-                                <div class="preview-placeholder" id="previewPlaceholderSkin">
-                                    <span>📸</span> Your photo will appear here
-                                </div>
-                                <div class="preview-swatch" id="previewSwatchSkin" style="background: #E0D6C8;"></div>
+                <div class="step-layout">
+                    {{-- Preview --}}
+                    <div class="step-preview">
+                        <div class="preview-container" id="previewSkin">
+                            <img class="preview-photo" id="previewImgSkin" style="display: none;">
+                            <div class="preview-placeholder" id="previewPlaceholderSkin">
+                                <span>📸</span> Your photo
                             </div>
+                            <div class="preview-swatch" id="previewSwatchSkin" style="background: #E0D6C8;"></div>
                         </div>
-                        <div class="col-span-4">
-                            <div class="opt-grid">
-                                <div class="opt" onclick="qSelect(this,'skin','fair')">
-                                    <div class="opt-circle" style="background:linear-gradient(135deg,#FDDBB4,#F5C89C);">
-                                    </div>
-                                    <div class="opt-name">{{ $data->content->step2_fair->value ?? '' }}</div>
-                                    <div class="opt-sub">{{ $data->content->step2_fair_sub->value ?? '' }}</div>
+                    </div>
+                    {{-- Options --}}
+                    <div class="step-options">
+                        <div class="opt-grid">
+                            <div class="opt" onclick="qSelect(this,'skin','fair')">
+                                <div class="opt-circle" style="background:linear-gradient(135deg,#FDDBB4,#F5C89C);"></div>
+                                <div class="opt-name">{{ $data->content->step2_fair->value ?? '' }}</div>
+                                <div class="opt-sub">{{ $data->content->step2_fair_sub->value ?? '' }}</div>
+                            </div>
+                            <div class="opt" onclick="qSelect(this,'skin','light')">
+                                <div class="opt-circle" style="background:linear-gradient(135deg,#F0C089,#D4956A);"></div>
+                                <div class="opt-name">{{ $data->content->step2_light->value ?? '' }}</div>
+                                <div class="opt-sub">{{ $data->content->step2_light_sub->value ?? '' }}</div>
+                            </div>
+                            <div class="opt" onclick="qSelect(this,'skin','medium')">
+                                <div class="opt-circle" style="background:linear-gradient(135deg,#C68642,#A0522D);"></div>
+                                <div class="opt-name">{{ $data->content->step2_medium->value ?? '' }}</div>
+                                <div class="opt-sub">{{ $data->content->step2_medium_sub->value ?? '' }}</div>
+                            </div>
+                            <div class="opt" onclick="qSelect(this,'skin','tan')">
+                                <div class="opt-circle" style="background:linear-gradient(135deg,#8D5524,#6B3A1F);"></div>
+                                <div class="opt-name">{{ $data->content->step2_tan->value ?? '' }}</div>
+                                <div class="opt-sub">{{ $data->content->step2_tan_sub->value ?? '' }}</div>
+                            </div>
+                            <div class="opt" onclick="qSelect(this,'skin','deep')">
+                                <div class="opt-circle" style="background:linear-gradient(135deg,#4A2508,#2C1A08);"></div>
+                                <div class="opt-name">{{ $data->content->step2_deep->value ?? '' }}</div>
+                                <div class="opt-sub">{{ $data->content->step2_deep_sub->value ?? '' }}</div>
+                            </div>
+                            <div class="opt" id="skin_custom_opt">
+                                <div class="opt-circle">
+                                    <input type="color" id="skin_custom" value="#C4956A" onchange="qSelectCustom(this, 'skin')">
                                 </div>
-                                <div class="opt" onclick="qSelect(this,'skin','light')">
-                                    <div class="opt-circle" style="background:linear-gradient(135deg,#F0C089,#D4956A);">
-                                    </div>
-                                    <div class="opt-name">{{ $data->content->step2_light->value ?? '' }}</div>
-                                    <div class="opt-sub">{{ $data->content->step2_light_sub->value ?? '' }}</div>
-                                </div>
-                                <div class="opt" onclick="qSelect(this,'skin','medium')">
-                                    <div class="opt-circle" style="background:linear-gradient(135deg,#C68642,#A0522D);">
-                                    </div>
-                                    <div class="opt-name">{{ $data->content->step2_medium->value ?? '' }}</div>
-                                    <div class="opt-sub">{{ $data->content->step2_medium_sub->value ?? '' }}</div>
-                                </div>
-                                <div class="opt" onclick="qSelect(this,'skin','tan')">
-                                    <div class="opt-circle" style="background:linear-gradient(135deg,#8D5524,#6B3A1F);">
-                                    </div>
-                                    <div class="opt-name">{{ $data->content->step2_tan->value ?? '' }}</div>
-                                    <div class="opt-sub">{{ $data->content->step2_tan_sub->value ?? '' }}</div>
-                                </div>
-                                <div class="opt" onclick="qSelect(this,'skin','deep')">
-                                    <div class="opt-circle" style="background:linear-gradient(135deg,#4A2508,#2C1A08);">
-                                    </div>
-                                    <div class="opt-name">{{ $data->content->step2_deep->value ?? '' }}</div>
-                                    <div class="opt-sub">{{ $data->content->step2_deep_sub->value ?? '' }}</div>
-                                </div>
-                                <!-- Custom skin option -->
-                                <div class="opt" id="skin_custom_opt">
-                                    <div class="opt-circle">
-                                        <input type="color" id="skin_custom" value="#C4956A" onchange="qSelectCustom(this, 'skin')">
-                                    </div>
-                                    <div class="opt-name">{{ $data->content->step2_custom->value ?? '' }}</div>
-                                    <div class="opt-sub">{{ $data->content->step2_custom_sub->value ?? '' }}</div>
-                                </div>
+                                <div class="opt-name">{{ $data->content->step2_custom->value ?? '' }}</div>
+                                <div class="opt-sub">{{ $data->content->step2_custom_sub->value ?? '' }}</div>
                             </div>
                         </div>
                     </div>
@@ -1563,56 +2030,51 @@
                 <div class="q-question">{{ $data->content->step3_question->value ?? '' }}</div>
                 <div class="q-hint">{{ $data->content->step3_hint->value ?? '' }}</div>
 
-                <div class="grid">
-                    <div class="grid grid-cols-6 gap-4">
-                        <div class="col-span-2">
-                            <div class="preview-container" id="previewUndertone">
-                                <img class="preview-photo" id="previewImgUndertone" style="display: none;">
-                                <div class="preview-placeholder" id="previewPlaceholderUndertone">
-                                    <span>📸</span> Your photo will appear here
-                                </div>
-                                <div class="preview-swatch" id="previewSwatchUndertone" style="background: #E0D6C8;">
-                                </div>
+                <div class="step-layout">
+                    {{-- Preview --}}
+                    <div class="step-preview">
+                        <div class="preview-container" id="previewUndertone">
+                            <img class="preview-photo" id="previewImgUndertone" style="display: none;">
+                            <div class="preview-placeholder" id="previewPlaceholderUndertone">
+                                <span>📸</span> Your photo
                             </div>
+                            <div class="preview-swatch" id="previewSwatchUndertone" style="background: #E0D6C8;"></div>
                         </div>
-                        <div class="col-span-4">
-                            <div class="opt-grid">
-                                <div class="opt" onclick="qSelect(this,'undertone','warm')">
-                                    <div class="opt-circle" style="background:linear-gradient(135deg,#FFD700,#FFA500);">
-                                    </div>
-                                    <div class="opt-name">{{ $data->content->step3_warm->value ?? '' }}</div>
-                                    <div class="opt-sub">{{ $data->content->step3_warm_sub->value ?? '' }}</div>
+                    </div>
+                    {{-- Options --}}
+                    <div class="step-options">
+                        <div class="opt-grid">
+                            <div class="opt" onclick="qSelect(this,'undertone','warm')">
+                                <div class="opt-circle" style="background:linear-gradient(135deg,#FFD700,#FFA500);"></div>
+                                <div class="opt-name">{{ $data->content->step3_warm->value ?? '' }}</div>
+                                <div class="opt-sub">{{ $data->content->step3_warm_sub->value ?? '' }}</div>
+                            </div>
+                            <div class="opt" onclick="qSelect(this,'undertone','cool')">
+                                <div class="opt-circle" style="background:linear-gradient(135deg,#B0C4DE,#6A5ACD);"></div>
+                                <div class="opt-name">{{ $data->content->step3_cool->value ?? '' }}</div>
+                                <div class="opt-sub">{{ $data->content->step3_cool_sub->value ?? '' }}</div>
+                            </div>
+                            <div class="opt" onclick="qSelect(this,'undertone','neutral')">
+                                <div class="opt-circle" style="background:linear-gradient(135deg,#D2B48C,#BC9A6A);"></div>
+                                <div class="opt-name">{{ $data->content->step3_neutral->value ?? '' }}</div>
+                                <div class="opt-sub">{{ $data->content->step3_neutral_sub->value ?? '' }}</div>
+                            </div>
+                            <div class="opt" onclick="qSelect(this,'undertone','olive')">
+                                <div class="opt-circle" style="background:linear-gradient(135deg,#8FBC8F,#6B8E23);"></div>
+                                <div class="opt-name">{{ $data->content->step3_olive->value ?? '' }}</div>
+                                <div class="opt-sub">{{ $data->content->step3_olive_sub->value ?? '' }}</div>
+                            </div>
+                            <div class="opt" id="undertone_custom_opt">
+                                <div class="opt-circle">
+                                    <input type="color" id="undertone_custom" value="#C4956A" onchange="qSelectCustom(this, 'undertone')">
                                 </div>
-                                <div class="opt" onclick="qSelect(this,'undertone','cool')">
-                                    <div class="opt-circle" style="background:linear-gradient(135deg,#B0C4DE,#6A5ACD);">
-                                    </div>
-                                    <div class="opt-name">{{ $data->content->step3_cool->value ?? '' }}</div>
-                                    <div class="opt-sub">{{ $data->content->step3_cool_sub->value ?? '' }}</div>
-                                </div>
-                                <div class="opt" onclick="qSelect(this,'undertone','neutral')">
-                                    <div class="opt-circle" style="background:linear-gradient(135deg,#D2B48C,#BC9A6A);">
-                                    </div>
-                                    <div class="opt-name">{{ $data->content->step3_neutral->value ?? '' }}</div>
-                                    <div class="opt-sub">{{ $data->content->step3_neutral_sub->value ?? '' }}</div>
-                                </div>
-                                <div class="opt" onclick="qSelect(this,'undertone','olive')">
-                                    <div class="opt-circle" style="background:linear-gradient(135deg,#8FBC8F,#6B8E23);">
-                                    </div>
-                                    <div class="opt-name">{{ $data->content->step3_olive->value ?? '' }}</div>
-                                    <div class="opt-sub">{{ $data->content->step3_olive_sub->value ?? '' }}</div>
-                                </div>
-                                <!-- Custom undertone option -->
-                                <div class="opt" id="undertone_custom_opt">
-                                    <div class="opt-circle">
-                                        <input type="color" id="undertone_custom" value="#C4956A" onchange="qSelectCustom(this, 'undertone')">
-                                    </div>
-                                    <div class="opt-name">{{ $data->content->step3_custom->value ?? '' }}</div>
-                                    <div class="opt-sub">{{ $data->content->step3_custom_sub->value ?? '' }}</div>
-                                </div>
+                                <div class="opt-name">{{ $data->content->step3_custom->value ?? '' }}</div>
+                                <div class="opt-sub">{{ $data->content->step3_custom_sub->value ?? '' }}</div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="q-nav">
                     <button class="btn-back-q" onclick="qGo(2)">{{ $data->content->step3_back->value ?? '' }}</button>
                     <button class="btn-next-q" id="qn3" onclick="qGo(4)">{{ $data->content->step3_next->value ?? '' }}</button>
@@ -1624,55 +2086,56 @@
                 <div class="q-num">{{ $data->content->step4_num->value ?? '' }}</div>
                 <div class="q-question">{{ $data->content->step4_question->value ?? '' }}</div>
                 <div class="q-hint">{{ $data->content->step4_hint->value ?? '' }}</div>
-                <div class="grid">
-                    <div class="grid grid-cols-6 gap-4">
-                        <div class="col-span-2">
-                            <div class="preview-container" id="previewEyes">
-                                <img class="preview-photo" id="previewImgEyes" style="display: none;">
-                                <div class="preview-placeholder" id="previewPlaceholderEyes">
-                                    <span>📸</span> Your photo will appear here
-                                </div>
-                                <div class="preview-swatch" id="previewSwatchEyes" style="background: #E0D6C8;"></div>
+
+                <div class="step-layout">
+                    {{-- Preview --}}
+                    <div class="step-preview">
+                        <div class="preview-container" id="previewEyes">
+                            <img class="preview-photo" id="previewImgEyes" style="display: none;">
+                            <div class="preview-placeholder" id="previewPlaceholderEyes">
+                                <span>📸</span> Your photo
                             </div>
+                            <div class="preview-swatch" id="previewSwatchEyes" style="background: #E0D6C8;"></div>
                         </div>
-                        <div class="col-span-4">
-                            <div class="opt-grid">
-                                <div class="opt" onclick="qSelect(this,'eyes','blue')">
-                                    <div class="opt-circle" style="background:radial-gradient(circle,#6CA6CD,#4682B4,#1C3A6E);"></div>
-                                    <div class="opt-name">{{ $data->content->step4_blue->value ?? '' }}</div>
+                    </div>
+                    {{-- Options --}}
+                    <div class="step-options">
+                        <div class="opt-grid">
+                            <div class="opt" onclick="qSelect(this,'eyes','blue')">
+                                <div class="opt-circle" style="background:radial-gradient(circle,#6CA6CD,#4682B4,#1C3A6E);"></div>
+                                <div class="opt-name">{{ $data->content->step4_blue->value ?? '' }}</div>
+                            </div>
+                            <div class="opt" onclick="qSelect(this,'eyes','green')">
+                                <div class="opt-circle" style="background:radial-gradient(circle,#8FBC8F,#3D7A47,#1B4A24);"></div>
+                                <div class="opt-name">{{ $data->content->step4_green->value ?? '' }}</div>
+                            </div>
+                            <div class="opt" onclick="qSelect(this,'eyes','hazel')">
+                                <div class="opt-circle" style="background:radial-gradient(circle,#C8A96E,#8B6914,#4A3508);"></div>
+                                <div class="opt-name">{{ $data->content->step4_hazel->value ?? '' }}</div>
+                            </div>
+                            <div class="opt" onclick="qSelect(this,'eyes','light-brown')">
+                                <div class="opt-circle" style="background:radial-gradient(circle,#C8905A,#9B5A24,#5C2A0A);"></div>
+                                <div class="opt-name">{{ $data->content->step4_light_brown->value ?? '' }}</div>
+                            </div>
+                            <div class="opt" onclick="qSelect(this,'eyes','dark-brown')">
+                                <div class="opt-circle" style="background:radial-gradient(circle,#6B3A1F,#2C150A,#000);"></div>
+                                <div class="opt-name">{{ $data->content->step4_dark_brown->value ?? '' }}</div>
+                            </div>
+                            <div class="opt" onclick="qSelect(this,'eyes','grey')">
+                                <div class="opt-circle" style="background:radial-gradient(circle,#B0B8C0,#7A8A94,#3A464E);"></div>
+                                <div class="opt-name">{{ $data->content->step4_grey->value ?? '' }}</div>
+                            </div>
+                            <div class="opt" id="eyes_custom_opt">
+                                <div class="opt-circle">
+                                    <input type="color" id="eyes_custom" value="#C4956A" onchange="qSelectCustom(this, 'eyes')">
                                 </div>
-                                <div class="opt" onclick="qSelect(this,'eyes','green')">
-                                    <div class="opt-circle" style="background:radial-gradient(circle,#8FBC8F,#3D7A47,#1B4A24);"></div>
-                                    <div class="opt-name">{{ $data->content->step4_green->value ?? '' }}</div>
-                                </div>
-                                <div class="opt" onclick="qSelect(this,'eyes','hazel')">
-                                    <div class="opt-circle" style="background:radial-gradient(circle,#C8A96E,#8B6914,#4A3508);"></div>
-                                    <div class="opt-name">{{ $data->content->step4_hazel->value ?? '' }}</div>
-                                </div>
-                                <div class="opt" onclick="qSelect(this,'eyes','light-brown')">
-                                    <div class="opt-circle" style="background:radial-gradient(circle,#C8905A,#9B5A24,#5C2A0A);"></div>
-                                    <div class="opt-name">{{ $data->content->step4_light_brown->value ?? '' }}</div>
-                                </div>
-                                <div class="opt" onclick="qSelect(this,'eyes','dark-brown')">
-                                    <div class="opt-circle" style="background:radial-gradient(circle,#6B3A1F,#2C150A,#000);"></div>
-                                    <div class="opt-name">{{ $data->content->step4_dark_brown->value ?? '' }}</div>
-                                </div>
-                                <div class="opt" onclick="qSelect(this,'eyes','grey')">
-                                    <div class="opt-circle" style="background:radial-gradient(circle,#B0B8C0,#7A8A94,#3A464E);"></div>
-                                    <div class="opt-name">{{ $data->content->step4_grey->value ?? '' }}</div>
-                                </div>
-                                <!-- Custom eyes option -->
-                                <div class="opt" id="eyes_custom_opt">
-                                    <div class="opt-circle">
-                                        <input type="color" id="eyes_custom" value="#C4956A" onchange="qSelectCustom(this, 'eyes')">
-                                    </div>
-                                    <div class="opt-name">{{ $data->content->step4_custom->value ?? '' }}</div>
-                                    <div class="opt-sub">{{ $data->content->step4_custom_sub->value ?? '' }}</div>
-                                </div>
+                                <div class="opt-name">{{ $data->content->step4_custom->value ?? '' }}</div>
+                                <div class="opt-sub">{{ $data->content->step4_custom_sub->value ?? '' }}</div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="q-nav">
                     <button class="btn-back-q" onclick="qGo(3)">{{ $data->content->step4_back->value ?? '' }}</button>
                     <button class="btn-next-q" id="qn4" onclick="qGo(5)">{{ $data->content->step4_next->value ?? '' }}</button>
@@ -1684,67 +2147,62 @@
                 <div class="q-num">{{ $data->content->step5_num->value ?? '' }}</div>
                 <div class="q-question">{{ $data->content->step5_question->value ?? '' }}</div>
                 <div class="q-hint">{{ $data->content->step5_hint->value ?? '' }}</div>
-                <div class="grid">
-                    <div class="grid grid-cols-6 gap-4">
-                        <div class="col-span-2">
-                            <div class="preview-container" id="previewHair">
-                                <img class="preview-photo" id="previewImgHair" style="display: none;">
-                                <div class="preview-placeholder" id="previewPlaceholderHair">
-                                    <span>📸</span> Your photo will appear here
-                                </div>
-                                <div class="preview-swatch" id="previewSwatchHair" style="background: #E0D6C8;"></div>
+
+                <div class="step-layout">
+                    {{-- Preview --}}
+                    <div class="step-preview">
+                        <div class="preview-container" id="previewHair">
+                            <img class="preview-photo" id="previewImgHair" style="display: none;">
+                            <div class="preview-placeholder" id="previewPlaceholderHair">
+                                <span>📸</span> Your photo
                             </div>
+                            <div class="preview-swatch" id="previewSwatchHair" style="background: #E0D6C8;"></div>
                         </div>
-                        <div class="col-span-4">
-                            <div class="opt-grid">
-                                <div class="opt" onclick="qSelect(this,'hair','blonde')">
-                                    <div class="opt-circle" style="background:linear-gradient(135deg,#F5E0A0,#D4A843);">
-                                    </div>
-                                    <div class="opt-name">{{ $data->content->step5_blonde->value ?? '' }}</div>
-                                    <div class="opt-sub">{{ $data->content->step5_blonde_sub->value ?? '' }}</div>
+                    </div>
+                    {{-- Options --}}
+                    <div class="step-options">
+                        <div class="opt-grid">
+                            <div class="opt" onclick="qSelect(this,'hair','blonde')">
+                                <div class="opt-circle" style="background:linear-gradient(135deg,#F5E0A0,#D4A843);"></div>
+                                <div class="opt-name">{{ $data->content->step5_blonde->value ?? '' }}</div>
+                                <div class="opt-sub">{{ $data->content->step5_blonde_sub->value ?? '' }}</div>
+                            </div>
+                            <div class="opt" onclick="qSelect(this,'hair','auburn')">
+                                <div class="opt-circle" style="background:linear-gradient(135deg,#C67B4A,#8B3A1A);"></div>
+                                <div class="opt-name">{{ $data->content->step5_auburn->value ?? '' }}</div>
+                                <div class="opt-sub">{{ $data->content->step5_auburn_sub->value ?? '' }}</div>
+                            </div>
+                            <div class="opt" onclick="qSelect(this,'hair','light-brown')">
+                                <div class="opt-circle" style="background:linear-gradient(135deg,#A0724E,#6B4226);"></div>
+                                <div class="opt-name">{{ $data->content->step5_light_brown->value ?? '' }}</div>
+                                <div class="opt-sub">{{ $data->content->step5_light_brown_sub->value ?? '' }}</div>
+                            </div>
+                            <div class="opt" onclick="qSelect(this,'hair','dark-brown')">
+                                <div class="opt-circle" style="background:linear-gradient(135deg,#4A2C1A,#2C1810);"></div>
+                                <div class="opt-name">{{ $data->content->step5_dark_brown->value ?? '' }}</div>
+                                <div class="opt-sub">{{ $data->content->step5_dark_brown_sub->value ?? '' }}</div>
+                            </div>
+                            <div class="opt" onclick="qSelect(this,'hair','black')">
+                                <div class="opt-circle" style="background:linear-gradient(135deg,#2A2A2A,#080808);"></div>
+                                <div class="opt-name">{{ $data->content->step5_black->value ?? '' }}</div>
+                                <div class="opt-sub">{{ $data->content->step5_black_sub->value ?? '' }}</div>
+                            </div>
+                            <div class="opt" onclick="qSelect(this,'hair','grey')">
+                                <div class="opt-circle" style="background:linear-gradient(135deg,#C8C8C8,#888888);"></div>
+                                <div class="opt-name">{{ $data->content->step5_grey->value ?? '' }}</div>
+                                <div class="opt-sub">{{ $data->content->step5_grey_sub->value ?? '' }}</div>
+                            </div>
+                            <div class="opt" id="hair_custom_opt">
+                                <div class="opt-circle">
+                                    <input type="color" id="hair_custom" value="#C4956A" onchange="qSelectCustom(this, 'hair')">
                                 </div>
-                                <div class="opt" onclick="qSelect(this,'hair','auburn')">
-                                    <div class="opt-circle" style="background:linear-gradient(135deg,#C67B4A,#8B3A1A);">
-                                    </div>
-                                    <div class="opt-name">{{ $data->content->step5_auburn->value ?? '' }}</div>
-                                    <div class="opt-sub">{{ $data->content->step5_auburn_sub->value ?? '' }}</div>
-                                </div>
-                                <div class="opt" onclick="qSelect(this,'hair','light-brown')">
-                                    <div class="opt-circle" style="background:linear-gradient(135deg,#A0724E,#6B4226);">
-                                    </div>
-                                    <div class="opt-name">{{ $data->content->step5_light_brown->value ?? '' }}</div>
-                                    <div class="opt-sub">{{ $data->content->step5_light_brown_sub->value ?? '' }}</div>
-                                </div>
-                                <div class="opt" onclick="qSelect(this,'hair','dark-brown')">
-                                    <div class="opt-circle" style="background:linear-gradient(135deg,#4A2C1A,#2C1810);">
-                                    </div>
-                                    <div class="opt-name">{{ $data->content->step5_dark_brown->value ?? '' }}</div>
-                                    <div class="opt-sub">{{ $data->content->step5_dark_brown_sub->value ?? '' }}</div>
-                                </div>
-                                <div class="opt" onclick="qSelect(this,'hair','black')">
-                                    <div class="opt-circle" style="background:linear-gradient(135deg,#2A2A2A,#080808);">
-                                    </div>
-                                    <div class="opt-name">{{ $data->content->step5_black->value ?? '' }}</div>
-                                    <div class="opt-sub">{{ $data->content->step5_black_sub->value ?? '' }}</div>
-                                </div>
-                                <div class="opt" onclick="qSelect(this,'hair','grey')">
-                                    <div class="opt-circle" style="background:linear-gradient(135deg,#C8C8C8,#888888);">
-                                    </div>
-                                    <div class="opt-name">{{ $data->content->step5_grey->value ?? '' }}</div>
-                                    <div class="opt-sub">{{ $data->content->step5_grey_sub->value ?? '' }}</div>
-                                </div>
-                                <!-- Custom hair option -->
-                                <div class="opt" id="hair_custom_opt">
-                                    <div class="opt-circle">
-                                        <input type="color" id="hair_custom" value="#C4956A" onchange="qSelectCustom(this, 'hair')">
-                                    </div>
-                                    <div class="opt-name">{{ $data->content->step5_custom->value ?? '' }}</div>
-                                    <div class="opt-sub">{{ $data->content->step5_custom_sub->value ?? '' }}</div>
-                                </div>
+                                <div class="opt-name">{{ $data->content->step5_custom->value ?? '' }}</div>
+                                <div class="opt-sub">{{ $data->content->step5_custom_sub->value ?? '' }}</div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="q-nav">
                     <button class="btn-back-q" onclick="qGo(4)">{{ $data->content->step5_back->value ?? '' }}</button>
                     <button class="btn-next-q" id="qn5" onclick="qGo(6)">{{ $data->content->step5_next->value ?? '' }}</button>
@@ -1875,10 +2333,7 @@
                                         <p>Upload a photo in Step 2 to try colours on yourself. The panel still
                                             works for checking colours against your season.</p>
                                     </div>
-                                    {{-- Photo injected here by JS --}}
-                                    <div class="colour-zones" id="colourZones">
-                                        {{-- Zones injected by JS --}}
-                                    </div>
+                                    <div class="colour-zones" id="colourZones"></div>
                                 </div>
                                 <p style="font-size:11px;color:var(--quiz-muted);margin-top:8px;text-align:center;">
                                     {{ $data->content->tryon_drag_hint->value ?? '' }}
@@ -1984,10 +2439,8 @@
             email: ''
         };
 
-        // CSRF token for Laravel
         const CSRF = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') || '';
 
-        // API routes
         const ROUTES = {
             computeSeason: '{{ route('quiz.compute_season') }}',
             evaluateColour: '{{ route('quiz.evaluate_colour') }}',
@@ -1997,7 +2450,6 @@
         let currentSeason = null;
         let currentData = null;
 
-        // Colour mappings for swatch previews
         const colourMap = {
             skin: {
                 fair: '#FDDBB4',
@@ -2030,9 +2482,6 @@
             }
         };
 
-        /* ────────────────────────────────────────────────────────────
-           HELPER: Convert hex to RGB
-        ──────────────────────────────────────────────────────────── */
         function hexToRgb(hex) {
             const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
             return result ? {
@@ -2042,19 +2491,13 @@
             } : null;
         }
 
-        /* ────────────────────────────────────────────────────────────
-           Find closest predefined key for a given hex
-        ──────────────────────────────────────────────────────────── */
         function getClosestKey(key, hex) {
             const map = colourMap[key];
             if (!map) return null;
-
             const target = hexToRgb(hex);
             if (!target) return null;
-
             let closestKey = null;
             let closestDist = Infinity;
-
             for (const [k, colHex] of Object.entries(map)) {
                 const rgb = hexToRgb(colHex);
                 if (!rgb) continue;
@@ -2068,21 +2511,16 @@
                     closestKey = k;
                 }
             }
-            return closestKey || Object.keys(map)[0]; // fallback to first key
+            return closestKey || Object.keys(map)[0];
         }
 
-        /* ────────────────────────────────────────────────────────────
-           NAVIGATION
-        ──────────────────────────────────────────────────────────── */
+        /* ─── NAVIGATION ─── */
         function qGo(step) {
             document.querySelectorAll('.q-step').forEach(el => el.classList.remove('active'));
             const target = document.getElementById('q' + step);
             if (target) {
                 target.classList.add('active');
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
             updateProgress(step);
         }
@@ -2104,81 +2542,54 @@
             });
         }
 
-        /* ────────────────────────────────────────────────────────────
-           SELECTORS (predefined) with preview updates
-        ──────────────────────────────────────────────────────────── */
+        /* ─── SELECTORS ─── */
         function qSelect(el, key, value) {
-            // Deselect siblings in the same grid
             const parentGrid = el.closest('.opt-grid');
             if (parentGrid) {
                 parentGrid.querySelectorAll('.opt').forEach(o => o.classList.remove('sel'));
             } else {
-                // fallback: remove from all .opt (should not happen)
                 document.querySelectorAll('.opt').forEach(o => o.classList.remove('sel'));
             }
             el.classList.add('sel');
             qa[key] = value;
-
-            // Update swatch preview for this step
             updatePreviewSwatch(key, value);
             enableNextButton(key);
         }
 
-        /* ────────────────────────────────────────────────────────────
-           CUSTOM COLOR SELECTOR
-        ──────────────────────────────────────────────────────────── */
         function qSelectCustom(inputEl, key) {
-            const hex = inputEl.value; // e.g. "#C4956A"
+            const hex = inputEl.value;
             const opt = inputEl.closest('.opt');
             if (!opt) return;
-
-            // Deselect siblings in the same grid
             const parentGrid = opt.closest('.opt-grid');
             if (parentGrid) {
                 parentGrid.querySelectorAll('.opt').forEach(o => o.classList.remove('sel'));
             }
             opt.classList.add('sel');
-
-            // Store the hex as the value
             qa[key] = hex;
-
-            // Update the preview swatch
             updatePreviewSwatch(key, hex);
             enableNextButton(key);
         }
 
-        /* ────────────────────────────────────────────────────────────
-           HELPER: update preview swatch and enable next button
-        ──────────────────────────────────────────────────────────── */
         function updatePreviewSwatch(key, value) {
             const swatchId = `previewSwatch${key.charAt(0).toUpperCase() + key.slice(1)}`;
             const swatchEl = document.getElementById(swatchId);
             if (swatchEl) {
-                // If value is a hex (starts with #), use it directly, else look up in colourMap
                 if (typeof value === 'string' && value.startsWith('#')) {
                     swatchEl.style.backgroundColor = value;
                 } else if (colourMap[key] && colourMap[key][value]) {
                     swatchEl.style.backgroundColor = colourMap[key][value];
                 } else {
-                    swatchEl.style.backgroundColor = '#E0D6C8'; // fallback
+                    swatchEl.style.backgroundColor = '#E0D6C8';
                 }
             }
         }
 
         function enableNextButton(key) {
-            const stepMap = {
-                skin: 2,
-                undertone: 3,
-                eyes: 4,
-                hair: 5
-            };
+            const stepMap = { skin: 2, undertone: 3, eyes: 4, hair: 5 };
             const btn = document.getElementById('qn' + stepMap[key]);
             if (btn) btn.classList.add('on');
         }
 
-        /* ────────────────────────────────────────────────────────────
-           GENDER & BODY SELECTORS (unchanged)
-        ──────────────────────────────────────────────────────────── */
         function qSelectGender(el, value) {
             document.querySelectorAll('.gender-opt').forEach(o => o.classList.remove('sel'));
             el.classList.add('sel');
@@ -2193,15 +2604,12 @@
             document.getElementById('qn6').classList.add('on');
         }
 
-        /* ────────────────────────────────────────────────────────────
-           PHOTO UPLOAD & SYNC TO ALL PREVIEWS
-        ──────────────────────────────────────────────────────────── */
+        /* ─── PHOTO UPLOAD ─── */
         function triggerPhotoUpload() {
             document.getElementById('photoFileInput').click();
         }
 
         function updateAllPhotoPreviews(photoDataUrl) {
-            // Update main results try-on panel
             const wrap = document.getElementById('tryonPhotoWrap');
             const placeholder = document.getElementById('tryonPlaceholder');
             if (placeholder) placeholder.style.display = 'none';
@@ -2217,7 +2625,6 @@
             mainImg.src = photoDataUrl;
             mainImg.style.display = 'block';
 
-            // Update preview images in steps 2-5
             const stepIds = ['Skin', 'Undertone', 'Eyes', 'Hair'];
             stepIds.forEach(step => {
                 const img = document.getElementById(`previewImg${step}`);
@@ -2239,10 +2646,7 @@
                 const area = document.getElementById('photoUploadArea');
                 area.classList.add('has-photo');
                 area.innerHTML =
-                    `
-                    <img src="${e.target.result}" alt="Your photo" style="width:100%;max-height:300px;object-fit:cover;display:block;border-radius:16px;">
-                    <button class="photo-change-btn" onclick="event.stopPropagation();triggerPhotoUpload()">Change Photo</button>`;
-
+                    `<img src="${e.target.result}" alt="Your photo" style="width:100%;max-height:300px;object-fit:cover;display:block;border-radius:16px;"><button class="photo-change-btn" onclick="event.stopPropagation();triggerPhotoUpload()">Change Photo</button>`;
                 updateAllPhotoPreviews(e.target.result);
             };
             reader.readAsDataURL(file);
@@ -2261,19 +2665,15 @@
                 detectOpt.classList.add('sel');
                 detectOpt.querySelector('.body-opt-desc').textContent = 'Analysing…';
             }
-
             const base64 = await new Promise(resolve => {
                 const r = new FileReader();
                 r.onload = e => resolve(e.target.result.split(',')[1]);
                 r.readAsDataURL(file);
             });
-
             try {
                 const response = await fetch('https://api.anthropic.com/v1/messages', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         model: 'claude-sonnet-4-20250514',
                         max_tokens: 200,
@@ -2311,9 +2711,7 @@
             }
         }
 
-        /* ────────────────────────────────────────────────────────────
-           CONTACT FORM VALIDATION
-        ──────────────────────────────────────────────────────────── */
+        /* ─── CONTACT ─── */
         function checkContactForm() {
             const name = document.getElementById('user_name').value.trim();
             const email = document.getElementById('user_email').value.trim();
@@ -2326,22 +2724,19 @@
             } else btn.classList.remove('on');
         }
 
-        /* ════════════════════════════════════════════════════════════
-           SHOW RESULTS — calls server for season calculation
-        ════════════════════════════════════════════════════════════ */
+        /* ─── SHOW RESULTS ─── */
         async function showQuizResults() {
             if (!document.getElementById('qn7').classList.contains('on')) return;
 
             qa.name = document.getElementById('user_name').value.trim();
             qa.email = document.getElementById('user_email').value.trim();
 
-            // Map custom hex values to closest predefined keys
             const mapCustom = (key) => {
                 const val = qa[key];
                 if (typeof val === 'string' && val.startsWith('#')) {
                     return getClosestKey(key, val);
                 }
-                return val; // already a valid key
+                return val;
             };
 
             const payload = {
@@ -2353,7 +2748,6 @@
                 body: qa.body
             };
 
-            // Validate that we have all required fields
             if (!payload.skin || !payload.undertone || !payload.eyes || !payload.hair || !payload.gender || !payload
                 .body) {
                 alert('Please complete all steps before submitting.');
@@ -2366,10 +2760,7 @@
 
             document.querySelectorAll('.q-step').forEach(el => el.classList.remove('active'));
             document.getElementById('qLoading').classList.add('active');
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
 
             const steps = ['ls1', 'ls2', 'ls3', 'ls4', 'ls5'];
             const animPromise = (async () => {
@@ -2392,11 +2783,8 @@
                     },
                     body: JSON.stringify(payload)
                 });
-
-                // Check if the response is OK and is JSON
                 if (!res.ok) {
                     const text = await res.text();
-                    console.error('Server error response:', text);
                     throw new Error(`Server returned ${res.status}: ${text.substring(0, 100)}`);
                 }
                 const contentType = res.headers.get('content-type');
@@ -2409,7 +2797,7 @@
                 console.error('Season compute failed:', e);
                 alert('Error computing your season: ' + e.message + '. Please try again or contact support.');
                 document.getElementById('qLoading').classList.remove('active');
-                qGo(6); // return to step 6 (body type) to retry
+                qGo(6);
                 return;
             }
 
@@ -2422,10 +2810,7 @@
 
             document.getElementById('qLoading').classList.remove('active');
             document.getElementById('qResults').classList.add('active');
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
 
             initTryonPanel(result);
             setTimeout(() => renderPinterest(result.pinterest), 400);
@@ -2464,9 +2849,7 @@
             document.getElementById('r-insight').innerHTML = data.insight.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
         }
 
-        /* ════════════════════════════════════════════════════════════
-           COLOUR TRY-ON PANEL
-        ════════════════════════════════════════════════════════════ */
+        /* ─── COLOUR TRY-ON ─── */
         let activeZone = 'top';
         let colourHistory = [];
         let zoneColours = {
@@ -2477,38 +2860,10 @@
         };
 
         const zoneConfig = {
-            top: {
-                emoji: '👕',
-                label: 'TOP',
-                default: {
-                    x: 45,
-                    y: 35
-                }
-            },
-            bottom: {
-                emoji: '👖',
-                label: 'BOTTOM',
-                default: {
-                    x: 45,
-                    y: 62
-                }
-            },
-            hair: {
-                emoji: '💇',
-                label: 'HAIR',
-                default: {
-                    x: 45,
-                    y: 10
-                }
-            },
-            accent: {
-                emoji: '✨',
-                label: 'ACCENT',
-                default: {
-                    x: 75,
-                    y: 45
-                }
-            },
+            top: { emoji: '👕', label: 'TOP', default: { x: 45, y: 35 } },
+            bottom: { emoji: '👖', label: 'BOTTOM', default: { x: 45, y: 62 } },
+            hair: { emoji: '💇', label: 'HAIR', default: { x: 45, y: 10 } },
+            accent: { emoji: '✨', label: 'ACCENT', default: { x: 75, y: 45 } },
         };
 
         function initTryonPanel(result) {
@@ -2532,14 +2887,10 @@
             const bestEl = document.getElementById('tryonBestSwatches');
             const avoidEl = document.getElementById('tryonAvoidSwatches');
             bestEl.innerHTML = result.data.best.map(c =>
-                `<div class="pswatch" style="background:${c.hex};" title="${c.name}" onclick="applySeasonColour('${c.hex}','${c.name}')" data-hex="${c.hex}">
-                    <div class="pswatch-tip">${c.name}</div>
-                </div>`
+                `<div class="pswatch" style="background:${c.hex};" title="${c.name}" onclick="applySeasonColour('${c.hex}','${c.name}')" data-hex="${c.hex}"><div class="pswatch-tip">${c.name}</div></div>`
             ).join('');
             avoidEl.innerHTML = result.data.avoid.map(c =>
-                `<div class="pswatch" style="background:${c.hex};filter:grayscale(30%);opacity:.7;" title="${c.name}" onclick="applySeasonColour('${c.hex}','${c.name}')" data-hex="${c.hex}">
-                    <div class="pswatch-tip">${c.name}</div>
-                </div>`
+                `<div class="pswatch" style="background:${c.hex};filter:grayscale(30%);opacity:.7;" title="${c.name}" onclick="applySeasonColour('${c.hex}','${c.name}')" data-hex="${c.hex}"><div class="pswatch-tip">${c.name}</div></div>`
             ).join('');
         }
 
@@ -2599,17 +2950,13 @@
             el.addEventListener('touchstart', e => {
                 e.preventDefault();
                 onStart(e.touches[0].clientX, e.touches[0].clientY);
-            }, {
-                passive: false
-            });
+            }, { passive: false });
             window.addEventListener('touchmove', e => {
                 if (isDragging) {
                     e.preventDefault();
                     onMove(e.touches[0].clientX, e.touches[0].clientY);
                 }
-            }, {
-                passive: false
-            });
+            }, { passive: false });
             window.addEventListener('touchend', onEnd);
         }
 
@@ -2629,8 +2976,7 @@
             setZoneColour(activeZone, hex);
             document.getElementById('customColourPicker').value = hex;
             document.getElementById('customHexInput').value = hex;
-            document.querySelectorAll('.pswatch').forEach(el => el.classList.toggle('selected', el.dataset.hex ===
-            hex));
+            document.querySelectorAll('.pswatch').forEach(el => el.classList.toggle('selected', el.dataset.hex === hex));
             await evaluateAndDisplay(hex);
         }
 
@@ -2676,10 +3022,7 @@
                         'Content-Type': 'application/json',
                         'X-CSRF-TOKEN': CSRF
                     },
-                    body: JSON.stringify({
-                        hex,
-                        season: currentSeason
-                    })
+                    body: JSON.stringify({ hex, season: currentSeason })
                 });
                 const data = await res.json();
                 ratingEl.className = `colour-rating ${data.rating}`;
@@ -2694,11 +3037,7 @@
 
         function addToHistory(hex, rating, score) {
             colourHistory = colourHistory.filter(h => h.hex !== hex);
-            colourHistory.unshift({
-                hex,
-                rating,
-                score
-            });
+            colourHistory.unshift({ hex, rating, score });
             if (colourHistory.length > 12) colourHistory.pop();
             renderHistory();
         }
@@ -2710,11 +3049,10 @@
                 return;
             }
             el.innerHTML = colourHistory.map(h =>
-                `<div class="history-dot" style="background:${h.hex};" onclick="recallHistory('${h.hex}')" title="${h.hex} — ${h.score}/100">
-                    <div class="hd-tip">${h.hex} · ${h.score}/100</div>
-                </div>`
+                `<div class="history-dot" style="background:${h.hex};" onclick="recallHistory('${h.hex}')" title="${h.hex} — ${h.score}/100"><div class="hd-tip">${h.hex} · ${h.score}/100</div></div>`
             ).join('');
         }
+
         async function recallHistory(hex) {
             setZoneColour(activeZone, hex);
             document.getElementById('customColourPicker').value = hex;
@@ -2734,9 +3072,7 @@
             return null;
         }
 
-        /* ════════════════════════════════════════════════════════════
-           PINTEREST
-        ════════════════════════════════════════════════════════════ */
+        /* ─── PINTEREST ─── */
         const seasonColours = {
             spring: ['#F4C542', '#E8865A', '#7BC67E', '#F5A623', '#D4A5A5'],
             summer: ['#B0C4DE', '#C8A2C8', '#8FAF8F', '#D4B5B5', '#A8BAC4'],
@@ -2761,9 +3097,7 @@
             ).join('');
         }
 
-        /* ════════════════════════════════════════════════════════════
-           LEAD SAVE & RESTART
-        ════════════════════════════════════════════════════════════ */
+        /* ─── LEAD SAVE ─── */
         async function saveLead(name, email, answers) {
             try {
                 await fetch(ROUTES.saveLead, {
@@ -2790,6 +3124,7 @@
             }
         }
 
+        /* ─── RESTART ─── */
         function restartQ() {
             Object.keys(qa).forEach(k => qa[k] = null);
             currentSeason = null;

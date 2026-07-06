@@ -150,7 +150,70 @@
             <div><a>Privacy</a><a>Terms</a><a>Cookies</a></div>
         </div>
     </footer>
+<!-- Floating Cookie Banner – always visible until accepted -->
+<div id="cookie-banner" style="position:fixed; bottom:24px; right:24px; z-index:9999; max-width:380px; width:calc(100% - 48px); background:#FCF8F2; border:1px solid #E6DFD6; border-radius:16px; box-shadow:0 8px 32px rgba(0,0,0,0.12); padding:24px 22px 20px; font-family:'Jost',sans-serif; box-sizing:border-box; transition:transform 0.3s ease, opacity 0.3s ease; transform:scale(1); opacity:1;">
+    <div style="display:flex; flex-direction:column; gap:14px;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+            <div style="font-size:16px; font-weight:600; color:#2D2A24; letter-spacing:-0.3px;">🍪 Cookies</div>
+            <button id="cookie-dismiss" style="background:transparent; border:none; font-size:22px; line-height:1; color:#8A7A6A; cursor:pointer; padding:0 4px; transition:color 0.2s;">&times;</button>
+        </div>
+        <p style="margin:0; font-size:13px; line-height:1.6; color:#2D2A24; opacity:0.85;">
+            We use cookies to improve your experience, analyse traffic, and personalise content.
+            <a href="#" style="color:#C4956A; text-decoration:underline; font-weight:500;">Learn more</a>
+        </p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:6px;">
+            <button id="cookie-accept" style="flex:1; background:#C4956A; border:none; border-radius:50px; padding:10px 18px; font-size:13px; font-weight:500; color:#fff; cursor:pointer; box-shadow:0 4px 12px rgba(196,149,106,0.25); transition:all 0.2s; min-width:100px;">Accept All</button>
+            <button id="cookie-manage" style="flex:1; background:transparent; border:1px solid #E6DFD6; border-radius:50px; padding:10px 18px; font-size:13px; font-weight:500; color:#2D2A24; cursor:pointer; transition:all 0.2s; min-width:80px;">Manage</button>
+        </div>
+    </div>
+</div>
 
+<script>
+    (function() {
+        // Run as soon as possible
+        const banner = document.getElementById('cookie-banner');
+        if (!banner) return;
+
+        // If consent already given permanently, hide the banner and do nothing else.
+        if (localStorage.getItem('cookie_consent') === 'accepted') {
+            banner.style.display = 'none';
+            return;
+        }
+
+        // If a cookie with consent exists (server-side), hide and sync.
+        if (document.cookie.includes('cookie_consent=accepted')) {
+            localStorage.setItem('cookie_consent', 'accepted');
+            banner.style.display = 'none';
+            return;
+        }
+
+        // If dismissed for this session, hide (but we'll show again on next page load)
+        if (sessionStorage.getItem('cookie_dismissed') === 'true') {
+            banner.style.display = 'none';
+            return;
+        }
+
+        // Otherwise, ensure the banner is visible (it should be by default)
+        banner.style.display = 'block';
+
+        // Attach events
+        document.getElementById('cookie-accept').addEventListener('click', function() {
+            localStorage.setItem('cookie_consent', 'accepted');
+            document.cookie = "cookie_consent=accepted; path=/; max-age=" + 60 * 60 * 24 * 365;
+            banner.style.display = 'none';
+        });
+
+        document.getElementById('cookie-dismiss').addEventListener('click', function() {
+            sessionStorage.setItem('cookie_dismissed', 'true');
+            banner.style.display = 'none';
+        });
+
+        document.getElementById('cookie-manage').addEventListener('click', function() {
+            // Replace with your own settings modal or redirect
+            alert('Cookie settings will open here. You can customise your preferences.');
+        });
+    })();
+</script>
     @include('layouts.script')
 
 </body>
