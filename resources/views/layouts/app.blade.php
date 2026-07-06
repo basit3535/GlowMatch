@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>GlowMatch. — Your Colour & Style Universe</title>
+    <title>{{$data->customPage->meta_title}}</title>
 
     <meta name="description"
-        content="Discover your perfect colours, style recommendations, and personalized fashion insights with GlowMatch..">
+        content="{{$data->customPage->meta_description}}">
 
     <link rel="canonical" href="https://glowmatch.co.uk">
-
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/favicon/favicon.ico') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('assets/favicon/site.webmanifest') }}">
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="GlowMatch. — Your Colour & Style Universe">
@@ -40,7 +44,7 @@
 
     <!-- ── NAVIGATION ── -->
     <nav>
-        <div class="nav-logo"><a href="{{ route('show.home_page') }}">Glow<em>Match</em></a></div>
+        <div class="nav-logo"><a href="{{ route('show.home_page') }}" class="flex align-baseline align-center"><img src="{{asset('assets/images/glowmatch-logo.png')}}" alt="" width="110px"> </a></div>
         <div class="nav-center">
             <a href="{{ route('show.home_page') }}" class="active" id="nav-home">Home</a>
             <a href="{{ route('show.custom_pages', ['slug' => 'about']) }}" id="nl-about">About</a>
@@ -134,20 +138,20 @@
                     href="{{ route('show.custom_pages', ['slug' => 'blog']) }}">Blog</a>
             </div>
             <div class="footer-col">
-                <h5>Learn</h5><a>Colour Theory</a><a>Seasonal Palettes</a><a>Style Guide</a><a>FAQ</a>
+                <h5>Learn</h5><a href="{{ route('show.custom_pages', ['slug' => 'colour-theory']) }}">Colour Theory</a><a href="{{ route('show.custom_pages', ['slug' => 'seasonal-palettes']) }}">Seasonal Palettes</a><a href="{{ route('show.custom_pages', ['slug' => 'style-guide']) }}">Style Guide</a><a href="{{ route('show.custom_pages', ['slug' => 'faq']) }}">FAQ</a>
             </div>
             <div class="footer-col">
                 <h5>Company</h5><a href="{{ route('show.custom_pages', ['slug' => 'about']) }}">About Us</a><a
-                    href="{{ route('show.custom_pages', ['slug' => 'contact']) }}">Contact</a><a>Press
-                    Kit</a><a>Careers</a>
+                    href="{{ route('show.custom_pages', ['slug' => 'contact']) }}">Contact</a><a href="{{ route('show.custom_pages', ['slug' => 'press-kit']) }}">Press
+                    Kit</a><a href="{{ route('show.custom_pages', ['slug' => 'careers']) }}">Careers</a>
             </div>
             <div class="footer-col">
-                <h5>Legal</h5><a>Privacy Policy</a><a>Terms of Service</a><a>Cookie Policy</a><a>Accessibility</a>
+                <h5>Legal</h5><a href="{{ route('show.custom_pages', ['slug' => 'privacy-policy']) }}">Privacy Policy</a><a href="{{ route('show.custom_pages', ['slug' => 'terms-of-service']) }}">Terms of Service</a><a href="{{ route('show.custom_pages', ['slug' => 'cookie-policy']) }}">Cookie Policy</a><a href="{{ route('show.custom_pages', ['slug' => 'accessibility']) }}">Accessibility</a>
             </div>
         </div>
         <div class="footer-bottom">
             <div>© 2026 SB INTERCONTINENTAL LIMITED. All rights reserved.</div>
-            <div><a>Privacy</a><a>Terms</a><a>Cookies</a></div>
+            <div><a href="{{ route('show.custom_pages', ['slug' => 'privacy-policy']) }}">Privacy</a><a href="{{ route('show.custom_pages', ['slug' => 'terms-of-service']) }}">Terms</a><a href="{{ route('show.custom_pages', ['slug' => 'cookie-policy']) }}">Cookies</a></div>
         </div>
     </footer>
 <!-- Floating Cookie Banner – always visible until accepted -->

@@ -187,7 +187,7 @@
 
     /* ── PAGES ── */
     .page {
-        padding-top: 70px;
+        padding-top: 90px;
         min-height: 100vh;
         animation: fadeUp .4s ease;
     }
