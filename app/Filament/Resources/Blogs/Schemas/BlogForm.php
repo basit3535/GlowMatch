@@ -10,6 +10,7 @@ use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Schema;
 use Filament\Schemas\Components\Utilities\Set;
 use Filament\Forms\Components\CodeEditor;
+
 class BlogForm
 {
     public static function configure(Schema $schema): Schema
@@ -42,8 +43,6 @@ class BlogForm
                     ->searchable()
                     ->preload()
                     ->nullable(),
-                // CodeEditor::make('blog_content'),
-
                 RichEditor::make('blog_content')
                     ->extraAttributes(['style' => 'min-height: 250px;'])
                     ->resizableImages()
@@ -55,8 +54,6 @@ class BlogForm
                     ->searchable()
                     ->preload()
                     ->nullable(),
-                // FileUpload::make('image_id')
-                //     ->image(),
                 MediaPicker::make('image_id')
                     ->label('Image'),
                 Toggle::make('status')

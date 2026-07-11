@@ -21,9 +21,21 @@ class BlogInfolist
                 TextEntry::make('meta_description')
                     ->placeholder('-'),
                 TextEntry::make('language'),
-                TextEntry::make('description')
-                    ->placeholder('-')
-                    ->columnSpanFull(),
+                // TextEntry::make('blog_content')
+                //     ->label('Content')
+                //     ->html() // This allows HTML content to be rendered
+                //     ->getStateUsing(function (Blog $record) {
+                //         // Combine all 5 content parts
+                //         $content = '';
+                //         for ($i = 1; $i <= 5; $i++) {
+                //             $field = "blog_content_{$i}";
+                //             if (!empty($record->$field)) {
+                //                 $content .= $record->$field;
+                //             }
+                //         }
+                //         return $content ?: '-';
+                //     })
+                //     ->columnSpanFull(),
                 TextEntry::make('parent.title')
                     ->label('Parent Blog')
                     ->placeholder('-'),
@@ -34,6 +46,14 @@ class BlogInfolist
                     ->placeholder('-'),
                 IconEntry::make('status')
                     ->boolean(),
+                TextEntry::make('category.title')
+                    ->label('Category')
+                    ->placeholder('-'),
+                TextEntry::make('reading_time')
+                    ->placeholder('-'),
+                IconEntry::make('featured')
+                    ->boolean()
+                    ->label('Featured'),
                 TextEntry::make('deleted_at')
                     ->dateTime()
                     ->visible(fn (Blog $record): bool => $record->trashed()),

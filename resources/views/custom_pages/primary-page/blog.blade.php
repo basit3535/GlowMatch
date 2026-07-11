@@ -35,7 +35,7 @@
                     </div>
                     <div class="blog-feat-body">
                         <span class="tag tag-rose" style="margin-bottom:14px;display:inline-block;">
-                            {{ $data->featured->category ?? 'Colour Theory' }}
+                            {{ $data->featured->category->title ?? 'Colour Theory' }}
                         </span>
                         <div class="blog-feat-title">{{ $data->featured->title }}</div>
                         <div class="blog-feat-meta">
@@ -52,6 +52,7 @@
             {{-- Blog Cards Grid --}}
             <div class="blog-cards" id="blog-cards">
                 @forelse($data->blogs as $blog)
+                 <a href="{{ route('show.single_blog',['category' => $blog->category->slug, 'slug' => $blog->slug]) }}">
                     <div class="blog-card">
                         <div class="bc-img" style="background:linear-gradient(145deg, #7B8EC9, #C8A2C8);">
                             @if($blog->image)
@@ -61,7 +62,7 @@
                             @endif
                         </div>
                         <div class="bc-body">
-                            <div class="bc-tag">{{ $blog->category ?? 'Style Tips' }}</div>
+                            <div class="bc-tag">{{ $blog->category->title ?? 'Style Tips' }}</div>
                             <div class="bc-title">{{ $blog->title }}</div>
                             <div class="bc-excerpt">{{ Str::limit($blog->description, 100) }}</div>
                             <div class="bc-meta">
@@ -71,6 +72,7 @@
                             </div>
                         </div>
                     </div>
+                    </a>
                 @empty
                     <p>No blog posts yet.</p>
                 @endforelse
