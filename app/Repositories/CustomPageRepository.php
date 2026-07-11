@@ -105,20 +105,35 @@ class CustomPageRepository implements CustomPageInterface
             'featured' => $featured,
         ];
     }
+    private function mapContentItem(&$content, $item)
+    {
+        if (empty($item['key'])) {
+            return;
+        }
 
-public function showSingleBlog($category, $slug)
-{
-    $post = Blog::where('slug', $slug)
-        ->whereHas('category', function ($query) use ($category) {
-            $query->where('slug', $category);
-        })
-        ->with('category', 'image')
-        ->firstOrFail();
+        $value = match ($item['type'] ?? 'input') {
+            'textarea' => $item['value_textarea'] ?? '',
+            'richtext' => $item['value_richtext'] ?? '',
+            default    => $item['value_input'] ?? '',
+        };
 
-    // dd($post);
+        $content->{$item['key']} = (object) [
+            'value' => $value,
+        ];
+    }
+    public function showSingleBlog($category, $slug)
+    {
+        $post = Blog::where('slug', $slug)
+            ->whereHas('category', function ($query) use ($category) {
+                $query->where('slug', $category);
+            })
+            ->with('category', 'image')
+            ->firstOrFail();
 
-    return (object) [
-        'post' => $post,
-    ];
-}
+        // dd($post);
+
+        return (object) [
+            'post' => $post,
+        ];
+    }
 }
