@@ -17,6 +17,7 @@
 /public/storage
 /storage/*.key
 /storage/pail
+/resources/views/custom_pages/
 /vendor
 Homestead.json
 Homestead.yaml

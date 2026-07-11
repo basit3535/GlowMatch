@@ -35,7 +35,7 @@
                     </div>
                     <div class="blog-feat-body">
                         <span class="tag tag-rose" style="margin-bottom:14px;display:inline-block;">
-                            {{ $data->featured->category ?? 'Colour Theory' }}
+                            {{ $data->featured->category->title ?? 'Colour Theory' }}
                         </span>
                         <div class="blog-feat-title">{{ $data->featured->title }}</div>
                         <div class="blog-feat-meta">
@@ -44,7 +44,7 @@
                             <span>{{ $data->featured->reading_time ?? '5 min read' }}</span>
                         </div>
                         <div class="blog-feat-excerpt">{{ Str::limit($data->featured->description, 150) }}</div>
-                        <a href="{{ route('blog.show', $data->featured->slug) }}" class="btn-outline" style="font-size:13px;padding:10px 22px;">Read Article →</a>
+                        <a href="{{ route('show.single_blog',['category' => $data->featured->category->slug, 'slug' => $data->featured->slug]) }}" class="btn-outline" style="font-size:13px;padding:10px 22px;">Read Article →</a>
                     </div>
                 </div>
             @endif
@@ -52,6 +52,7 @@
             {{-- Blog Cards Grid --}}
             <div class="blog-cards" id="blog-cards">
                 @forelse($data->blogs as $blog)
+                 <a href="{{ route('show.single_blog',['category' => $blog->category->slug, 'slug' => $blog->slug]) }}">
                     <div class="blog-card">
                         <div class="bc-img" style="background:linear-gradient(145deg, #7B8EC9, #C8A2C8);">
                             @if($blog->image)
@@ -61,7 +62,7 @@
                             @endif
                         </div>
                         <div class="bc-body">
-                            <div class="bc-tag">{{ $blog->category ?? 'Style Tips' }}</div>
+                            <div class="bc-tag">{{ $blog->category->title ?? 'Style Tips' }}</div>
                             <div class="bc-title">{{ $blog->title }}</div>
                             <div class="bc-excerpt">{{ Str::limit($blog->description, 100) }}</div>
                             <div class="bc-meta">
@@ -71,6 +72,7 @@
                             </div>
                         </div>
                     </div>
+                    </a>
                 @empty
                     <p>No blog posts yet.</p>
                 @endforelse
@@ -109,6 +111,7 @@
         fetch(url)
             .then(response => response.json())
             .then(data => {
+                console.log('Fetched blogs:', data); // Debugging line
                 // Rebuild the layout content
                 const layout = container.querySelector('.blog-layout');
                 let featuredHtml = data.featured ? generateFeaturedHtml(data.featured) : '';
@@ -166,7 +169,6 @@
                         <span>${readingTime}</span>
                     </div>
                     <div class="blog-feat-excerpt">${featured.description ? featured.description.substring(0, 150) + '...' : ''}</div>
-                    <a href="/blog/${featured.slug}" class="btn-outline" style="font-size:13px;padding:10px 22px;">Read Article →</a>
                 </div>
             </div>
         `;

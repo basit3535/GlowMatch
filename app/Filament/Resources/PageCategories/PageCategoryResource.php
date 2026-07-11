@@ -33,7 +33,7 @@ class PageCategoryResource extends Resource
     protected static ?string $navigationLabel                   = 'Page Categories';
     protected static ?string $modelLabel                        = 'Page Category';
     protected static ?string $pluralModelLabel                  = 'Page Categories';
-    protected static ?int $navigationSort                       = 3;
+    protected static ?int $navigationSort                       = 4;
     public static function form(Schema $schema): Schema
     {
         return $schema

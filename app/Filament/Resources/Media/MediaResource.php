@@ -26,7 +26,7 @@ class MediaResource extends Resource
     protected static ?string $navigationLabel                   = 'Media';
     protected static ?string $modelLabel                        = 'Media';
     protected static ?string $pluralModelLabel                  = 'Media';
-    protected static ?int $navigationSort                       = 2;
+    protected static ?int $navigationSort                       = 3;
 
     protected static ?string $recordTitleAttribute = 'Media';
 
