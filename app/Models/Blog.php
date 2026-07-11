@@ -11,11 +11,15 @@ class Blog extends Model
     protected $fillable = [
         'title',
         'slug',
-        'category',
+        'category_id',
         'meta_title',
         'meta_description',
         'language',
-        'description',
+        'blog_content_1',
+        'blog_content_2',
+        'blog_content_3',
+        'blog_content_4',
+        'blog_content_5',
         'parent_id',
         'image_id',
         'status',
@@ -31,5 +35,15 @@ class Blog extends Model
     public function parent()
     {
         return $this->belongsTo(Blog::class, 'parent_id');
+    }
+
+    public function children()
+    {
+        return $this->hasMany(Blog::class, 'parent_id');
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(BlogCategory::class, 'category_id');
     }
 }

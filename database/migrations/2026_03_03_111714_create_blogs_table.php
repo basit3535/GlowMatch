@@ -22,7 +22,11 @@ return new class extends Migration
 
             $table->string('language');
 
-            $table->longText('description')->nullable();
+            $table->longText('blog_content_1')->nullable();
+            $table->longText('blog_content_2')->nullable();
+            $table->longText('blog_content_3')->nullable();
+            $table->longText('blog_content_4')->nullable();
+            $table->longText('blog_content_5')->nullable();
 
             // Self-relation (parent blog)
             $table->foreignId('parent_id')
@@ -39,7 +43,10 @@ return new class extends Migration
             $table->boolean('status')
                 ->default(1)
                 ->comment('0 = inactive, 1 = active');
-            $table->string('category')->nullable();
+            $table->foreignId('category_id')
+                ->nullable()
+                ->constrained('blog_categories')
+                ->nullOnDelete();
             $table->string('reading_time')->nullable();
             $table->boolean('featured')->default(false);
             $table->softDeletes();

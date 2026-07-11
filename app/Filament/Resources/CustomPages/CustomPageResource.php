@@ -46,7 +46,7 @@ class CustomPageResource extends Resource
     protected static ?string $navigationLabel                   = 'Custom Pages';
     protected static ?string $modelLabel                        = 'Custom Page';
     protected static ?string $pluralModelLabel                  = 'Custom Pages';
-    protected static ?int $navigationSort                       = 4;
+    protected static ?int $navigationSort                       = 5;
 
     public static function form(Schema $schema): Schema
     {

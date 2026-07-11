@@ -96,4 +96,20 @@ public function showCustomPage($slug, $category = null)
             'featured' => $featured,
         ];
     }
+
+public function showSingleBlog($category, $slug)
+{
+    $post = Blog::where('slug', $slug)
+        ->whereHas('category', function ($query) use ($category) {
+            $query->where('slug', $category);
+        })
+        ->with('category', 'image')
+        ->firstOrFail();
+
+    // dd($post);
+
+    return (object) [
+        'post' => $post,
+    ];
+}
 }

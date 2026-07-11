@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Interfaces\CustomPageInterface;
 use Illuminate\Http\Request;
 
-class CustomPageController extends Controller   
+class CustomPageController extends Controller
 {
     private CustomPageInterface $customPageRepository;
 
@@ -37,5 +37,10 @@ class CustomPageController extends Controller
             'pagination'   => (string) $data->blogs->links('vendor.pagination.bootstrap-5'),
             'current_page' => $data->blogs->currentPage(),
         ]);
+    }
+    public function showSingleBlog($category, $slug)
+    {
+        $data = $this->customPageRepository->showSingleBlog($category, $slug);
+        return view("defual-pages.single-blog", compact('data'));
     }
 }

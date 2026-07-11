@@ -44,7 +44,7 @@
                             <span>{{ $data->featured->reading_time ?? '5 min read' }}</span>
                         </div>
                         <div class="blog-feat-excerpt">{{ Str::limit($data->featured->description, 150) }}</div>
-                        <a href="{{ route('blog.show', $data->featured->slug) }}" class="btn-outline" style="font-size:13px;padding:10px 22px;">Read Article →</a>
+                        <a href="{{ route('show.single_blog',['category' => $data->featured->category->slug, 'slug' => $data->featured->slug]) }}" class="btn-outline" style="font-size:13px;padding:10px 22px;">Read Article →</a>
                     </div>
                 </div>
             @endif
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                 @empty
-                    <p>No blog posts found.</p>
+                    <p>No blog posts yet.</p>
                 @endforelse
             </div>
 
@@ -109,6 +109,7 @@
         fetch(url)
             .then(response => response.json())
             .then(data => {
+                console.log('Fetched blogs:', data); // Debugging line
                 // Rebuild the layout content
                 const layout = container.querySelector('.blog-layout');
                 let featuredHtml = data.featured ? generateFeaturedHtml(data.featured) : '';
@@ -166,7 +167,6 @@
                         <span>${readingTime}</span>
                     </div>
                     <div class="blog-feat-excerpt">${featured.description ? featured.description.substring(0, 150) + '...' : ''}</div>
-                    <a href="/blog/${featured.slug}" class="btn-outline" style="font-size:13px;padding:10px 22px;">Read Article →</a>
                 </div>
             </div>
         `;
