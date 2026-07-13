@@ -17,12 +17,17 @@ class CustomPageController extends Controller
     public function homePage()
     {
         $data = $this->customPageRepository->homePage();
+        $this->seo()->setTitle($data->customPage->meta_title);
+        $this->seo()->setDescription($data->customPage->meta_description);
+        $this->seo()->setCanonical(url()->current());
+        $this->seo()->opengraph()->setUrl(url()->current());
         return view("custom_pages.{$data->customPage->category->slug}.{$data->customPage->blade_view}", compact('data'));
     }
 
     public function showCustomPage($slug)
     {
         $data = $this->customPageRepository->showCustomPage($slug);
+        $this->generateMetaTags($data->customPage);
         return view("custom_pages.{$data->customPage->category->slug}.{$data->customPage->blade_view}", compact('data'));
     }
 
