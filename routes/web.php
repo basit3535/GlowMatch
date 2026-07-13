@@ -38,7 +38,7 @@ Route::get('/media/{media}/json', function (App\Models\Media $media) {
     ]);
 });
 
-Route::get('seasons/{slug}',[CustomPageController::class, 'showCustomPage'])->name('show.seasons.custom_pages');
+Route::get('12-colour-seasons/{slug}',[CustomPageController::class, 'showCustomPage'])->name('show.seasons.custom_pages');
 // Route::post('quiz/save_lead',[CustomPageController::class, 'saveLead'])->name('quiz.save_lead');
 Route::get('/fetch-blogs', [CustomPageController::class, 'fetchBlogs'])->name('blog.fetch');
 Route::get('/blog/{category}/{slug}',[CustomPageController::class, 'showSingleBlog'])->name('show.single_blog');

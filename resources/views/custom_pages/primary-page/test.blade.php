@@ -2413,7 +2413,7 @@
                     <div class="results-actions">
                         <button class="btn-primary" onclick="restartQ()">{{ $data->content->action_retake->value ?? '' }}</button>
                         <a class="btn-outline" href="{{ route('show.custom_pages', ['slug' => 'blog']) }}">{{ $data->content->action_blog->value ?? '' }}</a>
-                        <a class="btn-outline" href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}">{{ $data->content->action_seasons->value ?? '' }}</a>
+                        <a class="btn-outline" href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}">{{ $data->content->action_seasons->value ?? '' }}</a>
                     </div>
                 </div>
             </div>

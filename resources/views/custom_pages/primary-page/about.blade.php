@@ -102,7 +102,7 @@
                 <a class="btn-primary"
                     href="{{ route('show.custom_pages', ['slug' => 'color-analysis-by-season']) }}">{{ $data->content->about_why_btn1_text->value ?? '' }}</a>
                 <a class="btn-outline"
-                    href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}">{{ $data->content->about_why_btn2_text->value ?? '' }}</a>
+                    href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}">{{ $data->content->about_why_btn2_text->value ?? '' }}</a>
             </div>
         </section>
 

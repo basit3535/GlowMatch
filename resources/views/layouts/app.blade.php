@@ -50,7 +50,7 @@
                 id="nav-home">Home</a>
             <a href="{{ route('show.custom_pages', ['slug' => 'about']) }}"
                 @if (Route::current()->getName() == 'show.custom_pages' && request()->slug == 'about') class="active" @endif id="nl-about">About</a>
-            <a href="{{ route('show.custom_pages', ['slug' => 'color-analysis-by-season']) }}" @if (Route::current()->getName() == 'show.custom_pages' && request()->slug == 'seasons')
+            <a href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}" @if (Route::current()->getName() == 'show.custom_pages' && request()->slug == '12-colour-seasons')
                 class="active"
                 @endif id="nl-seasons">Colour Seasons</a>
             <a href="{{ route('show.custom_pages', ['slug' => 'body-types']) }}"
@@ -81,7 +81,7 @@
             style="padding:12px 0;font-size:15px;font-weight:500;color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--border);cursor:pointer;">Home</a>
         <a onclick="toggleMobileMenu()" href="{{ route('show.custom_pages', ['slug' => 'about']) }}"
             style="padding:12px 0;font-size:15px;font-weight:500;color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--border);cursor:pointer;">About</a>
-        <a onclick="toggleMobileMenu()" href="{{ route('show.custom_pages', ['slug' => ''color-analysis-by-season'']) }}"
+        <a onclick="toggleMobileMenu()" href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}"
             style="padding:12px 0;font-size:15px;font-weight:500;color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--border);cursor:pointer;">Colour
             Seasons</a>
         <a onclick="toggleMobileMenu()" href="{{ route('show.custom_pages', ['slug' => 'body-types']) }}"
@@ -117,7 +117,7 @@
                 href="{{ route('show.custom_pages', ['slug' => 'color-analysis-by-season']) }}">Start My Analysis
                 →</a>
             <a style="background:rgba(250,247,242,.1);color:var(--cream);padding:14px 32px;border-radius:50px;font-size:14px;font-weight:500;border:1.5px solid rgba(250,247,242,.2);cursor:pointer;font-family:'Jost',sans-serif;"
-                href="{{ route('show.custom_pages', ['slug' => ''color-analysis-by-season'']) }}">Explore Seasons First</a>
+                href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}">Explore Seasons First</a>
         </div>
     </section>
 
@@ -145,7 +145,7 @@
             <div class="footer-col">
                 <h5>Explore</h5><a
                     href="{{ route('show.custom_pages', ['slug' => 'color-analysis-by-season']) }}">Take the
-                    Quiz</a><a href="{{ route('show.custom_pages', ['slug' => ''color-analysis-by-season'']) }}">Colour
+                    Quiz</a><a href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}">Colour
                     Seasons</a><a href="{{ route('show.custom_pages', ['slug' => 'body-types']) }}">Body Types</a><a
                     href="{{ route('show.custom_pages', ['slug' => 'blog']) }}">Blog</a>
             </div>

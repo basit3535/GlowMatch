@@ -146,7 +146,7 @@
                 <a class="btn-primary"
                     href="{{ route('show.custom_pages', ['slug' => 'color-analysis-by-season']) }}">{{ $data->content->crossover_btn1->value ?? '' }}</a>
                 <a class="btn-outline"
-                    href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}">{{ $data->content->crossover_btn2->value ?? '' }}</a>
+                    href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}">{{ $data->content->crossover_btn2->value ?? '' }}</a>
             </div>
         </section>
 

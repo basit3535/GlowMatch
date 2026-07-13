@@ -133,7 +133,7 @@
             </div>
             <div style="display:flex;gap:12px;flex-wrap:wrap;">
                 <a class="btn btn-white"
-                    href="['slug' => '12-colour-seasons']">{{ $data->content->season_hero_btn_all->value ?? '' }}</a>
+                    href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}"">{{ $data->content->season_hero_btn_all->value ?? '' }}</a>
                 <a class="btn btn-outline" style="color:#C0C8E0;border-color:#C0C8E044;"
                     href="{{ route('show.custom_pages', ['slug' => 'color-analysis-by-season']) }}">{{ $data->content->season_hero_btn_quiz->value ?? '' }}</a>
             </div>
@@ -880,7 +880,7 @@
     <div
         style="padding:40px 6%;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #E8DDD6;gap:20px;flex-wrap:wrap;">
         <a class="btn btn-outline" style="color:#2C2420;border-color:#E8DDD6;"
-            href="['slug' => '12-colour-seasons']">{{ $data->content->nav_all->value ?? '' }}</a>
+            href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}"">{{ $data->content->nav_all->value ?? '' }}</a>
         <div style="display:flex;gap:8px;flex-wrap:wrap;">
             <a class="btn btn-outline" style="color:#4860C0;border-color:#4860C044;font-size:13px;"
                 href="{{ route('show.seasons.custom_pages', ['slug' => 'true-winter']) }}">{{ $data->content->nav_prev->value ?? '' }}</a>
@@ -892,7 +892,8 @@
     <div class="footer-mini">
         <div class="fm-logo">Glow<em>Match</em></div>
         <div class="fm-links"><a
-                href="['slug' => '12-colour-seasons']">{{ $data->content->footer_links->value ?? '' }}</a></div>
+                href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}"">{{ $data->content->footer_links->value ?? '' }}</a>
+        </div>
     </div>
 
     {{-- gender toggle script (unchanged) --}}
