@@ -3,11 +3,12 @@ namespace App\Http\Controllers;
 
 use App\Interfaces\CustomPageInterface;
 use Illuminate\Http\Request;
+use Artesaos\SEOTools\Traits\SEOTools as SEOToolsTrait;
 
 class CustomPageController extends Controller
 {
     private CustomPageInterface $customPageRepository;
-
+    use SEOToolsTrait;
     public function __construct(CustomPageInterface $customPageRepository)
     {
         $this->customPageRepository = $customPageRepository;
@@ -42,6 +43,16 @@ class CustomPageController extends Controller
     public function showSingleBlog($category, $slug)
     {
         $data = $this->customPageRepository->showSingleBlog($category, $slug);
+        $this->generateMetaTags($data->customPage);
         return view("defual-pages.single-blog", compact('data'));
+    }
+
+    private function generateMetaTags($record)
+    {
+        $this->seo()->setTitle($record->meta_title);
+        $this->seo()->setDescription($record->meta_description);
+        $this->seo()->setCanonical(url($record->slug));
+        $this->seo()->opengraph()->setUrl(url($record->slug));
+
     }
 }
