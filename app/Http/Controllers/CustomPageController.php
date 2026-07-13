@@ -38,6 +38,7 @@ class CustomPageController extends Controller
             'current_page' => $data->blogs->currentPage(),
         ]);
     }
+
     public function showSingleBlog($category, $slug)
     {
         $data = $this->customPageRepository->showSingleBlog($category, $slug);

@@ -39,7 +39,7 @@ class CustomPageRepository implements CustomPageInterface
                 }
             }
         }
-// dd((array) $content);
+        // dd((array) $content);
         return (object) [
             'customPage'  => $customPage,
             'content'     => $content,
