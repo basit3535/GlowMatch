@@ -12,34 +12,28 @@ class CustomPageRepository implements CustomPageInterface
     {
         $guide        = CustomPage::where('category_id', PageCategory::where('slug', 'palette_page')->value('id'))->get();
         $customPage   = CustomPage::where('is_homepage', true)->firstOrFail();
-        $contentArray = $customPage->content_keys ?? [];
-        // dd($contentArray);
+
         $guide_links = $guide->map(function ($item) {
             return (object) [
                 'slug'         => $item->slug,
                 'palette_name' => $item->content_keys[0]['value_input'] ?? 'Guide',
             ];
         });
+        $contentArray = $customPage->content_keys ?? [];
+        $content      = new \stdClass();
         $content = new \stdClass();
 
-        foreach ($contentArray as $group) {
-            foreach ($group as $item) {
+        foreach ($contentArray as $entry) {
 
-                if (! empty($item['key'])) {
-
-                    $value = match ($item['type'] ?? 'input') {
-                        'textarea' => $item['value_textarea'] ?? '',
-                        'richtext' => $item['value_richtext'] ?? '',
-                        default    => $item['value_input'] ?? '',
-                    };
-
-                    $content->{$item['key']} = (object) [
-                        'value' => $value,
-                    ];
+            // Handle nested arrays
+            if (isset($entry[0]) && is_array($entry[0])) {
+                foreach ($entry as $item) {
+                    $this->mapContentItem($content, $item);
                 }
+            } else {
+                $this->mapContentItem($content, $entry);
             }
         }
-        // dd((array) $content);
         return (object) [
             'customPage'  => $customPage,
             'content'     => $content,
@@ -54,8 +48,6 @@ class CustomPageRepository implements CustomPageInterface
         $customPage   = CustomPage::where('slug', $slug)->firstOrFail();
         $contentArray = $customPage->content_keys ?? [];
         $content      = new \stdClass();
-        // dd($contentArray);
-        $content = new \stdClass();
 
         foreach ($contentArray as $entry) {
 
@@ -68,7 +60,6 @@ class CustomPageRepository implements CustomPageInterface
                 $this->mapContentItem($content, $entry);
             }
         }
-        // dd((array) $content);
 
         // Default values
         $blogs    = null;
