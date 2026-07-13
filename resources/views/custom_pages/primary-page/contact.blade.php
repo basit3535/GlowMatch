@@ -5,7 +5,7 @@
         <div class="contact-layout">
             <div class="contact-left-panel">
                 <span class="section-label">{{ $data->content->contact_label->value ?? '' }}</span>
-                <h2 class="section-h2">{!! $data->content->contact_h2->value ?? '' !!}</h2>
+                <h1 class="section-h2">{!! $data->content->contact_h2->value ?? '' !!}</h1>
                 <p class="clp-sub">{{ $data->content->contact_sub->value ?? '' }}</p>
                 {{-- <div class="contact-info">
                     <div class="ci">

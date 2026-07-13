@@ -114,12 +114,12 @@
                     <br>
                     Registered Office: 22 Balliol Street, Manchester, England, M8 0WS
                 </div>
-                <div class="footer-social">
+                {{-- <div class="footer-social">
                     <div class="social-btn">📸</div>
                     <div class="social-btn">🎵</div>
                     <div class="social-btn">🐦</div>
                     <div class="social-btn">📌</div>
-                </div>
+                </div> --}}
             </div>
             <div class="footer-col">
                 <h5>Explore</h5><a href="{{ route('show.custom_pages', ['slug' => 'color-analysis-by-season']) }}">Take
@@ -128,17 +128,18 @@
                     Seasons</a><a href="{{ route('show.custom_pages', ['slug' => 'body-types']) }}">Body Types</a><a
                     href="{{ route('show.custom_pages', ['slug' => 'blog']) }}">Blog</a>
             </div>
-            <div class="footer-col">
+            {{-- <div class="footer-col">
                 <h5>Learn</h5><a href="{{ route('show.custom_pages', ['slug' => 'colour-theory']) }}">Colour
                     Theory</a><a href="{{ route('show.custom_pages', ['slug' => 'seasonal-palettes']) }}">Seasonal
                     Palettes</a><a href="{{ route('show.custom_pages', ['slug' => 'style-guide']) }}">Style
                     Guide</a><a href="{{ route('show.custom_pages', ['slug' => 'faq']) }}">FAQ</a>
-            </div>
+            </div> --}}
             <div class="footer-col">
                 <h5>Company</h5><a href="{{ route('show.custom_pages', ['slug' => 'about']) }}">About Us</a><a
-                    href="{{ route('show.custom_pages', ['slug' => 'contact']) }}">Contact</a><a
+                    href="{{ route('show.custom_pages', ['slug' => 'contact']) }}">Contact</a>
+                    {{-- <a
                     href="{{ route('show.custom_pages', ['slug' => 'press-kit']) }}">Press
-                    Kit</a><a href="{{ route('show.custom_pages', ['slug' => 'careers']) }}">Careers</a>
+                    Kit</a><a href="{{ route('show.custom_pages', ['slug' => 'careers']) }}">Careers</a> --}}
             </div>
             <div class="footer-col">
                 <h5>Legal</h5><a href="{{ route('show.custom_pages', ['slug' => 'privacy-policy']) }}">Privacy
