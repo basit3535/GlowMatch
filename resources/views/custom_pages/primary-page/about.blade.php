@@ -6,9 +6,12 @@
             <div>
                 <span class="section-label">{{ $data->content->about_hero_label->value ?? '' }}</span>
                 <h1 class="section-h2">{!! $data->content->about_hero_h1->value ?? '' !!}</h1>
-                <p style="font-size:16px;font-weight:300;color:var(--muted);line-height:1.75;margin-bottom:28px;">{{ $data->content->about_hero_p1->value ?? '' }}</p>
-                <p style="font-size:16px;font-weight:300;color:var(--muted);line-height:1.75;margin-bottom:36px;">{{ $data->content->about_hero_p2->value ?? '' }}</p>
-                <a class="btn-primary" href="{{ route('show.custom_pages', ['slug' => 'test']) }}">{{ $data->content->about_hero_btn_text->value ?? '' }}</a>
+                <p style="font-size:16px;font-weight:300;color:var(--muted);line-height:1.75;margin-bottom:28px;">
+                    {{ $data->content->about_hero_p1->value ?? '' }}</p>
+                <p style="font-size:16px;font-weight:300;color:var(--muted);line-height:1.75;margin-bottom:36px;">
+                    {{ $data->content->about_hero_p2->value ?? '' }}</p>
+                <a class="btn-primary"
+                    href="{{ route('show.custom_pages', ['slug' => 'color-analysis-by-season']) }}">{{ $data->content->about_hero_btn_text->value ?? '' }}</a>
             </div>
             <div class="about-visual">
                 <div class="about-visual-main">🌸</div>
@@ -86,21 +89,20 @@
                     <p class="section-sub">{{ $data->content->about_why_sub->value ?? '' }}</p>
                 </div>
                 <div class="image-stack">
-                    <img src="{{ asset('assets/images/more_than_quiz_femail_2.png') }}"
-                         alt="Female Style Guide"
-                         class="stack-img img-left">
-                    <img src="{{ asset('assets/images/more_than_quiz_mail.png') }}"
-                         alt="Male Style Guide"
-                         class="stack-img img-center">
-                    <img src="{{ asset('assets/images/more_than_quiz_femail_1.png') }}"
-                         alt="Female Outfit Guide"
-                         class="stack-img img-right">
+                    <img src="{{ asset('assets/images/more_than_quiz_femail_2.png') }}" alt="Female Style Guide"
+                        class="stack-img img-left">
+                    <img src="{{ asset('assets/images/more_than_quiz_mail.png') }}" alt="Male Style Guide"
+                        class="stack-img img-center">
+                    <img src="{{ asset('assets/images/more_than_quiz_femail_1.png') }}" alt="Female Outfit Guide"
+                        class="stack-img img-right">
                 </div>
             </div>
 
             <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:32px;">
-                <a class="btn-primary" href="{{ route('show.custom_pages', ['slug' => 'test']) }}">{{ $data->content->about_why_btn1_text->value ?? '' }}</a>
-                <a class="btn-outline" href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}">{{ $data->content->about_why_btn2_text->value ?? '' }}</a>
+                <a class="btn-primary"
+                    href="{{ route('show.custom_pages', ['slug' => 'color-analysis-by-season']) }}">{{ $data->content->about_why_btn1_text->value ?? '' }}</a>
+                <a class="btn-outline"
+                    href="{{ route('show.custom_pages', ['slug' => 'seasons']) }}">{{ $data->content->about_why_btn2_text->value ?? '' }}</a>
             </div>
         </section>
 
@@ -111,7 +113,8 @@
             <p class="section-sub">{{ $data->content->about_team_sub->value ?? '' }}</p>
             <div class="team-grid">
                 <div class="team-card">
-                    <div class="team-img" style="background:linear-gradient(145deg,var(--blush),var(--terracotta));">🎨</div>
+                    <div class="team-img" style="background:linear-gradient(145deg,var(--blush),var(--terracotta));">🎨
+                    </div>
                     <div class="team-body">
                         <div class="team-name">{{ $data->content->about_team1_name->value ?? '' }}</div>
                         <div class="team-role">{{ $data->content->about_team1_role->value ?? '' }}</div>
@@ -127,7 +130,8 @@
                     </div>
                 </div>
                 <div class="team-card">
-                    <div class="team-img" style="background:linear-gradient(145deg,var(--lavender-light),var(--lavender));">✨</div>
+                    <div class="team-img" style="background:linear-gradient(145deg,var(--lavender-light),var(--lavender));">
+                        ✨</div>
                     <div class="team-body">
                         <div class="team-name">{{ $data->content->about_team3_name->value ?? '' }}</div>
                         <div class="team-role">{{ $data->content->about_team3_role->value ?? '' }}</div>
