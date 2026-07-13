@@ -13,7 +13,8 @@ class CustomPageRepository implements CustomPageInterface
         $guide        = CustomPage::where('category_id', PageCategory::where('slug', 'palette_page')->value('id'))->get();
         $customPage   = CustomPage::where('is_homepage', true)->firstOrFail();
         $contentArray = $customPage->content_keys ?? [];
-        $guide_links  = $guide->map(function ($item) {
+        // dd($contentArray);
+        $guide_links = $guide->map(function ($item) {
             return (object) [
                 'slug'         => $item->slug,
                 'palette_name' => $item->content_keys[0]['value_input'] ?? 'Guide',
@@ -21,20 +22,24 @@ class CustomPageRepository implements CustomPageInterface
         });
         $content = new \stdClass();
 
-        foreach ($contentArray as $item) {
-            if (! empty($item['key'])) {
-                // Pick the "value" based on type
-                $value = match ($item['type'] ?? 'input') {
-                    'textarea' => $item['value_textarea'] ?? '',
-                    'richtext' => $item['value_richtext'] ?? '',
-                    default    => $item['value_input'] ?? '',
-                };
+        foreach ($contentArray as $group) {
+            foreach ($group as $item) {
 
-                // Store as stdClass with single "value" property
-                $content->{$item['key']} = (object) ['value' => $value];
+                if (! empty($item['key'])) {
+
+                    $value = match ($item['type'] ?? 'input') {
+                        'textarea' => $item['value_textarea'] ?? '',
+                        'richtext' => $item['value_richtext'] ?? '',
+                        default    => $item['value_input'] ?? '',
+                    };
+
+                    $content->{$item['key']} = (object) [
+                        'value' => $value,
+                    ];
+                }
             }
         }
-
+        // dd((array) $content);
         return (object) [
             'customPage'  => $customPage,
             'content'     => $content,
@@ -42,53 +47,57 @@ class CustomPageRepository implements CustomPageInterface
             'guide_links' => $guide_links,
         ];
     }
-   // App\Repositories\CustomPageRepository.php
+    // App\Repositories\CustomPageRepository.php
 
-public function showCustomPage($slug, $category = null)
-{
-    $customPage = CustomPage::where('slug', $slug)->firstOrFail();
-    $contentArray = $customPage->content_keys ?? [];
-    $content = new \stdClass();
+    public function showCustomPage($slug, $category = null)
+    {
+        $customPage   = CustomPage::where('slug', $slug)->firstOrFail();
+        $contentArray = $customPage->content_keys ?? [];
+        $content      = new \stdClass();
+        // dd($contentArray);
+        $content = new \stdClass();
 
-    foreach ($contentArray as $item) {
-        if (! empty($item['key'])) {
-            $value = match ($item['type'] ?? 'input') {
-                'textarea' => $item['value_textarea'] ?? '',
-                'richtext' => $item['value_richtext'] ?? '',
-                default    => $item['value_input'] ?? '',
-            };
-            $content->{$item['key']} = (object) ['value' => $value];
+        foreach ($contentArray as $entry) {
+
+            // Handle nested arrays
+            if (isset($entry[0]) && is_array($entry[0])) {
+                foreach ($entry as $item) {
+                    $this->mapContentItem($content, $item);
+                }
+            } else {
+                $this->mapContentItem($content, $entry);
+            }
         }
-    }
+        // dd((array) $content);
 
-    // Default values
-    $blogs = null;
-    $featured = null;
+        // Default values
+        $blogs    = null;
+        $featured = null;
 
-    // If this is a blog page, fetch the blogs
-    if (str_contains($slug, 'blog')) {
-        $query = Blog::query();
-        if ($category) {
-            $query->where('category', $category);
+        // If this is a blog page, fetch the blogs
+        if (str_contains($slug, 'blog')) {
+            $query = Blog::query();
+            if ($category) {
+                $query->where('category', $category);
+            }
+            $blogs    = $query->paginate(9);
+            $featured = Blog::where('featured', true)->first();
         }
-        $blogs = $query->paginate(9);
-        $featured = Blog::where('featured', true)->first();
-    }
 
-    return (object) [
-        'customPage' => $customPage,
-        'content'    => $content,
-        'blogs'      => $blogs,
-        'featured'   => $featured,
-    ];
-}
-   public function getBlogs($category = null)
+        return (object) [
+            'customPage' => $customPage,
+            'content'    => $content,
+            'blogs'      => $blogs,
+            'featured'   => $featured,
+        ];
+    }
+    public function getBlogs($category = null)
     {
         $query = Blog::query();
         if ($category) {
             $query->where('category', $category);
         }
-        $blogs = $query->paginate(9); // 9 per page
+        $blogs    = $query->paginate(9); // 9 per page
         $featured = Blog::where('featured', true)->first();
 
         return (object) [
@@ -96,20 +105,35 @@ public function showCustomPage($slug, $category = null)
             'featured' => $featured,
         ];
     }
+    private function mapContentItem(&$content, $item)
+    {
+        if (empty($item['key'])) {
+            return;
+        }
 
-public function showSingleBlog($category, $slug)
-{
-    $post = Blog::where('slug', $slug)
-        ->whereHas('category', function ($query) use ($category) {
-            $query->where('slug', $category);
-        })
-        ->with('category', 'image')
-        ->firstOrFail();
+        $value = match ($item['type'] ?? 'input') {
+            'textarea' => $item['value_textarea'] ?? '',
+            'richtext' => $item['value_richtext'] ?? '',
+            default    => $item['value_input'] ?? '',
+        };
 
-    // dd($post);
+        $content->{$item['key']} = (object) [
+            'value' => $value,
+        ];
+    }
+    public function showSingleBlog($category, $slug)
+    {
+        $post = Blog::where('slug', $slug)
+            ->whereHas('category', function ($query) use ($category) {
+                $query->where('slug', $category);
+            })
+            ->with('category', 'image')
+            ->firstOrFail();
 
-    return (object) [
-        'post' => $post,
-    ];
-}
+        // dd($post);
+
+        return (object) [
+            'post' => $post,
+        ];
+    }
 }

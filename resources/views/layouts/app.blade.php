@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    {!! SEO::generate() !!}
 
-    <title>ChromaFit — Your Colour & Style Universe</title>
+    {{-- <title>ChromaFit — Your Colour & Style Universe</title> --}}
 
-    <meta name="description" content="Discover your perfect colours, style recommendations, and personalized fashion insights with ChromaFit.">
+    {{-- <meta name="description" content="Discover your perfect colours, style recommendations, and personalized fashion insights with ChromaFit.">
 
-    <link rel="canonical" href="https://chromafit.com">
+    <link rel="canonical" href="https://chromafit.com"> --}}
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
