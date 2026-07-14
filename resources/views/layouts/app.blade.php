@@ -24,7 +24,7 @@
     <!-- ── NAVIGATION ── -->
     <nav>
         <div class="nav-logo"><a href="{{ route('show.home_page') }}" class="flex align-baseline align-center"><img
-                    src="{{ asset('assets/images/glowmatch-logo.png') }}" alt="" width="110px"> </a></div>
+                    src="{{ asset('assets/images/glowmatch-logo.png') }}" alt="GlowMatch Logo" width="110px"> </a></div>
         <div class="nav-center">
             <a href="{{ route('show.home_page') }}" @if (Route::current()->getName() == 'show.home_page') class="active" @endif
                 id="nav-home">Home</a>
