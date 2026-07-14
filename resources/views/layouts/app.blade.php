@@ -5,6 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5XH6RMS4Y"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-B5XH6RMS4Y');
+    </script>
+    <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js"
+        data-settings-id="_TTVDtK99Kkw6J" async></script>
+
     {!! SEO::generate() !!}
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/favicon/favicon.ico') }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon/apple-touch-icon.png') }}">
@@ -24,7 +40,8 @@
     <!-- ── NAVIGATION ── -->
     <nav>
         <div class="nav-logo"><a href="{{ route('show.home_page') }}" class="flex align-baseline align-center"><img
-                    src="{{ asset('assets/images/glowmatch-logo.png') }}" alt="GlowMatch Logo" width="110px"> </a></div>
+                    src="{{ asset('assets/images/glowmatch-logo.png') }}" alt="GlowMatch Logo" width="110px"> </a>
+        </div>
         <div class="nav-center">
             <a href="{{ route('show.home_page') }}" @if (Route::current()->getName() == 'show.home_page') class="active" @endif
                 id="nav-home">Home</a>
@@ -122,7 +139,8 @@
                 </div> --}}
             </div>
             <div class="footer-col">
-                <p class="h5">Explore</p><a href="{{ route('show.custom_pages', ['slug' => 'color-analysis-by-season']) }}">Take
+                <p class="h5">Explore</p><a
+                    href="{{ route('show.custom_pages', ['slug' => 'color-analysis-by-season']) }}">Take
                     the
                     Quiz</a><a href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}">Colour
                     Seasons</a><a href="{{ route('show.custom_pages', ['slug' => 'body-types']) }}">Body Types</a><a
@@ -135,14 +153,15 @@
                     Guide</a><a href="{{ route('show.custom_pages', ['slug' => 'faq']) }}">FAQ</a>
             </div> --}}
             <div class="footer-col">
-                <p class="h5">Company</p><a href="{{ route('show.custom_pages', ['slug' => 'about']) }}">About Us</a><a
-                    href="{{ route('show.custom_pages', ['slug' => 'contact']) }}">Contact</a>
-                    {{-- <a
+                <p class="h5">Company</p><a href="{{ route('show.custom_pages', ['slug' => 'about']) }}">About
+                    Us</a><a href="{{ route('show.custom_pages', ['slug' => 'contact']) }}">Contact</a>
+                {{-- <a
                     href="{{ route('show.custom_pages', ['slug' => 'press-kit']) }}">Press
                     Kit</a><a href="{{ route('show.custom_pages', ['slug' => 'careers']) }}">Careers</a> --}}
             </div>
             <div class="footer-col">
-                <p class="h5">Legal</p><a href="{{ route('show.custom_pages', ['slug' => 'privacy-policy']) }}">Privacy
+                <p class="h5">Legal</p><a
+                    href="{{ route('show.custom_pages', ['slug' => 'privacy-policy']) }}">Privacy
                     Policy</a><a href="{{ route('show.custom_pages', ['slug' => 'terms-of-service']) }}">Terms of
                     Service</a><a href="{{ route('show.custom_pages', ['slug' => 'cookie-policy']) }}">Cookie
                     Policy</a><a
