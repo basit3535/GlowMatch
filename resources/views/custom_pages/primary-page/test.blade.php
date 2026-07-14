@@ -176,6 +176,7 @@
                 max-width: 36px;
             }
             .quiz-progress {
+                display: none;
                 gap: 0;
                 padding: 4px 2px;
             }
