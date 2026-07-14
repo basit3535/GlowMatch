@@ -12,10 +12,10 @@
                 <h1 class="hero-h1">{!! $data->content->hero_h1->value ?? '' !!}</h1>
                 <p class="hero-sub">{{ $data->content->hero_sub->value ?? '' }}</p>
                 <div class="hero-btns">
-                    <a class="btn-primary" href="{{ $data->content->hero_btn_url->value ?? '#' }}">
+                    <a class="btn-primary" href="{{route('show.custom_pages', ['slug' => 'color-analysis-by-season'])}}">
                         {{ $data->content->hero_btn_text->value ?? '' }}
                     </a>
-                    <a class="btn-outline" href="{{ $data->content->hero_btn2_url->value ?? '#' }}">
+                    <a class="btn-outline" href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}">
                         {{ $data->content->hero_btn2_text->value ?? '' }}
                     </a>
                 </div>
@@ -116,7 +116,7 @@
                 <h2 class="section-h2" style="margin-bottom:40px;">{!! $data->content->seasons_h2->value ?? '' !!}</h2>
             </div>
             <div class="seasons-scroll">
-                <a href="{{ $data->content->seasons_btn_url->value ?? '#' }}?season=spring" data-season="spring">
+                <a href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}?season=spring" data-season="spring">
                     <div class="s-card sc-spring">
                         <div class="s-card-label">{{ $data->content->season_spring_label->value ?? '' }}</div>
                         <div class="s-card-name">{{ $data->content->season_spring_name->value ?? '' }}</div>
@@ -129,7 +129,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="{{ $data->content->seasons_btn_url->value ?? '#' }}?season=summer" data-season="summer">
+                <a href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}?season=summer" data-season="summer">
                     <div class="s-card sc-summer">
                         <div class="s-card-label">{{ $data->content->season_summer_label->value ?? '' }}</div>
                         <div class="s-card-name">{{ $data->content->season_summer_name->value ?? '' }}</div>
@@ -142,7 +142,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="{{ $data->content->seasons_btn_url->value ?? '#' }}?season=autumn" data-season="autumn">
+                <a href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}?season=autumn" data-season="autumn">
                     <div class="s-card sc-autumn">
                         <div class="s-card-label">{{ $data->content->season_autumn_label->value ?? '' }}</div>
                         <div class="s-card-name">{{ $data->content->season_autumn_name->value ?? '' }}</div>
@@ -155,7 +155,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="{{ $data->content->seasons_btn_url->value ?? '#' }}?season=winter" data-season="winter">
+                <a href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}?season=winter" data-season="winter">
                     <div class="s-card sc-winter">
                         <div class="s-card-label">{{ $data->content->season_winter_label->value ?? '' }}</div>
                         <div class="s-card-name">{{ $data->content->season_winter_name->value ?? '' }}</div>
@@ -170,7 +170,7 @@
                 </a>
             </div>
             <div style="text-align:center;margin-top:40px;padding:0 6%;">
-                <a class="btn-dark" href="{{ $data->content->seasons_btn_url->value ?? '#' }}">
+                <a class="btn-dark" href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}">
                     {{ $data->content->seasons_btn_text->value ?? '' }}
                 </a>
             </div>
