@@ -1064,7 +1064,7 @@
         background: rgba(201, 123, 90, .3);
     }
 
-    .footer-col h5 {
+    .footer-col .h5 {
         font-size: 12px;
         font-weight: 600;
         letter-spacing: 1.5px;
@@ -3396,4 +3396,5 @@
             grid-template-columns: 1fr;
         }
     }
+
 }

@@ -122,7 +122,7 @@
                 </div> --}}
             </div>
             <div class="footer-col">
-                <h5>Explore</h5><a href="{{ route('show.custom_pages', ['slug' => 'color-analysis-by-season']) }}">Take
+                <p class="h5">Explore</p><a href="{{ route('show.custom_pages', ['slug' => 'color-analysis-by-season']) }}">Take
                     the
                     Quiz</a><a href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}">Colour
                     Seasons</a><a href="{{ route('show.custom_pages', ['slug' => 'body-types']) }}">Body Types</a><a
@@ -135,14 +135,14 @@
                     Guide</a><a href="{{ route('show.custom_pages', ['slug' => 'faq']) }}">FAQ</a>
             </div> --}}
             <div class="footer-col">
-                <h5>Company</h5><a href="{{ route('show.custom_pages', ['slug' => 'about']) }}">About Us</a><a
+                <p class="h5">Company</p><a href="{{ route('show.custom_pages', ['slug' => 'about']) }}">About Us</a><a
                     href="{{ route('show.custom_pages', ['slug' => 'contact']) }}">Contact</a>
                     {{-- <a
                     href="{{ route('show.custom_pages', ['slug' => 'press-kit']) }}">Press
                     Kit</a><a href="{{ route('show.custom_pages', ['slug' => 'careers']) }}">Careers</a> --}}
             </div>
             <div class="footer-col">
-                <h5>Legal</h5><a href="{{ route('show.custom_pages', ['slug' => 'privacy-policy']) }}">Privacy
+                <p class="h5">Legal</p><a href="{{ route('show.custom_pages', ['slug' => 'privacy-policy']) }}">Privacy
                     Policy</a><a href="{{ route('show.custom_pages', ['slug' => 'terms-of-service']) }}">Terms of
                     Service</a><a href="{{ route('show.custom_pages', ['slug' => 'cookie-policy']) }}">Cookie
                     Policy</a><a
