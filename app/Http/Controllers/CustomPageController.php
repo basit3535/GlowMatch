@@ -2,8 +2,8 @@
 namespace App\Http\Controllers;
 
 use App\Interfaces\CustomPageInterface;
-use Illuminate\Http\Request;
 use Artesaos\SEOTools\Traits\SEOTools as SEOToolsTrait;
+use Illuminate\Http\Request;
 
 class CustomPageController extends Controller
 {
@@ -34,13 +34,14 @@ class CustomPageController extends Controller
     // AJAX endpoint for filtering/pagination
     public function fetchBlogs(Request $request)
     {
-        $category = $request->query('category');
-        $data = $this->customPageRepository->getBlogs($category);
+        $category = $request->category;
+        $page     = $request->page;
+        $data     = $this->customPageRepository->getBlogs($category, $page);
 
         return response()->json([
             'blogs'        => $data->blogs->items(),
             'featured'     => $data->featured,
-            'pagination'   => (string) $data->blogs->links('vendor.pagination.bootstrap-5'),
+            'pagination'   => (string) $data->blogs->links(),
             'current_page' => $data->blogs->currentPage(),
         ]);
     }

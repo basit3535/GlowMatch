@@ -6,6 +6,6 @@ interface CustomPageInterface
 {
     public function homePage();
     public function showCustomPage();
-    public function getBlogs($category = null);
+    public function getBlogs($category = null, $page = null);
     public function showSingleBlog($category, $slug);
 }

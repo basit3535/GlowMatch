@@ -10,8 +10,8 @@ class CustomPageRepository implements CustomPageInterface
 {
     public function homePage()
     {
-        $guide        = CustomPage::where('category_id', PageCategory::where('slug', 'palette_page')->value('id'))->get();
-        $customPage   = CustomPage::where('is_homepage', true)->firstOrFail();
+        $guide      = CustomPage::where('category_id', PageCategory::where('slug', 'palette_page')->value('id'))->get();
+        $customPage = CustomPage::where('is_homepage', true)->firstOrFail();
 
         $guide_links = $guide->map(function ($item) {
             return (object) [
@@ -21,7 +21,7 @@ class CustomPageRepository implements CustomPageInterface
         });
         $contentArray = $customPage->content_keys ?? [];
         $content      = new \stdClass();
-        $content = new \stdClass();
+        $content      = new \stdClass();
 
         foreach ($contentArray as $entry) {
 
@@ -43,13 +43,13 @@ class CustomPageRepository implements CustomPageInterface
     }
     // App\Repositories\CustomPageRepository.php
 
-    public function showCustomPage()
+    public function showCustomPage($category = null)
     {
-        $getURL = url()->current();
-        $base = basename($getURL);
+        $getURL     = url()->current();
+        $base       = basename($getURL);
         $customPage = CustomPage::where('slug', $base)->first();
 
-        if (!$customPage) {
+        if (! $customPage) {
             abort(404);
         }
         // $customPage   = CustomPage::where('slug', $slug)->firstOrFail();
@@ -75,14 +75,14 @@ class CustomPageRepository implements CustomPageInterface
         $featured = null;
 
         // If this is a blog page, fetch the blogs
-        // if (str_contains($slug, 'blog')) {
-        //     $query = Blog::query();
-        //     if ($category) {
-        //         $query->where('category', $category);
-        //     }
-        //     $blogs    = $query->paginate(9);
-        //     $featured = Blog::where('featured', true)->first();
-        // }
+        if (str_contains($customPage->slug, 'blog')) {
+            $query = Blog::query();
+            if ($category) {
+                $query->where('category', $category);
+            }
+            $blogs    = $query->paginate(9);
+            $featured = Blog::where('featured', true)->first();
+        }
 
         return (object) [
             'customPage' => $customPage,
@@ -91,21 +91,29 @@ class CustomPageRepository implements CustomPageInterface
             'featured'   => $featured,
         ];
     }
-    public function getBlogs($category = null)
+    public function getBlogs($category = null, $page = null)
     {
         $query = Blog::query();
+
         if ($category) {
-            $query->where('category', $category);
+            $query->whereHas('category', function ($q) use ($category) {
+                $q->where('slug', $category);
+            });
         }
-        $blogs    = $query->paginate(9); // 9 per page
-        $featured = Blog::where('featured', true)->first();
+
+        $blogs = $query->with('category', 'image')
+            ->paginate(9, ['*'], 'page', $page);
+
+        $featured = Blog::where('featured', true)
+            ->with('category', 'image')
+            ->first();
 
         return (object) [
             'blogs'    => $blogs,
             'featured' => $featured,
         ];
     }
-    private function mapContentItem(&$content, $item)
+    private function mapContentItem($content, $item)
     {
         if (empty($item['key'])) {
             return;
