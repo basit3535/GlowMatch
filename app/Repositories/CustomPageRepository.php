@@ -43,11 +43,20 @@ class CustomPageRepository implements CustomPageInterface
     }
     // App\Repositories\CustomPageRepository.php
 
-    public function showCustomPage($slug, $category = null)
+    public function showCustomPage()
     {
-        $customPage   = CustomPage::where('slug', $slug)->firstOrFail();
+        $getURL = url()->current();
+        $base = basename($getURL);
+        $customPage = CustomPage::where('slug', $base)->first();
+
+        if (!$customPage) {
+            abort(404);
+        }
+        // $customPage   = CustomPage::where('slug', $slug)->firstOrFail();
         $contentArray = $customPage->content_keys ?? [];
         $content      = new \stdClass();
+        // dd($contentArray);
+        $content = new \stdClass();
 
         foreach ($contentArray as $entry) {
 
@@ -66,14 +75,14 @@ class CustomPageRepository implements CustomPageInterface
         $featured = null;
 
         // If this is a blog page, fetch the blogs
-        if (str_contains($slug, 'blog')) {
-            $query = Blog::query();
-            if ($category) {
-                $query->where('category', $category);
-            }
-            $blogs    = $query->paginate(9);
-            $featured = Blog::where('featured', true)->first();
-        }
+        // if (str_contains($slug, 'blog')) {
+        //     $query = Blog::query();
+        //     if ($category) {
+        //         $query->where('category', $category);
+        //     }
+        //     $blogs    = $query->paginate(9);
+        //     $featured = Blog::where('featured', true)->first();
+        // }
 
         return (object) [
             'customPage' => $customPage,

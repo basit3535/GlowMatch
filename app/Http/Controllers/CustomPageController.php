@@ -24,9 +24,9 @@ class CustomPageController extends Controller
         return view("custom_pages.{$data->customPage->category->slug}.{$data->customPage->blade_view}", compact('data'));
     }
 
-    public function showCustomPage($slug)
+    public function showCustomPage()
     {
-        $data = $this->customPageRepository->showCustomPage($slug);
+        $data = $this->customPageRepository->showCustomPage();
         $this->generateMetaTags($data->customPage);
         return view("custom_pages.{$data->customPage->category->slug}.{$data->customPage->blade_view}", compact('data'));
     }
