@@ -24,11 +24,11 @@ class CustomPageController extends Controller
         return view("custom_pages.{$data->customPage->category->slug}.{$data->customPage->slug}", compact('data'));
     }
 
-    public function showCustomPage($slug)
+    public function showCustomPage()
     {
-        $data = $this->customPageRepository->showCustomPage($slug);
+        $data = $this->customPageRepository->showCustomPage();
         $this->generateMetaTags($data->customPage);
-        return view("custom_pages.{$data->customPage->category->slug}.{$slug}", compact('data'));
+        return view("custom_pages.{$data->customPage->category->slug}.{$data->customPage->slug}", compact('data'));
     }
 
     // AJAX endpoint for filtering/pagination
