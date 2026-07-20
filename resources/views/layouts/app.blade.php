@@ -45,25 +45,23 @@
         <div class="nav-center">
             <a href="{{ route('show.home_page') }}" @if (Route::current()->getName() == 'show.home_page') class="active" @endif
                 id="nav-home">Home</a>
-            <a href="{{ route('show.custom_pages', ['slug' => 'about']) }}"
-                @if (Route::current()->getName() == 'show.custom_pages' && request()->slug == 'about') class="active" @endif id="nl-about">About</a>
-            <a href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}"
-                @if (Route::current()->getName() == 'show.custom_pages' && request()->slug == '12-colour-seasons') class="active" @endif id="nl-seasons">Colour Seasons</a>
-            <a href="{{ route('show.custom_pages', ['slug' => 'body-types']) }}"
-                @if (Route::current()->getName() == 'show.custom_pages' && request()->slug == 'body-types') class="active" @endif id="nl-bodytypes">Body Types</a>
-            <a href="{{ route('show.custom_pages', ['slug' => 'blog']) }}"
-                @if (Route::current()->getName() == 'show.custom_pages' && request()->slug == 'blog') class="active" @endif id="nav-blog">Blog</a>
-            <a href="{{ route('show.custom_pages', ['slug' => 'contact']) }}"
-                @if (Route::current()->getName() == 'show.custom_pages' && request()->slug == 'contact') class="active" @endif id="nav-contact">Contact</a>
+            <a href="{{ route('show.about_page') }}" @if (Route::current()->getName() == 'show.custom_pages' && request()->slug == 'about') class="active" @endif
+                id="nl-about">About</a>
+            <a href="{{ route('show.seasons_page') }}" @if (Route::current()->getName() == 'show.custom_pages' && request()->slug == '12-colour-seasons') class="active" @endif
+                id="nl-seasons">Colour Seasons</a>
+            <a href="{{ route('show.body_types_page') }}" @if (Route::current()->getName() == 'show.custom_pages' && request()->slug == 'body-types') class="active" @endif
+                id="nl-bodytypes">Body Types</a>
+            <a href="{{ route('show.blog_page') }}" @if (Route::current()->getName() == 'show.custom_pages' && request()->slug == 'blog') class="active" @endif
+                id="nav-blog">Blog</a>
+            <a href="{{ route('show.contact_page') }}" @if (Route::current()->getName() == 'show.custom_pages' && request()->slug == 'contact') class="active" @endif
+                id="nav-contact">Contact</a>
         </div>
         </div>
         <div class="nav-right">
-            <a href="{{ route('show.custom_pages', ['slug' => 'about']) }}"
-                class="nav-btn-ghost hidden sm:inline-block">
+            <a href="{{ route('show.about_page') }}" class="nav-btn-ghost hidden sm:inline-block">
                 Learn More
             </a>
-            <a href="{{ route('show.custom_pages', ['slug' => 'color-analysis-by-season']) }}"
-                class="nav-btn-fill">Take the Quiz →</a>
+            <a href="{{ route('show.color_analysis_page') }}" class="nav-btn-fill">Take the Quiz →</a>
         </div>
         <div class="hamburger" onclick="toggleMobileMenu()">
             <span></span><span></span><span></span>
@@ -73,22 +71,22 @@
     <!-- Mobile menu overlay -->
     <div id="mobile-menu"
         style="display:none;position:fixed;top:70px;left:0;right:0;background:var(--warm-white);border-bottom:1px solid var(--border);z-index:190;padding:20px 6%;flex-direction:column;gap:4px;">
-        <a onclick="toggleMobileMenu()" href="{{ route('show.home_page', ['slug' => 'home']) }}"
+        <a onclick="toggleMobileMenu()" href="{{ route('show.home_page') }}"
             style="padding:12px 0;font-size:15px;font-weight:500;color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--border);cursor:pointer;">Home</a>
-        <a onclick="toggleMobileMenu()" href="{{ route('show.custom_pages', ['slug' => 'about']) }}"
+        <a onclick="toggleMobileMenu()" href="{{ route('show.about_page') }}"
             style="padding:12px 0;font-size:15px;font-weight:500;color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--border);cursor:pointer;">About</a>
-        <a onclick="toggleMobileMenu()" href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}"
+        <a onclick="toggleMobileMenu()" href="{{ route('show.seasons_page') }}"
             style="padding:12px 0;font-size:15px;font-weight:500;color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--border);cursor:pointer;">Colour
             Seasons</a>
-        <a onclick="toggleMobileMenu()" href="{{ route('show.custom_pages', ['slug' => 'body-types']) }}"
+        <a onclick="toggleMobileMenu()" href="{{ route('show.body_types_page') }}"
             style="padding:12px 0;font-size:15px;font-weight:500;color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--border);cursor:pointer;">Body
             Types</a>
-        <a onclick="toggleMobileMenu()" href="{{ route('show.custom_pages', ['slug' => 'blog']) }}"
+        <a onclick="toggleMobileMenu()" href="{{ route('show.blog_page') }}"
             style="padding:12px 0;font-size:15px;font-weight:500;color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--border);cursor:pointer;">Blog</a>
-        <a onclick="toggleMobileMenu()" href="{{ route('show.custom_pages', ['slug' => 'contact']) }}"
+        <a onclick="toggleMobileMenu()" href="{{ route('show.contact_page') }}"
             style="padding:12px 0;font-size:15px;font-weight:500;color:var(--charcoal);text-decoration:none;cursor:pointer;">Contact</a>
         <a class="btn-primary" style="margin-top:12px;" onclick="toggleMobileMenu()"
-            href="{{ route('show.custom_pages', ['slug' => 'color-analysis-by-season']) }}">Take the Quiz
+            href="{{ route('show.color_analysis_page') }}">Take the Quiz
             →</a>
     </div>
 
@@ -109,11 +107,10 @@
         <p class="section-sub text-center mx-auto">Join 48,000+ people who've discovered their perfect colour palette
             and transformed the way they shop and get dressed.</p>
         <div class="cta-btns">
-            <a class="btn-primary"
-                href="{{ route('show.custom_pages', ['slug' => 'color-analysis-by-season']) }}">Start My Analysis
+            <a class="btn-primary" href="{{ route('show.color_analysis_page') }}">Start My Analysis
                 →</a>
             <a style="background:rgba(250,247,242,.1);color:var(--cream);padding:14px 32px;border-radius:50px;font-size:14px;font-weight:500;border:1.5px solid rgba(250,247,242,.2);cursor:pointer;font-family:'Jost',sans-serif;"
-                href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}">Explore Seasons First</a>
+                href="{{ route('show.seasons_page') }}">Explore Seasons First</a>
         </div>
     </section>
 
@@ -139,12 +136,11 @@
                 </div> --}}
             </div>
             <div class="footer-col">
-                <p class="h5">Explore</p><a
-                    href="{{ route('show.custom_pages', ['slug' => 'color-analysis-by-season']) }}">Take
+                <p class="h5">Explore</p><a href="{{ route('show.color_analysis_page') }}">Take
                     the
-                    Quiz</a><a href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}">Colour
-                    Seasons</a><a href="{{ route('show.custom_pages', ['slug' => 'body-types']) }}">Body Types</a><a
-                    href="{{ route('show.custom_pages', ['slug' => 'blog']) }}">Blog</a>
+                    Quiz</a><a href="{{ route('show.seasons_page') }}">Colour
+                    Seasons</a><a href="{{ route('show.body_types_page') }}">Body Types</a><a
+                    href="{{ route('show.blog_page') }}">Blog</a>
             </div>
             {{-- <div class="footer-col">
                 <h5>Learn</h5><a href="{{ route('show.custom_pages', ['slug' => 'colour-theory']) }}">Colour
@@ -153,26 +149,24 @@
                     Guide</a><a href="{{ route('show.custom_pages', ['slug' => 'faq']) }}">FAQ</a>
             </div> --}}
             <div class="footer-col">
-                <p class="h5">Company</p><a href="{{ route('show.custom_pages', ['slug' => 'about']) }}">About
-                    Us</a><a href="{{ route('show.custom_pages', ['slug' => 'contact']) }}">Contact</a>
+                <p class="h5">Company</p><a href="{{ route('show.about_page') }}">About
+                    Us</a><a href="{{ route('show.contact_page') }}">Contact</a>
                 {{-- <a
                     href="{{ route('show.custom_pages', ['slug' => 'press-kit']) }}">Press
                     Kit</a><a href="{{ route('show.custom_pages', ['slug' => 'careers']) }}">Careers</a> --}}
             </div>
             <div class="footer-col">
-                <p class="h5">Legal</p><a
-                    href="{{ route('show.custom_pages', ['slug' => 'privacy-policy']) }}">Privacy
-                    Policy</a><a href="{{ route('show.custom_pages', ['slug' => 'terms-of-service']) }}">Terms of
-                    Service</a><a href="{{ route('show.custom_pages', ['slug' => 'cookie-policy']) }}">Cookie
-                    Policy</a><a
-                    href="{{ route('show.custom_pages', ['slug' => 'accessibility']) }}">Accessibility</a>
+                <p class="h5">Legal</p><a href="{{ route('show.privacy_policy_page') }}">Privacy
+                    Policy</a><a href="{{ route('show.terms_of_service_page') }}">Terms of
+                    Service</a><a href="{{ route('show.cookie_policy_page') }}">Cookie
+                    Policy</a><a href="{{ route('show.accessibility_page') }}">Accessibility</a>
             </div>
         </div>
         <div class="footer-bottom">
             <div>© 2026 SB INTERCONTINENTAL LIMITED. All rights reserved.</div>
-            <div><a href="{{ route('show.custom_pages', ['slug' => 'privacy-policy']) }}">Privacy</a><a
-                    href="{{ route('show.custom_pages', ['slug' => 'terms-of-service']) }}">Terms</a><a
-                    href="{{ route('show.custom_pages', ['slug' => 'cookie-policy']) }}">Cookies</a></div>
+            <div><a href="{{ route('show.privacy_policy_page') }}">Privacy</a><a
+                    href="{{ route('show.terms_of_service_page') }}">Terms</a><a
+                    href="{{ route('show.cookie_policy_page') }}">Cookies</a></div>
         </div>
     </footer>
     <!-- Floating Cookie Banner – always visible until accepted -->

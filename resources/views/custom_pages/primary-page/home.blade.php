@@ -12,10 +12,10 @@
                 <h1 class="hero-h1">{!! $data->content->hero_h1->value ?? '' !!}</h1>
                 <p class="hero-sub">{{ $data->content->hero_sub->value ?? '' }}</p>
                 <div class="hero-btns">
-                    <a class="btn-primary" href="{{route('show.custom_pages', ['slug' => 'color-analysis-by-season'])}}">
+                    <a class="btn-primary" href="{{ route('show.color_analysis_page') }}">
                         {{ $data->content->hero_btn_text->value ?? '' }}
                     </a>
-                    <a class="btn-outline" href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}">
+                    <a class="btn-outline" href="{{ route('show.seasons_page') }}">
                         {{ $data->content->hero_btn2_text->value ?? '' }}
                     </a>
                 </div>
@@ -84,25 +84,29 @@
             <div class="hiw-grid">
                 <div class="hiw-card">
                     <div class="hiw-num">{{ $data->content->hiw_step1_num->value ?? '' }}</div>
-                    <div class="hiw-icon-wrap" style="background:var(--blush);">{{ $data->content->hiw_step1_icon->value ?? '' }}</div>
+                    <div class="hiw-icon-wrap" style="background:var(--blush);">
+                        {{ $data->content->hiw_step1_icon->value ?? '' }}</div>
                     <div class="hiw-title">{{ $data->content->hiw_step1_title->value ?? '' }}</div>
                     <div class="hiw-desc">{{ $data->content->hiw_step1_desc->value ?? '' }}</div>
                 </div>
                 <div class="hiw-card">
                     <div class="hiw-num">{{ $data->content->hiw_step2_num->value ?? '' }}</div>
-                    <div class="hiw-icon-wrap" style="background:var(--teal-light);">{{ $data->content->hiw_step2_icon->value ?? '' }}</div>
+                    <div class="hiw-icon-wrap" style="background:var(--teal-light);">
+                        {{ $data->content->hiw_step2_icon->value ?? '' }}</div>
                     <div class="hiw-title">{{ $data->content->hiw_step2_title->value ?? '' }}</div>
                     <div class="hiw-desc">{{ $data->content->hiw_step2_desc->value ?? '' }}</div>
                 </div>
                 <div class="hiw-card">
                     <div class="hiw-num">{{ $data->content->hiw_step3_num->value ?? '' }}</div>
-                    <div class="hiw-icon-wrap" style="background:var(--lavender-light);">{{ $data->content->hiw_step3_icon->value ?? '' }}</div>
+                    <div class="hiw-icon-wrap" style="background:var(--lavender-light);">
+                        {{ $data->content->hiw_step3_icon->value ?? '' }}</div>
                     <div class="hiw-title">{{ $data->content->hiw_step3_title->value ?? '' }}</div>
                     <div class="hiw-desc">{{ $data->content->hiw_step3_desc->value ?? '' }}</div>
                 </div>
                 <div class="hiw-card">
                     <div class="hiw-num">{{ $data->content->hiw_step4_num->value ?? '' }}</div>
-                    <div class="hiw-icon-wrap" style="background:var(--gold-light);">{{ $data->content->hiw_step4_icon->value ?? '' }}</div>
+                    <div class="hiw-icon-wrap" style="background:var(--gold-light);">
+                        {{ $data->content->hiw_step4_icon->value ?? '' }}</div>
                     <div class="hiw-title">{{ $data->content->hiw_step4_title->value ?? '' }}</div>
                     <div class="hiw-desc">{{ $data->content->hiw_step4_desc->value ?? '' }}</div>
                 </div>
@@ -116,7 +120,7 @@
                 <h2 class="section-h2" style="margin-bottom:40px;">{!! $data->content->seasons_h2->value ?? '' !!}</h2>
             </div>
             <div class="seasons-scroll">
-                <a href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}?season=spring" data-season="spring">
+                <a href="{{ route('show.seasons_page') }}?season=spring" data-season="spring">
                     <div class="s-card sc-spring">
                         <div class="s-card-label">{{ $data->content->season_spring_label->value ?? '' }}</div>
                         <div class="s-card-name">{{ $data->content->season_spring_name->value ?? '' }}</div>
@@ -129,7 +133,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}?season=summer" data-season="summer">
+                <a href="{{ route('show.seasons_page') }}?season=summer" data-season="summer">
                     <div class="s-card sc-summer">
                         <div class="s-card-label">{{ $data->content->season_summer_label->value ?? '' }}</div>
                         <div class="s-card-name">{{ $data->content->season_summer_name->value ?? '' }}</div>
@@ -142,7 +146,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}?season=autumn" data-season="autumn">
+                <a href="{{ route('show.seasons_page') }}?season=autumn" data-season="autumn">
                     <div class="s-card sc-autumn">
                         <div class="s-card-label">{{ $data->content->season_autumn_label->value ?? '' }}</div>
                         <div class="s-card-name">{{ $data->content->season_autumn_name->value ?? '' }}</div>
@@ -155,7 +159,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}?season=winter" data-season="winter">
+                <a href="{{ route('show.seasons_page') }}?season=winter" data-season="winter">
                     <div class="s-card sc-winter">
                         <div class="s-card-label">{{ $data->content->season_winter_label->value ?? '' }}</div>
                         <div class="s-card-name">{{ $data->content->season_winter_name->value ?? '' }}</div>
@@ -170,7 +174,7 @@
                 </a>
             </div>
             <div style="text-align:center;margin-top:40px;padding:0 6%;">
-                <a class="btn-dark" href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}">
+                <a class="btn-dark" href="{{ route('show.seasons_page') }}">
                     {{ $data->content->seasons_btn_text->value ?? '' }}
                 </a>
             </div>
@@ -182,35 +186,40 @@
             <h2 class="section-h2">{!! $data->content->features_h2->value ?? '' !!}</h2>
             <div class="features-grid">
                 <div class="feat-card">
-                    <div class="feat-icon-wrap" style="background:var(--blush);">{{ $data->content->feature1_icon->value ?? '' }}</div>
+                    <div class="feat-icon-wrap" style="background:var(--blush);">
+                        {{ $data->content->feature1_icon->value ?? '' }}</div>
                     <div>
                         <div class="feat-title">{{ $data->content->feature1_title->value ?? '' }}</div>
                         <div class="feat-desc">{{ $data->content->feature1_desc->value ?? '' }}</div>
                     </div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-icon-wrap" style="background:var(--teal-light);">{{ $data->content->feature2_icon->value ?? '' }}</div>
+                    <div class="feat-icon-wrap" style="background:var(--teal-light);">
+                        {{ $data->content->feature2_icon->value ?? '' }}</div>
                     <div>
                         <div class="feat-title">{{ $data->content->feature2_title->value ?? '' }}</div>
                         <div class="feat-desc">{{ $data->content->feature2_desc->value ?? '' }}</div>
                     </div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-icon-wrap" style="background:var(--lavender-light);">{{ $data->content->feature3_icon->value ?? '' }}</div>
+                    <div class="feat-icon-wrap" style="background:var(--lavender-light);">
+                        {{ $data->content->feature3_icon->value ?? '' }}</div>
                     <div>
                         <div class="feat-title">{{ $data->content->feature3_title->value ?? '' }}</div>
                         <div class="feat-desc">{{ $data->content->feature3_desc->value ?? '' }}</div>
                     </div>
                 </div>
                 <div class="feat-card">
-                    <div class="feat-icon-wrap" style="background:var(--gold-light);">{{ $data->content->feature4_icon->value ?? '' }}</div>
+                    <div class="feat-icon-wrap" style="background:var(--gold-light);">
+                        {{ $data->content->feature4_icon->value ?? '' }}</div>
                     <div>
                         <div class="feat-title">{{ $data->content->feature4_title->value ?? '' }}</div>
                         <div class="feat-desc">{{ $data->content->feature4_desc->value ?? '' }}</div>
                     </div>
                 </div>
                 <div class="feat-card wide">
-                    <div class="feat-icon-wrap" style="background:var(--blush);width:64px;height:64px;font-size:28px;">{{ $data->content->feature5_icon->value ?? '' }}</div>
+                    <div class="feat-icon-wrap" style="background:var(--blush);width:64px;height:64px;font-size:28px;">
+                        {{ $data->content->feature5_icon->value ?? '' }}</div>
                     <div>
                         <div class="feat-title">{{ $data->content->feature5_title->value ?? '' }}</div>
                         <div class="feat-desc">{{ $data->content->feature5_desc->value ?? '' }}</div>
@@ -250,7 +259,8 @@
                     <div class="t-stars">★★★★★</div>
                     <div class="t-text">{{ $data->content->testimonial1_text->value ?? '' }}</div>
                     <div class="t-author">
-                        <div class="t-avatar" style="background:#FDF0EA;color:#8B4A32;">{{ $data->content->testimonial1_avatar->value ?? '' }}</div>
+                        <div class="t-avatar" style="background:#FDF0EA;color:#8B4A32;">
+                            {{ $data->content->testimonial1_avatar->value ?? '' }}</div>
                         <div>
                             <div class="t-name">{{ $data->content->testimonial1_name->value ?? '' }}</div>
                             <div class="t-meta">{{ $data->content->testimonial1_meta->value ?? '' }}</div>
@@ -261,7 +271,8 @@
                     <div class="t-stars">★★★★★</div>
                     <div class="t-text">{{ $data->content->testimonial2_text->value ?? '' }}</div>
                     <div class="t-author">
-                        <div class="t-avatar" style="background:#EAF0FA;color:#1A3A6B;">{{ $data->content->testimonial2_avatar->value ?? '' }}</div>
+                        <div class="t-avatar" style="background:#EAF0FA;color:#1A3A6B;">
+                            {{ $data->content->testimonial2_avatar->value ?? '' }}</div>
                         <div>
                             <div class="t-name">{{ $data->content->testimonial2_name->value ?? '' }}</div>
                             <div class="t-meta">{{ $data->content->testimonial2_meta->value ?? '' }}</div>
@@ -272,7 +283,8 @@
                     <div class="t-stars">★★★★★</div>
                     <div class="t-text">{{ $data->content->testimonial3_text->value ?? '' }}</div>
                     <div class="t-author">
-                        <div class="t-avatar" style="background:#F0EDF5;color:#4B3A6B;">{{ $data->content->testimonial3_avatar->value ?? '' }}</div>
+                        <div class="t-avatar" style="background:#F0EDF5;color:#4B3A6B;">
+                            {{ $data->content->testimonial3_avatar->value ?? '' }}</div>
                         <div>
                             <div class="t-name">{{ $data->content->testimonial3_name->value ?? '' }}</div>
                             <div class="t-meta">{{ $data->content->testimonial3_meta->value ?? '' }}</div>

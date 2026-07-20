@@ -47,7 +47,7 @@ Route::get('/blog/{category}/{slug}',[CustomPageController::class, 'showSingleBl
 Route::get('/{slug}',[CustomPageController::class, 'showCustomPage'])->name('show.custom_pages');
 Route::controller(CustomPageController::class)->group(function () {
 
-    Route::get('/', 'showCustomPage')->name('show.home_page');
+    Route::get('/', 'homePage')->name('show.home_page');
     Route::get('/about', 'showCustomPage')->name('show.about_page');
     Route::get('/12-colour-seasons', 'showCustomPage')->name('show.seasons_page');
     Route::get('/body-types', 'showCustomPage')->name('show.body_types_page');
