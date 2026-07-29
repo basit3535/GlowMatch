@@ -43,17 +43,17 @@
                     src="{{ asset('assets/images/glowmatch-logo.png') }}" alt="GlowMatch Logo" width="110px"> </a>
         </div>
         <div class="nav-center">
-            <a href="{{ route('show.home_page') }}" @if (Route::current()->getName() == 'show.home_page') class="active" @endif
+            <a href="{{ route('show.home_page') }}" @if (Route::current()->getName() == 'show.home_page' ) class="active" @endif
                 id="nav-home">Home</a>
-            <a href="{{ route('show.about_page') }}" @if (Route::current()->getName() == 'show.custom_pages' && request()->slug == 'about') class="active" @endif
+            <a href="{{ route('show.about_page') }}" @if (Route::current()->getName() == 'show.about_page' ) class="active" @endif
                 id="nl-about">About</a>
-            <a href="{{ route('show.seasons_page') }}" @if (Route::current()->getName() == 'show.custom_pages' && request()->slug == '12-colour-seasons') class="active" @endif
+            <a href="{{ route('show.seasons_page') }}" @if (Route::current()->getName() == 'show.seasons_page' ) class="active" @endif
                 id="nl-seasons">Colour Seasons</a>
-            <a href="{{ route('show.body_types_page') }}" @if (Route::current()->getName() == 'show.custom_pages' && request()->slug == 'body-types') class="active" @endif
+            <a href="{{ route('show.body_types_page') }}" @if (Route::current()->getName() == 'show.body_types_page' ) class="active" @endif
                 id="nl-bodytypes">Body Types</a>
-            <a href="{{ route('show.blog_page') }}" @if (Route::current()->getName() == 'show.custom_pages' && request()->slug == 'blog') class="active" @endif
+            <a href="{{ route('show.blog_page') }}" @if (Route::current()->getName() == 'show.blog_page' ) class="active" @endif
                 id="nav-blog">Blog</a>
-            <a href="{{ route('show.contact_page') }}" @if (Route::current()->getName() == 'show.custom_pages' && request()->slug == 'contact') class="active" @endif
+            <a href="{{ route('show.contact_page') }}" @if (Route::current()->getName() == 'show.contact_page' ) class="active" @endif
                 id="nav-contact">Contact</a>
         </div>
         </div>

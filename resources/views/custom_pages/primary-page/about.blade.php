@@ -11,7 +11,7 @@
                 <p style="font-size:16px;font-weight:300;color:var(--muted);line-height:1.75;margin-bottom:36px;">
                     {{ $data->content->about_hero_p2->value ?? '' }}</p>
                 <a class="btn-primary"
-                    href="{{ route('show.custom_pages', ['slug' => 'color-analysis-by-season']) }}">{{ $data->content->about_hero_btn_text->value ?? '' }}</a>
+                    href="{{ route('show.color_analysis_page') }}">{{ $data->content->about_hero_btn_text->value ?? '' }}</a>
             </div>
             <div class="about-visual">
                 <div class="about-visual-main">🌸</div>
@@ -100,9 +100,9 @@
 
             <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:32px;">
                 <a class="btn-primary"
-                    href="{{ route('show.custom_pages', ['slug' => 'color-analysis-by-season']) }}">{{ $data->content->about_why_btn1_text->value ?? '' }}</a>
+                    href="{{ route('show.color_analysis_page') }}">{{ $data->content->about_why_btn1_text->value ?? '' }}</a>
                 <a class="btn-outline"
-                    href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}">{{ $data->content->about_why_btn2_text->value ?? '' }}</a>
+                    href="{{ route('show.seasons_page') }}">{{ $data->content->about_why_btn2_text->value ?? '' }}</a>
             </div>
         </section>
 

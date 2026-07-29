@@ -4,13 +4,13 @@
 @section('page_style')
     <style>
         /* ══════════════════════════════════════════════════════════
-                   Google Fonts
-                ══════════════════════════════════════════════════════════ */
+                       Google Fonts
+                    ══════════════════════════════════════════════════════════ */
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
 
         /* ══════════════════════════════════════════════════════════
-                   Root Variables
-                ══════════════════════════════════════════════════════════ */
+                       Root Variables
+                    ══════════════════════════════════════════════════════════ */
         :root {
             --quiz-bg: #FAF8F5;
             --quiz-card: #FFFFFF;
@@ -28,8 +28,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-                   Reset & Base
-                ══════════════════════════════════════════════════════════ */
+                       Reset & Base
+                    ══════════════════════════════════════════════════════════ */
         *,
         *::before,
         *::after {
@@ -37,8 +37,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-                   Page Shell
-                ══════════════════════════════════════════════════════════ */
+                       Page Shell
+                    ══════════════════════════════════════════════════════════ */
         #page-quiz {
             background: var(--quiz-bg);
             min-height: 100vh;
@@ -46,8 +46,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-                   Header
-                ══════════════════════════════════════════════════════════ */
+                       Header
+                    ══════════════════════════════════════════════════════════ */
         .quiz-header {
             text-align: center;
             padding: 90px 24px 40px;
@@ -83,8 +83,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-                   Progress Bar – responsive
-                ══════════════════════════════════════════════════════════ */
+                       Progress Bar – responsive
+                    ══════════════════════════════════════════════════════════ */
         .quiz-progress {
             display: flex;
             align-items: center;
@@ -166,15 +166,18 @@
             .qp-line {
                 width: 8px;
             }
+
             .qp-circle {
                 width: 26px;
                 height: 26px;
                 font-size: 10px;
             }
+
             .qp-label {
                 font-size: 7px;
                 max-width: 36px;
             }
+
             .quiz-progress {
                 display: none;
                 gap: 0;
@@ -186,11 +189,13 @@
             .qp-line {
                 width: 4px;
             }
+
             .qp-circle {
                 width: 22px;
                 height: 22px;
                 font-size: 8px;
             }
+
             .qp-label {
                 font-size: 6px;
                 max-width: 28px;
@@ -198,8 +203,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-                   Quiz Body
-                ══════════════════════════════════════════════════════════ */
+                       Quiz Body
+                    ══════════════════════════════════════════════════════════ */
         .quiz-body {
             max-width: 900px;
             margin: 48px auto 0;
@@ -227,6 +232,7 @@
                 opacity: 0;
                 transform: translateY(16px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -267,8 +273,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-                   STEP LAYOUT – preview + options (responsive)
-                ══════════════════════════════════════════════════════════ */
+                       STEP LAYOUT – preview + options (responsive)
+                    ══════════════════════════════════════════════════════════ */
         .step-layout {
             display: grid;
             grid-template-columns: 1fr 2fr;
@@ -296,6 +302,7 @@
                 grid-template-columns: 1fr;
                 gap: 16px;
             }
+
             .step-layout .step-preview {
                 max-width: 340px;
                 margin: 0 auto;
@@ -307,14 +314,15 @@
             .step-layout {
                 gap: 12px;
             }
+
             .step-layout .step-preview {
                 max-width: 280px;
             }
         }
 
         /* ══════════════════════════════════════════════════════════
-                   Gender Step
-                ══════════════════════════════════════════════════════════ */
+                       Gender Step
+                    ══════════════════════════════════════════════════════════ */
         .gender-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -367,17 +375,19 @@
             .gender-opt {
                 padding: 18px 8px;
             }
+
             .gender-opt-icon {
                 font-size: 24px;
             }
+
             .gender-opt-name {
                 font-size: 14px;
             }
         }
 
         /* ══════════════════════════════════════════════════════════
-                   Option Grids – fully responsive
-                ══════════════════════════════════════════════════════════ */
+                       Option Grids – fully responsive
+                    ══════════════════════════════════════════════════════════ */
         .opt-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
@@ -462,20 +472,24 @@
             .opt {
                 padding: 12px 4px 10px;
             }
+
             .opt-circle {
                 width: 36px;
                 height: 36px;
                 margin-bottom: 6px;
             }
+
             .opt-circle input[type="color"] {
                 width: 50px;
                 height: 50px;
                 top: -7px;
                 left: -7px;
             }
+
             .opt-name {
                 font-size: 11px;
             }
+
             .opt-sub {
                 font-size: 9px;
             }
@@ -486,20 +500,22 @@
                 width: 30px;
                 height: 30px;
             }
+
             .opt-circle input[type="color"] {
                 width: 42px;
                 height: 42px;
                 top: -6px;
                 left: -6px;
             }
+
             .opt-name {
                 font-size: 10px;
             }
         }
 
         /* ══════════════════════════════════════════════════════════
-                   Preview Container
-                ══════════════════════════════════════════════════════════ */
+                       Preview Container
+                    ══════════════════════════════════════════════════════════ */
         .preview-container {
             background: var(--quiz-card);
             border-radius: 16px;
@@ -560,17 +576,19 @@
                 bottom: 8px;
                 right: 8px;
             }
+
             .preview-container .preview-placeholder span {
                 font-size: 24px;
             }
+
             .preview-container .preview-placeholder {
                 font-size: 10px;
             }
         }
 
         /* ══════════════════════════════════════════════════════════
-                   Body Type
-                ══════════════════════════════════════════════════════════ */
+                       Body Type
+                    ══════════════════════════════════════════════════════════ */
         .body-opt-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -637,20 +655,23 @@
             .body-opt {
                 padding: 14px 6px 12px;
             }
+
             .body-opt-icon {
                 font-size: 20px;
             }
+
             .body-opt-name {
                 font-size: 11px;
             }
+
             .body-opt-desc {
                 font-size: 9px;
             }
         }
 
         /* ══════════════════════════════════════════════════════════
-                   Photo Upload
-                ══════════════════════════════════════════════════════════ */
+                       Photo Upload
+                    ══════════════════════════════════════════════════════════ */
         .photo-upload-area {
             border: 2px dashed var(--quiz-border);
             border-radius: var(--quiz-radius);
@@ -729,19 +750,24 @@
             .photo-upload-area {
                 padding: 32px 16px;
             }
+
             .photo-upload-icon {
                 font-size: 28px;
             }
+
             .photo-upload-title {
                 font-size: 16px;
             }
+
             .photo-upload-sub {
                 font-size: 11px;
             }
+
             .photo-change-btn {
                 font-size: 11px;
                 padding: 4px 10px;
             }
+
             .photo-ai-note {
                 font-size: 12px;
                 padding: 10px 14px;
@@ -749,8 +775,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-                   Contact Form
-                ══════════════════════════════════════════════════════════ */
+                       Contact Form
+                    ══════════════════════════════════════════════════════════ */
         .contact-form-wrap {
             background: var(--quiz-card);
             border: 1px solid var(--quiz-border);
@@ -804,6 +830,7 @@
             .contact-form-wrap {
                 padding: 20px 14px;
             }
+
             .contact-form-wrap input {
                 font-size: 14px;
                 padding: 10px 14px;
@@ -811,8 +838,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-                   Nav Buttons
-                ══════════════════════════════════════════════════════════ */
+                       Nav Buttons
+                    ══════════════════════════════════════════════════════════ */
         .q-nav {
             display: flex;
             justify-content: space-between;
@@ -870,18 +897,20 @@
                 padding: 8px 14px;
                 font-size: 12px;
             }
+
             .btn-next-q {
                 padding: 9px 18px;
                 font-size: 12px;
             }
+
             .q-nav {
                 gap: 8px;
             }
         }
 
         /* ══════════════════════════════════════════════════════════
-                   Loading
-                ══════════════════════════════════════════════════════════ */
+                       Loading
+                    ══════════════════════════════════════════════════════════ */
         #qLoading {
             text-align: center;
             padding: 60px 20px;
@@ -933,6 +962,7 @@
             #qLoading {
                 padding: 40px 16px;
             }
+
             .loading-steps li {
                 font-size: 13px;
                 padding: 4px 0;
@@ -940,8 +970,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-                   Results
-                ══════════════════════════════════════════════════════════ */
+                       Results
+                    ══════════════════════════════════════════════════════════ */
         .results-wrap {
             padding: 0;
         }
@@ -992,9 +1022,11 @@
             .results-hero {
                 padding: 28px 16px 24px;
             }
+
             .results-hero h2 {
                 font-size: 24px;
             }
+
             .results-hero p {
                 font-size: 13px;
             }
@@ -1150,9 +1182,11 @@
             .r-cloth-list {
                 grid-template-columns: 1fr;
             }
+
             .r-card {
                 padding: 16px 14px;
             }
+
             .r-makeup {
                 grid-template-columns: 1fr 1fr;
             }
@@ -1162,6 +1196,7 @@
             .r-makeup {
                 grid-template-columns: 1fr;
             }
+
             .r-swatch-dot {
                 width: 30px;
                 height: 30px;
@@ -1169,8 +1204,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-                   TRY-ON PANEL – fully responsive
-                ══════════════════════════════════════════════════════════ */
+                       TRY-ON PANEL – fully responsive
+                    ══════════════════════════════════════════════════════════ */
         .tryon-section {
             background: var(--quiz-card);
             border: 1px solid var(--quiz-border);
@@ -1305,11 +1340,13 @@
                 height: 36px;
                 font-size: 13px;
             }
+
             .czone-label {
                 font-size: 7px;
                 bottom: -18px;
                 padding: 1px 4px;
             }
+
             .tryon-photo-wrap {
                 min-height: 200px;
                 aspect-ratio: 4 / 3;
@@ -1515,15 +1552,18 @@
                 width: 38px;
                 height: 38px;
             }
+
             .colour-hex-input {
                 font-size: 12px;
                 padding: 6px 10px;
                 min-width: 60px;
             }
+
             .btn-apply-colour {
                 font-size: 11px;
                 padding: 6px 12px;
             }
+
             .custom-colour-row {
                 padding: 12px;
             }
@@ -1585,6 +1625,7 @@
                 padding: 8px 12px;
                 min-height: 38px;
             }
+
             .rating-score {
                 font-size: 18px;
             }
@@ -1653,6 +1694,7 @@
                 width: 22px;
                 height: 22px;
             }
+
             .history-clear {
                 font-size: 9px;
                 padding: 2px 6px;
@@ -1660,8 +1702,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-                   Pinterest
-                ══════════════════════════════════════════════════════════ */
+                       Pinterest
+                    ══════════════════════════════════════════════════════════ */
         .pinterest-section {
             background: var(--quiz-card);
             border: 1px solid var(--quiz-border);
@@ -1757,6 +1799,7 @@
                 grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
                 gap: 10px;
             }
+
             .pinterest-section {
                 padding: 16px 12px;
             }
@@ -1767,14 +1810,15 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 8px;
             }
+
             .pin-card-title {
                 font-size: 11px;
             }
         }
 
         /* ══════════════════════════════════════════════════════════
-                   Results Actions
-                ══════════════════════════════════════════════════════════ */
+                       Results Actions
+                    ══════════════════════════════════════════════════════════ */
         .results-actions {
             display: flex;
             gap: 12px;
@@ -1827,10 +1871,12 @@
             .results-actions {
                 gap: 8px;
             }
+
             .btn-primary {
                 padding: 10px 18px;
                 font-size: 12px;
             }
+
             .btn-outline {
                 padding: 9px 16px;
                 font-size: 12px;
@@ -1838,8 +1884,8 @@
         }
 
         /* ══════════════════════════════════════════════════════════
-                   Extra: small tweaks
-                ══════════════════════════════════════════════════════════ */
+                       Extra: small tweaks
+                    ══════════════════════════════════════════════════════════ */
         .text-center {
             text-align: center;
         }
@@ -1883,15 +1929,19 @@
             .q-nav {
                 display: none;
             }
+
             .tryon-section {
                 break-inside: avoid;
             }
+
             .results-actions {
                 display: none;
             }
+
             .quiz-progress {
                 display: none;
             }
+
             .photo-upload-area {
                 border-style: solid;
             }
@@ -1941,7 +1991,8 @@
                     </div>
                 </div>
                 <div class="q-nav">
-                    <div></div><button class="btn-next-q" id="qn0" onclick="qGo(1)">{{ $data->content->step0_next->value ?? '' }}</button>
+                    <div></div><button class="btn-next-q" id="qn0"
+                        onclick="qGo(1)">{{ $data->content->step0_next->value ?? '' }}</button>
                 </div>
             </div>
 
@@ -1950,16 +2001,19 @@
                 <div class="q-num">{{ $data->content->step1_num->value ?? '' }}</div>
                 <div class="q-question">{{ $data->content->step1_question->value ?? '' }}</div>
                 <div class="q-hint">{{ $data->content->step1_hint->value ?? '' }}</div>
-                <div class="photo-ai-note"><span>🔒</span><span>{{ $data->content->step1_photo_ai_note->value ?? '' }}</span></div>
+                <div class="photo-ai-note">
+                    <span>🔒</span><span>{{ $data->content->step1_photo_ai_note->value ?? '' }}</span></div>
                 <div class="photo-upload-area" id="photoUploadArea" onclick="triggerPhotoUpload()">
                     <span class="photo-upload-icon">📸</span>
                     <div class="photo-upload-title">{{ $data->content->step1_upload_title->value ?? '' }}</div>
                     <div class="photo-upload-sub">{{ $data->content->step1_upload_sub->value ?? '' }}</div>
                 </div>
-                <input type="file" id="photoFileInput" accept="image/*" style="display:none" onchange="handlePhotoUpload(this)">
+                <input type="file" id="photoFileInput" accept="image/*" style="display:none"
+                    onchange="handlePhotoUpload(this)">
                 <div class="q-nav">
                     <button class="btn-back-q" onclick="qGo(0)">{{ $data->content->step1_back->value ?? '' }}</button>
-                    <button class="btn-next-q on" id="qn1" onclick="qGo(2)">{{ $data->content->step1_next->value ?? '' }}</button>
+                    <button class="btn-next-q on" id="qn1"
+                        onclick="qGo(2)">{{ $data->content->step1_next->value ?? '' }}</button>
                 </div>
             </div>
 
@@ -2010,7 +2064,8 @@
                             </div>
                             <div class="opt" id="skin_custom_opt">
                                 <div class="opt-circle">
-                                    <input type="color" id="skin_custom" value="#C4956A" onchange="qSelectCustom(this, 'skin')">
+                                    <input type="color" id="skin_custom" value="#C4956A"
+                                        onchange="qSelectCustom(this, 'skin')">
                                 </div>
                                 <div class="opt-name">{{ $data->content->step2_custom->value ?? '' }}</div>
                                 <div class="opt-sub">{{ $data->content->step2_custom_sub->value ?? '' }}</div>
@@ -2021,7 +2076,8 @@
 
                 <div class="q-nav">
                     <button class="btn-back-q" onclick="qGo(1)">{{ $data->content->step2_back->value ?? '' }}</button>
-                    <button class="btn-next-q" id="qn2" onclick="qGo(3)">{{ $data->content->step2_next->value ?? '' }}</button>
+                    <button class="btn-next-q" id="qn2"
+                        onclick="qGo(3)">{{ $data->content->step2_next->value ?? '' }}</button>
                 </div>
             </div>
 
@@ -2067,7 +2123,8 @@
                             </div>
                             <div class="opt" id="undertone_custom_opt">
                                 <div class="opt-circle">
-                                    <input type="color" id="undertone_custom" value="#C4956A" onchange="qSelectCustom(this, 'undertone')">
+                                    <input type="color" id="undertone_custom" value="#C4956A"
+                                        onchange="qSelectCustom(this, 'undertone')">
                                 </div>
                                 <div class="opt-name">{{ $data->content->step3_custom->value ?? '' }}</div>
                                 <div class="opt-sub">{{ $data->content->step3_custom_sub->value ?? '' }}</div>
@@ -2078,7 +2135,8 @@
 
                 <div class="q-nav">
                     <button class="btn-back-q" onclick="qGo(2)">{{ $data->content->step3_back->value ?? '' }}</button>
-                    <button class="btn-next-q" id="qn3" onclick="qGo(4)">{{ $data->content->step3_next->value ?? '' }}</button>
+                    <button class="btn-next-q" id="qn3"
+                        onclick="qGo(4)">{{ $data->content->step3_next->value ?? '' }}</button>
                 </div>
             </div>
 
@@ -2103,32 +2161,39 @@
                     <div class="step-options">
                         <div class="opt-grid">
                             <div class="opt" onclick="qSelect(this,'eyes','blue')">
-                                <div class="opt-circle" style="background:radial-gradient(circle,#6CA6CD,#4682B4,#1C3A6E);"></div>
+                                <div class="opt-circle"
+                                    style="background:radial-gradient(circle,#6CA6CD,#4682B4,#1C3A6E);"></div>
                                 <div class="opt-name">{{ $data->content->step4_blue->value ?? '' }}</div>
                             </div>
                             <div class="opt" onclick="qSelect(this,'eyes','green')">
-                                <div class="opt-circle" style="background:radial-gradient(circle,#8FBC8F,#3D7A47,#1B4A24);"></div>
+                                <div class="opt-circle"
+                                    style="background:radial-gradient(circle,#8FBC8F,#3D7A47,#1B4A24);"></div>
                                 <div class="opt-name">{{ $data->content->step4_green->value ?? '' }}</div>
                             </div>
                             <div class="opt" onclick="qSelect(this,'eyes','hazel')">
-                                <div class="opt-circle" style="background:radial-gradient(circle,#C8A96E,#8B6914,#4A3508);"></div>
+                                <div class="opt-circle"
+                                    style="background:radial-gradient(circle,#C8A96E,#8B6914,#4A3508);"></div>
                                 <div class="opt-name">{{ $data->content->step4_hazel->value ?? '' }}</div>
                             </div>
                             <div class="opt" onclick="qSelect(this,'eyes','light-brown')">
-                                <div class="opt-circle" style="background:radial-gradient(circle,#C8905A,#9B5A24,#5C2A0A);"></div>
+                                <div class="opt-circle"
+                                    style="background:radial-gradient(circle,#C8905A,#9B5A24,#5C2A0A);"></div>
                                 <div class="opt-name">{{ $data->content->step4_light_brown->value ?? '' }}</div>
                             </div>
                             <div class="opt" onclick="qSelect(this,'eyes','dark-brown')">
-                                <div class="opt-circle" style="background:radial-gradient(circle,#6B3A1F,#2C150A,#000);"></div>
+                                <div class="opt-circle" style="background:radial-gradient(circle,#6B3A1F,#2C150A,#000);">
+                                </div>
                                 <div class="opt-name">{{ $data->content->step4_dark_brown->value ?? '' }}</div>
                             </div>
                             <div class="opt" onclick="qSelect(this,'eyes','grey')">
-                                <div class="opt-circle" style="background:radial-gradient(circle,#B0B8C0,#7A8A94,#3A464E);"></div>
+                                <div class="opt-circle"
+                                    style="background:radial-gradient(circle,#B0B8C0,#7A8A94,#3A464E);"></div>
                                 <div class="opt-name">{{ $data->content->step4_grey->value ?? '' }}</div>
                             </div>
                             <div class="opt" id="eyes_custom_opt">
                                 <div class="opt-circle">
-                                    <input type="color" id="eyes_custom" value="#C4956A" onchange="qSelectCustom(this, 'eyes')">
+                                    <input type="color" id="eyes_custom" value="#C4956A"
+                                        onchange="qSelectCustom(this, 'eyes')">
                                 </div>
                                 <div class="opt-name">{{ $data->content->step4_custom->value ?? '' }}</div>
                                 <div class="opt-sub">{{ $data->content->step4_custom_sub->value ?? '' }}</div>
@@ -2139,7 +2204,8 @@
 
                 <div class="q-nav">
                     <button class="btn-back-q" onclick="qGo(3)">{{ $data->content->step4_back->value ?? '' }}</button>
-                    <button class="btn-next-q" id="qn4" onclick="qGo(5)">{{ $data->content->step4_next->value ?? '' }}</button>
+                    <button class="btn-next-q" id="qn4"
+                        onclick="qGo(5)">{{ $data->content->step4_next->value ?? '' }}</button>
                 </div>
             </div>
 
@@ -2195,7 +2261,8 @@
                             </div>
                             <div class="opt" id="hair_custom_opt">
                                 <div class="opt-circle">
-                                    <input type="color" id="hair_custom" value="#C4956A" onchange="qSelectCustom(this, 'hair')">
+                                    <input type="color" id="hair_custom" value="#C4956A"
+                                        onchange="qSelectCustom(this, 'hair')">
                                 </div>
                                 <div class="opt-name">{{ $data->content->step5_custom->value ?? '' }}</div>
                                 <div class="opt-sub">{{ $data->content->step5_custom_sub->value ?? '' }}</div>
@@ -2206,7 +2273,8 @@
 
                 <div class="q-nav">
                     <button class="btn-back-q" onclick="qGo(4)">{{ $data->content->step5_back->value ?? '' }}</button>
-                    <button class="btn-next-q" id="qn5" onclick="qGo(6)">{{ $data->content->step5_next->value ?? '' }}</button>
+                    <button class="btn-next-q" id="qn5"
+                        onclick="qGo(6)">{{ $data->content->step5_next->value ?? '' }}</button>
                 </div>
             </div>
 
@@ -2242,10 +2310,12 @@
                         <div class="body-opt-desc">{{ $data->content->step6_inverted_desc->value ?? '' }}</div>
                     </div>
                 </div>
-                <input type="file" id="bodyPhotoInput" accept="image/*" style="display:none" onchange="handleBodyPhotoUpload(this)">
+                <input type="file" id="bodyPhotoInput" accept="image/*" style="display:none"
+                    onchange="handleBodyPhotoUpload(this)">
                 <div class="q-nav">
                     <button class="btn-back-q" onclick="qGo(5)">{{ $data->content->step6_back->value ?? '' }}</button>
-                    <button class="btn-next-q" id="qn6" onclick="qGo(7)">{{ $data->content->step6_next->value ?? '' }}</button>
+                    <button class="btn-next-q" id="qn6"
+                        onclick="qGo(7)">{{ $data->content->step6_next->value ?? '' }}</button>
                 </div>
             </div>
 
@@ -2257,25 +2327,32 @@
                 <div class="contact-form-wrap">
                     <div class="form-row">
                         <label for="user_name">{{ $data->content->step7_name_label->value ?? '' }}</label>
-                        <input type="text" id="user_name" placeholder="{{ $data->content->step7_name_placeholder->value ?? '' }}" oninput="checkContactForm()">
+                        <input type="text" id="user_name"
+                            placeholder="{{ $data->content->step7_name_placeholder->value ?? '' }}"
+                            oninput="checkContactForm()">
                     </div>
                     <div class="form-row">
                         <label for="user_email">{{ $data->content->step7_email_label->value ?? '' }}</label>
-                        <input type="email" id="user_email" placeholder="{{ $data->content->step7_email_placeholder->value ?? '' }}" oninput="checkContactForm()">
+                        <input type="email" id="user_email"
+                            placeholder="{{ $data->content->step7_email_placeholder->value ?? '' }}"
+                            oninput="checkContactForm()">
                     </div>
                     <p class="privacy-note">{{ $data->content->step7_privacy->value ?? '' }}</p>
                 </div>
                 <div class="q-nav">
                     <button class="btn-back-q" onclick="qGo(6)">{{ $data->content->step7_back->value ?? '' }}</button>
-                    <button class="btn-next-q" id="qn7" onclick="showQuizResults()">{{ $data->content->step7_submit->value ?? '' }}</button>
+                    <button class="btn-next-q" id="qn7"
+                        onclick="showQuizResults()">{{ $data->content->step7_submit->value ?? '' }}</button>
                 </div>
             </div>
 
             {{-- ─── LOADING ─── --}}
             <div class="q-step" id="qLoading">
                 <div class="loading-spinner"></div>
-                <div class="q-question" style="text-align:center;">{{ $data->content->loading_title->value ?? '' }}</div>
-                <p style="text-align:center;color:var(--quiz-muted);font-size:14px;">{{ $data->content->loading_sub->value ?? '' }}</p>
+                <div class="q-question" style="text-align:center;">{{ $data->content->loading_title->value ?? '' }}
+                </div>
+                <p style="text-align:center;color:var(--quiz-muted);font-size:14px;">
+                    {{ $data->content->loading_sub->value ?? '' }}</p>
                 <ul class="loading-steps">
                     <li id="ls1">{{ $data->content->loading_step1->value ?? '' }}</li>
                     <li id="ls2">{{ $data->content->loading_step2->value ?? '' }}</li>
@@ -2345,22 +2422,29 @@
                             <div class="tryon-controls">
                                 {{-- Zone tabs --}}
                                 <div>
-                                    <div style="font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--quiz-accent);margin-bottom:8px;">
+                                    <div
+                                        style="font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--quiz-accent);margin-bottom:8px;">
                                         {{ $data->content->tryon_zone_label->value ?? '' }}
                                     </div>
                                     <div class="zone-tabs" id="zoneTabs">
-                                        <button class="zone-tab active" data-zone="top" onclick="selectZone('top')">👕 {{ $data->content->tryon_zone_top->value ?? '' }}</button>
-                                        <button class="zone-tab" data-zone="bottom" onclick="selectZone('bottom')">👖 {{ $data->content->tryon_zone_bottom->value ?? '' }}</button>
-                                        <button class="zone-tab" data-zone="hair" onclick="selectZone('hair')">💇 {{ $data->content->tryon_zone_hair->value ?? '' }}</button>
-                                        <button class="zone-tab" data-zone="accent" onclick="selectZone('accent')">✨ {{ $data->content->tryon_zone_accent->value ?? '' }}</button>
+                                        <button class="zone-tab active" data-zone="top" onclick="selectZone('top')">👕
+                                            {{ $data->content->tryon_zone_top->value ?? '' }}</button>
+                                        <button class="zone-tab" data-zone="bottom" onclick="selectZone('bottom')">👖
+                                            {{ $data->content->tryon_zone_bottom->value ?? '' }}</button>
+                                        <button class="zone-tab" data-zone="hair" onclick="selectZone('hair')">💇
+                                            {{ $data->content->tryon_zone_hair->value ?? '' }}</button>
+                                        <button class="zone-tab" data-zone="accent" onclick="selectZone('accent')">✨
+                                            {{ $data->content->tryon_zone_accent->value ?? '' }}</button>
                                     </div>
                                 </div>
 
                                 {{-- Season palette quick-pick --}}
                                 <div class="tryon-palette-strip">
-                                    <div class="palette-row-label">{{ $data->content->tryon_palette_best->value ?? '' }}</div>
+                                    <div class="palette-row-label">{{ $data->content->tryon_palette_best->value ?? '' }}
+                                    </div>
                                     <div class="palette-swatches" id="tryonBestSwatches"></div>
-                                    <div class="palette-row-label" style="margin-top:8px;">{{ $data->content->tryon_palette_avoid->value ?? '' }}</div>
+                                    <div class="palette-row-label" style="margin-top:8px;">
+                                        {{ $data->content->tryon_palette_avoid->value ?? '' }}</div>
                                     <div class="palette-swatches" id="tryonAvoidSwatches"></div>
                                 </div>
 
@@ -2368,9 +2452,13 @@
                                 <div class="custom-colour-row">
                                     <label>{{ $data->content->tryon_custom_label->value ?? '' }}</label>
                                     <div class="colour-input-wrap">
-                                        <input type="color" id="customColourPicker" value="#C4956A" onchange="syncHexFromPicker()">
-                                        <input type="text" class="colour-hex-input" id="customHexInput" value="#C4956A" maxlength="7" placeholder="#RRGGBB" oninput="syncPickerFromHex()">
-                                        <button class="btn-apply-colour" onclick="applyCustomColour()">{{ $data->content->tryon_apply_btn->value ?? '' }}</button>
+                                        <input type="color" id="customColourPicker" value="#C4956A"
+                                            onchange="syncHexFromPicker()">
+                                        <input type="text" class="colour-hex-input" id="customHexInput"
+                                            value="#C4956A" maxlength="7" placeholder="#RRGGBB"
+                                            oninput="syncPickerFromHex()">
+                                        <button class="btn-apply-colour"
+                                            onclick="applyCustomColour()">{{ $data->content->tryon_apply_btn->value ?? '' }}</button>
                                     </div>
                                 </div>
 
@@ -2387,9 +2475,11 @@
 
                                 {{-- Colour history --}}
                                 <div>
-                                    <div style="font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--quiz-muted);margin-bottom:8px;">
+                                    <div
+                                        style="font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--quiz-muted);margin-bottom:8px;">
                                         {{ $data->content->tryon_history_label->value ?? '' }}
-                                        <button class="history-clear" onclick="clearHistory()" style="margin-left:8px;">{{ $data->content->tryon_clear_btn->value ?? '' }}</button>
+                                        <button class="history-clear" onclick="clearHistory()"
+                                            style="margin-left:8px;">{{ $data->content->tryon_clear_btn->value ?? '' }}</button>
                                     </div>
                                     <div class="colour-history" id="colourHistory">
                                         <span style="font-size:12px;color:var(--quiz-muted);">None yet</span>
@@ -2402,19 +2492,24 @@
                     {{-- Pinterest --}}
                     <div class="pinterest-section" id="pinterestSection">
                         <div class="pinterest-header">
-                            <div class="r-card-label" style="margin-bottom:0;">{{ $data->content->pinterest_title->value ?? '' }}</div>
+                            <div class="r-card-label" style="margin-bottom:0;">
+                                {{ $data->content->pinterest_title->value ?? '' }}</div>
                             <div class="pinterest-badge">{{ $data->content->pinterest_badge->value ?? '' }}</div>
                         </div>
-                        <p style="font-size:13px;color:var(--quiz-muted);margin:0 0 18px;">{{ $data->content->pinterest_sub->value ?? '' }}</p>
+                        <p style="font-size:13px;color:var(--quiz-muted);margin:0 0 18px;">
+                            {{ $data->content->pinterest_sub->value ?? '' }}</p>
                         <div class="pinterest-grid" id="pinterestGrid">
                             <div class="pin-loading">{{ $data->content->pinterest_loading->value ?? '' }}</div>
                         </div>
                     </div>
 
                     <div class="results-actions">
-                        <button class="btn-primary" onclick="restartQ()">{{ $data->content->action_retake->value ?? '' }}</button>
-                        <a class="btn-outline" href="{{ route('show.custom_pages', ['slug' => 'blog']) }}">{{ $data->content->action_blog->value ?? '' }}</a>
-                        <a class="btn-outline" href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}">{{ $data->content->action_seasons->value ?? '' }}</a>
+                        <button class="btn-primary"
+                            onclick="restartQ()">{{ $data->content->action_retake->value ?? '' }}</button>
+                        <a class="btn-outline"
+                            href="{{ route('show.blog_page') }}">{{ $data->content->action_blog->value ?? '' }}</a>
+                        <a class="btn-outline"
+                            href="{{ route('show.seasons_page') }}">{{ $data->content->action_seasons->value ?? '' }}</a>
                     </div>
                 </div>
             </div>
@@ -2426,8 +2521,8 @@
 @section('page_script')
     <script>
         /* ════════════════════════════════════════════════════════════
-                               QUIZ STATE
-            ════════════════════════════════════════════════════════════ */
+                                   QUIZ STATE
+                ════════════════════════════════════════════════════════════ */
         const qa = {
             gender: null,
             photo: null,
@@ -2521,7 +2616,10 @@
             const target = document.getElementById('q' + step);
             if (target) {
                 target.classList.add('active');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
             }
             updateProgress(step);
         }
@@ -2586,7 +2684,12 @@
         }
 
         function enableNextButton(key) {
-            const stepMap = { skin: 2, undertone: 3, eyes: 4, hair: 5 };
+            const stepMap = {
+                skin: 2,
+                undertone: 3,
+                eyes: 4,
+                hair: 5
+            };
             const btn = document.getElementById('qn' + stepMap[key]);
             if (btn) btn.classList.add('on');
         }
@@ -2674,7 +2777,9 @@
             try {
                 const response = await fetch('https://api.anthropic.com/v1/messages', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
                     body: JSON.stringify({
                         model: 'claude-sonnet-4-20250514',
                         max_tokens: 200,
@@ -2761,7 +2866,10 @@
 
             document.querySelectorAll('.q-step').forEach(el => el.classList.remove('active'));
             document.getElementById('qLoading').classList.add('active');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
 
             const steps = ['ls1', 'ls2', 'ls3', 'ls4', 'ls5'];
             const animPromise = (async () => {
@@ -2811,7 +2919,10 @@
 
             document.getElementById('qLoading').classList.remove('active');
             document.getElementById('qResults').classList.add('active');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
 
             initTryonPanel(result);
             setTimeout(() => renderPinterest(result.pinterest), 400);
@@ -2861,10 +2972,38 @@
         };
 
         const zoneConfig = {
-            top: { emoji: '👕', label: 'TOP', default: { x: 45, y: 35 } },
-            bottom: { emoji: '👖', label: 'BOTTOM', default: { x: 45, y: 62 } },
-            hair: { emoji: '💇', label: 'HAIR', default: { x: 45, y: 10 } },
-            accent: { emoji: '✨', label: 'ACCENT', default: { x: 75, y: 45 } },
+            top: {
+                emoji: '👕',
+                label: 'TOP',
+                default: {
+                    x: 45,
+                    y: 35
+                }
+            },
+            bottom: {
+                emoji: '👖',
+                label: 'BOTTOM',
+                default: {
+                    x: 45,
+                    y: 62
+                }
+            },
+            hair: {
+                emoji: '💇',
+                label: 'HAIR',
+                default: {
+                    x: 45,
+                    y: 10
+                }
+            },
+            accent: {
+                emoji: '✨',
+                label: 'ACCENT',
+                default: {
+                    x: 75,
+                    y: 45
+                }
+            },
         };
 
         function initTryonPanel(result) {
@@ -2951,13 +3090,17 @@
             el.addEventListener('touchstart', e => {
                 e.preventDefault();
                 onStart(e.touches[0].clientX, e.touches[0].clientY);
-            }, { passive: false });
+            }, {
+                passive: false
+            });
             window.addEventListener('touchmove', e => {
                 if (isDragging) {
                     e.preventDefault();
                     onMove(e.touches[0].clientX, e.touches[0].clientY);
                 }
-            }, { passive: false });
+            }, {
+                passive: false
+            });
             window.addEventListener('touchend', onEnd);
         }
 
@@ -2977,7 +3120,8 @@
             setZoneColour(activeZone, hex);
             document.getElementById('customColourPicker').value = hex;
             document.getElementById('customHexInput').value = hex;
-            document.querySelectorAll('.pswatch').forEach(el => el.classList.toggle('selected', el.dataset.hex === hex));
+            document.querySelectorAll('.pswatch').forEach(el => el.classList.toggle('selected', el.dataset.hex ===
+            hex));
             await evaluateAndDisplay(hex);
         }
 
@@ -3023,7 +3167,10 @@
                         'Content-Type': 'application/json',
                         'X-CSRF-TOKEN': CSRF
                     },
-                    body: JSON.stringify({ hex, season: currentSeason })
+                    body: JSON.stringify({
+                        hex,
+                        season: currentSeason
+                    })
                 });
                 const data = await res.json();
                 ratingEl.className = `colour-rating ${data.rating}`;
@@ -3038,7 +3185,11 @@
 
         function addToHistory(hex, rating, score) {
             colourHistory = colourHistory.filter(h => h.hex !== hex);
-            colourHistory.unshift({ hex, rating, score });
+            colourHistory.unshift({
+                hex,
+                rating,
+                score
+            });
             if (colourHistory.length > 12) colourHistory.pop();
             renderHistory();
         }

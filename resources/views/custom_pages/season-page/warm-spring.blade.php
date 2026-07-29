@@ -132,9 +132,9 @@
             </div>
             <div style="display:flex;gap:12px;flex-wrap:wrap;">
                 <a class="btn btn-white"
-                    href="{{ route('show.custom_pages', ['slug' => 'color-analysis-by-season']) }}">{{ $data->content->season_hero_btn_all->value ?? '' }}</a>
+                    href="{{ route('show.color_analysis_page') }}">{{ $data->content->season_hero_btn_all->value ?? '' }}</a>
                 <a class="btn btn-outline" style="color:#fff;border-color:#ffffff44;"
-                    href="{{ route('show.custom_pages', ['slug' => 'color-analysis-by-season']) }}">{{ $data->content->season_hero_btn_quiz->value ?? '' }}</a>
+                    href="{{ route('show.color_analysis_page') }}">{{ $data->content->season_hero_btn_quiz->value ?? '' }}</a>
             </div>
         </div>
         <div class="sp-hero-visual">
@@ -872,7 +872,7 @@
     <div
         style="padding:40px 6%;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #E8DDD6;gap:20px;flex-wrap:wrap;">
         <a class="btn btn-outline" style="color:#2C2420;border-color:#E8DDD6;"
-            href="{{ route('show.custom_pages', ['slug' => 'color-analysis-by-season']) }}">{{ $data->content->nav_all->value ?? '' }}</a>
+            href="{{ route('show.color_analysis_page') }}">{{ $data->content->nav_all->value ?? '' }}</a>
         <div style="display:flex;gap:8px;flex-wrap:wrap;">
             <a class="btn btn-outline" style="color:#B85A38;border-color:#B85A3844;font-size:13px;"
                 href="{{ route('show.seasons.custom_pages', ['slug' => 'true-spring']) }}">{{ $data->content->nav_prev->value ?? '' }}</a>
@@ -884,7 +884,7 @@
     <div class="footer-mini">
         <div class="fm-logo">Glow<em>Match</em></div>
         <div class="fm-links"><a
-                href="{{ route('show.custom_pages', ['slug' => 'color-analysis-by-season']) }}">{{ $data->content->footer_links->value ?? '' }}</a>
+                href="{{ route('show.color_analysis_page') }}">{{ $data->content->footer_links->value ?? '' }}</a>
         </div>
     </div>
 

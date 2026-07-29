@@ -9,7 +9,7 @@
                 {{ $data->content->body_hero_desc->value ?? '' }}</p>
             <div style="margin-top:24px;">
                 <a class="btn-primary"
-                    href="{{ route('show.custom_pages', ['slug' => 'color-analysis-by-season']) }}">{{ $data->content->body_hero_btn->value ?? '' }}</a>
+                    href="{{ route('show.color_analysis_page') }}">{{ $data->content->body_hero_btn->value ?? '' }}</a>
             </div>
         </div>
 
@@ -144,9 +144,9 @@
             <p class="section-sub" style="max-width:600px;margin:0 auto;">{!! $data->content->crossover_desc->value ?? '' !!}</p>
             <div class="hero-btns" style="justify-content:center;margin-top:28px;">
                 <a class="btn-primary"
-                    href="{{ route('show.custom_pages', ['slug' => 'color-analysis-by-season']) }}">{{ $data->content->crossover_btn1->value ?? '' }}</a>
+                    href="{{ route('show.color_analysis_page') }}">{{ $data->content->crossover_btn1->value ?? '' }}</a>
                 <a class="btn-outline"
-                    href="{{ route('show.custom_pages', ['slug' => '12-colour-seasons']) }}">{{ $data->content->crossover_btn2->value ?? '' }}</a>
+                    href="{{ route('show.seasons_page') }}">{{ $data->content->crossover_btn2->value ?? '' }}</a>
             </div>
         </section>
 
