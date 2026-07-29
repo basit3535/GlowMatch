@@ -44,7 +44,7 @@ Route::get('/fetch-blogs', [CustomPageController::class, 'fetchBlogs'])->name('b
 Route::get('/blog/{category}/{slug}',[CustomPageController::class, 'showSingleBlog'])->name('show.single_blog');
 
 
-Route::get('/{slug}',[CustomPageController::class, 'showCustomPage'])->name('show.custom_pages');
+// Route::get('/{slug}',[CustomPageControllezr::class, 'showCustomPage'])->name('show.custom_pages');
 Route::controller(CustomPageController::class)->group(function () {
 
     Route::get('/', 'homePage')->name('show.home_page');
